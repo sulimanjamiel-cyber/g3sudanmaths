@@ -1,0 +1,685 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>مغامرة الكسور</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Readex+Pro:wght@400;500;600&display=swap">
+<style>
+/* The digit ٢ drawn in the handwritten shape the teacher asked for (one-glyph font, used only for U+0662) */
+@font-face{font-family:"Two Sudan";src:url(data:font/ttf;base64,AAEAAAAKAIAAAwAgT1MvMmwJSf4AAAEoAAAAYGNtYXAADAa1AAABkAAAADRnbHlmcBAyawAAAcwAAACOaGVhZC8Kn+QAAACsAAAANmhoZWEFkQEpAAAA5AAAACRobXR4BAAARQAAAYgAAAAIbG9jYQBHAAAAAAHEAAAABm1heHAABAA1AAABCAAAACBuYW1lndiXGwAAAlwAAABmcG9zdAAZAAAAAALEAAAAJgABAAAAAQAAP50j7V8PPPUAAwPoAAAAAOb0riIAAAAA5vSuIgBFAAEBxgK/AAAAAwACAAAAAAAAAAEAAAOE/tQAAAIMAEUARgHGAAEAAAAAAAAAAAAAAAAAAAACAAEAAAACADMAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwIAAZAABQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAPz8/PwAABmIGYgOE/tQAAAOEASwAAAAAAAAAAAAAAAAAAAAgAAAB9AAAAgwARQAAAAIAAAADAAAAFAADAAEAAAAUAAQAIAAAAAQABAABAAAGYv//AAAGYv//+Z8AAQAAAAAAAAAAAEcAAAABAEUAAQHGAr8AMgAAEycnPwgfBw8DLwUjDwYXFxMXDwQnJwMnTgcCBAkQFhsdJCQjJSAdHBQJCwUGCQ0QGBQJCwUXJBUTIBELBwMCCOoEAQYRDxgWCt0VAbMtHxwcGx0aExILBgEFChIUDxgYFw0JBQINDRcECAUHFBEPDg4TJf6EDxAPEQYBCwwBZiYAAAAAAAQANgABAAAAAAABAAkAAAABAAAAAAACAAcACQADAAEECQABABIAEAADAAEECQACAA4AIlR3byBTdWRhblJlZ3VsYXIAVAB3AG8AIABTAHUAZABhAG4AUgBlAGcAdQBsAGEAcgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABUAAA==) format("truetype");unicode-range:U+0662;font-display:block}
+/* Layout: a book-like map of 8 lesson "tabs" (yellow tab + green title, like the textbook), then one question card at a time */
+:root{
+  --paper:#F3F8F4; --card:#FFFFFF; --ink:#1C2A22; --muted:#5B6F63; --line:#CFDDD3;
+  --green:#0B8A52; --green-soft:#DDF3E7; --yellow:#FFD60A; --yellow-ink:#3A3000;
+  --pink:#E0457B; --blue:#2D6FD6; --ok:#118A4E; --ok-soft:#DFF5E8; --bad:#D23B3B; --bad-soft:#FBE3E3;
+  --shade:#FFC93C; --empty:#FFFFFF;
+  --f-display:"Two Sudan","Baloo Bhaijaan 2","Readex Pro",system-ui,sans-serif;
+  --f-body:"Two Sudan","Readex Pro",system-ui,"Segoe UI",Tahoma,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#111813; --card:#1A241E; --ink:#E7F1EA; --muted:#9DB2A5; --line:#2E3D34;
+  --green:#3CC283; --green-soft:#1F3A2B; --yellow:#FFD60A; --yellow-ink:#3A3000;
+  --pink:#F0679A; --blue:#5C95F0; --ok:#43C985; --ok-soft:#173A27; --bad:#F06A6A; --bad-soft:#3E1F1F;
+  --shade:#F2B92B; --empty:#26322B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111813; --card:#1A241E; --ink:#E7F1EA; --muted:#9DB2A5; --line:#2E3D34;
+  --green:#3CC283; --green-soft:#1F3A2B; --yellow:#FFD60A; --yellow-ink:#3A3000;
+  --pink:#F0679A; --blue:#5C95F0; --ok:#43C985; --ok-soft:#173A27; --bad:#F06A6A; --bad-soft:#3E1F1F;
+  --shade:#F2B92B; --empty:#26322B; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column}
+.tab{display:inline-block;background:var(--yellow);color:var(--yellow-ink);font-family:var(--f-display);font-weight:700;
+  border-radius:999px 0 0 999px;padding:2px 16px 0;font-size:15px;align-self:flex-start}
+h1{font-family:var(--f-display);font-weight:800;color:var(--green);font-size:clamp(34px,7vw,50px);line-height:1.1;margin:6px 0 0;text-wrap:balance}
+.tools{display:flex;gap:8px;align-items:center}
+.pill{display:flex;align-items:center;gap:6px;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600}
+.iconbtn{background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px}
+.sub{color:var(--muted);margin:0}
+
+/* map */
+.map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.map{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.lesson{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:12px 12px 10px;text-align:right;
+  display:flex;flex-direction:column;gap:6px;transition:transform .15s,border-color .15s;min-width:0}
+.lesson:hover{transform:translateY(-2px);border-color:var(--green)}
+.lesson .ln{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.lesson .tab{font-size:13px;padding:1px 12px 0}
+.lesson .pg{color:var(--muted);font-size:13px}
+.lesson .nm{font-family:var(--f-display);font-weight:700;color:var(--green);font-size:19px;line-height:1.25}
+.lesson .pie-mini{height:44px}
+.stars{letter-spacing:2px;font-size:18px;color:var(--line)}
+.stars .on{color:#F5B400}
+.lesson.final{grid-column:1/-1;background:var(--green);border-color:var(--green);color:#fff}
+.lesson.final .nm{color:#fff;font-size:22px}
+.lesson.final .pg{color:#E6FFF2}
+.lesson.final .tab{background:var(--yellow)}
+.lesson.final .stars{color:rgba(255,255,255,.35)}
+
+/* play */
+.bar{display:flex;align-items:center;gap:10px}
+.back{background:none;border:1.5px solid var(--line);border-radius:999px;padding:4px 14px;background:var(--card)}
+.prog{flex:1;height:12px;background:var(--card);border:1.5px solid var(--line);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .3s}
+.count{font-weight:600;min-width:52px;text-align:center}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:16px}
+.qhead{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.qhead .tab{font-size:14px}
+.qtype{color:var(--muted);font-size:14px}
+.q{font-size:21px;font-weight:600;margin:0;line-height:1.7}
+.vis{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:18px}
+.eq{direction:rtl;unicode-bidi:isolate;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+  font-family:var(--f-display);font-size:28px;font-weight:700}
+.eqline{display:flex;justify-content:center}
+
+/* fractions: stacked numerator over denominator */
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-family:var(--f-display);font-weight:700;line-height:1.05;margin:0 3px;direction:rtl}
+.fr>b{font-weight:inherit;padding:0 4px}
+.fr>i{font-style:normal;border-top:2.5px solid currentColor;padding:0 4px;min-width:1.2em;text-align:center}
+.q .fr{font-size:22px}
+
+/* selects */
+select.dd{font-family:var(--f-display);font-size:24px;font-weight:700;color:var(--ink);background:var(--yellow);background:color-mix(in srgb,var(--yellow) 35%,var(--card));
+  border:2px solid var(--line);border-radius:10px;padding:0 6px;min-width:62px;text-align:center;direction:rtl;height:44px}
+.fr select.dd{margin:3px 0}
+select.dd.right{border-color:var(--ok);background:var(--ok-soft)}
+select.dd.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.fix{font-size:15px;color:var(--ok);font-family:var(--f-body);font-weight:600;display:block;text-align:center}
+
+/* mcq */
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;direction:rtl;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:8px 14px;text-align:right;min-height:62px}
+.opt:hover:not(:disabled){border-color:var(--green)}
+.opt .L{font-family:var(--f-display);font-weight:800;font-size:20px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--green-soft);color:var(--green);flex:none}
+.opt .C{direction:rtl;flex:1;font-size:20px;font-weight:600;display:flex;justify-content:flex-start;align-items:center}
+.opt .C .fr{font-size:26px}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt:disabled{cursor:default}
+
+/* compare */
+.cmp{display:flex;align-items:center;justify-content:center;gap:16px;direction:rtl}
+.cmp .fr{font-size:40px}
+.slot{width:64px;height:64px;border:3px dashed var(--line);border-radius:16px;display:grid;place-items:center;font-family:var(--f-display);font-size:38px;font-weight:800}
+.slot.right{border:3px solid var(--ok);background:var(--ok-soft)}
+.slot.wrong{border:3px solid var(--bad);background:var(--bad-soft)}
+.signs{display:flex;gap:12px;justify-content:center;direction:rtl}
+.sign{width:74px;height:62px;border-radius:14px;border:2px solid var(--line);background:var(--card);font-family:var(--f-display);font-size:34px;font-weight:800}
+.sign:hover:not(:disabled){border-color:var(--green);background:var(--green-soft)}
+
+/* chips (order / match / multi) */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;direction:rtl}
+.chip{min-width:72px;min-height:78px;border-radius:14px;border:2px solid var(--line);background:var(--card);display:grid;place-items:center;padding:6px 10px}
+.chip .fr{font-size:28px}
+.chip.sel{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 14%,var(--card))}
+.chip.used{opacity:.25;pointer-events:none}
+.chip.right{border-color:var(--ok);background:var(--ok-soft)}
+.chip.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.chip.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.slots{display:flex;gap:10px;justify-content:center;direction:rtl;align-items:center;flex-wrap:wrap}
+.slots .chip{border-style:dashed}
+.slots .arrow{font-family:var(--f-display);font-size:26px;color:var(--muted)}
+.dirnote{text-align:center;color:var(--muted);font-weight:600}
+.match{display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;direction:rtl;max-width:360px;margin:0 auto;width:100%}
+.match .col{display:flex;flex-direction:column;gap:10px}
+.match .chip{width:100%}
+.pair1{border-color:var(--ok)!important;background:var(--ok-soft)!important}
+
+/* shapes */
+svg.shape{max-width:100%;height:auto;display:block}
+svg .part{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round}
+svg.click .part{cursor:pointer}
+svg.click .part:hover{opacity:.85}
+.shape-wrap{display:flex;flex-direction:column;align-items:center;gap:6px}
+.caption{font-size:15px;color:var(--muted);font-weight:600}
+.set{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;border:2px solid var(--line);border-radius:16px;padding:10px;max-width:420px;direction:rtl}
+.set .grp{display:flex;gap:4px;border:1.5px solid var(--line);border-radius:10px;padding:4px}
+.item{width:52px;height:52px;display:grid;place-items:center;font-size:36px;border-radius:12px;border:2.5px solid transparent;background:none;padding:0;line-height:1}
+.set.small .item{width:38px;height:38px;font-size:26px}
+.item.pick{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 16%,transparent)}
+.item[disabled]{cursor:default}
+.counter{text-align:center;font-weight:600;color:var(--muted)}
+.wall{width:100%;max-width:440px;direction:rtl;display:flex;flex-direction:column;border:2px solid var(--ink);border-radius:4px;overflow:hidden}
+.wall .row{display:flex}
+.wall .cell{flex:1;border:1px solid var(--ink);display:grid;place-items:center;padding:3px 0;background:var(--card)}
+.wall .cell .fr{font-size:15px}
+.wall .row:nth-child(1) .cell{background:color-mix(in srgb,var(--yellow) 45%,var(--card))}
+.wall .row:nth-child(2) .cell{background:color-mix(in srgb,var(--green) 22%,var(--card))}
+.wall .row:nth-child(3) .cell{background:color-mix(in srgb,var(--blue) 18%,var(--card))}
+.wall .row:nth-child(4) .cell{background:color-mix(in srgb,var(--pink) 16%,var(--card))}
+
+/* feedback */
+.fb{border-radius:14px;padding:12px 16px;font-weight:600;display:flex;gap:10px;align-items:flex-start}
+.fb.ok{background:var(--ok-soft);color:var(--ok)}
+.fb.no{background:var(--bad-soft);color:var(--bad)}
+.fb .tip{color:var(--ink);font-weight:500;display:block}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{background:var(--green);color:#fff;border:none;border-radius:999px;padding:10px 30px;font-weight:700;font-size:19px;font-family:var(--f-display)}
+.btn:disabled{opacity:.4;cursor:default}
+.btn.ghost{background:var(--card);color:var(--green);border:2px solid var(--green)}
+
+/* result */
+.result{text-align:center;align-items:center}
+.result .big{font-family:var(--f-display);font-size:64px;font-weight:800;color:var(--green);line-height:1;direction:rtl}
+.result .stars{font-size:44px}
+.result h2{font-family:var(--f-display);font-size:30px;margin:0;color:var(--ink)}
+
+@media (max-width:480px){
+  body{font-size:16px}
+  .card{padding:16px}
+  .q{font-size:19px}
+  .eq{font-size:24px}
+  .cmp .fr{font-size:34px}
+  .sign{width:64px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap" id="app" dir="rtl" lang="ar">
+  <header class="top">
+    <div class="brand">
+      <span class="tab">الوحدة الرابعة · الصف الثالث</span>
+      <h1>مغامرة الكسور</h1>
+    </div>
+    <div class="tools">
+      <span class="pill" title="مجموع النجوم"><span style="color:#F5B400">★</span> <span id="totalStars">0 / 27</span></span>
+      <button class="iconbtn" id="soundBtn" aria-pressed="true">الصوت: يعمل</button>
+    </div>
+  </header>
+  <main id="view"></main>
+</div>
+
+<script>
+(function(){
+"use strict";
+/* ---------- helpers ---------- */
+const $ = (s,r=document)=>r.querySelector(s);
+const F = (n,d)=>`<span class="fr"><b>${n}</b><i>${d}</i></span>`;
+const shuffle = a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const range=(a,b)=>{const r=[];for(let i=a;i<=b;i++)r.push(i);return r;};
+const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v);}catch(e){return d;}},
+             set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}};
+
+/* ---------- sound ---------- */
+let soundOn = store.get("fr-sound",true), actx=null;
+function beep(good){
+  if(!soundOn) return;
+  try{
+    actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+    const notes = good? [523,659,784] : [330,247];
+    notes.forEach((f,i)=>{
+      const o=actx.createOscillator(), g=actx.createGain();
+      o.type = good? "triangle":"sine"; o.frequency.value=f;
+      const t=actx.currentTime+i*0.11;
+      g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.18,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.2);
+      o.connect(g).connect(actx.destination); o.start(t); o.stop(t+0.22);
+    });
+  }catch(e){}
+}
+function paintSound(){const b=$("#soundBtn");b.textContent= soundOn?"الصوت: يعمل":"الصوت: متوقف";b.setAttribute("aria-pressed",soundOn);}
+$("#soundBtn").addEventListener("click",()=>{soundOn=!soundOn;store.set("fr-sound",soundOn);paintSound();});
+paintSound();
+
+/* ---------- shapes ---------- */
+const COL={shade:"var(--shade)",pink:"var(--pink)",blue:"var(--blue)",green:"var(--green)",empty:"var(--empty)"};
+// shaded: array of colour keys per part (or null)
+function pie(n,shaded=[],opt={}){
+  const size=opt.size||170, r=size/2-4, cx=size/2, cy=size/2;
+  let s="";
+  for(let i=0;i<n;i++){
+    const fill=COL[shaded[i]]||COL.empty;
+    if(n===1){s+=`<circle class="part" data-i="0" cx="${cx}" cy="${cy}" r="${r}" fill="${fill}"/>`;continue;}
+    const a0=-Math.PI/2+i*2*Math.PI/n, a1=a0+2*Math.PI/n;
+    const x0=cx+r*Math.cos(a0), y0=cy+r*Math.sin(a0), x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
+    const large=(a1-a0)>Math.PI?1:0;
+    s+=`<path class="part" data-i="${i}" d="M${cx},${cy} L${x0.toFixed(2)},${y0.toFixed(2)} A${r},${r} 0 ${large} 1 ${x1.toFixed(2)},${y1.toFixed(2)} Z" fill="${fill}"/>`;
+  }
+  return `<svg class="shape${opt.click?" click":""}" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="دائرة مقسمة إلى ${n} أجزاء">${s}</svg>`;
+}
+function bar(n,shaded=[],opt={}){
+  const w=opt.w||Math.min(380,n*56), h=opt.h||70, pw=(w-4)/n; let s="";
+  for(let i=0;i<n;i++){const fill=COL[shaded[i]]||COL.empty;
+    s+=`<rect class="part" data-i="${i}" x="${(2+i*pw).toFixed(2)}" y="2" width="${pw.toFixed(2)}" height="${h-4}" fill="${fill}"/>`;}
+  return `<svg class="shape${opt.click?" click":""}" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="شريط مقسم إلى ${n} أجزاء">${s}</svg>`;
+}
+function grid(r,c,shaded=[],opt={}){
+  const cw=opt.cell||54, w=c*cw+4, h=r*cw+4; let s="",k=0;
+  for(let y=0;y<r;y++)for(let x=0;x<c;x++,k++){const fill=COL[shaded[k]]||COL.empty;
+    s+=`<rect class="part" data-i="${k}" x="${2+x*cw}" y="${2+y*cw}" width="${cw}" height="${cw}" fill="${fill}"/>`;}
+  return `<svg class="shape${opt.click?" click":""}" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="مستطيل مقسم إلى ${r*c} أجزاء">${s}</svg>`;
+}
+const sh=(k,c="shade")=>Array(k).fill(c);
+function fish(color){
+  return `<svg width="44" height="30" viewBox="0 0 44 30" aria-hidden="true"><path d="M30 15 L43 5 L43 25 Z" fill="${color}" stroke="#1C2A22" stroke-width="1.5"/><ellipse cx="18" cy="15" rx="17" ry="11" fill="${color}" stroke="#1C2A22" stroke-width="1.5"/><circle cx="9" cy="12" r="2.6" fill="#fff"/><circle cx="8.6" cy="12" r="1.3" fill="#1C2A22"/></svg>`;
+}
+const FISH={red:fish("#F2662B"),green:fish("#3BB54A"),blue:fish("#5A8FE0")};
+// items: array of strings (emoji or svg); groups: optional number of boxes
+function setVis(items,opt={}){
+  const cls="set"+(opt.small?" small":"");
+  const btn=(it,i)=> opt.click? `<button class="item" data-i="${i}" aria-label="عنصر ${i+1}">${it}</button>` : `<span class="item">${it}</span>`;
+  if(opt.groups){
+    const per=items.length/opt.groups; let s="";
+    for(let g=0;g<opt.groups;g++) s+=`<div class="grp">${items.slice(g*per,(g+1)*per).map((it,j)=>btn(it,g*per+j)).join("")}</div>`;
+    return `<div class="${cls}">${s}</div>`;
+  }
+  return `<div class="${cls}">${items.map(btn).join("")}</div>`;
+}
+const rep=(it,n)=>Array(n).fill(it);
+function wall(dens){
+  return `<div class="wall">${dens.map(d=>`<div class="row">${range(1,d).map(()=>`<div class="cell">${d===1?'<b style="font-family:var(--f-display)">1</b>':F(1,d)}</div>`).join("")}</div>`).join("")}</div>`;
+}
+const cap=(html,c)=>`<div class="shape-wrap">${html}<span class="caption">${c}</span></div>`;
+
+/* ---------- question bank (from the textbook, unit 4, pp. 74–95) ---------- */
+const L = [
+{ id:1, name:"كسور الوحدة", page:"74–76", qs:[
+  {t:"mcq", q:"دائرة قُسمت إلى جزأين متطابقين. كل جزء منهما يُسمّى:", vis:pie(2,["green"]), opts:["نصفاً","ثلثاً","ربعاً","ثمناً"], a:0,
+   tip:`جزء واحد من جزأين متطابقين يُكتب ${F(1,2)} ويُقرأ نصف.`},
+  {t:"mcq", q:"ما الكسر الدال على الجزء الملوّن؟", vis:pie(4,["blue"]), opts:[F(1,4),F(1,3),F(4,1),F(1,2)], a:0,
+   tip:"جزء واحد ملوّن من 4 أجزاء متطابقة."},
+  {t:"color", q:`لوّن الجزء الذي يمثل الكسر ${F(1,5)}`, shape:"pie", n:5, need:1},
+  {t:"color", q:`لوّن الجزء الذي يمثل الكسر ${F(1,8)}`, shape:"pie", n:8, need:1},
+  {t:"mcq", q:"اكتب الكسر الدال على الجزء الملوّن:", vis:pie(3,["shade"]), opts:[F(1,3),F(3,1),F(1,2),F(2,3)], a:0,
+   tip:"البسط = عدد الأجزاء الملوّنة (1)، والمقام = عدد الأجزاء المتطابقة جميعها (3)."},
+  {t:"mcq", q:"اكتب الكسر الدال على الجزء الملوّن:", vis:pie(10,["green"]), opts:[F(1,10),F(1,9),F(10,1),F(1,8)], a:0,
+   tip:"عُدّ الأجزاء كلها: 10 أجزاء، الملوّن منها جزء واحد."},
+  {t:"fill", q:"اكتب رمز الكسر: سُدس", expr:`<span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[1,6], opts:[range(1,9),range(1,9)]},
+  {t:"fill", q:"اكتب رمز الكسر: تُسع", expr:`<span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[1,9], opts:[range(1,9),range(1,9)]},
+  {t:"mcq", q:`كيف نقرأ الكسر ${F(1,7)}؟`, opts:["سُبع","سُدس","تُسع","ثُمن"], a:0},
+  {t:"mcq", q:`كيف نقرأ الكسر ${F(1,8)}؟`, opts:["ثُمن","ربع","ثلث","سُبع"], a:0},
+]},
+{ id:2, name:"الكسور الدالة على أكثر من جزء", page:"76–79", qs:[
+  {t:"mcq", q:"ما الكسر الدال على الجزء الملوّن؟", vis:pie(4,sh(3,"blue")), opts:[F(3,4),F(1,4),F(4,3),F(3,3)], a:0,
+   tip:`3 أجزاء ملوّنة من 4 أجزاء متطابقة: ${F(3,4)} ويُقرأ ثلاثة أرباع.`},
+  {t:"mcq", q:"ما الكسر الدال على الجزء الملوّن؟", vis:pie(6,sh(5,"blue")), opts:[F(5,6),F(6,5),F(1,6),F(5,5)], a:0,
+   tip:`5 أجزاء ملوّنة من 6 أجزاء: ${F(5,6)} ويُقرأ خمسة أسداس.`},
+  {t:"mcq", q:"كيف نقرأ الكسر الدال على الجزء الملوّن؟", vis:pie(6,["shade",null,null,"shade",null,null]), opts:["سُدسان","ثلاثة أسداس","سُدس","ثلثان"], a:0,
+   tip:`جزءان ملوّنان من 6 أجزاء: ${F(2,6)} ويُقرأ سُدسان.`},
+  {t:"color", q:`لوّن الأجزاء التي تمثل الكسر ${F(2,3)}`, shape:"pie", n:3, need:2},
+  {t:"color", q:`لوّن الأجزاء التي تمثل الكسر ${F(7,10)}`, shape:"pie", n:10, need:7},
+  {t:"fill", q:"أكمل:", expr:`<span>في الكسر ${F(3,10)} : البسط = {0} ، المقام = {1}</span>`, ans:[3,10], opts:[range(1,10),range(1,10)], rtlExpr:true},
+  {t:"fill", q:"اكتب الكسر: ثلاثة أتساع", expr:`<span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[3,9], opts:[range(1,9),range(1,9)]},
+  {t:"fill", q:"اكتب الكسر: أربعة أسباع", expr:`<span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[4,7], opts:[range(1,9),range(1,9)]},
+  {t:"mcq", q:"عدّ الأجزاء الملوّنة واكتب الكسر الدال عليها:", vis:bar(5,sh(5,"blue"),{w:300}), opts:[F(5,5)+"&nbsp; = 1",F(1,5),F(4,5),F(5,1)+"&nbsp; = 0"], a:0,
+   tip:"الكسر الدال على الكل يساوي دائماً 1."},
+  {t:"mcq", q:"ضع دائرة حول الكسر الممثل للجزء الملوّن:", vis:pie(4,sh(3,"green")), opts:[F(3,4),F(1,3),F(1,4),F(1,2)], a:0},
+]},
+{ id:3, name:"الكسور كأجزاء من مجموعة", page:"80–82", qs:[
+  {t:"mcq", q:"ما الكسر الذي يمثل القطع الصفراء؟", vis:setVis(["🟡","🟡","🟡","🔴","🔴"]), opts:[F(3,5),F(2,5),F(3,2),F(5,3)], a:0,
+   tip:"عدد القطع الصفراء (3) هو البسط، وعدد القطع كلها (5) هو المقام."},
+  {t:"mcq", q:"ما الكسر الذي يمثل السمكات الحمراء؟", vis:setVis([...rep(FISH.red,3),...rep(FISH.green,4),...rep(FISH.blue,2)],{small:true}), opts:[F(3,9),F(4,9),F(2,9),F(3,6)], a:0},
+  {t:"mcq", q:"ما الكسر الذي يمثل السمكات الخضراء؟", vis:setVis([...rep(FISH.red,3),...rep(FISH.green,4),...rep(FISH.blue,2)],{small:true}), opts:[F(4,9),F(3,9),F(5,9),F(4,5)], a:0},
+  {t:"fill", q:"اكتب الكسر الممثل للسمكات الحمراء والزرقاء معاً:", vis:setVis([...rep(FISH.red,3),...rep(FISH.green,4),...rep(FISH.blue,2)],{small:true}),
+   expr:`<span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,9], opts:[range(1,9),range(1,9)]},
+  {t:"mcq", q:"ما الكسر الممثل للعناصر الحمراء في المجموعة؟", vis:setVis([...rep(FISH.red,4),...rep(FISH.green,3)],{small:true}), opts:[F(4,7),F(3,7),F(4,3),F(7,4)], a:0},
+  {t:"mcq", q:"ما الكسر الممثل للتفاح الأحمر؟", vis:setVis([...rep("🍎",2),...rep("🍏",6)],{small:true}), opts:[F(2,8),F(6,8),F(2,6),F(8,2)], a:0},
+  {t:"set", q:`احصر ${F(2,5)} التفاح (اختر العدد المناسب من التفاح)`, items:rep("🍎",5), need:2},
+  {t:"set", q:`احصر ${F(4,9)} الأكواب`, items:rep("☕",9), need:4},
+  {t:"set", q:`احصر ${F(5,8)} البرتقال`, items:rep("🍊",8), need:5},
+  {t:"fill", q:"أكمل:", vis:setVis(rep("🫑",6),{groups:3,small:true}), expr:`<span>${F(1,3)} الـ 6 = {0} &nbsp;لأن&nbsp; <span>6 ÷ 3 = {1}</span></span>`, ans:[2,2], rtlExpr:true},
+  {t:"fill", q:"أكمل:", vis:setVis(rep("🫑",12),{groups:4,small:true}), expr:`<span>${F(1,4)} الـ 12 = {0} &nbsp;لأن&nbsp; <span>12 ÷ 4 = {1}</span></span>`, ans:[3,3], rtlExpr:true},
+  {t:"fill", q:"أكمل:", expr:`<span>${F(1,2)} الـ 14 = {0}</span>`, ans:[7], rtlExpr:true},
+  {t:"fill", q:"أكمل:", expr:`<span>${F(1,3)} الـ 12 = {0}</span>`, ans:[4], rtlExpr:true},
+]},
+{ id:4, name:"الكسور المتكافئة", page:"83–85", qs:[
+  {t:"fill", q:"لاحظ الجدول ثم أكمل:", vis:wall([1,2,4,8]), expr:`${F(1,2)} = <span class="fr"><b>{0}</b><i>4</i></span>`, ans:[2]},
+  {t:"fill", q:"لاحظ الجدول ثم أكمل:", vis:wall([1,2,4,8]), expr:`${F(3,4)} = <span class="fr"><b>{0}</b><i>8</i></span>`, ans:[6]},
+  {t:"fill", q:"لاحظ الجدول ثم أكمل:", vis:wall([1,3,6]), expr:`${F(2,3)} = <span class="fr"><b>{0}</b><i>6</i></span>`, ans:[4]},
+  {t:"fill", q:"أكمل:", vis:cap(bar(2,["shade"],{w:240,h:50}),F(1,2))+cap(bar(6,sh(3),{w:240,h:50}),"؟"), expr:`${F(1,2)} = <span class="fr"><b>{0}</b><i>6</i></span>`, ans:[3]},
+  {t:"fill", q:"أكمل:", expr:`1 = <span class="fr"><b>{0}</b><i>4</i></span> = <span class="fr"><b>{1}</b><i>6</i></span> = <span class="fr"><b>{2}</b><i>8</i></span>`, ans:[4,6,8]},
+  {t:"cmp", q:"ضع إشارة = بين الكسرين المتكافئين، وإشارة ≠ بين غير المتكافئين:", a:[2,8], b:[1,4], signs:["=","≠"]},
+  {t:"cmp", q:"ضع إشارة = بين الكسرين المتكافئين، وإشارة ≠ بين غير المتكافئين:", a:[3,5], b:[6,10], signs:["=","≠"]},
+  {t:"cmp", q:"ضع إشارة = بين الكسرين المتكافئين، وإشارة ≠ بين غير المتكافئين:", a:[4,9], b:[1,2], signs:["=","≠"]},
+  {t:"cmp", q:"ضع إشارة = بين الكسرين المتكافئين، وإشارة ≠ بين غير المتكافئين:", a:[3,4], b:[6,8], signs:["=","≠"]},
+  {t:"match", q:"صِل بين كل كسرين متكافئين:", pairs:[[[1,3],[2,6]],[[2,3],[4,6]],[[3,5],[6,10]],[[4,4],[8,8]]]},
+  {t:"fill", q:"أكمل بكتابة العدد المناسب:", expr:`${F(1,2)} = <span class="fr"><b>{0}</b><i>10</i></span>`, ans:[5]},
+  {t:"fill", q:"أكمل بكتابة العدد المناسب:", expr:`${F(2,3)} = <span class="fr"><b>4</b><i>{0}</i></span>`, ans:[6]},
+  {t:"mcq", q:"عند ضرب بسط كسر ومقامه في العدد نفسه ينتج:", opts:["كسر مكافئ له","كسر أكبر منه","كسر أصغر منه","العدد 1 دائماً"], a:0},
+  {t:"mcq", q:`أي الكسور الآتية يكافئ ${F(3,4)}؟`, opts:[F(6,8),F(3,8),F(4,3),F(6,4)], a:0, tip:`${F(3,4)} = ${F("3×2","4×2")} = ${F(6,8)}`},
+]},
+{ id:5, name:"اختصار الكسور", page:"85–87", qs:[
+  {t:"fill", q:`اختصر لأبسط صورة: قسّم البسط والمقام على 6`, expr:`${F(12,18)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[2,3]},
+  {t:"mcq", q:`ماذا فعلنا لبسط ومقام الكسر ${F(4,12)} لنحصل على ${F(1,3)}؟`, opts:["قسمنا كلاً منهما على 4","ضربنا كلاً منهما في 4","طرحنا 3 من كل منهما","قسمنا كلاً منهما على 3"], a:0},
+  {t:"mcq", q:`اختصر لأبسط صورة: ${F(12,16)}`, opts:[F(3,4),F(6,8),F(2,3),F(4,3)], a:0, tip:"نقسم البسط والمقام على 4."},
+  {t:"mcq", q:`اختصر لأبسط صورة: ${F(16,40)}`, opts:[F(2,5),F(8,20),F(4,10),F(1,4)], a:0, tip:"نقسم البسط والمقام على 8."},
+  {t:"mcq", q:`اختصر لأبسط صورة: ${F(18,42)}`, opts:[F(3,7),F(9,21),F(6,14),F(2,7)], a:0, tip:"نقسم البسط والمقام على 6."},
+  {t:"mcq", q:`اختصر لأبسط صورة: ${F(36,40)}`, opts:[F(9,10),F(18,20),F(6,8),F(3,4)], a:0, tip:"نقسم البسط والمقام على 4."},
+  {t:"mcq", q:`اختصر لأبسط صورة: ${F(15,18)}`, opts:[F(5,6),F(3,6),F(5,9),F(1,3)], a:0, tip:"نقسم البسط والمقام على 3."},
+  {t:"multi", q:"اختر جميع الكسور المكتوبة في أبسط صورة:", items:[[5,8],[3,18],[2,5],[6,9],[7,11]], ans:[0,2,4],
+   tip:`${F(3,18)} و ${F(6,9)} يقبل بسط كل منهما ومقامه القسمة على 3.`},
+  {t:"mcq", q:"أي الكسور الآتية غير قابل للاختصار؟", opts:[F(3,7),F(5,10),F(15,18),F(12,16)], a:0, tip:"البسط 3 والمقام 7 لا يقبلان القسمة على عدد واحد غير 1."},
+  {t:"mcq", q:"قاعدة: لا تتغير قيمة الكسر إذا ............ كل من بسطه ومقامه على العدد نفسه.", opts:["قسمنا","جمعنا","طرحنا","كتبنا"], a:0},
+]},
+{ id:6, name:"مقارنة الكسور", page:"88–92", qs:[
+  {t:"cmp", q:"ظلّل حسب الكسر وضع العلامة المناسبة:", vis:cap(pie(3,["shade"],{size:120}),F(1,3))+cap(pie(2,["shade"],{size:120}),F(1,2)), a:[1,3], b:[1,2]},
+  {t:"cmp", q:"ضع العلامة المناسبة:", vis:cap(bar(4,sh(3),{w:200,h:46}),F(3,4))+cap(bar(2,["shade"],{w:200,h:46}),F(1,2)), a:[3,4], b:[1,2]},
+  {t:"cmp", q:"اكتب < أو > :", a:[1,3], b:[1,8]},
+  {t:"cmp", q:"اكتب < أو > :", a:[1,5], b:[1,4]},
+  {t:"cmp", q:"اكتب < أو > :", a:[1,7], b:[1,8]},
+  {t:"cmp", q:"اكتب < أو > :", a:[1,12], b:[1,6]},
+  {t:"cmp", q:"المقامان متساويان، فقارن البسطين:", a:[1,5], b:[3,5]},
+  {t:"cmp", q:"المقامان متساويان، فقارن البسطين:", a:[7,9], b:[5,9]},
+  {t:"cmp", q:"المقامان متساويان، فقارن البسطين:", a:[2,10], b:[3,10]},
+  {t:"cmp", q:`اكتب الكسر المكافئ أولاً (${F(1,2)} = ${F(4,8)}) ثم قارن:`, vis:cap(bar(8,sh(4,"pink"),{w:260,h:44}),F(4,8))+cap(bar(8,sh(3,"pink"),{w:260,h:44}),F(3,8)), a:[1,2], b:[3,8]},
+  {t:"cmp", q:`اكتب الكسر المكافئ أولاً (${F(4,5)} = ${F(8,10)}) ثم قارن:`, a:[4,5], b:[9,10]},
+  {t:"fill", q:"أكمل النمط:", expr:`${F(1,5)} , ${F(2,5)} , ${F(3,5)} , <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[4,5], opts:[range(1,10),range(1,10)]},
+  {t:"fill", q:"أكمل النمط:", expr:`${F(8,9)} , ${F(7,9)} , ${F(6,9)} , <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,9], opts:[range(1,10),range(1,10)]},
+  {t:"order", q:"رتّب تصاعدياً من الأصغر إلى الأكبر:", items:[[2,5],[4,5],[1,5]], dir:"asc"},
+  {t:"order", q:"رتّب تصاعدياً من الأصغر إلى الأكبر:", items:[[2,7],[5,7],[3,7]], dir:"asc"},
+  {t:"order", q:"رتّب تنازلياً من الأكبر إلى الأصغر:", items:[[4,6],[1,3],[3,3]], dir:"desc"},
+  {t:"order", q:"رتّب تنازلياً من الأكبر إلى الأصغر:", items:[[3,4],[7,8],[1,2]], dir:"desc"},
+  {t:"mcq", q:"عند مقارنة كسرين لهما المقام نفسه، يكون الكسر الأكبر هو الذي:", opts:["بسطه أكبر","بسطه أصغر","مقامه أكبر","مقامه أصغر"], a:0},
+  {t:"mcq", q:"حين يزيد عدد الأجزاء المتساوية التي يُقسم إليها الواحد الصحيح، يصير الكسر:", opts:["أصغر","أكبر","مساوياً للواحد","لا يتغير"], a:0},
+]},
+{ id:7, name:"جمع الكسور متساوية المقامات", page:"93–94", qs:[
+  {t:"mcq", q:`لوّن تلميذ ${F(3,8)} القرص بالأحمر ثم ${F(2,8)} القرص بالأزرق. ما الكسر الدال على الجزء الملوّن؟`,
+   vis:pie(8,["pink","pink","pink","blue","blue"]), opts:[F(5,8),F(5,16),F(1,8),F(6,8)], a:0,
+   tip:`${F(3,8)} + ${F(2,8)} = ${F(5,8)} : نجمع البسطين ونترك المقام كما هو.`},
+  {t:"fill", q:"اكتب ناتج الجمع مستعيناً بالرسم:", vis:bar(3,["pink","blue"],{w:240}), expr:`${F(1,3)} + ${F(1,3)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[2,3], opts:[range(1,12),range(1,12)]},
+  {t:"fill", q:"اكتب ناتج الجمع مستعيناً بالرسم:", vis:bar(5,["pink","blue","blue"],{w:300}), expr:`${F(1,5)} + ${F(2,5)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[3,5], opts:[range(1,12),range(1,12)]},
+  {t:"fill", q:"اكتب ناتج الجمع مستعيناً بالرسم:", vis:grid(2,4,["pink","blue","blue","blue","blue"],{cell:50}), expr:`${F(1,8)} + ${F(4,8)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,8], opts:[range(1,12),range(1,12)]},
+  {t:"fill", q:"اكتب ناتج الجمع:", expr:`${F(7,10)} + ${F(2,10)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[9,10], opts:[range(1,20),range(1,20)]},
+  {t:"fill", q:"اكتب ناتج الجمع:", expr:`${F(2,5)} + ${F(3,5)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,5], opts:[range(1,12),range(1,12)], tip:`${F(5,5)} = 1`},
+  {t:"fill", q:"اكتب ناتج الجمع:", expr:`${F(3,7)} + ${F(2,7)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,7], opts:[range(1,14),range(1,14)]},
+  {t:"mcq", q:`${F(3,8)} + ${F(2,8)} = ؟`, opts:[F(5,8),F(5,16),F(6,16),F(1,8)], a:0, tip:"لا نجمع المقامين! المقام يبقى 8."},
+  {t:"mcq", q:"ناتج جمع كسرين متساويين في المقام هو كسر:", opts:["بسطه = ناتج جمع البسطين، ومقامه هو المقام نفسه","بسطه = ناتج جمع البسطين، ومقامه = ناتج جمع المقامين","بسطه هو البسط نفسه، ومقامه = ناتج جمع المقامين","بسطه = 1 دائماً"], a:0},
+]},
+{ id:8, name:"طرح الكسور متساوية المقامات", page:"95", qs:[
+  {t:"mcq", q:`مع طفل ${F(3,4)} رغيفة، أكل ${F(1,4)} الرغيفة. كم بقي معه؟`, vis:bar(4,sh(3),{w:260}), opts:[F(2,4)+" = نصف الرغيف",F(4,4),F(3,4),F(1,4)], a:0,
+   tip:`${F(3,4)} − ${F(1,4)} = ${F(2,4)} = ${F(1,2)}`},
+  {t:"fill", q:`الشكل المظلل يمثل ${F(4,6)}. إذا طرحنا منه ${F(3,6)} يكون:`, vis:bar(6,sh(4),{w:330}), expr:`${F(4,6)} − ${F(3,6)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[1,6], opts:[range(0,12),range(1,12)]},
+  {t:"fill", q:"اكتب باقي الطرح:", expr:`${F(6,7)} − ${F(2,7)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[4,7], opts:[range(0,12),range(1,12)]},
+  {t:"fill", q:"اكتب باقي الطرح:", expr:`${F(5,8)} − ${F(2,8)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[3,8], opts:[range(0,12),range(1,12)]},
+  {t:"fill", q:"اكتب باقي الطرح:", expr:`${F(5,9)} − ${F(3,9)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[2,9], opts:[range(0,12),range(1,12)]},
+  {t:"fill", q:"اكتب باقي الطرح:", expr:`${F(5,6)} − ${F(4,6)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[1,6], opts:[range(0,12),range(1,12)]},
+  {t:"mcq", q:`${F(6,7)} − ${F(2,7)} = ؟`, opts:[F(4,7),F(3,7),F(8,7),F(4,14)], a:0, tip:"نطرح البسطين فقط، والمقام يبقى 7."},
+  {t:"mcq", q:"باقي طرح كسرين متساويين في المقام هو كسر:", opts:["بسطه = ناتج طرح البسطين، ومقامه مقام الكسرين نفسه","بسطه = ناتج طرح البسطين، ومقامه = ناتج طرح المقامين","بسطه ومقامه = صفر","مقامه = ناتج جمع المقامين"], a:0},
+]},
+];
+const FINAL={id:9,name:"التحدي الشامل",page:"74–95"};
+
+/* ---------- state ---------- */
+let best = store.get("fr-best",{});
+let S = null; // {lesson, list, i, score, done}
+
+function starsFor(p){return p>=0.9?3:p>=0.7?2:p>=0.4?1:0;}
+function starStr(n){return [0,1,2].map(i=>`<span class="${i<n?"on":""}">★</span>`).join("");}
+function updateTotal(){
+  const t=[...L,FINAL].reduce((s,l)=>s+(best[l.id]||0),0);
+  $("#totalStars").textContent=`${t} / ${(L.length+1)*3}`;
+}
+const ORD=["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن"];
+
+/* ---------- map ---------- */
+function showMap(){
+  S=null;
+  const minis=[pie(2,["green"],{size:44}),pie(4,sh(3,"blue"),{size:44}),pie(5,sh(3),{size:44}),pie(4,sh(2,"green"),{size:44}),
+               pie(6,sh(2,"pink"),{size:44}),pie(8,sh(5,"blue"),{size:44}),pie(8,["pink","pink","pink","blue","blue"],{size:44}),pie(4,sh(2),{size:44})];
+  $("#view").innerHTML = `
+    <p class="sub">اختر درساً. كل درس من تمارين كتاب الرياضيات للصف الثالث (المنهج السوداني)، وتربح حتى 3 نجوم.</p>
+    <div class="map" style="margin-top:14px">
+      ${L.map((l,i)=>`
+        <button class="lesson" data-l="${l.id}">
+          <span class="ln"><span class="tab">الدرس ${ORD[i]}</span><span class="pie-mini">${minis[i]}</span></span>
+          <span class="nm">${l.name}</span>
+          <span class="ln"><span class="pg">ص ${l.page} · ${l.qs.length} سؤالاً</span><span class="stars">${starStr(best[l.id]||0)}</span></span>
+        </button>`).join("")}
+      <button class="lesson final" data-l="9">
+        <span class="ln"><span class="tab">كل الدروس</span><span class="stars">${starStr(best[9]||0)}</span></span>
+        <span class="nm">${FINAL.name}</span>
+        <span class="pg">12 سؤالاً عشوائياً من الدروس الثمانية</span>
+      </button>
+    </div>`;
+  $("#view").querySelectorAll(".lesson").forEach(b=>b.addEventListener("click",()=>start(+b.dataset.l)));
+  updateTotal();
+}
+
+function start(id){
+  let lesson, list;
+  if(id===9){
+    lesson=FINAL;
+    // 12 questions: 2 from each of lessons 1–4, 1 from each of lessons 5–8
+    list = shuffle(L.flatMap((l,li)=>shuffle(l.qs).slice(0, li<4?2:1).map(q=>({...q,_l:li}))));
+  } else {
+    lesson=L.find(l=>l.id===id);
+    list=lesson.qs.map(q=>({...q,_l:id-1}));
+  }
+  S={lesson,list,i:0,score:0};
+  renderQ();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+/* ---------- question rendering ---------- */
+const LET=["أ","ب","ج","د"];
+// logical relation "right REL left" -> glyph drawn so its point faces the smaller fraction, as in the book
+const VIS=s=> s==="<"?">":s===">"?"<":s;
+const G=s=>`<bdi dir="ltr">${VIS(s)}</bdi>`;
+const PRAISE=["أحسنت!","ممتاز!","رائع!","إجابة صحيحة!","بطل الكسور!"];
+const TYPE={mcq:"اختيار من متعدد",color:"لوّن",set:"احصر",fill:"أكمل",cmp:"قارن",order:"رتّب",match:"صِل",multi:"اختر الكل"};
+
+function renderQ(){
+  const q=S.list[S.i], n=S.list.length;
+  const li=q._l; S.wrong=0;
+  $("#view").innerHTML=`
+    <div class="bar">
+      <button class="back" id="backBtn">→ الدروس</button>
+      <div class="prog" aria-hidden="true"><i style="width:${(S.i/n)*100}%"></i></div>
+      <span class="count">${S.i+1} / ${n}</span>
+    </div>
+    <section class="card" style="margin-top:14px">
+      <div class="qhead"><span class="tab">الدرس ${ORD[li]} · ${L[li].name}</span><span class="qtype">${TYPE[q.t]}</span></div>
+      <p class="q">${q.q}</p>
+      <div id="body" style="display:flex;flex-direction:column;gap:16px"></div>
+      <div id="fb"></div>
+      <div class="actions" id="acts"></div>
+    </section>`;
+  $("#backBtn").addEventListener("click",showMap);
+  const body=$("#body");
+  if(q.vis) body.insertAdjacentHTML("beforeend",`<div class="vis">${q.vis}</div>`);
+  R[q.t](q,body);
+}
+
+const AGAIN=["حاول مرة أخرى","فكّر جيداً وحاول مرة أخرى","اقتربت! حاول مرة أخرى"];
+// wrong answer: never show the answer, let the pupil try again
+function wrong(hint=""){
+  S.wrong++; beep(false);
+  $("#fb").innerHTML=`<div class="fb no"><span>✗</span><span>${AGAIN[Math.min(S.wrong-1,AGAIN.length-1)]}${hint?`<span class="tip">${hint}</span>`:""}</span></div>`;
+}
+// right answer: point only if it was right from the first try
+function correct(q,note=""){
+  if(S.wrong===0) S.score++;
+  beep(true);
+  const tip = q.tip? `<span class="tip">${q.tip}</span>`:"";
+  const extra = S.wrong>0? `<span class="tip">وصلت إلى الإجابة الصحيحة بعد ${S.wrong+1} محاولات.</span>`:"";
+  $("#fb").innerHTML=`<div class="fb ok"><span>✓</span><span>${PRAISE[Math.floor(Math.random()*PRAISE.length)]} ${note}${extra}${tip}</span></div>`;
+  const last = S.i===S.list.length-1;
+  $("#acts").innerHTML=`<button class="btn" id="nextBtn">${last?"النتيجة":"التالي ←"}</button>`;
+  $("#nextBtn").addEventListener("click",()=>{ if(last) showResult(); else {S.i++;renderQ();} });
+  $("#nextBtn").focus({preventScroll:true});
+}
+function checkBtn(onCheck,enabled=true){
+  $("#acts").innerHTML=`<button class="btn" id="chk"${enabled?"":" disabled"}>تحقّق</button>`;
+  $("#chk").addEventListener("click",onCheck);
+  return $("#chk");
+}
+
+const R={
+  mcq(q,body){
+    const order=shuffle(q.opts.map((o,i)=>i));
+    body.insertAdjacentHTML("beforeend",`<div class="opts">${order.map((oi,k)=>`<button class="opt" data-oi="${oi}"><span class="L">${LET[k]}</span><span class="C">${q.opts[oi]}</span></button>`).join("")}</div>`);
+    body.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
+      if(+b.dataset.oi===q.a){
+        b.classList.add("right"); body.querySelectorAll(".opt").forEach(x=>x.disabled=true); correct(q);
+      } else { b.classList.add("wrong"); b.disabled=true; wrong(); }
+    }));
+  },
+  color(q,body){
+    const st=Array(q.n).fill(null); let locked=false;
+    const draw=()=> q.shape==="pie"? pie(q.n,st,{click:!locked,size:230}) : bar(q.n,st,{click:!locked});
+    body.insertAdjacentHTML("beforeend",`<div class="vis" id="cv"></div><div class="counter" id="cc"></div>`);
+    const btn=checkBtn(check,false);
+    function paint(){
+      $("#cv").innerHTML=draw();
+      const k=st.filter(Boolean).length;
+      $("#cc").textContent=`عدد الأجزاء الملوّنة: ${k}`;
+      if(locked) return;
+      btn.disabled = k===0;
+      $("#cv").querySelectorAll(".part").forEach(p=>p.addEventListener("click",()=>{const i=+p.dataset.i;st[i]=st[i]?null:"shade";paint();}));
+    }
+    function check(){
+      const k=st.filter(Boolean).length;
+      if(k===q.need){ locked=true; paint(); correct(q); }
+      else wrong("تذكّر: البسط يخبرك كم جزءاً تلوّن، والمقام عدد الأجزاء كلها.");
+    }
+    paint();
+  },
+  set(q,body){
+    const st=Array(q.items.length).fill(false);
+    body.insertAdjacentHTML("beforeend",`<div class="vis">${setVis(q.items,{click:true})}</div><div class="counter" id="cc">اخترت: 0</div>`);
+    const btn=checkBtn(()=>{
+      const k=st.filter(Boolean).length;
+      if(k===q.need){ body.querySelectorAll(".item").forEach(b=>b.disabled=true); correct(q); }
+      else wrong("تذكّر: المقام عدد العناصر كلها، والبسط عدد العناصر التي تختارها.");
+    },false);
+    body.querySelectorAll(".item").forEach(b=>b.addEventListener("click",()=>{
+      const i=+b.dataset.i; st[i]=!st[i]; b.classList.toggle("pick",st[i]);
+      const k=st.filter(Boolean).length; $("#cc").textContent=`اخترت: ${k}`; btn.disabled=k===0;
+    }));
+  },
+  fill(q,body){
+    let html=q.expr;
+    q.ans.forEach((a,k)=>{
+      const opts=(q.opts&&q.opts[k])||range(0,12);
+      html=html.replace(`{${k}}`,`<select class="dd" id="dd${k}" aria-label="الفراغ ${k+1}"><option value="">?</option>${opts.map(o=>`<option value="${o}">${o}</option>`).join("")}</select>`);
+    });
+    body.insertAdjacentHTML("beforeend",`<div class="eqline"><span class="eq"${q.rtlExpr?' style="direction:rtl"':""}>${html}</span></div>`);
+    const sels=q.ans.map((a,k)=>$("#dd"+k,body));
+    const btn=checkBtn(()=>{
+      let ok=true;
+      sels.forEach((s,k)=>{const r=+s.value===q.ans[k]; s.classList.toggle("wrong",!r); if(!r) ok=false;});
+      if(ok){ sels.forEach(s=>{s.disabled=true;s.classList.add("right");}); correct(q); }
+      else wrong(sels.length>1?"الفراغ الملوّن بالأحمر يحتاج إلى تصحيح.":"");
+    },false);
+    sels.forEach(s=>s.addEventListener("change",()=>{s.classList.remove("wrong");btn.disabled=sels.some(x=>x.value==="");}));
+  },
+  cmp(q,body){
+    const signs=q.signs||["<","=",">"];
+    const v=q.a[0]/q.a[1]-q.b[0]/q.b[1];
+    const ans = signs.includes("≠") ? (Math.abs(v)<1e-9?"=":"≠") : (Math.abs(v)<1e-9?"=":v<0?"<":">");
+    body.insertAdjacentHTML("beforeend",`<div class="cmp">${F(...q.a)}<span class="slot" id="slot"></span>${F(...q.b)}</div>
+      <div class="signs">${signs.map(s=>`<button class="sign" data-s="${s}" aria-label="${s==="<"?"أصغر من":s===">"?"أكبر من":s==="="?"يساوي":"لا يساوي"}">${G(s)}</button>`).join("")}</div>`);
+    body.querySelectorAll(".sign").forEach(b=>b.addEventListener("click",()=>{
+      const slot=$("#slot");
+      slot.innerHTML=G(b.dataset.s); slot.classList.remove("right","wrong");
+      if(b.dataset.s===ans){ slot.classList.add("right"); body.querySelectorAll(".sign").forEach(x=>x.disabled=true); correct(q); }
+      else { slot.classList.add("wrong"); b.disabled=true; wrong(signs.includes("≠")?"":"تذكّر: رأس العلامة يتجه نحو الكسر الأصغر.");
+             setTimeout(()=>{ if(slot.classList.contains("wrong")){slot.innerHTML="";slot.classList.remove("wrong");} },900); }
+    }));
+  },
+  order(q,body){
+    const val=x=>x[0]/x[1];
+    const correctOrder=q.items.slice().sort((x,y)=> q.dir==="asc"? val(x)-val(y) : val(y)-val(x));
+    const pool=shuffle(q.items.map((x,i)=>i)); let placed=[], locked=false, marks=[];
+    body.insertAdjacentHTML("beforeend",`<div class="dirnote">${q.dir==="asc"?"الأصغر ← … ← الأكبر":"الأكبر ← … ← الأصغر"} <span style="font-weight:400">(املأ الخانات من اليمين، واضغط على خانة لتفريغها)</span></div>
+      <div class="slots" id="slots"></div><div class="chips" id="pool"></div>`);
+    const btn=checkBtn(check,false);
+    function paint(){
+      $("#slots").innerHTML=q.items.map((x,k)=>{
+        const it=placed[k]; const arrow=k<q.items.length-1?`<span class="arrow">${G(q.dir==="asc"?"<":">")}</span>`:"";
+        return `<button class="chip ${marks[k]||""}" data-k="${k}" aria-label="خانة ${k+1}"${locked?" disabled":""}>${it!=null?F(...q.items[it]):""}</button>${arrow}`;}).join("");
+      $("#pool").innerHTML= locked? "" : pool.map(i=>`<button class="chip${placed.includes(i)?" used":""}" data-i="${i}">${F(...q.items[i])}</button>`).join("");
+      if(locked) return;
+      $("#slots").querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{const k=+b.dataset.k;if(placed[k]!=null){placed.splice(k,1);marks=[];paint();}}));
+      $("#pool").querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{placed.push(+b.dataset.i);marks=[];paint();}));
+      btn.disabled=placed.length!==q.items.length;
+    }
+    function check(){
+      const ok=placed.every((p,k)=>val(q.items[p])===val(correctOrder[k]));
+      if(ok){ locked=true; marks=placed.map(()=> "right"); paint(); correct(q); }
+      else { marks=placed.map(()=> "wrong"); paint(); btn.disabled=false;
+             wrong("اضغط على الخانات لتفريغها ثم رتّب من جديد. "+(q.dir==="asc"?"ابدأ بالكسر الأصغر.":"ابدأ بالكسر الأكبر.")); }
+    }
+    paint();
+  },
+  match(q,body){
+    const right=shuffle(q.pairs.map((p,i)=>i));
+    let sel=null, done=0;
+    body.insertAdjacentHTML("beforeend",`<div class="dirnote" style="font-weight:400">اضغط كسراً من العمود الأول، ثم الكسر المكافئ له من العمود الثاني.</div>
+      <div class="match"><div class="col" id="mL">${q.pairs.map((p,i)=>`<button class="chip" data-i="${i}">${F(...p[0])}</button>`).join("")}</div>
+      <div class="col" id="mR">${right.map(i=>`<button class="chip" data-i="${i}">${F(...q.pairs[i][1])}</button>`).join("")}</div></div>`);
+    $("#acts").innerHTML="";
+    body.querySelectorAll("#mL .chip").forEach(b=>b.addEventListener("click",()=>{
+      body.querySelectorAll("#mL .chip").forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); sel=+b.dataset.i;}));
+    body.querySelectorAll("#mR .chip").forEach(b=>b.addEventListener("click",()=>{
+      if(sel==null){b.classList.add("shake");setTimeout(()=>b.classList.remove("shake"),400);return;}
+      if(+b.dataset.i===sel){
+        const l=body.querySelector(`#mL .chip[data-i="${sel}"]`);
+        [l,b].forEach(x=>{x.classList.remove("sel");x.classList.add("pair1");x.disabled=true;});
+        sel=null; done++; $("#fb").innerHTML="";
+        if(done===q.pairs.length) correct(q,"وصلت كل الكسور المتكافئة.");
+        else if(soundOn) beep(true);
+      } else { b.classList.add("wrong","shake"); setTimeout(()=>b.classList.remove("wrong","shake"),450);
+               wrong("الكسران المتكافئان: نضرب البسط والمقام في العدد نفسه."); }
+    }));
+  },
+  multi(q,body){
+    const st=Array(q.items.length).fill(false);
+    body.insertAdjacentHTML("beforeend",`<div class="chips">${q.items.map((x,i)=>`<button class="chip" data-i="${i}" aria-pressed="false">${F(...x)}</button>`).join("")}</div>`);
+    const btn=checkBtn(()=>{
+      const ok=q.items.every((x,i)=>st[i]===q.ans.includes(i));
+      if(ok){ body.querySelectorAll(".chip").forEach(b=>{if(st[+b.dataset.i]){b.classList.remove("sel");b.classList.add("right");} b.disabled=true;}); correct(q); }
+      else wrong("الكسر في أبسط صورة لا يقبل بسطه ومقامه القسمة على عدد واحد غير ١.");
+    },false);
+    body.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{
+      const i=+b.dataset.i; st[i]=!st[i]; b.classList.toggle("sel",st[i]); b.setAttribute("aria-pressed",st[i]); btn.disabled=!st.some(Boolean);}));
+  }
+};
+
+/* ---------- result ---------- */
+function showResult(){
+  const n=S.list.length, p=S.score/n, st=starsFor(p), id=S.lesson.id;
+  if(st>(best[id]||0)){best[id]=st;store.set("fr-best",best);}
+  beep(st>=2);
+  const msg = st===3?"ممتاز! أنت بطل الكسور":st===2?"أحسنت! أداء جيد جداً":st===1?"جيد، تدرّب مرة أخرى لتربح نجوماً أكثر":"لنراجع الدرس ونحاول من جديد";
+  $("#view").innerHTML=`
+    <section class="card result">
+      <span class="tab">${id===9?"كل الدروس":"الدرس "+ORD[id-1]} · ${S.lesson.name}</span>
+      <div class="stars">${starStr(st)}</div>
+      <div class="big">${S.score} / ${n}</div>
+      <h2>${msg}</h2>
+      <p class="sub">تُحسب النقطة للسؤال الذي تُجاب عنه صحيحاً من المحاولة الأولى.</p>
+      <div class="actions">
+        <button class="btn" id="again">العب مرة أخرى</button>
+        <button class="btn ghost" id="toMap">الدروس</button>
+      </div>
+    </section>`;
+  $("#again").addEventListener("click",()=>start(id));
+  $("#toMap").addEventListener("click",showMap);
+  updateTotal();
+}
+
+/* ---------- Arabic-Indic digits everywhere on screen ---------- */
+const AD="٠١٢٣٤٥٦٧٨٩";
+function arab(node){
+  const w=document.createTreeWalker(node,NodeFilter.SHOW_TEXT);
+  let t; while((t=w.nextNode())){ if(/[0-9]/.test(t.nodeValue)) t.nodeValue=t.nodeValue.replace(/[0-9]/g,d=>AD[d]); }
+}
+new MutationObserver(ms=>ms.forEach(m=>{
+  if(m.type==="characterData"){ if(/[0-9]/.test(m.target.nodeValue)) arab(m.target.parentNode); }
+  else m.addedNodes.forEach(n=>{ if(n.nodeType===3){ if(/[0-9]/.test(n.nodeValue)) n.nodeValue=n.nodeValue.replace(/[0-9]/g,d=>AD[d]); } else if(n.nodeType===1) arab(n); });
+})).observe($("#app"),{childList:true,subtree:true,characterData:true});
+
+showMap();
+arab($("#app"));
+})();
+</script>
+
+</body></html>
