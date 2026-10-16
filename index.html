@@ -1,5 +1,30 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>مغامرة الكسور</title>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رياضيات الصف الثالث – ألعاب تفاعلية</title>
+<meta name="description" content="ألعاب تفاعلية لكل وحدات كتاب الرياضيات للصف الثالث (المنهج السوداني): الأعداد، الضرب، القسمة، الكسور، القياس، الهندسة. مع تحيات سليمان جميل.">
+<meta name="author" content="سليمان جميل">
+<meta name="theme-color" content="#2F80ED">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232F80ED'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3E%C3%B7%3C/text%3E%3C/svg%3E">
+<!-- Link preview (WhatsApp, Telegram, Facebook, X).
+     IMPORTANT: replace https://USERNAME.github.io/REPO/ below with your real GitHub Pages address (3 places). -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:site_name" content="رياضيات الصف الثالث">
+<meta property="og:title" content="رياضيات الصف الثالث – ألعاب تفاعلية">
+<meta property="og:description" content="ألعاب تفاعلية لكل وحدات كتاب الرياضيات للصف الثالث (المنهج السوداني): الأعداد، الضرب، القسمة، الكسور، القياس، الهندسة. مع تحيات سليمان جميل.">
+<meta property="og:url" content="https://USERNAME.github.io/REPO/">
+<meta property="og:image" content="https://USERNAME.github.io/REPO/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="رياضيات الصف الثالث – ألعاب تفاعلية">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="رياضيات الصف الثالث – ألعاب تفاعلية">
+<meta name="twitter:description" content="ألعاب تفاعلية لكل وحدات كتاب الرياضيات للصف الثالث (المنهج السوداني): الأعداد، الضرب، القسمة، الكسور، القياس، الهندسة. مع تحيات سليمان جميل.">
+<meta name="twitter:image" content="https://USERNAME.github.io/REPO/preview.png">
+<style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Readex+Pro:wght@400;500;600&display=swap">
@@ -7,27 +32,34 @@
 /* The digit ٢ drawn in the handwritten shape the teacher asked for (one-glyph font, used only for U+0662) */
 @font-face{font-family:"Two Sudan";src:url(data:font/ttf;base64,AAEAAAAKAIAAAwAgT1MvMmwJSf4AAAEoAAAAYGNtYXAADAa1AAABkAAAADRnbHlmcBAyawAAAcwAAACOaGVhZC8Kn+QAAACsAAAANmhoZWEFkQEpAAAA5AAAACRobXR4BAAARQAAAYgAAAAIbG9jYQBHAAAAAAHEAAAABm1heHAABAA1AAABCAAAACBuYW1lndiXGwAAAlwAAABmcG9zdAAZAAAAAALEAAAAJgABAAAAAQAAP50j7V8PPPUAAwPoAAAAAOb0riIAAAAA5vSuIgBFAAEBxgK/AAAAAwACAAAAAAAAAAEAAAOE/tQAAAIMAEUARgHGAAEAAAAAAAAAAAAAAAAAAAACAAEAAAACADMAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwIAAZAABQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAPz8/PwAABmIGYgOE/tQAAAOEASwAAAAAAAAAAAAAAAAAAAAgAAAB9AAAAgwARQAAAAIAAAADAAAAFAADAAEAAAAUAAQAIAAAAAQABAABAAAGYv//AAAGYv//+Z8AAQAAAAAAAAAAAEcAAAABAEUAAQHGAr8AMgAAEycnPwgfBw8DLwUjDwYXFxMXDwQnJwMnTgcCBAkQFhsdJCQjJSAdHBQJCwUGCQ0QGBQJCwUXJBUTIBELBwMCCOoEAQYRDxgWCt0VAbMtHxwcGx0aExILBgEFChIUDxgYFw0JBQINDRcECAUHFBEPDg4TJf6EDxAPEQYBCwwBZiYAAAAAAAQANgABAAAAAAABAAkAAAABAAAAAAACAAcACQADAAEECQABABIAEAADAAEECQACAA4AIlR3byBTdWRhblJlZ3VsYXIAVAB3AG8AIABTAHUAZABhAG4AUgBlAGcAdQBsAGEAcgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABUAAA==) format("truetype");unicode-range:U+0662;font-display:block}
 /* Layout: a book-like map of 8 lesson "tabs" (yellow tab + green title, like the textbook), then one question card at a time */
+/* Colours shared with "Maaz's Maths Quest": light-blue ground, eight bright colours, golden accent */
 :root{
-  --paper:#F3F8F4; --card:#FFFFFF; --ink:#1C2A22; --muted:#5B6F63; --line:#CFDDD3;
-  --green:#0B8A52; --green-soft:#DDF3E7; --yellow:#FFD60A; --yellow-ink:#3A3000;
-  --pink:#E0457B; --blue:#2D6FD6; --ok:#118A4E; --ok-soft:#DFF5E8; --bad:#D23B3B; --bad-soft:#FBE3E3;
-  --shade:#FFC93C; --empty:#FFFFFF;
+  --paper:#EEF6FF; --card:#FFFFFF; --ink:#1A2233; --muted:#55607A; --line:#D3DDEB;
+  --c1:#F0505A; --c2:#2F80ED; --c3:#1E9E57; --c4:#8E44D9; --c5:#F2711C; --c6:#E0428C; --c7:#0E9AA7; --c8:#4B5BD6;
+  --gc:#2F80ED; --blob1:rgba(255,196,0,.30); --blob2:rgba(47,128,237,.20); --blob3:rgba(224,66,140,.16);
+  --yellow:#F2B705; --yellow-soft:#FCEFC2; --yellow-ink:#3A2C00;
+  --pink:#E0428C; --blue:#2F80ED; --ok:#1D7F62; --ok-soft:#DCF1E7; --bad:#C2423A; --bad-soft:#FBE4E0;
+  --shade:#F6C431; --empty:#FFFFFF;
   --f-display:"Two Sudan","Baloo Bhaijaan 2","Readex Pro",system-ui,sans-serif;
   --f-body:"Two Sudan","Readex Pro",system-ui,"Segoe UI",Tahoma,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#111813; --card:#1A241E; --ink:#E7F1EA; --muted:#9DB2A5; --line:#2E3D34;
-  --green:#3CC283; --green-soft:#1F3A2B; --yellow:#FFD60A; --yellow-ink:#3A3000;
-  --pink:#F0679A; --blue:#5C95F0; --ok:#43C985; --ok-soft:#173A27; --bad:#F06A6A; --bad-soft:#3E1F1F;
-  --shade:#F2B92B; --empty:#26322B; color-scheme:dark}}
+  --paper:#10141F; --card:#1A2030; --ink:#EEF2FA; --muted:#A1ABC2; --line:#323C52;
+  --c1:#F25F67; --c2:#4A8FEF; --c3:#2AAE66; --c4:#A266E6; --c5:#F47F2F; --c6:#E5559A; --c7:#1AAAB6; --c8:#6474EA;
+  --gc:#4A8FEF; --blob1:rgba(255,196,0,.10); --blob2:rgba(47,128,237,.16); --blob3:rgba(224,66,140,.12);
+  --yellow:#F5C434; --yellow-soft:#3A3115; --yellow-ink:#3A2C00;
+  --pink:#E5559A; --blue:#4A8FEF; --ok:#45C99D; --ok-soft:#14352A; --bad:#F27D70; --bad-soft:#3D1F1C;
+  --shade:#E0AE2A; --empty:#222A3C; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --paper:#111813; --card:#1A241E; --ink:#E7F1EA; --muted:#9DB2A5; --line:#2E3D34;
-  --green:#3CC283; --green-soft:#1F3A2B; --yellow:#FFD60A; --yellow-ink:#3A3000;
-  --pink:#F0679A; --blue:#5C95F0; --ok:#43C985; --ok-soft:#173A27; --bad:#F06A6A; --bad-soft:#3E1F1F;
-  --shade:#F2B92B; --empty:#26322B; color-scheme:dark}
+  --paper:#10141F; --card:#1A2030; --ink:#EEF2FA; --muted:#A1ABC2; --line:#323C52;
+  --c1:#F25F67; --c2:#4A8FEF; --c3:#2AAE66; --c4:#A266E6; --c5:#F47F2F; --c6:#E5559A; --c7:#1AAAB6; --c8:#6474EA;
+  --gc:#4A8FEF; --blob1:rgba(255,196,0,.10); --blob2:rgba(47,128,237,.16); --blob3:rgba(224,66,140,.12);
+  --yellow:#F5C434; --yellow-soft:#3A3115; --yellow-ink:#3A2C00;
+  --pink:#E5559A; --blue:#4A8FEF; --ok:#45C99D; --ok-soft:#14352A; --bad:#F27D70; --bad-soft:#3D1F1C;
+  --shade:#E0AE2A; --empty:#222A3C; color-scheme:dark}
 
 *{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;
+body{background-color:var(--paper);background-image:radial-gradient(520px 380px at 0% 0%,var(--blob1),transparent 70%),radial-gradient(520px 420px at 100% 20%,var(--blob2),transparent 70%),radial-gradient(600px 420px at 40% 100%,var(--blob3),transparent 70%);background-attachment:fixed;color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
 .wrap{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
 button{font:inherit;color:inherit;cursor:pointer}
@@ -38,7 +70,7 @@ button:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-
 .brand{display:flex;flex-direction:column}
 .tab{display:inline-block;background:var(--yellow);color:var(--yellow-ink);font-family:var(--f-display);font-weight:700;
   border-radius:999px 0 0 999px;padding:2px 16px 0;font-size:15px;align-self:flex-start}
-h1{font-family:var(--f-display);font-weight:800;color:var(--green);font-size:clamp(34px,7vw,50px);line-height:1.1;margin:6px 0 0;text-wrap:balance}
+h1{font-family:var(--f-display);font-weight:800;color:var(--gc);font-size:clamp(34px,7vw,50px);line-height:1.1;margin:6px 0 0;text-wrap:balance}
 .tools{display:flex;gap:8px;align-items:center}
 .pill{display:flex;align-items:center;gap:6px;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600}
 .iconbtn{background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px}
@@ -49,15 +81,15 @@ h1{font-family:var(--f-display);font-weight:800;color:var(--green);font-size:cla
 @media (max-width:620px){.map{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .lesson{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:12px 12px 10px;text-align:right;
   display:flex;flex-direction:column;gap:6px;transition:transform .15s,border-color .15s;min-width:0}
-.lesson:hover{transform:translateY(-2px);border-color:var(--green)}
+.lesson:hover{transform:translateY(-2px);border-color:var(--gc)}
 .lesson .ln{display:flex;justify-content:space-between;align-items:center;gap:6px}
 .lesson .tab{font-size:13px;padding:1px 12px 0}
 .lesson .pg{color:var(--muted);font-size:13px}
-.lesson .nm{font-family:var(--f-display);font-weight:700;color:var(--green);font-size:19px;line-height:1.25}
+.lesson .nm{font-family:var(--f-display);font-weight:700;color:var(--gc);font-size:19px;line-height:1.25}
 .lesson .pie-mini{height:44px}
 .stars{letter-spacing:2px;font-size:18px;color:var(--line)}
 .stars .on{color:#F5B400}
-.lesson.final{grid-column:1/-1;background:var(--green);border-color:var(--green);color:#fff}
+.lesson.final{grid-column:1/-1;background:var(--gc);border-color:var(--gc);color:#fff}
 .lesson.final .nm{color:#fff;font-size:22px}
 .lesson.final .pg{color:#E6FFF2}
 .lesson.final .tab{background:var(--yellow)}
@@ -67,7 +99,7 @@ h1{font-family:var(--f-display);font-weight:800;color:var(--green);font-size:cla
 .bar{display:flex;align-items:center;gap:10px}
 .back{background:none;border:1.5px solid var(--line);border-radius:999px;padding:4px 14px;background:var(--card)}
 .prog{flex:1;height:12px;background:var(--card);border:1.5px solid var(--line);border-radius:99px;overflow:hidden}
-.prog i{display:block;height:100%;background:var(--green);border-radius:99px;transition:width .3s}
+.prog i{display:block;height:100%;background:var(--gc);border-radius:99px;transition:width .3s}
 .count{font-weight:600;min-width:52px;text-align:center}
 .card{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:16px}
 .qhead{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
@@ -96,8 +128,8 @@ select.dd.wrong{border-color:var(--bad);background:var(--bad-soft)}
 /* mcq */
 .opts{display:flex;flex-direction:column;gap:10px}
 .opt{display:flex;align-items:center;gap:14px;direction:rtl;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:8px 14px;text-align:right;min-height:62px}
-.opt:hover:not(:disabled){border-color:var(--green)}
-.opt .L{font-family:var(--f-display);font-weight:800;font-size:20px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--green-soft);color:var(--green);flex:none}
+.opt:hover:not(:disabled){border-color:var(--gc)}
+.opt .L{font-family:var(--f-display);font-weight:800;font-size:20px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--gc) 14%,var(--card));color:var(--gc);flex:none}
 .opt .C{direction:rtl;flex:1;font-size:20px;font-weight:600;display:flex;justify-content:flex-start;align-items:center}
 .opt .C .fr{font-size:26px}
 .opt.right{border-color:var(--ok);background:var(--ok-soft)}
@@ -112,7 +144,7 @@ select.dd.wrong{border-color:var(--bad);background:var(--bad-soft)}
 .slot.wrong{border:3px solid var(--bad);background:var(--bad-soft)}
 .signs{display:flex;gap:12px;justify-content:center;direction:rtl}
 .sign{width:74px;height:62px;border-radius:14px;border:2px solid var(--line);background:var(--card);font-family:var(--f-display);font-size:34px;font-weight:800}
-.sign:hover:not(:disabled){border-color:var(--green);background:var(--green-soft)}
+.sign:hover:not(:disabled){border-color:var(--gc);background:color-mix(in srgb,var(--gc) 14%,var(--card))}
 
 /* chips (order / match / multi) */
 .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;direction:rtl}
@@ -152,7 +184,7 @@ svg.click .part:hover{opacity:.85}
 .wall .cell{flex:1;border:1px solid var(--ink);display:grid;place-items:center;padding:3px 0;background:var(--card)}
 .wall .cell .fr{font-size:15px}
 .wall .row:nth-child(1) .cell{background:color-mix(in srgb,var(--yellow) 45%,var(--card))}
-.wall .row:nth-child(2) .cell{background:color-mix(in srgb,var(--green) 22%,var(--card))}
+.wall .row:nth-child(2) .cell{background:color-mix(in srgb,var(--gc) 22%,var(--card))}
 .wall .row:nth-child(3) .cell{background:color-mix(in srgb,var(--blue) 18%,var(--card))}
 .wall .row:nth-child(4) .cell{background:color-mix(in srgb,var(--pink) 16%,var(--card))}
 
@@ -162,13 +194,13 @@ svg.click .part:hover{opacity:.85}
 .fb.no{background:var(--bad-soft);color:var(--bad)}
 .fb .tip{color:var(--ink);font-weight:500;display:block}
 .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{background:var(--green);color:#fff;border:none;border-radius:999px;padding:10px 30px;font-weight:700;font-size:19px;font-family:var(--f-display)}
+.btn{background:var(--gc);color:#fff;border:none;border-radius:999px;padding:10px 30px;font-weight:700;font-size:19px;font-family:var(--f-display)}
 .btn:disabled{opacity:.4;cursor:default}
-.btn.ghost{background:var(--card);color:var(--green);border:2px solid var(--green)}
+.btn.ghost{background:var(--card);color:var(--gc);border:2px solid var(--gc)}
 
 /* result */
 .result{text-align:center;align-items:center}
-.result .big{font-family:var(--f-display);font-size:64px;font-weight:800;color:var(--green);line-height:1;direction:rtl}
+.result .big{font-family:var(--f-display);font-size:64px;font-weight:800;color:var(--gc);line-height:1;direction:rtl}
 .result .stars{font-size:44px}
 .result h2{font-family:var(--f-display);font-size:30px;margin:0;color:var(--ink)}
 
@@ -180,21 +212,168 @@ svg.click .part:hover{opacity:.85}
   .cmp .fr{font-size:34px}
   .sign{width:64px}
 }
+/* clock + words */
+:root{--hourhand:#D9342B;--minhand:#1F3F8F}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--hourhand:#FF6B5E;--minhand:#8FB0FF}}
+:root[data-theme="dark"]{--hourhand:#FF6B5E;--minhand:#8FB0FF}
+svg.clock .cnum{font-family:var(--f-display);font-weight:700;font-size:20px;fill:var(--ink)}
+svg.clock.click{cursor:pointer;touch-action:manipulation}
+.lesson .pie-mini{height:52px}
+.word{font-family:var(--f-display);font-weight:700;font-size:26px;line-height:1.3;padding:0 4px}
+.cmp .word{font-size:32px}
+.handbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hb{border:2px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font-weight:600}
+.hb[data-h="h"].on{border-color:var(--hourhand);background:color-mix(in srgb,var(--hourhand) 14%,var(--card))}
+.hb[data-h="m"].on{border-color:var(--minhand);background:color-mix(in srgb,var(--minhand) 14%,var(--card))}
+.hb .dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-inline-end:6px;vertical-align:middle}
+/* unit cards on the home screen */
+.units{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+@media (max-width:560px){.units{grid-template-columns:1fr}}
+.unit{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:16px;display:flex;gap:14px;align-items:center;text-align:right;transition:transform .15s,border-color .15s;min-width:0}
+.unit:hover{transform:translateY(-2px);border-color:var(--gc)}
+.unit .uicon{flex:none}
+.unit .ubody{display:flex;flex-direction:column;gap:4px;min-width:0}
+.unit .nm{font-family:var(--f-display);font-weight:800;color:var(--gc);font-size:30px;line-height:1.2}
+.unit .tab{font-size:14px}
+.unit .pg{color:var(--muted);font-size:14px}
+.bar .sub{font-weight:600}
+/* interactive activities */
+.card.fx-ok{animation:bounce .45s}
+.card.fx-no{animation:shake .35s}
+@keyframes bounce{40%{transform:scale(1.02)}70%{transform:scale(.995)}}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+.streak{font-weight:700;color:#E8590C;background:color-mix(in srgb,#FF8A3D 18%,var(--card));border-radius:999px;padding:2px 10px;white-space:nowrap}
+.part.pop-in{animation:popin .25s}
+@keyframes popin{50%{opacity:.6}}
+.steppers{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.stepper{display:flex;flex-direction:column;align-items:center;gap:6px;background:color-mix(in srgb,var(--gc) 14%,var(--card));border-radius:16px;padding:10px 14px}
+.slabel{font-weight:600;font-size:15px}
+.srow{display:flex;align-items:center;gap:12px}
+.sbtn{width:48px;height:48px;border-radius:50%;border:2px solid var(--gc);background:var(--card);color:var(--gc);font-family:var(--f-display);font-size:30px;font-weight:800;line-height:1}
+.sbtn:active{transform:scale(.92)}
+.sval{font-family:var(--f-display);font-size:34px;font-weight:800;min-width:40px;text-align:center}
+svg.nline .tl{font-family:var(--f-display);font-weight:700;font-size:30px;fill:var(--ink)}
+svg.nline .tl.s{font-size:24px}
+svg.nline .jl{font-family:var(--f-display);font-weight:700;font-size:22px;fill:var(--ink)}
+svg.nline .hit{cursor:pointer}
+svg.nline .hit:hover{fill:color-mix(in srgb,var(--blue) 12%,transparent)}
+.pond{position:relative;display:flex;flex-wrap:wrap;gap:12px 10px;justify-content:center;padding:14px 6px 24px;border-radius:18px;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--blue) 14%,var(--card)),var(--card))}
+.balloon{position:relative;border:none;background:none;padding:0;width:92px;height:118px;animation:float 3.2s ease-in-out infinite;animation-delay:var(--d)}
+.balloon .bl{position:absolute;inset:0 0 22px 0;border-radius:50% 50% 46% 46%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.55),transparent 34%),var(--c);
+  display:grid;place-items:center;color:#fff;box-shadow:inset -6px -8px 0 rgba(0,0,0,.12)}
+.balloon .bl .fr{font-size:24px}
+.balloon .bl .word{font-size:19px;color:#fff;line-height:1.15;padding:0 6px}
+.balloon .str{position:absolute;left:50%;bottom:0;width:2px;height:24px;background:var(--muted)}
+.balloon.popped{animation:burst .35s forwards;pointer-events:none}
+.balloon.shake{animation:shake .35s}
+@keyframes float{50%{transform:translateY(-10px)}}
+@keyframes burst{60%{transform:scale(1.25);opacity:.7}100%{transform:scale(0);opacity:0}}
+.chip.drag{cursor:grab}
+.chip.lifting{opacity:.35}
+.dragghost{position:fixed;z-index:60;pointer-events:none;margin:0;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+/* geometry */
+svg.geo .pl, svg.rulerbox .pl{font-family:var(--f-display);font-weight:700;font-size:24px;fill:var(--ink)}
+svg.geo .hitseg{cursor:pointer}
+#gv{touch-action:none}
+.seg{display:inline-block;border-top:2px solid currentColor;line-height:1.25;padding:1px 3px 0;margin:0 2px;white-space:nowrap;word-spacing:.2em;font-family:var(--f-display);font-weight:700}
+.rulerbox .rn{font-family:var(--f-display);font-weight:700;font-size:15px;fill:#3B2410}
+.rulerbox .rmm{font-family:var(--f-body);font-size:11px;fill:#3B2410}
+.nudge{display:flex;align-items:center;justify-content:center;gap:10px}
+.nudge .sbtn{width:42px;height:42px;font-size:22px}
+.mini-shape{max-width:100%;height:auto}
+.balloon .bl .mini-shape{width:66px}
+.balloon .bl .mini-shape polygon{stroke:#fff}
+.shapecard{min-width:96px;min-height:70px}
+.shapecard .mini-shape{width:86px}
+.bins{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.bin{border:2.5px dashed var(--line);border-radius:16px;min-height:96px;padding:8px;display:flex;flex-direction:column;gap:6px;background:var(--card);cursor:pointer}
+.bin.nope{border-color:var(--bad);background:var(--bad-soft)}
+.binl{font-family:var(--f-display);font-weight:800;font-size:20px;color:var(--gc)}
+.bini{display:flex;flex-wrap:wrap;gap:4px}
+.bini .placed .mini-shape{width:52px}
+/* developer credit */
+.credit[hidden]{display:none!important}
+.credit{margin-top:8px;border-top:1.5px dashed var(--line);padding-top:14px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;color:var(--muted);font-size:15px;text-align:center}
+.credit b{color:var(--gc);font-family:var(--f-display);font-size:18px}
+.credit .phone{font-family:var(--f-display);font-weight:700;color:var(--ink);user-select:all;letter-spacing:.03em}
+/* Maaz-style colour touches */
+h1 .hl{background:linear-gradient(transparent 64%, var(--yellow) 64%, var(--yellow) 90%, transparent 90%)}
+.lesson,.unit{border-top:6px solid var(--tc,var(--gc)) !important;box-shadow:0 5px 0 rgba(0,0,0,.05)}
+.lesson:hover,.unit:hover{border-color:var(--tc,var(--gc))}
+.lesson .nm,.unit .nm{color:var(--tc,var(--gc))}
+.lesson .tab,.unit .tab{background:var(--tc,var(--gc));color:#fff;border-radius:6px;padding:1px 9px 0}
+.lesson.final{background:var(--gc);border-color:var(--gc)}
+.lesson.final .nm{color:#fff}
+.lesson.final .tab{background:var(--yellow);color:var(--yellow-ink)}
+.card{border-top:6px solid var(--gc);box-shadow:0 6px 0 rgba(0,0,0,.05)}
+.qhead .tab{background:var(--gc);color:#fff;border-radius:6px;padding:1px 10px 0}
+.prog i{background:repeating-linear-gradient(45deg,var(--gc) 0 12px,var(--yellow) 12px 24px)}
+.opt:nth-child(4n+1) .L{background:var(--c1);color:#fff}
+.opt:nth-child(4n+2) .L{background:var(--c2);color:#fff}
+.opt:nth-child(4n+3) .L{background:var(--c3);color:#fff}
+.opt:nth-child(4n+4) .L{background:var(--c5);color:#fff}
+.opt:hover:not(:disabled){border-color:var(--yellow)}
+.opt.right .L{background:var(--ok)}
+.opt.wrong .L{background:var(--bad)}
+.btn{box-shadow:0 4px 0 rgba(0,0,0,.15)}
+.result .btn:not(.ghost){background:var(--yellow);color:var(--yellow-ink)}
+.stars .on{color:var(--yellow)}
+.pill span[style]{color:var(--yellow)!important}
+.top .tab{background:var(--yellow);color:var(--yellow-ink)}
+/* units 1–3 */
+.mbadge{display:inline-grid;place-items:center;min-width:46px;height:40px;padding:0 8px;border-radius:10px;background:var(--tc,var(--gc));color:#fff;font-family:var(--f-display);font-weight:800;font-size:18px;box-shadow:0 3px 0 rgba(0,0,0,.15);white-space:nowrap}
+.ubadge{display:grid;place-items:center;width:84px;height:84px;border-radius:20px;color:#fff;font-family:var(--f-display);font-weight:800;font-size:54px;box-shadow:0 5px 0 rgba(0,0,0,.15)}
+svg.abacus .alab{font-family:var(--f-display);font-weight:700;font-size:15px;fill:var(--ink)}
+svg.abacus .rodhit{cursor:pointer}
+.abtns{display:flex;justify-content:center;gap:6px;direction:ltr;width:100%;max-width:300px;margin:0 auto}
+.abtn{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+.abtn .sbtn{width:44px;height:44px;font-size:26px}
+.colbox{overflow-x:auto}
+.colt,.divt{border-collapse:collapse;font-family:var(--f-display);font-weight:700;font-size:30px;margin:0 auto}
+.colt td,.divt td{width:52px;height:56px;text-align:center;padding:2px}
+.colt td.op{width:34px;color:var(--gc)}
+.colt td.lab{width:auto;font-size:15px;color:var(--muted);text-align:left;white-space:nowrap;padding-left:8px}
+.colt tr.line td:not(.lab){border-bottom:3px solid var(--ink)}
+select.dd.sm{min-width:50px;height:46px;font-size:24px;padding:0 2px}
+.divt td.dv{border-right:3px solid var(--ink);color:var(--gc)}
+.divt td.dn{border-top:3px solid var(--ink)}
+.pvt{border-collapse:collapse;font-size:18px;direction:rtl}
+.pvt th{background:color-mix(in srgb,var(--yellow) 35%,var(--card));border:1.5px solid var(--line);padding:4px 10px;font-family:var(--f-body)}
+.pvt td{border:1.5px solid var(--line);padding:6px;text-align:center}
+.gbox{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;min-height:70px;align-items:center}
+.grpbox{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:color-mix(in srgb,var(--yellow) 30%,var(--card));border:2px solid var(--line);border-radius:12px;padding:6px;font-size:20px;line-height:1.1}
+.pool{display:flex;flex-wrap:wrap;gap:2px;justify-content:center;font-size:24px;min-height:44px;align-items:center;border:2px dashed var(--line);border-radius:14px;padding:8px}
+.pool.shake{animation:shake .35s}
+.plabel{width:100%;text-align:center;font-size:15px;font-weight:600;color:var(--muted)}
+.plates{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.plate{width:96px;min-height:96px;border-radius:50%;border:3px solid var(--gc);background:color-mix(in srgb,var(--gc) 10%,var(--card));display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;gap:2px}
+.plate .pc{font-family:var(--f-display);font-weight:800;font-size:20px;color:var(--gc)}
+.plate .pitems{font-size:14px;line-height:1.05;max-width:76px;word-break:break-all;text-align:center}
+.racebar{display:flex;justify-content:space-between;font-weight:700;color:var(--muted);font-family:var(--f-display);font-size:20px}
+.sign.wide{width:auto;min-width:90px;padding:0 14px}
+.sign.shake{animation:shake .35s}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
+</head>
+<body>
 <div class="wrap" id="app" dir="rtl" lang="ar">
   <header class="top">
     <div class="brand">
-      <span class="tab">الوحدة الرابعة · الصف الثالث</span>
-      <h1>مغامرة الكسور</h1>
+      <span class="tab" id="unitTab">كتاب الرياضيات · المنهج السوداني</span>
+      <h1><span style="color:var(--c2)">رياضيات</span> <span style="color:var(--c6)">الصف</span> <span class="hl" style="color:var(--c3)">الثالث</span></h1>
     </div>
     <div class="tools">
-      <span class="pill" title="مجموع النجوم"><span style="color:#F5B400">★</span> <span id="totalStars">0 / 27</span></span>
+      <span class="pill" title="مجموع النجوم"><span style="color:#F5B400">★</span> <span id="totalStars">0 / 39</span></span>
       <button class="iconbtn" id="soundBtn" aria-pressed="true">الصوت: يعمل</button>
     </div>
   </header>
   <main id="view"></main>
+  <footer class="credit">
+    <span>مع تحيات <b>سليمان جميل</b></span>
+    <span>رقم الجوال: <bdi dir="ltr" class="phone">00974&lrm; 5108&lrm; 5117</bdi></span>
+  </footer>
 </div>
 
 <script>
@@ -209,7 +388,7 @@ const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.
              set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}};
 
 /* ---------- sound ---------- */
-let soundOn = store.get("fr-sound",true), actx=null;
+let soundOn = store.get("g3-sound",true), actx=null;
 function beep(good){
   if(!soundOn) return;
   try{
@@ -225,11 +404,11 @@ function beep(good){
   }catch(e){}
 }
 function paintSound(){const b=$("#soundBtn");b.textContent= soundOn?"الصوت: يعمل":"الصوت: متوقف";b.setAttribute("aria-pressed",soundOn);}
-$("#soundBtn").addEventListener("click",()=>{soundOn=!soundOn;store.set("fr-sound",soundOn);paintSound();});
+$("#soundBtn").addEventListener("click",()=>{soundOn=!soundOn;store.set("g3-sound",soundOn);paintSound();});
 paintSound();
 
 /* ---------- shapes ---------- */
-const COL={shade:"var(--shade)",pink:"var(--pink)",blue:"var(--blue)",green:"var(--green)",empty:"var(--empty)"};
+const COL={shade:"var(--shade)",pink:"var(--pink)",blue:"var(--blue)",green:"var(--gc)",empty:"var(--empty)"};
 // shaded: array of colour keys per part (or null)
 function pie(n,shaded=[],opt={}){
   const size=opt.size||170, r=size/2-4, cx=size/2, cy=size/2;
@@ -278,8 +457,12 @@ function wall(dens){
 }
 const cap=(html,c)=>`<div class="shape-wrap">${html}<span class="caption">${c}</span></div>`;
 
+function ruler(){
+  let t=""; for(let i=0;i<=10;i++){const x=6+i*7.2; t+=`<line x1="${x}" y1="10" x2="${x}" y2="${i%5===0?26:19}" stroke="var(--ink)" stroke-width="1.5"/>`;}
+  return `<svg width="84" height="40" viewBox="0 0 84 40" aria-hidden="true"><rect x="1.5" y="8" width="81" height="26" rx="3" fill="var(--yellow)" stroke="var(--ink)" stroke-width="2"/>${t}</svg>`;
+}
 /* ---------- question bank (from the textbook, unit 4, pp. 74–95) ---------- */
-const L = [
+const L4 = [
 { id:1, name:"كسور الوحدة", page:"74–76", qs:[
   {t:"mcq", q:"دائرة قُسمت إلى جزأين متطابقين. كل جزء منهما يُسمّى:", vis:pie(2,["green"]), opts:["نصفاً","ثلثاً","ربعاً","ثمناً"], a:0,
    tip:`جزء واحد من جزأين متطابقين يُكتب ${F(1,2)} ويُقرأ نصف.`},
@@ -287,6 +470,8 @@ const L = [
    tip:"جزء واحد ملوّن من 4 أجزاء متطابقة."},
   {t:"color", q:`لوّن الجزء الذي يمثل الكسر ${F(1,5)}`, shape:"pie", n:5, need:1},
   {t:"color", q:`لوّن الجزء الذي يمثل الكسر ${F(1,8)}`, shape:"pie", n:8, need:1},
+  {t:"build", q:"اصنع الكسر: ثُمن", n:1, d:8, tip:`الثُمن = ${F(1,8)} : جزء واحد من 8 أجزاء متطابقة.`},
+  {t:"build", q:"اصنع الكسر: نصف", n:1, d:2},
   {t:"mcq", q:"اكتب الكسر الدال على الجزء الملوّن:", vis:pie(3,["shade"]), opts:[F(1,3),F(3,1),F(1,2),F(2,3)], a:0,
    tip:"البسط = عدد الأجزاء الملوّنة (1)، والمقام = عدد الأجزاء المتطابقة جميعها (3)."},
   {t:"mcq", q:"اكتب الكسر الدال على الجزء الملوّن:", vis:pie(10,["green"]), opts:[F(1,10),F(1,9),F(10,1),F(1,8)], a:0,
@@ -305,6 +490,9 @@ const L = [
    tip:`جزءان ملوّنان من 6 أجزاء: ${F(2,6)} ويُقرأ سُدسان.`},
   {t:"color", q:`لوّن الأجزاء التي تمثل الكسر ${F(2,3)}`, shape:"pie", n:3, need:2},
   {t:"color", q:`لوّن الأجزاء التي تمثل الكسر ${F(7,10)}`, shape:"pie", n:10, need:7},
+  {t:"build", q:"اصنع الكسر: ثلاثة أرباع", n:3, d:4},
+  {t:"build", q:"اصنع الكسر: خمسة أسداس", n:5, d:6},
+  {t:"build", q:"اصنع الكسر: سُدسان", n:2, d:6},
   {t:"fill", q:"أكمل:", expr:`<span>في الكسر ${F(3,10)} : البسط = {0} ، المقام = {1}</span>`, ans:[3,10], opts:[range(1,10),range(1,10)], rtlExpr:true},
   {t:"fill", q:"اكتب الكسر: ثلاثة أتساع", expr:`<span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[3,9], opts:[range(1,9),range(1,9)]},
   {t:"fill", q:"اكتب الكسر: أربعة أسباع", expr:`<span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[4,7], opts:[range(1,9),range(1,9)]},
@@ -340,6 +528,8 @@ const L = [
   {t:"cmp", q:"ضع إشارة = بين الكسرين المتكافئين، وإشارة ≠ بين غير المتكافئين:", a:[4,9], b:[1,2], signs:["=","≠"]},
   {t:"cmp", q:"ضع إشارة = بين الكسرين المتكافئين، وإشارة ≠ بين غير المتكافئين:", a:[3,4], b:[6,8], signs:["=","≠"]},
   {t:"match", q:"صِل بين كل كسرين متكافئين:", pairs:[[[1,3],[2,6]],[[2,3],[4,6]],[[3,5],[6,10]],[[4,4],[8,8]]]},
+  {t:"pop", q:`فرقع كل بالون فيه كسر يكافئ ${F(1,2)}`, hint:"الكسر المكافئ لـ ١/٢ مقامه ضعف بسطه.", items:[{x:[2,4],ok:1},{x:[3,6],ok:1},{x:[4,8],ok:1},{x:[5,10],ok:1},{x:[1,3],ok:0},{x:[2,5],ok:0},{x:[3,4],ok:0},{x:[2,3],ok:0}]},
+  {t:"pop", q:"فرقع كل بالون فيه كسر يساوي 1", hint:"الكسر الذي يساوي ١ بسطه يساوي مقامه.", items:[{x:[5,5],ok:1},{x:[4,4],ok:1},{x:[8,8],ok:1},{x:[3,3],ok:1},{x:[1,5],ok:0},{x:[4,5],ok:0},{x:[3,8],ok:0},{x:[2,3],ok:0}]},
   {t:"fill", q:"أكمل بكتابة العدد المناسب:", expr:`${F(1,2)} = <span class="fr"><b>{0}</b><i>10</i></span>`, ans:[5]},
   {t:"fill", q:"أكمل بكتابة العدد المناسب:", expr:`${F(2,3)} = <span class="fr"><b>4</b><i>{0}</i></span>`, ans:[6]},
   {t:"mcq", q:"عند ضرب بسط كسر ومقامه في العدد نفسه ينتج:", opts:["كسر مكافئ له","كسر أكبر منه","كسر أصغر منه","العدد 1 دائماً"], a:0},
@@ -356,6 +546,7 @@ const L = [
   {t:"multi", q:"اختر جميع الكسور المكتوبة في أبسط صورة:", items:[[5,8],[3,18],[2,5],[6,9],[7,11]], ans:[0,2,4],
    tip:`${F(3,18)} و ${F(6,9)} يقبل بسط كل منهما ومقامه القسمة على 3.`},
   {t:"mcq", q:"أي الكسور الآتية غير قابل للاختصار؟", opts:[F(3,7),F(5,10),F(15,18),F(12,16)], a:0, tip:"البسط 3 والمقام 7 لا يقبلان القسمة على عدد واحد غير 1."},
+  {t:"pop", q:"فرقع كل بالون فيه كسر مكتوب في أبسط صورة", hint:"الكسر في أبسط صورة لا يقبل بسطه ومقامه القسمة على عدد واحد غير ١.", items:[{x:[1,2],ok:1},{x:[3,7],ok:1},{x:[5,8],ok:1},{x:[2,5],ok:1},{x:[7,11],ok:1},{x:[5,10],ok:0},{x:[15,18],ok:0},{x:[3,18],ok:0},{x:[6,9],ok:0},{x:[12,16],ok:0}]},
   {t:"mcq", q:"قاعدة: لا تتغير قيمة الكسر إذا ............ كل من بسطه ومقامه على العدد نفسه.", opts:["قسمنا","جمعنا","طرحنا","كتبنا"], a:0},
 ]},
 { id:6, name:"مقارنة الكسور", page:"88–92", qs:[
@@ -380,12 +571,16 @@ const L = [
   {t:"mcq", q:"حين يزيد عدد الأجزاء المتساوية التي يُقسم إليها الواحد الصحيح، يصير الكسر:", opts:["أصغر","أكبر","مساوياً للواحد","لا يتغير"], a:0},
 ]},
 { id:7, name:"جمع الكسور متساوية المقامات", page:"93–94", qs:[
+  {t:"jump", q:`${F(2,8)} + ${F(3,8)} = ؟ (كما في خط الأعداد في الكتاب)`, den:8, start:2, add:3, tip:`${F(2,8)} + ${F(3,8)} = ${F(5,8)}`},
+  {t:"jump", q:`${F(1,8)} + ${F(4,8)} = ؟`, den:8, start:1, add:4, tip:`${F(1,8)} + ${F(4,8)} = ${F(5,8)}`},
+  {t:"jump", q:`${F(1,5)} + ${F(2,5)} = ؟`, den:5, start:1, add:2},
   {t:"mcq", q:`لوّن تلميذ ${F(3,8)} القرص بالأحمر ثم ${F(2,8)} القرص بالأزرق. ما الكسر الدال على الجزء الملوّن؟`,
    vis:pie(8,["pink","pink","pink","blue","blue"]), opts:[F(5,8),F(5,16),F(1,8),F(6,8)], a:0,
    tip:`${F(3,8)} + ${F(2,8)} = ${F(5,8)} : نجمع البسطين ونترك المقام كما هو.`},
   {t:"fill", q:"اكتب ناتج الجمع مستعيناً بالرسم:", vis:bar(3,["pink","blue"],{w:240}), expr:`${F(1,3)} + ${F(1,3)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[2,3], opts:[range(1,12),range(1,12)]},
   {t:"fill", q:"اكتب ناتج الجمع مستعيناً بالرسم:", vis:bar(5,["pink","blue","blue"],{w:300}), expr:`${F(1,5)} + ${F(2,5)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[3,5], opts:[range(1,12),range(1,12)]},
-  {t:"fill", q:"اكتب ناتج الجمع مستعيناً بالرسم:", vis:grid(2,4,["pink","blue","blue","blue","blue"],{cell:50}), expr:`${F(1,8)} + ${F(4,8)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,8], opts:[range(1,12),range(1,12)]},
+  {t:"fill", q:"اكتب ناتج الجمع مستعيناً بالرسم:", vis:grid(2,4,["pink","blue","blue","blue","blue"],{cell:50}),
+ expr:`${F(1,8)} + ${F(4,8)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,8], opts:[range(1,12),range(1,12)]},
   {t:"fill", q:"اكتب ناتج الجمع:", expr:`${F(7,10)} + ${F(2,10)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[9,10], opts:[range(1,20),range(1,20)]},
   {t:"fill", q:"اكتب ناتج الجمع:", expr:`${F(2,5)} + ${F(3,5)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,5], opts:[range(1,12),range(1,12)], tip:`${F(5,5)} = 1`},
   {t:"fill", q:"اكتب ناتج الجمع:", expr:`${F(3,7)} + ${F(2,7)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[5,7], opts:[range(1,14),range(1,14)]},
@@ -393,6 +588,8 @@ const L = [
   {t:"mcq", q:"ناتج جمع كسرين متساويين في المقام هو كسر:", opts:["بسطه = ناتج جمع البسطين، ومقامه هو المقام نفسه","بسطه = ناتج جمع البسطين، ومقامه = ناتج جمع المقامين","بسطه هو البسط نفسه، ومقامه = ناتج جمع المقامين","بسطه = 1 دائماً"], a:0},
 ]},
 { id:8, name:"طرح الكسور متساوية المقامات", page:"95", qs:[
+  {t:"jump", q:`${F(4,6)} − ${F(3,6)} = ؟`, den:6, start:4, add:-3, tip:`${F(4,6)} − ${F(3,6)} = ${F(1,6)}`},
+  {t:"jump", q:`${F(3,4)} − ${F(1,4)} = ؟`, den:4, start:3, add:-1, tip:`${F(3,4)} − ${F(1,4)} = ${F(2,4)} = نصف الرغيف`},
   {t:"mcq", q:`مع طفل ${F(3,4)} رغيفة، أكل ${F(1,4)} الرغيفة. كم بقي معه؟`, vis:bar(4,sh(3),{w:260}), opts:[F(2,4)+" = نصف الرغيف",F(4,4),F(3,4),F(1,4)], a:0,
    tip:`${F(3,4)} − ${F(1,4)} = ${F(2,4)} = ${F(1,2)}`},
   {t:"fill", q:`الشكل المظلل يمثل ${F(4,6)}. إذا طرحنا منه ${F(3,6)} يكون:`, vis:bar(6,sh(4),{w:330}), expr:`${F(4,6)} − ${F(3,6)} = <span class="fr"><b>{0}</b><i>{1}</i></span>`, ans:[1,6], opts:[range(0,12),range(1,12)]},
@@ -404,66 +601,679 @@ const L = [
   {t:"mcq", q:"باقي طرح كسرين متساويين في المقام هو كسر:", opts:["بسطه = ناتج طرح البسطين، ومقامه مقام الكسرين نفسه","بسطه = ناتج طرح البسطين، ومقامه = ناتج طرح المقامين","بسطه ومقامه = صفر","مقامه = ناتج جمع المقامين"], a:0},
 ]},
 ];
-const FINAL={id:9,name:"التحدي الشامل",page:"74–95"};
+const FINAL4={id:9,name:"التحدي الشامل",page:"74–95"};
+
+/* ---------- clock drawing ---------- */
+// hourPos / minPos are positions in "number steps" (0–12); null hides the hand
+function clockFace(hourPos,minPos,opt={}){
+  const S=opt.size||220, c=S/2, r=c-8;
+  let s=`<circle cx="${c}" cy="${c}" r="${r}" fill="var(--card)" stroke="var(--ink)" stroke-width="${opt.mini?3:7}"/>`;
+  if(!opt.mini) for(let i=0;i<60;i++){const a=i*6*Math.PI/180, big=i%5===0, r1=r-6, r2=big?r-16:r-11;
+    s+=`<line x1="${(c+r1*Math.sin(a)).toFixed(1)}" y1="${(c-r1*Math.cos(a)).toFixed(1)}" x2="${(c+r2*Math.sin(a)).toFixed(1)}" y2="${(c-r2*Math.cos(a)).toFixed(1)}" stroke="var(--ink)" stroke-width="${big?3:1.2}"/>`;}
+  if(!opt.mini) for(let n=1;n<=12;n++){const a=n*30*Math.PI/180, rr=r-32;
+    s+=`<text x="${(c+rr*Math.sin(a)).toFixed(1)}" y="${(c-rr*Math.cos(a)).toFixed(1)}" text-anchor="middle" dominant-baseline="central" class="cnum" data-n="${n}">${n}</text>`;}
+  const hand=(pos,len,w,col,head)=>{ if(pos==null) return ""; const a=pos*30*Math.PI/180, x=c+len*Math.sin(a), y=c-len*Math.cos(a);
+    let h=`<line x1="${c}" y1="${c}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${col}" stroke-width="${w}" stroke-linecap="round"/>`;
+    if(head){const hx=c+(len+12)*Math.sin(a), hy=c-(len+12)*Math.cos(a), px=Math.cos(a)*9, py=Math.sin(a)*9;
+      h+=`<polygon points="${hx.toFixed(1)},${hy.toFixed(1)} ${(x+px).toFixed(1)},${(y+py).toFixed(1)} ${(x-px).toFixed(1)},${(y-py).toFixed(1)}" fill="${col}"/>`;}
+    return h; };
+  s+=hand(minPos,opt.mini?r*0.8:r-30,3.5,"var(--minhand)",false);
+  s+=hand(hourPos,opt.mini?r*0.42:r*0.45,6,"var(--hourhand)",true);
+  s+=`<circle cx="${c}" cy="${c}" r="6" fill="var(--card)" stroke="var(--ink)" stroke-width="2.5"/>`;
+  return `<svg class="shape clock${opt.click?" click":""}" width="${S}" height="${S}" viewBox="0 0 ${S} ${S}" role="img" aria-label="ساعة">${s}</svg>`;
+}
+// a real time: hour hand moves between numbers as minutes pass
+const clock=(h,m,opt)=>clockFace((h%12)+m/60, m/5, opt);
+const minOnly=(m,opt)=>clockFace(null,m/5,opt);
+const HN=["","الواحدة","الثانية","الثالثة","الرابعة","الخامسة","السادسة","السابعة","الثامنة","التاسعة","العاشرة","الحادية عشرة","الثانية عشرة"];
+const W=(l,v)=>({l,v});           // a word with a value used for comparing / ordering
+const U={mile:W("ميل",150000),km:W("كيلو متر",100000),m:W("متر",100),yd:W("ياردة",90),ft:W("قدم",30),inch:W("بوصة",2.5),cm:W("سنتمتر",1),mm:W("مليمتر",0.1)};
+
+/* ---------- question bank (from the textbook, unit 5, pp. 96–105) ---------- */
+const L5 = [
+{ id:1, name:"الطول", page:"97–98", qs:[
+  {t:"mcq", q:"وحدات قياس الطول التي درستها في الصف الثاني هي:", opts:["الكيلو متر – المتر – السنتمتر – المليمتر","الميل – الياردة – القدم – البوصة","الساعة – الدقيقة – الثانية","اليوم – الساعة – الدقيقة"], a:0},
+  {t:"multi", q:"اختر وحدات قياس الطول الأخرى التي تعرّفت عليها في هذا الدرس:", items:[U.mile,U.m,U.yd,U.cm,U.ft,U.inch,U.km,U.mm], ans:[0,2,4,5],
+   tip:"الوحدات الأخرى لقياس الطول: الميل – الياردة – القدم – البوصة."},
+  {t:"mcq", q:"البوصة = ............", opts:["2 سنتمتر ونصف تقريباً","12 سنتمتر","30 سنتمتر","90 سنتمتر"], a:0},
+  {t:"fill", q:"أكمل:", expr:`<span>القدم = {0} بوصة = {1} سم</span>`, ans:[12,30], opts:[[3,10,12,36],[12,30,36,90]], rtlExpr:true},
+  {t:"fill", q:"أكمل:", expr:`<span>الياردة = {0} أقدام = {1} بوصة = {2} سم</span>`, ans:[3,36,90], opts:[[3,10,12,36],[12,30,36,90],[30,36,90,100]], rtlExpr:true},
+  {t:"mcq", q:"الميل = ............ ياردة", opts:["1760","1000","36","5280"], a:0, tip:"الميل = 1760 ياردة = 5280 قدم."},
+  {t:"mcq", q:"الميل = 5280 ............", opts:["قدم","ياردة","بوصة","سنتمتر"], a:0},
+  {t:"mcq", q:"الميل يساوي تقريباً:", opts:["كيلو متر ونصف","متر ونصف","سنتمتر ونصف","2 سنتمتر ونصف"], a:0},
+  {t:"mcq", q:"البوصة هي جزء من أجزاء:", opts:["المتر","الياردة","الكيلو جرام"], a:1, tip:"الياردة = 36 بوصة."},
+  {t:"mcq", q:"المليمتر هو جزء من أجزاء:", opts:["القدم","الرطل","المتر"], a:2},
+  {t:"order", q:"رتّب تصاعدياً (من الأصغر إلى الأكبر):", items:[U.yd,U.inch,U.ft,U.mile], dir:"asc"},
+  {t:"order", q:"رتّب تنازلياً (من الأكبر إلى الأصغر):", items:[U.km,U.inch,U.m,U.yd,U.cm,U.ft,U.mile], dir:"desc",
+   tip:"الميل كيلو متر ونصف تقريباً، والمتر 100 سم، والياردة 90 سم، والقدم 30 سم، والبوصة 2 سم ونصف."},
+  {t:"fill", q:"كم بوصة في 3 أقدام؟", expr:`<span>3 أقدام = {0} بوصة</span>`, ans:[36], opts:[[3,12,15,24,30,36,90]], rtlExpr:true, tip:"القدم = 12 بوصة، و 12 × 3 = 36"},
+  {t:"fill", q:"كم ياردة في 9 أقدام؟", expr:`<span>9 أقدام = {0} ياردة</span>`, ans:[3], opts:[[1,2,3,4,6,9,12,27]], rtlExpr:true, tip:"الياردة = 3 أقدام، و 9 ÷ 3 = 3"},
+  {t:"fill", q:"كم سنتمتر تقريباً في 4 بوصات؟", expr:`<span>4 بوصات = {0} سنتمتر</span>`, ans:[10], opts:[[4,6,8,10,12,48]], rtlExpr:true, tip:"البوصة = 2 سم ونصف، فالبوصتان = 5 سم، و 4 بوصات = 10 سم."},
+  {t:"cmp", q:"ضع العلامة المناسبة:", a:U.ft, b:U.yd},
+  {t:"cmp", q:"ضع العلامة المناسبة:", a:U.mile, b:U.km},
+  {t:"cmp", q:"ضع العلامة المناسبة:", a:U.inch, b:U.cm},
+  {t:"cmp", q:"ضع العلامة المناسبة:", a:U.yd, b:U.m},
+  {t:"pop", q:"فرقع كل بالون فيه وحدة لقياس الطول", hint:"وحدات الطول: الكيلو متر والمتر والسنتمتر والمليمتر والميل والياردة والقدم والبوصة.", items:[{x:W("ميل"),ok:1},{x:W("ياردة"),ok:1},{x:W("قدم"),ok:1},{x:W("بوصة"),ok:1},{x:W("متر"),ok:1},{x:W("سنتمتر"),ok:1},{x:W("رطل"),ok:0},{x:W("كيلو جرام"),ok:0},{x:W("ساعة"),ok:0},{x:W("دقيقة"),ok:0}]},
+]},
+{ id:2, name:"قياس الوقت – الساعة", page:"99–103", qs:[
+  {t:"mcq", q:"الشوكة القصيرة في الساعة هي:", vis:clock(3,0), opts:["شوكة الساعات","شوكة الدقائق","شوكة الثواني"], a:0},
+  {t:"mcq", q:"الشوكة الطويلة في الساعة تحدد:", vis:clock(9,30), opts:["الدقائق","الساعات","الثواني"], a:0},
+  {t:"mcq", q:"الشوكة الرفيعة في الساعة تحدد:", opts:["الثواني","الساعات","الأيام"], a:0},
+  {t:"mcq", q:"كم شوكة نجد في الساعة؟", opts:["3","2","4","12"], a:0, tip:"شوكة الساعات، وشوكة الدقائق، وشوكة الثواني."},
+  {t:"mcq", q:"كم عدد الدقائق بين كل رقمين على الساعة؟", opts:["5 دقائق","1 دقيقة","10 دقائق","12 دقيقة"], a:0},
+  {t:"fill", q:"أكمل عدد الدقائق عندما يتحرك عقرب الدقائق:", vis:minOnly(10), expr:`<span>من (12) إلى (2) = {0} دقائق</span>`, ans:[10], opts:[[2,5,10,12,15,20]], rtlExpr:true},
+  {t:"fill", q:"أكمل عدد الدقائق عندما يتحرك عقرب الدقائق:", vis:minOnly(15), expr:`<span>من (12) إلى (3) = {0} دقيقة</span>`, ans:[15], opts:[[3,5,10,15,20,30]], rtlExpr:true},
+  {t:"fill", q:"أكمل عدد الدقائق عندما يتحرك عقرب الدقائق دورة كاملة:", expr:`<span>من (12) إلى (12) = {0} دقيقة</span>`, ans:[60], opts:[[12,24,30,45,60,100]], rtlExpr:true},
+  {t:"mcq", q:"كم عدد الدقائق التي تشير إليها شوكة الدقائق؟", vis:minOnly(5), opts:["5","1","10","15"], a:0},
+  {t:"mcq", q:"كم عدد الدقائق التي تشير إليها شوكة الدقائق؟", vis:minOnly(20), opts:["20","4","40","15"], a:0},
+  {t:"mcq", q:"كم عدد الدقائق التي تشير إليها شوكة الدقائق؟", vis:minOnly(30), opts:["30","6","60","20"], a:0},
+  {t:"mcq", q:"كم عدد الدقائق التي تشير إليها شوكة الدقائق؟", vis:minOnly(45), opts:["45","9","30","50"], a:0},
+  {t:"fill", q:"أكمل:", expr:`<span>اليوم = {0} ساعة</span>`, ans:[24], opts:[[12,24,30,60]], rtlExpr:true},
+  {t:"fill", q:"أكمل:", expr:`<span>الساعة = {0} دقيقة ، الدقيقة = {1} ثانية</span>`, ans:[60,60], opts:[[12,24,60,100],[12,24,60,100]], rtlExpr:true},
+  {t:"fill", q:"كم عدد الدقائق في ساعتين؟", expr:`<span>60 + 60 = 60 × 2 = {0} دقيقة</span>`, ans:[120], opts:[[62,100,120,180,600]], rtlExpr:true},
+  {t:"fill", q:"كم عدد الدقائق في 3 ساعات؟", expr:`<span>60 × 3 = {0} دقيقة</span>`, ans:[180], opts:[[63,90,120,180,360]], rtlExpr:true},
+  {t:"fill", q:"كم عدد الدقائق في 10 ساعات؟", expr:`<span>60 × 10 = {0} دقيقة</span>`, ans:[600], opts:[[70,100,160,600,1000]], rtlExpr:true},
+  {t:"fill", q:"جد عدد الثواني في 3 دقائق:", expr:`<span>60 × 3 = {0} ثانية</span>`, ans:[180], opts:[[63,90,120,180,300]], rtlExpr:true},
+  {t:"cmp", q:"ضع العلامة المناسبة:", a:W("ساعة واحدة",60), b:W("يوم",1440)},
+  {t:"cmp", q:"ضع العلامة المناسبة:", a:W("دقيقة",1), b:W("ساعة",60)},
+  {t:"cmp", q:"ضع العلامة المناسبة:", a:W("دقيقة",60), b:W("ثانية",1)},
+  {t:"pop", q:"فرقع كل بالون فيه وحدة لقياس الوقت", hint:"نقيس الوقت باليوم والساعة والدقيقة والثانية.", items:[{x:W("يوم"),ok:1},{x:W("ساعة"),ok:1},{x:W("دقيقة"),ok:1},{x:W("ثانية"),ok:1},{x:W("متر"),ok:0},{x:W("بوصة"),ok:0},{x:W("قدم"),ok:0},{x:W("رطل"),ok:0}]},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(3,0), opts:["الساعة الثالثة","الساعة الثانية عشرة","الساعة الرابعة","الساعة التاسعة"], a:0,
+   tip:"عندما تشير شوكة الدقائق إلى 12 فإن الساعة هي الرقم الذي تشير إليه شوكة الساعات."},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(5,0), opts:["الساعة الخامسة","الساعة الثانية عشرة","الساعة السادسة","الساعة الرابعة"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(8,0), opts:["الساعة الثامنة","الساعة الثانية عشرة","الساعة الرابعة","الساعة السابعة"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(6,0), opts:["الساعة السادسة","الساعة الثانية عشرة","الساعة الخامسة","الساعة السابعة"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(11,0), opts:["الساعة الحادية عشرة","الساعة الثانية عشرة","الساعة العاشرة","الساعة الواحدة"], a:0},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة 7", h:7, m:0},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة 2", h:2, m:0},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة 8", h:8, m:0},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة 12", h:12, m:0},
+  {t:"mcq", q:"عند دوران شوكة الدقائق دورة كاملة، كم مرة يتكرر العدد 5 (بين كل رقمين 5 دقائق)؟", opts:["12 مرة","5 مرات","10 مرات","60 مرة"], a:0, tip:"الساعة = 5 × 12 = 60 دقيقة."},
+  {t:"mcq", q:"عندما تدور شوكة الثواني دورة كاملة تتحرك شوكة الدقائق:", opts:["دقيقة واحدة","ساعة واحدة","5 دقائق","60 دقيقة"], a:0},
+  {t:"mcq", q:"الساعة التي يظهر فيها قياس الوقت مكتوباً عليها هي:", opts:["الساعة الرقمية","الساعة الدائرية ذات الشوكات","الساعة الرملية"], a:0},
+]},
+{ id:3, name:"أجزاء الساعة", page:"104–105", qs:[
+  {t:"fill", q:"أكمل:", expr:`<span>ربع الساعة = {0} دقيقة</span>`, ans:[15], opts:[[4,10,15,20,25,30]], rtlExpr:true},
+  {t:"fill", q:"أكمل:", expr:`<span>ثلث الساعة = {0} دقيقة</span>`, ans:[20], opts:[[3,10,15,20,30,40]], rtlExpr:true},
+  {t:"fill", q:"أكمل:", expr:`<span>نصف الساعة = {0} دقيقة</span>`, ans:[30], opts:[[2,15,20,30,50,60]], rtlExpr:true},
+  {t:"match", q:"صِل كل جزء من الساعة بعدد دقائقه:", pairs:[[W("ربع الساعة"),W("15 دقيقة")],[W("ثلث الساعة"),W("20 دقيقة")],[W("نصف الساعة"),W("30 دقيقة")],[W("الساعة"),W("60 دقيقة")]]},
+  {t:"pop", q:"فرقع البالونات التي تساوي نصف ساعة أو ربع ساعة", hint:"ربع الساعة = ١٥ دقيقة، ونصف الساعة = ٣٠ دقيقة.", items:[{x:W("30 دقيقة"),ok:1},{x:W("15 دقيقة"),ok:1},{x:W("نصف الساعة"),ok:1},{x:W("ربع الساعة"),ok:1},{x:W("20 دقيقة"),ok:0},{x:W("60 دقيقة"),ok:0},{x:W("10 دقائق"),ok:0},{x:W("45 دقيقة"),ok:0}]},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(1,15), opts:["الساعة الواحدة والربع","الساعة الواحدة والثلث","الساعة الثالثة وخمس دقائق","الساعة الواحدة والنصف"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(1,20), opts:["الساعة الواحدة والثلث","الساعة الواحدة والربع","الساعة الرابعة وخمس دقائق","الساعة الثانية إلا ثلثاً"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(8,20), opts:["الساعة الثامنة والثلث","الساعة الرابعة والثلث","الساعة الثامنة والربع","الساعة الثامنة إلا ثلثاً"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(3,30), opts:["الساعة الثالثة والنصف","الساعة السادسة والربع","الساعة الثالثة والربع","الساعة الثالثة إلا ربعاً"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(8,40), opts:["الساعة التاسعة إلا ثلثاً","الساعة الثامنة والثلث","الساعة التاسعة إلا ربعاً","الساعة الثامنة والنصف"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(12,5), opts:["الساعة الثانية عشرة وخمس دقائق","الساعة الواحدة","الساعة الثانية عشرة والربع","الساعة الواحدة إلا خمس دقائق"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(12,35), opts:["الساعة الثانية عشرة ونصف وخمس دقائق","الساعة السابعة والنصف","الساعة الثانية عشرة والنصف","الساعة الواحدة إلا ربعاً"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(12,45), opts:["الساعة الواحدة إلا ربعاً","الساعة الثانية عشرة والربع","الساعة التاسعة والنصف","الساعة الواحدة والربع"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(12,50), opts:["الساعة الواحدة إلا عشر دقائق","الساعة العاشرة","الساعة الثانية عشرة وعشر دقائق","الساعة الواحدة إلا ربعاً"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(11,30), opts:["الساعة الحادية عشرة والنصف","الساعة السادسة والنصف","الساعة الثانية عشرة والنصف","الساعة الحادية عشرة والربع"], a:0},
+  {t:"mcq", q:"كم الساعة؟", vis:clock(1,45), opts:["الساعة الواحدة و45 دقيقة","الساعة التاسعة والربع","الساعة الواحدة والربع","الساعة الواحدة والنصف"], a:0},
+  {t:"mcq", q:"في الساعة الثالثة والنصف، إلى أي رقم تشير شوكة الدقائق؟", opts:["6","3","12","9"], a:0, tip:"نصف الساعة = 30 دقيقة، أي 6 × 5."},
+  {t:"mcq", q:"«الساعة التاسعة إلا ثلثاً» تعني أنه بقي على الساعة التاسعة:", opts:["20 دقيقة","15 دقيقة","30 دقيقة","3 دقائق"], a:0},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة التاسعة والربع", h:9, m:15},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة الثامنة والثلث", h:8, m:20},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة الثالثة والنصف", h:3, m:30},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة التاسعة إلا ثلثاً", h:8, m:40},
+  {t:"setclock", q:"ارسم شوكتي الساعات والدقائق: الساعة الواحدة و45 دقيقة", h:1, m:45},
+]},
+];
+const FINAL5={id:9,name:"التحدي الشامل",page:"97–105"};
+/* ---------- geometry drawing ---------- */
+// pts: {name:[x,y]}, segs: ["أب",...] as pairs of point names; each name may be 1 or 2 chars (هـ)
+const SEGP=(s,pts)=>{ const ns=Object.keys(pts).sort((a,b)=>b.length-a.length); for(const a of ns) if(s.startsWith(a)){ const b=s.slice(a.length); if(pts[b]) return [a,b]; } return null; };
+function fig(pts,segs=[],opt={}){
+  const Wd=opt.w||320, H=opt.h||230; const names=Object.keys(pts);
+  const cx=names.reduce((s,n)=>s+pts[n][0],0)/names.length, cy=names.reduce((s,n)=>s+pts[n][1],0)/names.length;
+  let s="";
+  segs.forEach(sg=>{ const [a,b]=SEGP(sg,pts); const [x1,y1]=pts[a],[x2,y2]=pts[b];
+    s+=`<line class="sg" data-s="${sg}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${opt.col||"var(--pink)"}" stroke-width="3.5" stroke-linecap="round"/>`; });
+  if(opt.arrows) segs.forEach(sg=>{ const [a,b]=SEGP(sg,pts); const [x1,y1]=pts[a],[x2,y2]=pts[b], dx=x2-x1, dy=y2-y1, l=Math.hypot(dx,dy), ux=dx/l, uy=dy/l, e=40;
+    const X1=x1-ux*e, Y1=y1-uy*e, X2=x2+ux*e, Y2=y2+uy*e;
+    s+=`<line x1="${X1}" y1="${Y1}" x2="${X2}" y2="${Y2}" stroke="${opt.col||"var(--pink)"}" stroke-width="3.5"/>`+
+       `<polygon points="${X2+ux*4},${Y2+uy*4} ${X2-ux*10-uy*7},${Y2-uy*10+ux*7} ${X2-ux*10+uy*7},${Y2-uy*10-ux*7}" fill="${opt.col||"var(--pink)"}"/>`+
+       `<polygon points="${X1-ux*4},${Y1-uy*4} ${X1+ux*10-uy*7},${Y1+uy*10+ux*7} ${X1+ux*10+uy*7},${Y1+uy*10-ux*7}" fill="${opt.col||"var(--pink)"}"/>`; });
+  names.forEach(n=>{ const [x,y]=pts[n]; let dx=x-cx, dy=y-cy; const l=Math.hypot(dx,dy)||1; dx/=l; dy/=l;
+    if(opt.labelUp) {dx=0; dy=-1;}
+    s+=`<circle class="pt" data-p="${n}" cx="${x}" cy="${y}" r="${opt.big?9:5.5}" fill="var(--ink)"/>`;
+    s+=`<text class="pl" x="${x+dx*22}" y="${y+dy*22}" text-anchor="middle" dominant-baseline="central">${n}</text>`; });
+  return `<svg class="shape geo" viewBox="0 0 ${Wd} ${H}" width="${Wd}" style="max-width:100%;height:auto" role="img" aria-label="شكل هندسي">${s}</svg>`;
+}
+// show a segment name with its letters apart (ج د, not جد), "هـ" counts as one letter
+const SEG=n=>`<span class="seg">${(n.match(/هـ|./g)||[]).join(" ")}</span>`;
+const SW=n=>W(SEG(n));
+// small outline shapes for classifying / balloons
+function poly(points,opt={}){ const w=opt.w||110,h=opt.h||80;
+  return `<svg class="mini-shape" viewBox="0 0 ${w} ${h}" width="${opt.size||w}" aria-hidden="true"><polygon points="${points}" fill="${opt.fill||"none"}" stroke="${opt.stroke||"var(--ink)"}" stroke-width="3" stroke-linejoin="round"/></svg>`; }
+const SH={
+  square:  ()=>poly("30,8 90,8 90,68 30,68",{w:120}),
+  rect:    ()=>poly("8,14 112,14 112,66 8,66",{w:120}),
+  tall:    ()=>poly("42,4 78,4 78,76 42,76",{w:120}),
+  rtri:    ()=>poly("8,72 104,72 104,8",{w:120}),
+  tri:     ()=>poly("60,6 104,72 16,72",{w:120}),
+  trap:    ()=>poly("28,10 92,8 112,70 8,72",{w:120}),
+  para:    ()=>poly("26,10 114,10 94,70 6,70",{w:120}),
+  pent:    ()=>poly("10,26 72,6 114,14 98,56 50,74 22,62",{w:120}),
+  hex:     ()=>poly("30,8 92,10 112,40 92,72 30,72 10,40",{w:120}),
+};
+// a ruler in millimetres (3px = 1mm), drawn like the book's wooden ruler
+function rulerSvg(){
+  let t=""; for(let mm=0;mm<=100;mm++){ const x=10+mm*3, h=mm%10===0?22:mm%5===0?15:9;
+    t+=`<line x1="${x}" y1="0" x2="${x}" y2="${h}" stroke="#3B2410" stroke-width="${mm%10===0?1.6:1}"/>`;
+    if(mm%10===0) t+=`<text x="${x}" y="38" text-anchor="middle" class="rn">${mm/10}</text>`; }
+  return `<rect x="0" y="0" width="320" height="52" rx="4" fill="#D98B4A" stroke="#7A4A22" stroke-width="2"/>${t}<text x="306" y="49" text-anchor="end" class="rmm">سم</text>`;
+}
+function pencilSvg(x0,len,y){ const x1=x0+len; return `<rect x="${x0+14}" y="${y-8}" width="${len-30}" height="16" fill="#F6B92B" stroke="#7A4A22" stroke-width="1.5"/>
+  <rect x="${x1-16}" y="${y-8}" width="16" height="16" fill="#F05D7A" stroke="#7A4A22" stroke-width="1.5"/>
+  <polygon points="${x0},${y} ${x0+14},${y-8} ${x0+14},${y+8}" fill="#F3D2A2" stroke="#7A4A22" stroke-width="1.5"/><polygon points="${x0},${y} ${x0+5},${y-3} ${x0+5},${y+3}" fill="#333"/>`; }
+function nailSvg(x0,len,y){ const x1=x0+len; return `<rect x="${x0+10}" y="${y-4}" width="${len-16}" height="8" fill="#B9C0C7" stroke="#555" stroke-width="1.2"/>
+  <polygon points="${x0},${y} ${x0+10},${y-4} ${x0+10},${y+4}" fill="#9AA2AA" stroke="#555" stroke-width="1.2"/><rect x="${x1-6}" y="${y-12}" width="6" height="24" rx="2" fill="#6F777F"/>`; }
+
+/* ---------- question bank (from the textbook, unit 6, pp. 106–114) ---------- */
+const P1={"أ":[240,60],"ب":[80,60]};
+const PL={"س":[280,70],"ص":[165,70],"ع":[45,70]};
+const PC={"س":[250,50],"ع":[70,50],"ص":[160,180]};
+const PZ={"أ":[290,30],"ب":[240,185],"ج":[175,30],"د":[115,185],"هـ":[55,30]};
+const PK={"ط":[90,30],"ك":[90,195],"ز":[230,30],"و":[230,195]};
+const PR={"ن":[115,35],"ك":[275,110],"ل":[225,200],"م":[65,125]};
+const PP={"هـ":[95,30],"س":[255,95],"ص":[215,195],"ق":[110,195],"ع":[40,115]};
+const PT={"ج":[160,30],"ب":[50,195],"أ":[270,195]};
+const PRC={"د":[270,45],"ج":[55,45],"ب":[55,180],"أ":[270,180]};
+const PSQ={"ن":[240,35],"م":[80,35],"ل":[80,195],"ك":[240,195]};
+const L6 = [
+{ id:1, name:"النقطة والقطعة المستقيمة", page:"107–108", qs:[
+  {t:"mcq", q:"عندما يلمس قلم الرصاص سطح الورقة يترك أثراً يسمى:", vis:fig({"أ":[230,60],"ب":[90,40],"ج":[160,120]},[],{h:150,big:true}), opts:["نقطة","قطعة مستقيمة","مستقيماً","مثلثاً"], a:0},
+  {t:"mcq", q:"نسمي النقطة بأحد:", opts:["الحروف مثل أ ، ب ، ج","الألوان","الأشكال","الأيام"], a:0},
+  {t:"connect", q:"نشاط: صِل بين النقطتين أ و ب بالمسطرة", pts:P1, targets:["أب"], h:120, labelUp:true, tip:`نسمي الشكل الناتج قطعة مستقيمة وتكتب هكذا ${SEG("أب")}`},
+  {t:"mcq", q:"ما اسم هذا الشكل؟", vis:fig(P1,["أب"],{h:120,labelUp:true}), opts:["قطعة مستقيمة","مستقيم","نقطة","مثلث"], a:0},
+  {t:"mcq", q:"مددنا طرفي القطعة المستقيمة على الجانبين. ما اسم الشكل الناتج؟", vis:fig(P1,["أب"],{h:120,arrows:true,labelUp:true}), opts:["مستقيم","قطعة مستقيمة","نقطة","مستطيل"], a:0},
+  {t:"mcq", q:"ما الفرق بين القطعة المستقيمة والخط المستقيم؟", opts:["القطعة المستقيمة لها طرفان، والمستقيم ممدود من الجانبين","القطعة المستقيمة أطول دائماً","لا فرق بينهما","المستقيم له طرف واحد فقط"], a:0},
+  {t:"multi", q:"سمِّ ثلاث قطع مستقيمة في الشكل:", vis:fig(PL,["سع"],{h:120,labelUp:true}), items:[SW("سص"),SW("صع"),SW("سع"),SW("سك"),SW("عم")], ans:[0,1,2],
+   hint:"القطع المستقيمة في الشكل طرفاها من النقاط س ، ص ، ع."},
+  {t:"connect", q:"صِل بين كل نقطتين:", pts:PC, targets:["سص","صع","سع"], tip:`القطع المستقيمة: ${SEG("سص")} ، ${SEG("صع")} ، ${SEG("سع")}`},
+  {t:"tapseg", q:`اضغط على القطعة المستقيمة ${SEG("جد")}`, pts:PZ, segs:["أب","بج","جد","دهـ"], ask:"جد"},
+  {t:"tapseg", q:`اضغط على القطعة المستقيمة ${SEG("كز")}`, pts:PK, segs:["طك","كز","زو"], ask:"كز"},
+  {t:"multi", q:"سمِّ القطع المستقيمة في الشكل:", vis:fig(PR,["نك","كل","لم","من"]), items:[SW("نك"),SW("كل"),SW("لم"),SW("من"),SW("نل"),SW("كم")], ans:[0,1,2,3],
+   hint:"اختر القطع المرسومة فقط."},
+  {t:"tapseg", q:`اضغط على القطعة المستقيمة ${SEG("عص")}`, pts:PP, segs:["هـس","هـع","عس","عص","عق","قص","صس"], ask:"عص"},
+]},
+{ id:2, name:"قياس طول القطعة المستقيمة", page:"109–110", qs:[
+  {t:"mcq", q:"المسافة بين الخط الذي عليه الرقم 0 والخط الذي عليه الرقم 1 في المسطرة تسمى:", opts:["سنتمتر (سم)","مليمتر (ملم)","متر","بوصة"], a:0},
+  {t:"mcq", q:"كل سنتمتر في المسطرة مقسم إلى كم جزءاً متساوياً؟", opts:["10","5","12","100"], a:0},
+  {t:"mcq", q:"كل جزء من أجزاء السنتمتر يسمى:", opts:["مليمتر (ملم)","متر","كيلو متر","قدم"], a:0},
+  {t:"measure", q:`قِس طول القطعة المستقيمة ${SEG("أب")}`, a:"أ", b:"ب", mm:40, aligned:true, tip:`طول ${SEG("أب")} = 4 سم`},
+  {t:"measure", q:`اسحب المسطرة وقِس طول ${SEG("جد")}`, a:"ج", b:"د", mm:35},
+  {t:"measure", q:`اسحب المسطرة وقِس طول ${SEG("هـو")}`, a:"هـ", b:"و", mm:62},
+  {t:"measure", q:`اسحب المسطرة وقِس طول ${SEG("سص")}`, a:"س", b:"ص", mm:78},
+  {t:"measure", q:"اسحب المسطرة واحسب طول القلم:", obj:"pencil", mm:56},
+  {t:"measure", q:"اسحب المسطرة واحسب طول المسمار:", obj:"nail", mm:47},
+  {t:"fill", q:"أكمل:", expr:`<span>3 سم = {0} ملم</span>`, ans:[30], opts:[[3,13,30,300]], rtlExpr:true, tip:"1 سم = 10 ملم"},
+  {t:"fill", q:"أكمل:", expr:`<span>5 سم و 4 ملم = {0} ملم</span>`, ans:[54], opts:[[9,45,54,504]], rtlExpr:true},
+  {t:"fill", q:"أكمل:", expr:`<span>70 ملم = {0} سم</span>`, ans:[7], opts:[[7,70,700,17]], rtlExpr:true},
+]},
+{ id:3, name:"المثلث", page:"111", qs:[
+  {t:"mcq", q:"كم عدد القطع المستقيمة في هذا الشكل؟", vis:fig(PT,["أب","بج","جأ"],{col:"var(--blue)"}), opts:["3","4","2","5"], a:0, tip:"مثل هذا الشكل الثلاثي يسمى مثلثاً."},
+  {t:"mcq", q:"الشكل الثلاثي الذي له 3 قطع مستقيمة يسمى:", opts:["مثلثاً","مستطيلاً","مربعاً","مستقيماً"], a:0},
+  {t:"mcq", q:"كل قطعة مستقيمة في المثلث تسمى:", opts:["ضلعاً","نقطة","مستقيماً","زاوية"], a:0},
+  {t:"connect", q:"ارسم مثلثاً: صِل بين النقاط أ ، ب ، ج", pts:PT, targets:["أب","بج","جأ"]},
+  {t:"multi", q:"سمِّ أضلاع المثلث:", vis:fig(PT,["أب","بج","جأ"],{col:"var(--blue)"}), items:[SW("أب"),SW("بج"),SW("أج"),SW("أد"),SW("جد")], ans:[0,1,2], hint:"أضلاع المثلث أطرافها رؤوسه الثلاثة."},
+  {t:"tapseg", q:`اضغط على الضلع ${SEG("بج")} في المثلث`, pts:PT, segs:["أب","بج","جأ"], ask:"بج"},
+  {t:"measure", q:`قِس بالمسطرة طول الضلع ${SEG("أب")} في المثلث`, a:"أ", b:"ب", mm:52, tri:true},
+  {t:"measure", q:`قِس بالمسطرة طول الضلع ${SEG("بج")} في المثلث`, a:"ب", b:"ج", mm:44, tri:true},
+  {t:"pop", q:"فرقع كل بالون فيه مثلث", hint:"المثلث له 3 أضلاع.", items:[{x:{h:SH.tri()},ok:1},{x:{h:SH.rtri()},ok:1},{x:{h:poly("10,70 110,70 40,10",{w:120})},ok:1},
+     {x:{h:SH.square()},ok:0},{x:{h:SH.rect()},ok:0},{x:{h:SH.trap()},ok:0},{x:{h:SH.hex()},ok:0}]},
+]},
+{ id:4, name:"المستطيل والمربع", page:"112–114", qs:[
+  {t:"mcq", q:"كم عدد القطع المستقيمة في هذا الشكل؟", vis:fig(PRC,["أب","بج","جد","دأ"],{col:"var(--blue)"}), opts:["4","3","5","2"], a:0},
+  {t:"mcq", q:"الشكل الذي له 4 أضلاع يسمى شكلاً:", opts:["رباعياً","ثلاثياً","دائرياً","مستقيماً"], a:0},
+  {t:"mcq", q:`في المستطيل: قِس ${SEG("أب")} و ${SEG("جد")}. ماذا تلاحظ؟`, vis:fig(PRC,["أب","بج","جد","دأ"],{col:"var(--blue)"}), opts:["طولاهما متساويان",`${SEG("أب")} أطول من ${SEG("جد")}`,`${SEG("جد")} أطول من ${SEG("أب")}`], a:0},
+  {t:"mcq", q:"المستطيل شكل رباعي فيه:", opts:["كل ضلعين متقابلين متساويان","ثلاثة أضلاع فقط","ضلع واحد","لا يوجد أضلاع متساوية"], a:0},
+  {t:"mcq", q:"المربع شكل رباعي:", opts:["جميع أضلاعه الأربعة متساوية","له ثلاثة أضلاع","ضلعاه المتقابلان غير متساويين","ليس له أضلاع"], a:0},
+  {t:"tapseg", q:`اضغط على الضلع المقابل للضلع ${SEG("أب")} في المستطيل`, pts:PRC, segs:["أب","بج","جد","دأ"], ask:"جد", tip:`الضلعان المتقابلان ${SEG("أب")} و ${SEG("جد")} متساويان.`},
+  {t:"connect", q:"ارسم مستطيلاً: صِل بين النقاط أ ، ب ، ج ، د بالترتيب", pts:PRC, targets:["أب","بج","جد","دأ"]},
+  {t:"connect", q:"ارسم مربعاً: صِل بين النقاط ك ، ل ، م ، ن بالترتيب", pts:PSQ, targets:["كل","لم","من","نك"]},
+  {t:"mcq", q:"اكتب الحرف الذي يشير إلى المربع:", vis:cap(SH.rtri(),"ج")+cap(SH.rect(),"ب")+cap(SH.square(),"أ"), opts:["أ","ب","ج"], a:0},
+  {t:"mcq", q:"اكتب الحرف الذي يشير إلى المستطيل:", vis:cap(SH.rtri(),"ج")+cap(SH.rect(),"ب")+cap(SH.square(),"أ"), opts:["ب","أ","ج"], a:0},
+  {t:"mcq", q:"اكتب الحرف الذي يشير إلى المثلث:", vis:cap(SH.rtri(),"ج")+cap(SH.rect(),"ب")+cap(SH.square(),"أ"), opts:["ج","أ","ب"], a:0},
+  {t:"classify", q:"ميِّز المربع والمستطيل والمثلث: ضع كل شكل في صندوقه", bins:[["sq","مربع"],["re","مستطيل"],["tr","مثلث"],["ot","شكل آخر"]],
+   shapes:[["sq",SH.square()],["re",SH.rect()],["tr",SH.rtri()],["ot",SH.trap()],["tr",SH.tri()],["ot",SH.para()],["ot",SH.pent()],["ot",SH.hex()],["re",SH.tall()]],
+   hint:"عُدّ الأضلاع: المثلث 3 أضلاع، والمربع أضلاعه الأربعة متساوية، والمستطيل كل ضلعين متقابلين متساويان."},
+  {t:"pop", q:"فرقع كل بالون فيه مستطيل", hint:"المستطيل شكل رباعي فيه كل ضلعين متقابلين متساويان.", items:[{x:{h:SH.rect()},ok:1},{x:{h:SH.tall()},ok:1},{x:{h:poly("4,24 116,24 116,56 4,56",{w:120})},ok:1},
+     {x:{h:SH.tri()},ok:0},{x:{h:SH.trap()},ok:0},{x:{h:SH.hex()},ok:0},{x:{h:SH.rtri()},ok:0}]},
+]},
+];
+const FINAL6={id:9,name:"التحدي الشامل",page:"107–114"};
+
+
+/* ---------- abacus and place-value table (units 1–3) ---------- */
+// d = [thousands, hundreds, tens, ones]; rods drawn left to right as in the book (ألوف … آحاد)
+function abacusSvg(d,opt={}){
+  const cols=["#F5A623","#3B7DD8","#2FAE4E","#E53935"], labs=["ألوف","مئات","عشرات","آحاد"], Wd=280, H=210, base=160;
+  let s=`<rect x="10" y="${base}" width="${Wd-20}" height="14" rx="3" fill="#29C5F6"/><rect x="10" y="${base+14}" width="${Wd-20}" height="4" fill="#123"/>`;
+  d.forEach((n,i)=>{ const x=45+i*63;
+    s+=`<line x1="${x}" y1="18" x2="${x}" y2="${base}" stroke="#1F3FBF" stroke-width="3"/>`;
+    for(let b=0;b<n;b++) s+=`<ellipse cx="${x}" cy="${base-9-b*14}" rx="17" ry="7" fill="${cols[i]}" stroke="rgba(0,0,0,.25)"/>`;
+    s+=`<text x="${x}" y="${base+36}" text-anchor="middle" class="alab">${labs[i]}</text>`;
+    if(opt.click) s+=`<rect class="rodhit" data-i="${i}" x="${x-28}" y="10" width="56" height="${base-6}" fill="transparent"/>`; });
+  return `<svg class="shape abacus" viewBox="0 0 ${Wd} ${H}" width="${Wd}" style="max-width:100%;height:auto" role="img" aria-label="عداد">${s}</svg>`;
+}
+function PVT(){ return `<table class="pvt"><tr><th>آحاد</th><th>عشرات</th><th>مئات</th><th>ألوف</th></tr><tr><td>{3}</td><td>{2}</td><td>{1}</td><td>{0}</td></tr></table>`; }
+
+/* ================= Units 1–3: numbers, multiplication, division ================= */
+/* ---------- helpers for building questions ---------- */
+const uniqSort=a=>[...new Set(a)].filter(x=>x>=0).sort((x,y)=>x-y);
+// a small set of plausible choices around n for dropdowns
+const near=n=>uniqSort([n,n+1,n-1,n+10,n-10,n+2]).slice(0,6);
+const FL=(q,expr,ans,opts,extra={})=>({t:"fill",q,expr,ans,opts:opts||ans.map(near),...extra});
+// column (vertical) arithmetic. rows: [{p:"34?2", a:"3462", op:"+", line:true}]
+function VCOL(a,b,op,extra={}){
+  const res= op==="+"?a+b : op==="−"?a-b : a*b, rows=[{p:String(a)},{p:String(b),op,line:true}];
+  if(op==="×" && b>=10){
+    const t=Math.floor(b/10)%10, o=b%10, h=Math.floor(b/100);
+    if(h===0){ rows.push({p:"?".repeat(String(a*t*10).length),a:String(a*t*10),lab:`${a} × ${t*10}`},{p:"?".repeat(String(a*o).length),a:String(a*o),lab:`${a} × ${o}`,line:true}); }
+  }
+  rows.push({p:"?".repeat(String(res).length),a:String(res)});
+  return {t:"column",q:extra.q||"أوجد الناتج:",rows,tip:extra.tip,hint:extra.hint||(op==="−"?"ابدأ بالآحاد. إذا كان الرقم العلوي أصغر فاستلف من الخانة التي على يساره.":op==="×"?"اضرب الآحاد أولاً، ثم العشرات، ولا تنسَ ما تحمله.":"ابدأ بالآحاد، ولا تنسَ ما تحمله إلى الخانة التالية.")};
+}
+const LD=(a,b,q)=>({t:"longdiv",a,b,q:q||`اقسم: ${a} ÷ ${b}`});
+const DIVR=(a,b,q)=>FL(q||"أكمل:",`${a} ÷ ${b} = {0} والباقي {1}`,[Math.floor(a/b),a%b],[near(Math.floor(a/b)),range(0,b-1)]);
+const MUL=(a,b,q)=>FL(q||"أكمل:",`${a} × ${b} = {0}`,[a*b]);
+const OPS=(l,r,res)=>({t:"opsign",q:"ضع العلامة المناسبة: (+) أو (−) أو (×) أو (÷)",l,r,res});
+const ab=(n)=>String(n).padStart(4,"0").split("").map(Number);
+const WORDS={ // book readings
+  2001:"واحد وألفان", 1260:"ستون ومئتان وألف", 1510:"عشرة وخمسمئة وألف", 2073:"ثلاثة وسبعون وألفان", 3210:"عشرة ومئتان وثلاثة آلاف", 4303:"ثلاثة وثلاثمئة وأربعة آلاف",
+  4563:"ثلاثة وستون وخمسمئة وأربعة آلاف", 8390:"تسعون وثلاثمئة وثمانية آلاف"};
+const badge=t=>`<span class="mbadge">${t}</span>`;
+function race(table,n=10){ const facts=shuffle(range(1,10)).slice(0,n).map(k=>[k,table]); return {t:"race",facts,q:`سباق جدول ${table}: اختر الناتج الصحيح بأسرع ما يمكن`}; }
+
+/* ---------- unit 1 (pp. 5–15) ---------- */
+const L1 = [
+{ id:1, name:"قراءة عدد مكوّن من أربعة أرقام وكتابته", page:"6–8", badge:"٢٠٧٣", qs:[
+  {t:"mcq", q:"انظر إلى العداد. ما العدد المكتوب؟", vis:abacusSvg(ab(2001)), opts:["2001","1002","201","2100"], a:0, tip:"نقرأ: واحد وألفان، أو ألفان وواحد."},
+  {t:"mcq", q:"انظر إلى العداد. ما العدد المكتوب؟", vis:abacusSvg(ab(1260)), opts:["1260","1620","2601","1206"], a:0},
+  {t:"mcq", q:"انظر إلى العداد. ما العدد المكتوب؟", vis:abacusSvg(ab(4303)), opts:["4303","3403","4033","4330"], a:0},
+  {t:"abacus", q:"مثّل العدد 3027 في العداد", n:3027},
+  {t:"abacus", q:"مثّل العدد 1652 في العداد", n:1652},
+  {t:"abacus", q:"مثّل العدد 2000 في العداد", n:2000},
+  {t:"abacus", q:"مثّل العدد 0350 في العداد", n:350},
+  FL("اكتب العدد المكوّن من: 3 آحاد، 8 عشرات، 5 مئات، 3 آلاف", PVT(), [3,5,8,3], [range(0,9),range(0,9),range(0,9),range(0,9)], {tip:"العدد هو 3583"}),
+  FL("اكتب العدد المكوّن من: 7 آحاد، 9 عشرات، 4 مئات، 2 آلاف", PVT(), [2,4,9,7], [range(0,9),range(0,9),range(0,9),range(0,9)], {tip:"العدد هو 2497"}),
+  FL("اكتب العدد المكوّن من: 0 آحاد، 5 عشرات، 3 مئات، 7 آلاف", PVT(), [7,3,5,0], [range(0,9),range(0,9),range(0,9),range(0,9)], {tip:"العدد هو 7350"}),
+  {t:"mcq", q:"كيف نقرأ العدد 4563؟", opts:[WORDS[4563],"ثلاثة وستون وأربعمئة وخمسة آلاف","ستة وثلاثون وخمسمئة وأربعة آلاف","ثلاثة وخمسون وستمئة وأربعة آلاف"], a:0, tip:"أو: أربعة آلاف وخمسمئة وثلاثة وستون."},
+  {t:"mcq", q:"كيف نقرأ العدد 8390؟", opts:[WORDS[8390],"تسعة وثلاثمئة وثمانية آلاف","تسعون وثمانمئة وثلاثة آلاف","ثلاثون وتسعمئة وثمانية آلاف"], a:0},
+  {t:"match", q:"صِل كل عدد بطريقة قراءته:", pairs:[[W("1510"),W(WORDS[1510])],[W("1260"),W(WORDS[1260])],[W("2073"),W(WORDS[2073])],[W("3210"),W(WORDS[3210])]], hint:"اقرأ الآحاد أولاً ثم العشرات ثم المئات ثم الآلاف."},
+]},
+{ id:2, name:"مضاعفات الأعداد", page:"9–11", badge:"١٠٠+", qs:[
+  FL("أكمل مضاعفات الواحد:", `11 ، 12 ، 13 ، {0} ، {1}`, [14,15]),
+  FL("أكمل مضاعفات الواحد:", `1231 ، 1232 ، 1233 ، {0} ، {1}`, [1234,1235]),
+  FL("أكمل مضاعفات العشرة:", `40 ، 50 ، 60 ، {0} ، {1}`, [70,80], [[65,70,61,600],[70,75,80,90]]),
+  FL("أكمل مضاعفات العشرة:", `150 ، 160 ، 170 ، {0} ، {1}`, [180,190], [[171,180,270],[181,190,200]]),
+  FL("أكمل مضاعفات العشرة:", `2530 ، 2540 ، 2550 ، 2560 ، {0}`, [2570], [[2561,2570,2660,3560]]),
+  FL("أكمل مضاعفات المئة:", `500 ، 600 ، 700 ، {0} ، {1}`, [800,900], [[701,710,800],[810,900,1000]]),
+  FL("أكمل مضاعفات المئة:", `1100 ، 1200 ، 1300 ، {0}`, [1400], [[1301,1310,1400,2300]]),
+  FL("أكمل مضاعفات الألف:", `1000 ، 2000 ، 3000 ، {0} ، {1}`, [4000,5000], [[3001,3100,4000],[4100,5000,6000]]),
+  {t:"mcq", q:"كيف نقرأ العدد 1900؟", opts:["ألف وتسعمئة","ألف وتسعون","تسعة آلاف ومئة","مئة وتسعون"], a:0},
+  {t:"mcq", q:"كيف نقرأ العدد 2560؟", opts:["ألفان وخمسمئة وستون","ألفان وستمئة وخمسون","خمسة آلاف ومئتان وستون","ألفان وخمسون وستمئة"], a:0},
+  {t:"mcq", q:"اكتب بالأرقام: أربعة آلاف وسبعمئة", opts:["4700","4070","7400","4007"], a:0},
+  {t:"pop", q:"فرقع كل بالون فيه عدد من مضاعفات العشرة", hint:"مضاعفات العشرة آحادها صفر.", items:[{x:W("40"),ok:1},{x:W("150"),ok:1},{x:W("1220"),ok:1},{x:W("2530"),ok:1},{x:W("45"),ok:0},{x:W("152"),ok:0},{x:W("1233"),ok:0},{x:W("703"),ok:0}]},
+  {t:"pop", q:"فرقع كل بالون فيه عدد من مضاعفات المئة", hint:"مضاعفات المئة آحادها وعشراتها أصفار.", items:[{x:W("500"),ok:1},{x:W("1600"),ok:1},{x:W("9900"),ok:1},{x:W("1300"),ok:1},{x:W("150"),ok:0},{x:W("1610"),ok:0},{x:W("2560"),ok:0},{x:W("7730"),ok:0}]},
+]},
+{ id:3, name:"الجمع ضمن العدد 9999", page:"12–13", badge:"+", qs:[
+  VCOL(4126,1872,"+",{tip:"4126 + 1872 = 5998"}),
+  VCOL(6395,1524,"+"),
+  VCOL(2753,5116,"+"),
+  VCOL(2547,1535,"+"),
+  VCOL(1235,6752,"+"),
+  VCOL(4011,4968,"+"),
+  VCOL(2007,5196,"+"),
+  VCOL(6425,3203,"+"),
+  VCOL(8749,80,"+"),
+  VCOL(1756,2498,"+"),
+  {t:"column", q:"أكمل الأرقام الناقصة:", rows:[{p:"34?2",a:"3462"},{p:"?53?",a:"2535",op:"+",line:true},{p:"5997"}], hint:"ابدأ بالآحاد: أي رقم إذا أضفته إلى 2 يكون 7؟"},
+  {t:"column", q:"أكمل الأرقام الناقصة:", rows:[{p:"2141"},{p:"????",a:"0627",op:"+",line:true},{p:"2768"}], hint:"ابحث عن العدد الذي إذا جمعته مع 2141 يكون 2768."},
+  {t:"column", q:"أكمل الأرقام الناقصة:", rows:[{p:"214?",a:"2149"},{p:"1?08",a:"1308",op:"+",line:true},{p:"?4?7",a:"3457"}], hint:"ابدأ بالآحاد: ? + 8 آحاده 7."},
+  {t:"abacus", q:"اجمع 4126 + 1872 ثم مثّل الناتج في العداد", n:5998},
+]},
+{ id:4, name:"الطرح ضمن العدد 9999", page:"14–15", badge:"−", qs:[
+  VCOL(5628,1313,"−",{tip:"5628 − 1313 = 4315"}),
+  VCOL(4753,2648,"−"),
+  VCOL(6837,124,"−"),
+  VCOL(5429,4332,"−"),
+  VCOL(2186,1243,"−"),
+  VCOL(8514,7503,"−"),
+  VCOL(1629,1435,"−"),
+  VCOL(5200,4154,"−"),
+  VCOL(7401,6492,"−"),
+  VCOL(9000,2999,"−"),
+  {t:"abacus", q:"اطرح 5628 − 1313 ثم مثّل الناتج في العداد", n:4315},
+]},
+];
+
+/* ---------- unit 2 (pp. 16–44) ---------- */
+const L2 = [
+{ id:1, name:"الضرب في 1 وصفر", page:"17–18", badge:"×١", qs:[
+  MUL(5,1,"جد ناتج الضرب:"), MUL(4,1,"جد ناتج الضرب:"), MUL(6,0,"جد ناتج الضرب:"), MUL(3,0,"جد ناتج الضرب:"),
+  {t:"mcq", q:"أي عدد × صفر = ............", opts:["صفر","العدد نفسه","1","10"], a:0},
+  {t:"mcq", q:"أي عدد × 1 = ............", opts:["العدد نفسه","صفر","1","10"], a:0},
+  OPS(6,1,6), OPS(6,0,6), OPS(6,0,0), OPS(6,1,7),
+  {t:"pop", q:"فرقع كل بالون ناتجه صفر", hint:"أي عدد × صفر = صفر.", items:[{x:W("6 × 0"),ok:1},{x:W("0 × 9"),ok:1},{x:W("4 × 0"),ok:1},{x:W("0 × 1"),ok:1},{x:W("6 × 1"),ok:0},{x:W("1 × 1"),ok:0},{x:W("5 × 1"),ok:0},{x:W("2 × 1"),ok:0}]},
+]},
+{ id:2, name:"جدول الضرب للعدد 7", page:"19–21", badge:"×٧", qs:[
+  {t:"groups", q:"اصنع 3 × 7 : أضف مجموعات من 7 حمامات حتى يصبح عندك 3 مجموعات", n:7, g:3, e:"🕊️"},
+  FL("أكمل:", `7 + 7 + 7 = 3 × 7 = {0}`, [21]),
+  {t:"groups", q:"اصنع 5 × 7 بمجموعات الحمام", n:7, g:5, e:"🕊️"},
+  FL("أكمل:", `3 × 7 = 7 × 3 = {0}`, [21]), FL("أكمل:", `6 × 7 = 7 × 6 = {0}`, [42]), FL("أكمل:", `8 × 7 = 7 × 8 = {0}`, [56]), FL("أكمل:", `9 × 7 = 7 × 9 = {0}`, [63]),
+  race(7),
+  OPS(5,7,12), OPS(7,2,14), OPS(7,2,5), OPS(7,4,3), OPS(7,7,14), OPS(7,7,0),
+  FL("إذا كان ثمن القلم 6 جنيهات، فكم ثمن 7 أقلام؟", `7 × 6 = {0} جنيهاً`, [42]),
+]},
+{ id:3, name:"جدول الضرب للعدد 8", page:"22–24", badge:"×٨", qs:[
+  {t:"groups", q:"اصنع 4 × 8 : أضف علباً في كل منها 8 تفاحات", n:8, g:4, e:"🍎"},
+  FL("أكمل:", `8 × 3 = {0}`, [24]), FL("أكمل:", `4 × 8 = {0}`, [32]), FL("أكمل:", `7 × 8 = {0}`, [56]), FL("أكمل:", `8 × 8 = {0}`, [64]), FL("أكمل:", `9 × 8 = {0}`, [72]),
+  FL("اكتب العدد المناسب:", `{0} × 8 = 56`, [7], [range(1,10)]), FL("اكتب العدد المناسب:", `8 × {0} = 80`, [10], [range(1,10)]), FL("اكتب العدد المناسب:", `8 × {0} = 48`, [6], [range(1,10)]),
+  {t:"mcq", q:"8 × 8 = ؟", opts:["64","16","0"], a:0}, {t:"mcq", q:"8 × 1 = ؟", opts:["8","9","7"], a:0}, {t:"mcq", q:"8 × 4 = ؟", opts:["32","12","4"], a:0},
+  race(8),
+  FL("إذا كان ثمن المسطرة 8 جنيهات، كم تدفع ملاذ إذا أرادت أن تشتري ثلاث مساطر؟", `3 × 8 = {0} جنيهاً`, [24]),
+]},
+{ id:4, name:"جدول الضرب للعدد 9", page:"25–27", badge:"×٩", qs:[
+  {t:"groups", q:"اصنع 6 × 9 : أضف مجموعات في كل منها 9 شاحنات", n:9, g:6, e:"🚚"},
+  FL("أكمل:", `9 × 5 = {0}`, [45]), FL("أكمل:", `9 × 6 = {0}`, [54]), FL("أكمل:", `9 × 8 = {0}`, [72]), FL("أكمل:", `9 × 9 = {0}`, [81]), FL("أكمل:", `9 × 10 = {0}`, [90]),
+  FL("اكتب العدد المناسب:", `{0} × 9 = 27`, [3], [range(0,10)]), FL("اكتب العدد المناسب:", `{0} × 9 = 18`, [2], [range(0,10)]), FL("اكتب العدد المناسب:", `9 × {0} = 0`, [0], [range(0,10)]), FL("اكتب العدد المناسب:", `4 × {0} = 36`, [9], [range(0,10)]),
+  {t:"mcq", q:"9 + 8 = ؟", opts:["17","72","1"], a:0}, {t:"mcq", q:"9 − 2 = ؟", opts:["7","18","11"], a:0}, {t:"mcq", q:"9 × 0 = ؟", opts:["0","9","1"], a:0},
+  race(9),
+  FL("علبة الحلوى بها 9 قطع، كم قطعة في 7 علب حلوى؟", `7 × 9 = {0} قطعة`, [63]),
+]},
+{ id:5, name:"الضرب في 10 ومضاعفاتها", page:"28–31", badge:"×١٠", qs:[
+  {t:"groups", q:"كم تساوي 3 عشرات؟ أضف 3 مجموعات في كل منها 10 بالونات", n:10, g:3, e:"🎈"},
+  FL("أكمل:", `10 + 10 + 10 = 3 × 10 = {0}`, [30]), FL("كم تساوي 7 عشرات؟", `7 × 10 = {0}`, [70]), FL("كم تساوي 14 عشرة؟", `14 × 10 = {0}`, [140]),
+  FL("اضرب:", `25 × 10 = {0}`, [250]), FL("اضرب:", `37 × 10 = {0}`, [370]),
+  FL("جد قيمة:", `3 × 20 = {0}`, [60]), FL("جد قيمة:", `20 × 40 = {0}`, [800], [[80,600,800,8000]]),
+  FL("ضع العدد المناسب:", `18 × {0} = 180`, [10], [[1,10,18,100]]), FL("ضع العدد المناسب:", `{0} × 10 = 390`, [39], [[3,9,39,390]]), FL("ضع العدد المناسب:", `{0} × 10 = 500`, [50], [[5,50,500,10]]),
+  FL("ضع العدد المناسب:", `{0} × 50 = 1500`, [30], [[3,30,300,15]]), FL("ضع العدد المناسب:", `60 × {0} = 4800`, [80], [[8,80,800,48]]),
+  {t:"mcq", q:"ناتج ضرب أي عدد في 10 يساوي:", opts:["مضاعفات العدد عشرة لذلك العدد (نضع صفراً عن يمينه)","العدد نفسه","صفراً","العدد + 10"], a:0},
+  {t:"pop", q:"فرقع كل بالون ناتجه 600", hint:"عُدّ الأصفار ثم اضرب الأعداد الباقية.", items:[{x:W("20 × 30"),ok:1},{x:W("60 × 10"),ok:1},{x:W("3 × 200"),ok:1},{x:W("6 × 100"),ok:1},{x:W("6 × 10"),ok:0},{x:W("20 × 3"),ok:0},{x:W("30 × 30"),ok:0},{x:W("2 × 300"),ok:1}]},
+]},
+{ id:6, name:"الضرب في مئة", page:"32", badge:"×١٠٠", qs:[
+  FL("أكمل مضاعفات العدد 100:", `100 ، 200 ، 300 ، 400 ، {0} ، {1}`, [500,600], [[410,500,450],[510,600,700]]),
+  FL("أكمل:", `6 × 100 = 6 مئات = {0}`, [600], [[60,600,6000,106]]), FL("أكمل:", `8 × 100 = 8 مئات = {0}`, [800], [[80,800,8000,108]]),
+  FL("أكمل:", `12 × 100 = 12 مئة = {0}`, [1200], [[120,1200,12000,112]]), FL("أكمل:", `25 × 100 = 25 مئة = {0}`, [2500], [[250,2500,25000,125]]),
+  {t:"mcq", q:"حاصل ضرب أي عدد في 100 هو:", opts:["العدد نفسه مع وضع صفرين عن يمينه","العدد نفسه مع وضع صفر واحد عن يمينه","العدد نفسه","صفر"], a:0},
+  FL("جد قيمة:", `35 × 100 = {0}`, [3500], [[350,3500,35000]]), FL("جد قيمة:", `47 × 100 = {0}`, [4700], [[470,4700,47000]]), FL("جد قيمة:", `54 × 100 = {0}`, [5400], [[540,5400,54000]]),
+  FL("جد قيمة:", `72 × 100 = {0}`, [7200], [[720,7200,72000]]), FL("جد قيمة:", `99 × 100 = {0}`, [9900], [[990,9900,99000]]),
+  {t:"match", q:"صِل كل عملية بناتجها:", pairs:[[W("15 × 100"),W("1500")],[W("50 × 100"),W("5000")],[W("90 × 100"),W("9000")],[W("60 × 100"),W("6000")]]},
+]},
+{ id:7, name:"ضرب الأعداد التي آحادها أو عشراتها أصفار", page:"33–34", badge:"٠٠", qs:[
+  FL("جد قيمة: 30 × 40", `30 × 40 = 3 × 4 عشرات = {0} عشرة = {1}`, [12,1200], [[7,12,120],[120,1200,12000]], {tip:"نضع مجموع الأصفار ثم نضرب الأعداد الباقية."}),
+  FL("جد قيمة: 50 × 30", `50 × 30 = 50 × ثلاث عشرات = {0} عشرة = {1}`, [150,1500], [[15,150,80],[150,1500,15000]]),
+  FL("جد قيمة: 6 × 300", `6 × 3 مئات = {0} مئة = {1}`, [18,1800], [[9,18,180],[180,1800,18000]]),
+  {t:"mcq", q:"عند ضرب عددين آحادهما أو عشراتهما أصفار:", opts:["نضع مجموع الأصفار في العددين ثم نضرب الأعداد الباقية","نحذف الأصفار من الناتج","نجمع العددين","نضع صفراً واحداً فقط"], a:0},
+  FL("أجرِ عملية الضرب:", `30 × 60 = {0}`, [1800], [[180,1800,18000]]), FL("أجرِ عملية الضرب:", `300 × 10 = {0}`, [3000], [[300,3000,30000]]),
+  FL("أجرِ عملية الضرب:", `200 × 4 = {0}`, [800], [[80,800,8000]]), FL("أجرِ عملية الضرب:", `600 × 5 = {0}`, [3000], [[300,3000,30000]]),
+  FL("أجرِ عملية الضرب:", `3 × 700 = {0}`, [2100], [[210,2100,21000]]), FL("أجرِ عملية الضرب:", `700 × 2 = {0}`, [1400], [[140,1400,14000]]),
+  FL("أجرِ عملية الضرب:", `10 × 100 = {0}`, [1000], [[100,1000,10000]]),
+  {t:"pop", q:"فرقع كل بالون ناتجه 1500", hint:"عُدّ الأصفار ثم اضرب الأعداد الباقية.", items:[{x:W("50 × 30"),ok:1},{x:W("3 × 500"),ok:1},{x:W("15 × 100"),ok:1},{x:W("5 × 300"),ok:1},{x:W("5 × 30"),ok:0},{x:W("50 × 3"),ok:0},{x:W("30 × 30"),ok:0},{x:W("500 × 30"),ok:0}]},
+]},
+{ id:8, name:"توزيع الضرب على الجمع", page:"35–37", badge:"( + )", qs:[
+  FL("انظر إلى البرتقال وأكمل:", `2 × 8 = 2(5 + 3) = 2 × 5 + 2 × 3 = 10 + 6 = {0}`, [16], undefined, {vis:setVis([...rep("🍊",10),...rep("🍊",6)],{groups:8,small:true})}),
+  FL("جد قيمة: 5 × (4 + 2)", `5 × 4 + 5 × 2 = {0} + {1} = {2}`, [20,10,30]),
+  FL("جد قيمة: 7 × 18", `7 × 18 = 7(10 + 8) = 7 × 10 + 7 × 8 = {0} + {1} = {2}`, [70,56,126]),
+  FL("جد قيمة: 5 × 24", `5 × 24 = 5(20 + 4) = {0} + {1} = {2}`, [100,20,120]),
+  FL("اكتب العدد الصحيح:", `3 × 15 = 3(5 + {0})`, [10], [range(1,15)]), FL("اكتب العدد الصحيح:", `6 × {0} = 6(8 + 4)`, [12], [range(4,15)]),
+  FL("اكتب العدد الصحيح:", `7 × {0} = 7(5 + 9)`, [14], [range(4,15)]), FL("اكتب العدد الصحيح:", `34 × 24 = 34(4 + {0})`, [20], [[2,4,20,24,40]]),
+  FL("اكتب العدد الصحيح:", `5 × 7 = 5(5 + {0})`, [2], [range(0,9)]), FL("اكتب العدد الصحيح:", `7 × 45 = 7({0} + 40)`, [5], [range(0,9)]),
+  FL("اضرب مستعملاً توزيع الضرب على الجمع:", `5 × 35 = 5 × 30 + 5 × 5 = {0} + {1} = {2}`, [150,25,175]),
+  FL("اضرب مستعملاً توزيع الضرب على الجمع:", `3 × 42 = 3 × 40 + 3 × 2 = {0} + {1} = {2}`, [120,6,126]),
+  FL("اضرب مستعملاً توزيع الضرب على الجمع:", `9 × 19 = 9 × 10 + 9 × 9 = {0} + {1} = {2}`, [90,81,171]),
+]},
+{ id:9, name:"ضرب عدد من رقمين في عدد من رقم واحد", page:"38–39", badge:"٣٤×٢", qs:[
+  VCOL(34,2,"×",{tip:"34 × 2 = 68"}), VCOL(43,2,"×"), VCOL(16,7,"×"), VCOL(25,3,"×"), VCOL(34,4,"×"), VCOL(47,3,"×"), VCOL(93,5,"×"), VCOL(97,8,"×"), VCOL(145,6,"×"), VCOL(56,8,"×"),
+  FL("اشترت زينب 3 كتب سعر الكتاب 45 جنيهاً، كم دفعت زينب؟", `3 × 45 = {0} جنيهاً`, [135], [[48,125,135,145]]),
+  FL("إذا كانت كرتونة البسكويت بها 24 صندوقاً، فكم صندوقاً في 9 كراتين؟", `9 × 24 = {0}`, [216], [[33,186,206,216]]),
+  FL("كم تلميذاً في 8 فصول إذا كان بكل فصل 35 تلميذاً؟", `8 × 35 = {0} تلميذاً`, [280], [[43,240,280,285]]),
+]},
+{ id:10, name:"ضرب عدد من رقمين في عدد من رقمين", page:"40–41", badge:"٣٢×١٤", qs:[
+  VCOL(32,14,"×",{tip:"32 × 14 = 448"}), VCOL(35,24,"×"), VCOL(95,44,"×"), VCOL(25,23,"×"), VCOL(34,15,"×"), VCOL(45,18,"×"), VCOL(46,23,"×"), VCOL(78,32,"×"), VCOL(41,23,"×"), VCOL(74,73,"×"),
+  FL("يتصدق مصعب بمبلغ 35 جنيهاً يومياً. بكم يتصدق في 75 يوماً؟", `75 × 35 = {0} جنيهاً`, [2625], [[110,2525,2625,2635]]),
+  FL("كرتونة الصابون بها 72 قطعة، فكم قطعة في 25 كرتونة؟", `25 × 72 = {0}`, [1800], [[97,1700,1800,1880]]),
+  FL("إذا كان ثمن الكتاب 15 جنيهاً، فكم ثمن 85 كتاباً؟", `85 × 15 = {0} جنيهاً`, [1275], [[100,1175,1275,1285]]),
+]},
+{ id:11, name:"ضرب عدد من رقمين في عدد من 3 أرقام", page:"42–44", badge:"٢٣٥×٢٤", qs:[
+  VCOL(235,24,"×",{tip:"235 × 24 = 5640"}), VCOL(345,24,"×"), VCOL(235,15,"×"), VCOL(317,24,"×"), VCOL(207,35,"×"), VCOL(220,38,"×"), VCOL(139,64,"×"), VCOL(412,21,"×"),
+  FL("كم ساعة في 345 يوماً إذا كان اليوم 24 ساعة؟", `345 × 24 = {0} ساعة`, [8280], [[369,8180,8280,8290]]),
+  FL("كم قلماً في 35 صندوقاً إذا كان بكل صندوق 180 قلماً؟", `180 × 35 = {0} قلماً`, [6300], [[215,6000,6300,6350]]),
+  FL("إذا كان في الكتاب الواحد 135 ورقة، فكم ورقة في 65 كتاباً؟", `135 × 65 = {0} ورقة`, [8775], [[200,8675,8775,8875]]),
+  FL("اكتب العدد المناسب:", `7 × {0} = 28`, [4], [range(0,10)]), FL("اكتب العدد المناسب:", `8 × {0} = 64`, [8], [range(0,10)]), FL("اكتب العدد المناسب:", `{0} × 7 = 35`, [5], [range(0,10)]),
+]},
+];
+
+/* ---------- unit 3 (pp. 45–73) ---------- */
+const famQ=(d,k)=>FL("أكمل:", `${d} × ${k} = {0}  ،  {1} ÷ ${d} = ${k}  ،  {2} ÷ ${k} = ${d}`, [d*k,d*k,d*k]);
+const L3 = [
+{ id:1, name:"القسمة على 7 بدون باقٍ", page:"46", badge:"÷٧", qs:[
+  famQ(7,4), famQ(7,5), famQ(7,6),
+  {t:"share", q:"وزّع 28 قطعة حلوى على 7 أطفال بالتساوي. كم نصيب كل طفل؟", total:28, k:7, e:"🍬"},
+  FL("ضع العدد المناسب:", `63 ÷ 7 = {0}`, [9], [range(1,10)]), FL("ضع العدد المناسب:", `{0} ÷ 7 = 7`, [49], [[14,42,49,56]]),
+  FL("ضع العدد المناسب:", `21 ÷ {0} = 3`, [7], [range(1,10)]), FL("ضع العدد المناسب:", `{0} ÷ 7 = 10`, [70], [[17,60,70,77]]),
+  OPS(35,7,5), OPS(42,7,35), OPS(14,7,21), OPS(7,6,42), OPS(56,7,8), OPS(7,7,1),
+  FL("اشترت زينب حبلاً طوله 7 أمتار بمبلغ 42 جنيهاً، كم ثمن المتر الواحد؟", `42 ÷ 7 = {0} جنيهات`, [6], [range(1,10)]),
+]},
+{ id:2, name:"القسمة على 7 بباقٍ", page:"47–48", badge:"باقٍ", qs:[
+  {t:"share", q:"وزّع 23 قطعة على 7 أطفال بالتساوي. كم نصيب كل طفل؟ وكم يبقى؟", total:23, k:7, e:"🍬", rem:true},
+  DIVR(29,7), DIVR(51,7), DIVR(73,7), DIVR(37,7), DIVR(27,7), DIVR(58,7), DIVR(75,7), DIVR(13,7),
+  FL("اكتب العدد المناسب:", `{0} ÷ 7 = 4 والباقي 2`, [30], [[28,29,30,32]]), FL("اكتب العدد المناسب:", `{0} ÷ 7 = 7 والباقي 4`, [53], [[49,51,53,56]]),
+  {t:"share", q:"وزّع 50 بالونة على 7 أطفال بالتساوي. كم نصيب كل طفل؟ وكم يبقى؟", total:50, k:7, e:"🎈", rem:true},
+]},
+{ id:3, name:"القسمة على 7 خارج جدول الضرب", page:"49–55", badge:"٩٥٢÷٧", qs:[
+  LD(952,7), LD(574,7), LD(714,7), LD(815,7), LD(199,7), LD(247,7), LD(786,7), LD(599,7), LD(461,7), LD(345,7), LD(1757,7), LD(3018,7),
+]},
+{ id:4, name:"مسائل لفظية", page:"56–57", badge:"؟", qs:[
+  FL("وضع صاحب مزرعة دواجن 210 دجاجة في 7 أقفاص بالتساوي، فكم دجاجة وضعها في كل قفص؟", `210 ÷ 7 = {0} دجاجة`, [30], [[3,20,30,300]]),
+  FL("عند آدم 3150 جنيهاً وزعها على 7 من الفقراء، فكم كان نصيب كل منهم؟", `3150 ÷ 7 = {0} جنيهاً`, [450], [[45,405,450,540]]),
+  {t:"share", q:"وزّع معلم 21 كراسة على 7 تلاميذ بالتساوي، فكم كراسة أعطى لكل تلميذ؟", total:21, k:7, e:"📒"},
+  {t:"share", q:"إذا وزعنا 42 قطعة حلوى على 7 أطفال بالتساوي، فكم نعطي كل طفل؟", total:42, k:7, e:"🍬"},
+  FL("مدرسة بها 7 فصول وعدد تلاميذها 280 تلميذاً، فكم تلميذاً في كل فصل إذا كان عدد التلاميذ في الفصول متساوياً؟", `280 ÷ 7 = {0} تلميذاً`, [40], [[4,30,40,400]]),
+  FL("إذا كان ثمن القلم 7 جنيهات، فكم قلماً تشتريه بمبلغ 140 جنيهاً؟", `140 ÷ 7 = {0} قلماً`, [20], [[2,20,27,200]]),
+  LD(280,7,"مدرسة بها 7 فصول و 280 تلميذاً. اقسم لتعرف عدد التلاميذ في كل فصل:"),
+]},
+{ id:5, name:"القسمة على العدد 8 بدون باقٍ", page:"58", badge:"÷٨", qs:[
+  famQ(8,3), famQ(8,4), famQ(8,5), famQ(8,6),
+  {t:"share", q:"قسمت سعاد 32 جنيهاً على 8 فقراء بالتساوي، كم نصيب كل منهم؟", total:32, k:8, e:"💵"},
+  FL("أكمل:", `16 ÷ 8 = {0}`, [2], [range(1,10)]), FL("أكمل:", `48 ÷ 8 = {0}`, [6], [range(1,10)]), FL("أكمل:", `{0} ÷ 8 = 10`, [80], [[18,70,80,88]]),
+  OPS(40,8,5), OPS(7,8,56), OPS(8,8,0), OPS(8,8,1),
+  FL("قسّم بائع أقمشة لفة قماش طولها 72 متراً إلى 8 قطع متساوية، كم طول القطعة؟", `72 ÷ 8 = {0} أمتار`, [9], [range(1,10)]),
+]},
+{ id:6, name:"القسمة على 8 بباقٍ", page:"59–60", badge:"باقٍ", qs:[
+  DIVR(75,8), DIVR(61,8), DIVR(25,8), DIVR(31,8), DIVR(27,8), DIVR(60,8), DIVR(26,8),
+  FL("أكمل:", `57 ÷ {0} = 7 والباقي 1`, [8], [range(5,10)]), FL("أكمل:", `{0} ÷ 8 = 2 والباقي 1`, [17], [[15,16,17,18]]), FL("أكمل:", `{0} ÷ 8 = 1 والباقي 3`, [11], [[9,10,11,12]]),
+  {t:"share", q:"وزّع 29 قطعة على 8 أطفال بالتساوي. كم نصيب كل طفل؟ وكم يبقى؟", total:29, k:8, e:"🍪", rem:true},
+]},
+{ id:7, name:"القسمة على 8 خارج جدول الضرب", page:"61–62", badge:"٧٢٨÷٨", qs:[
+  LD(728,8), LD(368,8), LD(959,8), LD(371,8), LD(512,8), LD(4192,8), LD(65,8), LD(54,8), LD(47,8),
+]},
+{ id:8, name:"مسائل لفظية", page:"63", badge:"؟", qs:[
+  LD(136,8,"مخيم للكشافة يستوعب 136 كشافاً، وكل خيمة 8 كشافة، فكم عدد الخيام؟"),
+  LD(192,8,"ثمن 8 علب حلوى 192 جنيهاً، فكم ثمن العلبة الواحدة؟"),
+  FL("تقاسم 8 عمال مبلغ 400 جنيه، فكم أخذ كل منهم؟", `400 ÷ 8 = {0} جنيهاً`, [50], [[5,40,50,500]]),
+  FL("عند فاكهاني 624 برتقالة، وزعها على 8 أقفاص، فكم برتقالة يضع في كل قفص؟", `624 ÷ 8 = {0} برتقالة`, [78], [[68,78,87,88]]),
+  FL("إذا دفع رجل مبلغ 120 جنيهاً ليشتري 8 دجاجات، فكم سعر الدجاجة؟", `120 ÷ 8 = {0} جنيهاً`, [15], [[12,15,16,20]]),
+  {t:"share", q:"وزع محمود مبلغ 80 جنيهاً على 8 فقراء بالتساوي، كم جنيهاً أخذ كل فقير؟", total:80, k:8, e:"💵"},
+  FL("سافر 1728 حاجاً إلى الأراضي المقدسة في 8 رحلات بالتساوي، فكم حاجاً في الرحلة الواحدة؟", `1728 ÷ 8 = {0} حاجاً`, [216], [[206,216,226,261]]),
+]},
+{ id:9, name:"القسمة على العدد 9 بدون باقٍ", page:"64", badge:"÷٩", qs:[
+  famQ(9,3), famQ(9,4), famQ(9,5), famQ(9,6),
+  FL("أكمل:", `63 ÷ 9 = {0}`, [7], [range(1,10)]), FL("أكمل:", `72 ÷ 9 = {0}`, [8], [range(1,10)]), FL("أكمل:", `81 ÷ {0} = 9`, [9], [range(1,10)]), FL("أكمل:", `{0} ÷ 9 = 3`, [27], [[12,18,27,36]]),
+  OPS(45,9,5), OPS(54,9,45), OPS(18,9,27), OPS(9,6,54), OPS(72,9,8),
+  {t:"share", q:"وزّع 36 كرة على 9 أطفال بالتساوي، كم نصيب كل طفل؟", total:36, k:9, e:"⚽"},
+]},
+{ id:10, name:"القسمة على العدد 9 بباقٍ", page:"65", badge:"باقٍ", qs:[
+  FL("أكمل:", `54 ÷ 9 = {0}`, [6], [range(1,10)]), DIVR(89,9), DIVR(38,9), DIVR(49,9), DIVR(75,9), DIVR(80,9), DIVR(83,9),
+  {t:"share", q:"وزّع 40 قطعة على 9 أطفال بالتساوي. كم نصيب كل طفل؟ وكم يبقى؟", total:40, k:9, e:"🍬", rem:true},
+]},
+{ id:11, name:"القسمة على العدد 9 خارج جدول الضرب", page:"66", badge:"٤٩٥÷٩", qs:[
+  LD(495,9), LD(207,9), LD(292,9), LD(359,9), LD(234,9), LD(389,9), LD(568,9), LD(812,9), LD(2369,9),
+]},
+{ id:12, name:"مسائل لفظية", page:"67", badge:"؟", qs:[
+  FL("عند محمد 810 جنيهات يصرف منها كل يوم 9 جنيهات، فكم يوماً تكفيه النقود؟", `810 ÷ 9 = {0} يوماً`, [90], [[9,80,90,900]]),
+  LD(135,9,"شريط طوله 135 سنتمتراً، تريد نوال تقسيمه إلى 9 قطع متساوية، كم طول القطعة؟"),
+  {t:"share", q:"وزّع معلم 63 كراسة على 9 تلاميذ بالتساوي، فكم أخذ كل تلميذ؟", total:63, k:9, e:"📒"},
+  FL("اقتسم 9 إخوان 180 بلحة بالتساوي، فكم بلحة أخذها كل أخ؟", `180 ÷ 9 = {0} بلحة`, [20], [[2,18,20,200]]),
+  FL("عند تاجر 218 قطعة صابون، باع منها 56 قطعة، وقسم الباقي على 9 أقسام متساوية، فكم قطعة في كل قسم؟", `218 − 56 = {0}  ،  {1} ÷ 9 = {2} قطعة`, [162,162,18], [[152,162,172],[152,162,172],[16,18,20]]),
+  FL("عند خالد 299 جنيهاً صرف منها 74 جنيهاً، واشترى بالباقي 9 أقلام، فكم ثمن القلم الواحد؟", `299 − 74 = {0}  ،  {1} ÷ 9 = {2} جنيهاً`, [225,225,25], [[215,225,235],[215,225,235],[24,25,26]]),
+]},
+{ id:13, name:"علاقة الضرب والجمع والطرح", page:"68", badge:"×±", qs:[
+  {t:"mcq", q:"عند حل 5 × 2 + 3 نبدأ بـ:", opts:["الضرب","الجمع","الطرح"], a:0, tip:"الضرب دائماً يسبق الجمع والطرح."},
+  FL("أكمل الحل:", `5 × 2 + 3 = {0} + 3 = {1}`, [10,13]), FL("أكمل الحل:", `6 × 3 − 7 = {0} − 7 = {1}`, [18,11]),
+  FL("أكمل الحل:", `5 + 2 × 7 = 5 + {0} = {1}`, [14,19]), FL("أكمل الحل:", `14 − 3 × 3 = 14 − {0} = {1}`, [9,5]),
+  FL("أجرِ العملية:", `7 × 3 − 4 = {0}`, [17], [[17,7,25,21]]), FL("أجرِ العملية:", `6 × 4 + 7 = {0}`, [31], [[31,66,24,17]]),
+  FL("أجرِ العملية:", `8 + 3 × 4 = {0}`, [20], [[20,44,15,12]]), FL("أجرِ العملية:", `12 − 3 × 3 = {0}`, [3], [[3,27,9,6]]),
+  FL("أجرِ العملية:", `9 × 6 − 6 = {0}`, [48], [[48,0,54,9]]), FL("أجرِ العملية:", `10 + 2 × 5 = {0}`, [20], [[20,60,17,15]]),
+]},
+{ id:14, name:"علاقة القسمة بالجمع والطرح", page:"69", badge:"÷±", qs:[
+  {t:"mcq", q:"عند حل 8 ÷ 4 + 2 نبدأ بـ:", opts:["القسمة","الجمع","الطرح"], a:0, tip:"القسمة دائماً تسبق الجمع والطرح."},
+  FL("أكمل الحل:", `8 ÷ 4 + 2 = {0} + 2 = {1}`, [2,4]), FL("أكمل الحل:", `16 ÷ 4 − 3 = {0} − 3 = {1}`, [4,1]),
+  FL("أكمل الحل:", `2 + 24 ÷ 8 = 2 + {0} = {1}`, [3,5]), FL("أكمل الحل:", `18 − 6 ÷ 2 = 18 − {0} = {1}`, [3,15]),
+  FL("أجرِ العملية:", `21 ÷ 7 + 4 = {0}`, [7], [[7,3,2,25]]), FL("أجرِ العملية:", `81 ÷ 9 − 5 = {0}`, [4], [[4,9,14,2]]),
+  FL("أجرِ العملية:", `42 ÷ 6 + 2 = {0}`, [9], [[9,5,7,44]]), FL("أجرِ العملية:", `30 + 36 ÷ 6 = {0}`, [36], [[36,11,6,66]]),
+  FL("أجرِ العملية:", `42 − 28 ÷ 7 = {0}`, [38], [[38,2,4,14]]), FL("أجرِ العملية:", `72 ÷ 8 − 6 = {0}`, [3], [[3,36,9,12]]),
+]},
+{ id:15, name:"مسائل لفظية", page:"70–71", badge:"؟", qs:[
+  FL("وزعت الجمعية 117 رطلاً من السكر في اليوم الأول و 243 رطلاً في اليوم الثاني، وكان نصيب كل أسرة 9 أرطال، فكم عدد الأسر؟", `117 + 243 = {0}  ،  {1} ÷ 9 = {2} أسرة`, [360,360,40], [[350,360,370],[350,360,370],[4,40,36]]),
+  FL("عند مزارع 8 حواشات بكل حواشة 5 أفدنة. وزعها على أولاده الخمسة بالتساوي، فكم نصيب كل ولد؟", `8 × 5 = {0}  ،  {1} ÷ 5 = {2} أفدنة`, [40,40,8], [[13,40,45],[13,40,45],[5,8,9]]),
+  FL("أنتج مزارع 60 جوالاً من الذرة، أخذ منها 20 جوالاً، وباع 10 جوالات، ووزع الباقي على 5 من إخوانه بالتساوي، فكم أخذ كل منهم؟", `60 − 20 − 10 = {0}  ،  {1} ÷ 5 = {2} جوالات`, [30,30,6], [[30,40,50],[30,40,50],[5,6,8]]),
+  FL("اشترى رجل صندوقين من الحلوى بكل صندوق 24 قطعة، وقسمها على أولاده الأربعة بالتساوي، فكم نصيب كل منهم؟", `2 × 24 = {0}  ،  {1} ÷ 4 = {2} قطعة`, [48,48,12], [[26,44,48],[26,44,48],[6,12,24]]),
+  FL("10 حظائر بكل منها 12 بقرة، وزعناها على 4 رعاة بالتساوي، فكم بقرة لكل راعٍ؟", `10 × 12 = {0}  ،  {1} ÷ 4 = {2} بقرة`, [120,120,30], [[22,102,120],[22,102,120],[3,30,40]]),
+  FL("في الفصل 16 كنبة بكل كنبة 5 تلاميذ. إذا جلس التلاميذ على 10 كنبات بالتساوي، فكم تلميذاً في كل كنبة؟", `16 × 5 = {0}  ،  {1} ÷ 10 = {2} تلاميذ`, [80,80,8], [[21,80,85],[21,80,85],[5,8,10]]),
+]},
+{ id:16, name:"مع الناس في قريتي", page:"72–73", badge:"🏡", qs:[
+  LD(200,8,"عند أحد الرعاة في قريتنا 200 رأس من الضأن، وزعها على 8 قطعان بالتساوي، فكم رأساً في كل قطيع؟"),
+  LD(315,9,"صلى في مسجد قريتي 315 رجلاً في 9 صفوف متساوية، فكم رجلاً في كل صف؟"),
+  FL("تم ترحيل 700 جوال ذرة من إنتاج قريتي على 7 سيارات بأعداد متساوية، فكم جوالاً تحمل السيارة الواحدة؟", `700 ÷ 7 = {0} جوال`, [100], [[10,70,100,107]]),
+  LD(189,9,"تستهلك الأسرة في قريتي 189 رطلاً من السكر في 9 أشهر، فكم رطلاً تستهلك في الشهر؟"),
+  LD(966,7,"شارك عدد من سكان قريتنا في عمل خيري، دفع كل منهم 7 جنيهات، فجمعوا 966 جنيهاً، فكم عدد المشاركين؟"),
+  FL("أنتجت 6 حواشات 336 جوالاً من الذرة، فكم جوالاً أنتجت الحواشة الواحدة؟", `336 ÷ 6 = {0} جوالاً`, [56], [[46,56,65,66]]),
+  FL("وزع بائع برتقال 210 برتقالة في أكياس سعة كل منها 6 برتقالات، كم عدد الأكياس؟", `210 ÷ 6 = {0} كيساً`, [35], [[30,35,36,53]]),
+  FL("يوفر أحمد 7 جنيهات يومياً ليشتري لعبة ثمنها 119 جنيهاً، كم يوماً يحتاج؟", `119 ÷ 7 = {0} يوماً`, [17], [[13,17,19,71]]),
+]},
+];
+const FINAL1={id:9,name:"التحدي الشامل",page:"5–15"}, FINAL2={id:99,name:"التحدي الشامل",page:"16–44"}, FINAL3={id:99,name:"التحدي الشامل",page:"45–73"};
+
+/* ---------- units ---------- */
+const pickN=(L,n=12)=>{ const pools=L.map((l,li)=>shuffle(l.qs).map(q=>({...q,_l:li}))), out=[]; let i=0;
+  while(out.length<n && pools.some(p=>p.length)){ const p=pools[i%pools.length]; if(p.length) out.push(p.shift()); i++; } return out; };
+const BADGES=L=>()=>L.map(l=>badge(l.badge));
+const UNITS=[
+  {key:"u1", col:"var(--c7)", num:"الأولى", name:"الأعداد والجمع والطرح", page:"5–15", L:L1, FINAL:FINAL1, minis:BADGES(L1),
+   icon:()=>abacusSvg([2,0,7,3]).replace('width="280"','width="96"'), pick:L=>pickN(L), pickNote:"12 سؤالاً عشوائياً من الدروس الأربعة"},
+  {key:"u2", col:"var(--c1)", num:"الثانية", name:"الضرب", page:"16–44", L:L2, FINAL:FINAL2, minis:BADGES(L2),
+   icon:()=>`<span class="ubadge" style="background:var(--c1)">×</span>`, pick:L=>pickN(L), pickNote:"12 سؤالاً عشوائياً من دروس الوحدة"},
+  {key:"u3", col:"var(--c8)", num:"الثالثة", name:"القسمة", page:"45–73", L:L3, FINAL:FINAL3, minis:BADGES(L3),
+   icon:()=>`<span class="ubadge" style="background:var(--c8)">÷</span>`, pick:L=>pickN(L), pickNote:"12 سؤالاً عشوائياً من دروس الوحدة"},
+  {key:"u4", col:"var(--c2)", num:"الرابعة", name:"الكسور", page:"74–95", L:L4, FINAL:FINAL4,
+   minis:()=>[pie(2,["green"],{size:44}),pie(4,sh(3,"blue"),{size:44}),pie(5,sh(3),{size:44}),pie(4,sh(2,"green"),{size:44}),
+              pie(6,sh(2,"pink"),{size:44}),pie(8,sh(5,"blue"),{size:44}),pie(8,["pink","pink","pink","blue","blue"],{size:44}),pie(4,sh(2),{size:44})],
+   icon:()=>pie(8,["pink","pink","pink","blue","blue"],{size:86}),
+   pick:L=>L.flatMap((l,li)=>shuffle(l.qs).slice(0, li<4?2:1).map(q=>({...q,_l:li}))), pickNote:"12 سؤالاً عشوائياً من الدروس الثمانية"},
+  {key:"u5", col:"var(--c5)", num:"الخامسة", name:"القياس", page:"96–105", L:L5, FINAL:FINAL5,
+   minis:()=>[ruler(),clock(3,0,{size:52,mini:true}),clock(8,20,{size:52,mini:true})],
+   icon:()=>clock(3,0,{size:86,mini:true}),
+   pick:L=>L.flatMap((l,li)=>shuffle(l.qs).slice(0,4).map(q=>({...q,_l:li}))), pickNote:"12 سؤالاً عشوائياً من الدروس الثلاثة"},
+  {key:"u6", col:"var(--c4)", num:"السادسة", name:"الهندسة", page:"106–114", L:L6, FINAL:FINAL6,
+   minis:()=>[fig({"أ":[260,40],"ب":[60,40]},["أب"],{h:80}).replace('width="320"','width="90"'), ruler(),
+              poly("60,6 104,72 16,72",{w:120,size:70,fill:"color-mix(in srgb,var(--blue) 25%,transparent)"}), poly("8,14 112,14 112,66 8,66",{w:120,size:70,fill:"color-mix(in srgb,var(--yellow) 45%,transparent)"})],
+   icon:()=>poly("60,6 104,72 16,72",{w:120,size:90,fill:"color-mix(in srgb,var(--pink) 30%,transparent)",stroke:"var(--ink)"}),
+   pick:L=>L.flatMap((l,li)=>shuffle(l.qs).slice(0,3).map(q=>({...q,_l:li}))), pickNote:"12 سؤالاً عشوائياً من الدروس الأربعة"},
+];
+let UNIT=UNITS[0], L=UNIT.L, FINAL=UNIT.FINAL;
+const LCOLS=["--c1","--c2","--c3","--c4","--c5","--c6","--c7","--c8"];
+const LC=i=>`var(${LCOLS[(i+UNITS.indexOf(UNIT)*3)%8]})`;
+// the credit line shows only on the units (home) screen
+const setGC=c=>{ if(c) $("#app").style.setProperty("--gc",c); else $("#app").style.removeProperty("--gc"); $(".credit").hidden=!!c; };
+function useUnit(u){UNIT=u; L=u.L; FINAL=u.FINAL; $("#unitTab").textContent=`الوحدة ${u.num} · ${u.name}`;}
 
 /* ---------- state ---------- */
-let best = store.get("fr-best",{});
-let S = null; // {lesson, list, i, score, done}
+// stars kept per unit + lesson; carry over stars already earned in the two separate games
+let best = store.get("g3-best",null);
+if(!best){ best={}; const o4=store.get("fr-best",{}), o5=store.get("ms-best",{});
+  for(const k in o4) best["u4-"+k]=o4[k]; for(const k in o5) best["u5-"+k]=o5[k]; }
+const B=id=>best[UNIT.key+"-"+id]||0;
+let S = null;
 
 function starsFor(p){return p>=0.9?3:p>=0.7?2:p>=0.4?1:0;}
 function starStr(n){return [0,1,2].map(i=>`<span class="${i<n?"on":""}">★</span>`).join("");}
+const unitStars=u=>[...u.L,u.FINAL].reduce((s,l)=>s+(best[u.key+"-"+l.id]||0),0);
+const unitMax=u=>(u.L.length+1)*3;
 function updateTotal(){
-  const t=[...L,FINAL].reduce((s,l)=>s+(best[l.id]||0),0);
-  $("#totalStars").textContent=`${t} / ${(L.length+1)*3}`;
+  const t=UNITS.reduce((s,u)=>s+unitStars(u),0), m=UNITS.reduce((s,u)=>s+unitMax(u),0);
+  $("#totalStars").textContent=`${t} / ${m}`;
 }
-const ORD=["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن"];
+const PG=p=>{const [a,b]=p.split("–"); return b? `من صفحة ${a} إلى ${b}` : `صفحة ${a}`;};
+const ORD=["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن","التاسع","العاشر","الحادي عشر","الثاني عشر","الثالث عشر","الرابع عشر","الخامس عشر","السادس عشر"];
 
-/* ---------- map ---------- */
+/* ---------- home: choose a unit ---------- */
+function showHome(){
+  S=null; setGC(null); $("#unitTab").textContent="كتاب الرياضيات · المنهج السوداني";
+  $("#view").innerHTML=`
+    <p class="sub">اختر وحدة. كل الأسئلة من تمارين كتاب الرياضيات للصف الثالث.</p>
+    <div class="units" style="margin-top:14px">
+      ${UNITS.map((u,i)=>`
+        <button class="unit" data-u="${i}" style="--tc:${u.col}">
+          <span class="uicon">${u.icon()}</span>
+          <span class="ubody">
+            <span class="tab">الوحدة ${u.num}</span>
+            <span class="nm">${u.name}</span>
+            <span class="pg">${PG(u.page)}<br>${u.L.length} دروس وتحدٍّ شامل</span>
+            <span class="pg"><span style="color:#F5B400">★</span> ${unitStars(u)} / ${unitMax(u)}</span>
+          </span>
+        </button>`).join("")}
+    </div>`;
+  $("#view").querySelectorAll(".unit").forEach(b=>b.addEventListener("click",()=>{useUnit(UNITS[+b.dataset.u]);showMap();}));
+  updateTotal();
+}
+
+/* ---------- map of one unit ---------- */
 function showMap(){
-  S=null;
-  const minis=[pie(2,["green"],{size:44}),pie(4,sh(3,"blue"),{size:44}),pie(5,sh(3),{size:44}),pie(4,sh(2,"green"),{size:44}),
-               pie(6,sh(2,"pink"),{size:44}),pie(8,sh(5,"blue"),{size:44}),pie(8,["pink","pink","pink","blue","blue"],{size:44}),pie(4,sh(2),{size:44})];
+  S=null; setGC(UNIT.col);
+  const minis=UNIT.minis();
   $("#view").innerHTML = `
-    <p class="sub">اختر درساً. كل درس من تمارين كتاب الرياضيات للصف الثالث (المنهج السوداني)، وتربح حتى 3 نجوم.</p>
+    <div class="bar"><button class="back" id="homeBtn">→ الوحدات</button><span class="sub">الوحدة ${UNIT.num}: ${UNIT.name}</span></div>
     <div class="map" style="margin-top:14px">
       ${L.map((l,i)=>`
-        <button class="lesson" data-l="${l.id}">
+        <button class="lesson" data-l="${l.id}" style="--tc:${LC(i)}">
           <span class="ln"><span class="tab">الدرس ${ORD[i]}</span><span class="pie-mini">${minis[i]}</span></span>
           <span class="nm">${l.name}</span>
-          <span class="ln"><span class="pg">ص ${l.page} · ${l.qs.length} سؤالاً</span><span class="stars">${starStr(best[l.id]||0)}</span></span>
+          <span class="ln"><span class="pg">${PG(l.page)}<br>${l.qs.length} سؤالاً</span><span class="stars">${starStr(B(l.id))}</span></span>
         </button>`).join("")}
-      <button class="lesson final" data-l="9">
-        <span class="ln"><span class="tab">كل الدروس</span><span class="stars">${starStr(best[9]||0)}</span></span>
+      <button class="lesson final" data-l="${FINAL.id}">
+        <span class="ln"><span class="tab">كل الدروس</span><span class="stars">${starStr(B(FINAL.id))}</span></span>
         <span class="nm">${FINAL.name}</span>
-        <span class="pg">12 سؤالاً عشوائياً من الدروس الثمانية</span>
+        <span class="pg">${UNIT.pickNote}</span>
       </button>
     </div>`;
+  $("#homeBtn").addEventListener("click",showHome);
   $("#view").querySelectorAll(".lesson").forEach(b=>b.addEventListener("click",()=>start(+b.dataset.l)));
   updateTotal();
 }
 
 function start(id){
   let lesson, list;
-  if(id===9){
-    lesson=FINAL;
-    // 12 questions: 2 from each of lessons 1–4, 1 from each of lessons 5–8
-    list = shuffle(L.flatMap((l,li)=>shuffle(l.qs).slice(0, li<4?2:1).map(q=>({...q,_l:li}))));
-  } else {
-    lesson=L.find(l=>l.id===id);
-    list=lesson.qs.map(q=>({...q,_l:id-1}));
-  }
-  S={lesson,list,i:0,score:0};
+  if(id===FINAL.id){ lesson=FINAL; list=shuffle(UNIT.pick(L)); }
+  else { lesson=L.find(l=>l.id===id); list=lesson.qs.map(q=>({...q,_l:id-1})); }
+  setGC(id===FINAL.id? UNIT.col : LC(id-1));
+  S={lesson,list,i:0,score:0,streak:0};
   renderQ();
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
+
 /* ---------- question rendering ---------- */
 const LET=["أ","ب","ج","د"];
+const D=x=> Array.isArray(x)? F(...x) : x.h? x.h : `<span class="word">${x.l}</span>`;
+const VAL=x=> Array.isArray(x)? x[0]/x[1] : x.v;
 // logical relation "right REL left" -> glyph drawn so its point faces the smaller fraction, as in the book
 const VIS=s=> s==="<"?">":s===">"?"<":s;
 const G=s=>`<bdi dir="ltr">${VIS(s)}</bdi>`;
 const PRAISE=["أحسنت!","ممتاز!","رائع!","إجابة صحيحة!","بطل الكسور!"];
-const TYPE={mcq:"اختيار من متعدد",color:"لوّن",set:"احصر",fill:"أكمل",cmp:"قارن",order:"رتّب",match:"صِل",multi:"اختر الكل"};
+const TYPE={abacus:"العدّاد",column:"الحساب الرأسي",longdiv:"القسمة المطوّلة",groups:"اصنع المجموعات",share:"وزّع بالتساوي",opsign:"ضع العلامة",race:"سباق",connect:"صِل النقاط",tapseg:"اختر القطعة",measure:"قِس بالمسطرة",classify:"صنّف الأشكال",pop:"فرقع البالونات",build:"اصنع الكسر",jump:"خط الأعداد",setclock:"حرّك الشوكتين",mcq:"اختيار من متعدد",color:"لوّن",set:"احصر",fill:"أكمل",cmp:"قارن",order:"رتّب",match:"صِل",multi:"اختر الكل"};
 
 function renderQ(){
   const q=S.list[S.i], n=S.list.length;
@@ -472,6 +1282,7 @@ function renderQ(){
     <div class="bar">
       <button class="back" id="backBtn">→ الدروس</button>
       <div class="prog" aria-hidden="true"><i style="width:${(S.i/n)*100}%"></i></div>
+      <span class="streak" id="streak" hidden></span>
       <span class="count">${S.i+1} / ${n}</span>
     </div>
     <section class="card" style="margin-top:14px">
@@ -485,18 +1296,49 @@ function renderQ(){
   const body=$("#body");
   if(q.vis) body.insertAdjacentHTML("beforeend",`<div class="vis">${q.vis}</div>`);
   R[q.t](q,body);
+  paintStreak();
 }
+
+
+/* ---------- drag helper: tap = onTap, drag = onDrop(x,y) ---------- */
+function dragify(el,onTap,onDrop){
+  el.style.touchAction="none";
+  el.addEventListener("pointerdown",e=>{
+    const sx=e.clientX, sy=e.clientY; let ghost=null;
+    const move=ev=>{ const dx=ev.clientX-sx, dy=ev.clientY-sy;
+      if(!ghost && Math.hypot(dx,dy)>8){ ghost=el.cloneNode(true); ghost.classList.add("dragghost"); const r=el.getBoundingClientRect();
+        ghost.style.width=r.width+"px"; ghost.style.left=r.left+"px"; ghost.style.top=r.top+"px"; document.body.appendChild(ghost); el.classList.add("lifting"); }
+      if(ghost){ const r=el.getBoundingClientRect(); ghost.style.transform=`translate(${dx}px,${dy}px) rotate(-3deg)`; } };
+    const up=ev=>{ window.removeEventListener("pointermove",move); window.removeEventListener("pointerup",up);
+      if(ghost){ ghost.remove(); el.classList.remove("lifting"); if(!onDrop(ev.clientX,ev.clientY)){} } else onTap(); };
+    window.addEventListener("pointermove",move); window.addEventListener("pointerup",up);
+  });
+}
+/* ---------- celebration ---------- */
+const RM = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function confetti(){
+  if(RM) return;
+  const c=document.createElement("canvas"); c.className="confetti"; document.body.appendChild(c);
+  const w=c.width=innerWidth, h=c.height=innerHeight, x=c.getContext("2d");
+  const cols=["#FFD60A","#0B8A52","#E0457B","#2D6FD6","#FF8A3D","#A86EF0"];
+  const ps=Array.from({length:90},()=>({x:w/2+(Math.random()-.5)*120,y:h*0.45,vx:(Math.random()-.5)*11,vy:-Math.random()*11-4,s:Math.random()*7+5,r:Math.random()*6,c:cols[Math.floor(Math.random()*cols.length)]}));
+  let t=0; (function f(){ x.clearRect(0,0,w,h); ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.35;p.r+=0.2; x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);x.restore();});
+    if(++t<70) requestAnimationFrame(f); else c.remove(); })();
+}
+function cardFx(cls){ const c=$(".card"); if(!c||RM) return; c.classList.remove("fx-ok","fx-no"); void c.offsetWidth; c.classList.add(cls); }
+function paintStreak(){ const s=$("#streak"); if(!s) return; s.hidden=!(S.streak>=2); s.innerHTML=`🔥 <span>${S.streak}</span> متتالية`; }
 
 const AGAIN=["حاول مرة أخرى","فكّر جيداً وحاول مرة أخرى","اقتربت! حاول مرة أخرى"];
 // wrong answer: never show the answer, let the pupil try again
 function wrong(hint=""){
-  S.wrong++; beep(false);
+  S.wrong++; beep(false); S.streak=0; paintStreak(); cardFx("fx-no");
   $("#fb").innerHTML=`<div class="fb no"><span>✗</span><span>${AGAIN[Math.min(S.wrong-1,AGAIN.length-1)]}${hint?`<span class="tip">${hint}</span>`:""}</span></div>`;
 }
 // right answer: point only if it was right from the first try
 function correct(q,note=""){
-  if(S.wrong===0) S.score++;
-  beep(true);
+  if(S.wrong===0){ S.score++; S.streak=(S.streak||0)+1; } 
+  beep(true); confetti(); cardFx("fx-ok"); paintStreak();
+  if(S.streak>=3 && S.wrong===0) note=`${S.streak} إجابات صحيحة متتالية! `+note;
   const tip = q.tip? `<span class="tip">${q.tip}</span>`:"";
   const extra = S.wrong>0? `<span class="tip">وصلت إلى الإجابة الصحيحة بعد ${S.wrong+1} محاولات.</span>`:"";
   $("#fb").innerHTML=`<div class="fb ok"><span>✓</span><span>${PRAISE[Math.floor(Math.random()*PRAISE.length)]} ${note}${extra}${tip}</span></div>`;
@@ -522,24 +1364,94 @@ const R={
     }));
   },
   color(q,body){
-    const st=Array(q.n).fill(null); let locked=false;
-    const draw=()=> q.shape==="pie"? pie(q.n,st,{click:!locked,size:230}) : bar(q.n,st,{click:!locked});
-    body.insertAdjacentHTML("beforeend",`<div class="vis" id="cv"></div><div class="counter" id="cc"></div>`);
+    // tap or drag across the parts to paint them
+    const st=Array(q.n).fill(false); let locked=false, painting=null;
+    const svgHtml= q.shape==="pie"? pie(q.n,[],{click:true,size:230}) : bar(q.n,[],{click:true});
+    body.insertAdjacentHTML("beforeend",`<div class="vis" id="cv">${svgHtml}</div><div class="counter" id="cc">عدد الأجزاء الملوّنة: 0</div>
+      <div class="dirnote" style="font-weight:400">اضغط على الأجزاء أو اسحب إصبعك فوقها لتلوينها.</div>`);
+    const parts=[...body.querySelectorAll("#cv .part")];
     const btn=checkBtn(check,false);
-    function paint(){
-      $("#cv").innerHTML=draw();
-      const k=st.filter(Boolean).length;
-      $("#cc").textContent=`عدد الأجزاء الملوّنة: ${k}`;
-      if(locked) return;
-      btn.disabled = k===0;
-      $("#cv").querySelectorAll(".part").forEach(p=>p.addEventListener("click",()=>{const i=+p.dataset.i;st[i]=st[i]?null:"shade";paint();}));
-    }
+    const setPart=(i,v)=>{ if(locked||st[i]===v) return; st[i]=v; parts[i].setAttribute("fill", v?"var(--shade)":"var(--empty)");
+      parts[i].classList.toggle("pop-in",v); const k=st.filter(Boolean).length; $("#cc").textContent=`عدد الأجزاء الملوّنة: ${k}`; btn.disabled=k===0; };
+    const partAt=e=>{ const el=document.elementFromPoint(e.clientX,e.clientY); return el&&el.classList.contains("part")&&parts.includes(el)? +el.dataset.i : null; };
+    const svg=$("#cv svg"); svg.style.touchAction="none";
+    svg.addEventListener("pointerdown",e=>{ const i=partAt(e); if(i==null) return; painting=!st[i]; setPart(i,painting); e.preventDefault(); });
+    window.addEventListener("pointermove",e=>{ if(painting==null) return; const i=partAt(e); if(i!=null) setPart(i,painting); });
+    window.addEventListener("pointerup",()=>{ painting=null; });
     function check(){
       const k=st.filter(Boolean).length;
-      if(k===q.need){ locked=true; paint(); correct(q); }
+      if(k===q.need){ locked=true; svg.classList.remove("click"); correct(q); }
       else wrong("تذكّر: البسط يخبرك كم جزءاً تلوّن، والمقام عدد الأجزاء كلها.");
     }
+  },
+  build(q,body){
+    // build a fraction: choose the number of equal parts (denominator) and the shaded parts (numerator)
+    const st={d:1,n:0}; let locked=false;
+    body.insertAdjacentHTML("beforeend",`<div class="vis" id="bv"></div>
+      <div class="steppers">
+        <div class="stepper"><span class="slabel">الأجزاء الملوّنة (البسط)</span>
+          <div class="srow"><button class="sbtn" data-k="n" data-d="1" aria-label="زِد البسط">+</button><span class="sval" id="sn">0</span><button class="sbtn" data-k="n" data-d="-1" aria-label="أنقص البسط">−</button></div></div>
+        <div class="stepper"><span class="slabel">عدد الأجزاء المتطابقة (المقام)</span>
+          <div class="srow"><button class="sbtn" data-k="d" data-d="1" aria-label="زِد المقام">+</button><span class="sval" id="sd">1</span><button class="sbtn" data-k="d" data-d="-1" aria-label="أنقص المقام">−</button></div></div>
+      </div>`);
+    const btn=checkBtn(check,true);
+    function paint(){
+      $("#bv").innerHTML=cap(pie(st.d,sh(st.n),{size:210}), F(st.n,st.d));
+      $("#sn").textContent=st.n; $("#sd").textContent=st.d;
+    }
+    body.querySelectorAll(".sbtn").forEach(b=>b.addEventListener("click",()=>{ if(locked) return;
+      const k=b.dataset.k, d=+b.dataset.d;
+      if(k==="d"){ st.d=Math.min(12,Math.max(1,st.d+d)); st.n=Math.min(st.n,st.d); }
+      else st.n=Math.min(st.d,Math.max(0,st.n+d));
+      paint(); }));
+    function check(){
+      const okD=st.d===q.d, okN=st.n===q.n;
+      if(okD&&okN){ locked=true; body.querySelectorAll(".sbtn").forEach(b=>b.disabled=true); correct(q); }
+      else wrong(!okD? "عدد الأجزاء المتطابقة (المقام) يحتاج إلى تصحيح." : "عدد الأجزاء الملوّنة (البسط) يحتاج إلى تصحيح.");
+    }
     paint();
+  },
+  jump(q,body){
+    // number line from 0 to 1, as in the book; pupil taps where the answer lands
+    const den=q.den, ans=q.start+q.add, W0=520, pad=28, H=190, base=105, step=(W0-2*pad)/den;
+    const X=k=>pad+k*step;
+    const arc=(a,b,col,lab)=>{ const x1=X(a),x2=X(b),mx=(x1+x2)/2, h=Math.min(60,18+Math.abs(b-a)*10);
+      return `<path d="M${x1},${base} Q${mx},${base-h*1.6} ${x2},${base}" fill="none" stroke="${col}" stroke-width="3"/>
+        <polygon points="${x2},${base} ${x2+(b>a?-9:9)},${base-12} ${x2+(b>a?-1:1)},${base-14}" fill="${col}"/>
+        <text x="${mx}" y="${base-h*0.9-14}" text-anchor="middle" class="jl">${lab}</text>`; };
+    function draw(extra=""){
+      let s=`<line x1="${pad-8}" y1="${base}" x2="${W0-pad+14}" y2="${base}" stroke="var(--ink)" stroke-width="2.5"/>`;
+      for(let k=0;k<=den;k++){ const x=X(k);
+        s+=`<line x1="${x}" y1="${base-8}" x2="${x}" y2="${base+8}" stroke="var(--ink)" stroke-width="2"/>`;
+        s+= k===0? `<text x="${x}" y="${base+42}" text-anchor="middle" class="tl">0</text>` : k===den? `<text x="${x}" y="${base+42}" text-anchor="middle" class="tl">1</text>`
+          : `<text x="${x}" y="${base+32}" text-anchor="middle" class="tl s">${k}</text><line x1="${x-10}" y1="${base+39}" x2="${x+10}" y2="${base+39}" stroke="var(--ink)" stroke-width="2"/><text x="${x}" y="${base+60}" text-anchor="middle" class="tl s">${den}</text>`;
+        s+=`<rect class="hit" data-k="${k}" x="${x-step/2}" y="${base-45}" width="${step}" height="115" fill="transparent"/>`; }
+      s+=arc(0,q.start,"var(--pink)",`${q.start}/${den}`)+extra;
+      return `<svg class="shape nline" viewBox="0 0 ${W0} ${H}" width="${W0}" style="max-width:100%;height:auto" role="img" aria-label="خط الأعداد">${s}</svg>`;
+    }
+    body.insertAdjacentHTML("beforeend",`<div class="vis" id="jv" style="direction:ltr">${draw()}</div><div class="dirnote" style="font-weight:400">${q.add>0?"قفز السهم إلى":"نبدأ من"} ${F(q.start,den)}. اضغط على المكان الذي ${q.add>0?"تصل إليه بعد القفزة الثانية":"تصل إليه بعد الرجوع"}.</div>`);
+    $("#acts").innerHTML="";
+    let locked=false;
+    function bind(){ body.querySelectorAll("#jv .hit").forEach(r=>r.addEventListener("click",()=>{ if(locked) return; const k=+r.dataset.k;
+      if(k===ans){ locked=true; $("#jv").innerHTML=draw(arc(q.start,ans,"var(--blue)",`${Math.abs(q.add)}/${den}`)+`<circle cx="${X(ans)}" cy="${base}" r="11" fill="var(--ok)"/>`); correct(q); }
+      else { $("#jv").innerHTML=draw(`<circle cx="${X(k)}" cy="${base}" r="11" fill="var(--bad)"/>`); bind();
+        wrong(q.add>0? `القفزة الثانية طولها ${Math.abs(q.add)} أجزاء. عُدّ الأجزاء من ${q.start}.` : `نرجع ${Math.abs(q.add)} أجزاء. عُدّ الأجزاء إلى الخلف.`); } })); }
+    bind();
+  },
+  pop(q,body){
+    // balloons: pop every balloon that matches the rule
+    const items=shuffle(q.items.map((x,i)=>i)); let left=q.items.filter(x=>x.ok).length;
+    const COLS=["#F05D7A","#4C8DF0","#F6B92B","#3CC283","#A86EF0","#FF8A3D"];
+    body.insertAdjacentHTML("beforeend",`<div class="pond" id="pond">${items.map((i,k)=>`
+      <button class="balloon" data-i="${i}" style="--c:${COLS[k%COLS.length]};--d:${(k%5)*0.45}s"><span class="bl">${D(q.items[i].x)}</span><span class="str"></span></button>`).join("")}</div>
+      <div class="counter" id="cc">بقي ${left} بالونات</div>`);
+    $("#acts").innerHTML="";
+    body.querySelectorAll(".balloon").forEach(b=>b.addEventListener("click",()=>{
+      const it=q.items[+b.dataset.i];
+      if(it.ok){ b.classList.add("popped"); b.disabled=true; left--; $("#cc").textContent= left? `بقي ${left} ${left===1?"بالون":"بالونات"}` : "أحسنت! فرقعت كل البالونات";
+        if(left===0) correct(q); else beep(true); }
+      else { b.classList.remove("shake"); void b.offsetWidth; b.classList.add("shake"); wrong(q.hint||""); }
+    }));
   },
   set(q,body){
     const st=Array(q.items.length).fill(false);
@@ -572,40 +1484,43 @@ const R={
   },
   cmp(q,body){
     const signs=q.signs||["<","=",">"];
-    const v=q.a[0]/q.a[1]-q.b[0]/q.b[1];
+    const v=VAL(q.a)-VAL(q.b);
     const ans = signs.includes("≠") ? (Math.abs(v)<1e-9?"=":"≠") : (Math.abs(v)<1e-9?"=":v<0?"<":">");
-    body.insertAdjacentHTML("beforeend",`<div class="cmp">${F(...q.a)}<span class="slot" id="slot"></span>${F(...q.b)}</div>
+    body.insertAdjacentHTML("beforeend",`<div class="cmp">${D(q.a)}<span class="slot" id="slot"></span>${D(q.b)}</div>
       <div class="signs">${signs.map(s=>`<button class="sign" data-s="${s}" aria-label="${s==="<"?"أصغر من":s===">"?"أكبر من":s==="="?"يساوي":"لا يساوي"}">${G(s)}</button>`).join("")}</div>`);
     body.querySelectorAll(".sign").forEach(b=>b.addEventListener("click",()=>{
       const slot=$("#slot");
       slot.innerHTML=G(b.dataset.s); slot.classList.remove("right","wrong");
       if(b.dataset.s===ans){ slot.classList.add("right"); body.querySelectorAll(".sign").forEach(x=>x.disabled=true); correct(q); }
-      else { slot.classList.add("wrong"); b.disabled=true; wrong(signs.includes("≠")?"":"تذكّر: رأس العلامة يتجه نحو الكسر الأصغر.");
+      else { slot.classList.add("wrong"); b.disabled=true; wrong("تذكّر: رأس العلامة يتجه نحو الأصغر.");
              setTimeout(()=>{ if(slot.classList.contains("wrong")){slot.innerHTML="";slot.classList.remove("wrong");} },900); }
     }));
   },
   order(q,body){
-    const val=x=>x[0]/x[1];
+    // drag a card into a box, or tap a card to put it in the next empty box; tap a box to empty it
+    const val=VAL, n=q.items.length;
     const correctOrder=q.items.slice().sort((x,y)=> q.dir==="asc"? val(x)-val(y) : val(y)-val(x));
-    const pool=shuffle(q.items.map((x,i)=>i)); let placed=[], locked=false, marks=[];
-    body.insertAdjacentHTML("beforeend",`<div class="dirnote">${q.dir==="asc"?"الأصغر ← … ← الأكبر":"الأكبر ← … ← الأصغر"} <span style="font-weight:400">(املأ الخانات من اليمين، واضغط على خانة لتفريغها)</span></div>
+    const pool=shuffle(q.items.map((x,i)=>i)); let slots=Array(n).fill(null), locked=false, marks=[];
+    body.insertAdjacentHTML("beforeend",`<div class="dirnote">${q.dir==="asc"?"الأصغر ← … ← الأكبر":"الأكبر ← … ← الأصغر"} <span style="font-weight:400">(اسحب البطاقة إلى الخانة، أو اضغط عليها. اضغط على خانة لتفريغها)</span></div>
       <div class="slots" id="slots"></div><div class="chips" id="pool"></div>`);
     const btn=checkBtn(check,false);
+    const place=(i,k)=>{ const old=slots.indexOf(i); if(old>-1) slots[old]=null; if(k==null) k=slots.indexOf(null); if(k<0) return; slots[k]=i; marks=[]; paint(); };
     function paint(){
-      $("#slots").innerHTML=q.items.map((x,k)=>{
-        const it=placed[k]; const arrow=k<q.items.length-1?`<span class="arrow">${G(q.dir==="asc"?"<":">")}</span>`:"";
-        return `<button class="chip ${marks[k]||""}" data-k="${k}" aria-label="خانة ${k+1}"${locked?" disabled":""}>${it!=null?F(...q.items[it]):""}</button>${arrow}`;}).join("");
-      $("#pool").innerHTML= locked? "" : pool.map(i=>`<button class="chip${placed.includes(i)?" used":""}" data-i="${i}">${F(...q.items[i])}</button>`).join("");
+      $("#slots").innerHTML=slots.map((it,k)=>{
+        const arrow=k<n-1?`<span class="arrow">${G(q.dir==="asc"?"<":">")}</span>`:"";
+        return `<button class="chip slot-chip ${marks[k]||""}" data-k="${k}" aria-label="خانة ${k+1}"${locked?" disabled":""}>${it!=null?D(q.items[it]):""}</button>${arrow}`;}).join("");
+      $("#pool").innerHTML= locked? "" : pool.map(i=>`<button class="chip drag${slots.includes(i)?" used":""}" data-i="${i}">${D(q.items[i])}</button>`).join("");
+      btn.disabled=slots.includes(null)||locked;
       if(locked) return;
-      $("#slots").querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{const k=+b.dataset.k;if(placed[k]!=null){placed.splice(k,1);marks=[];paint();}}));
-      $("#pool").querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{placed.push(+b.dataset.i);marks=[];paint();}));
-      btn.disabled=placed.length!==q.items.length;
+      $("#slots").querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{const k=+b.dataset.k;if(slots[k]!=null){slots[k]=null;marks=[];paint();}}));
+      $("#pool").querySelectorAll(".chip").forEach(b=>dragify(b,()=>place(+b.dataset.i,null),(x,y)=>{
+        const el=document.elementFromPoint(x,y), s=el&&el.closest(".slot-chip"); if(s){ place(+b.dataset.i,+s.dataset.k); return true; } return false; }));
     }
     function check(){
-      const ok=placed.every((p,k)=>val(q.items[p])===val(correctOrder[k]));
-      if(ok){ locked=true; marks=placed.map(()=> "right"); paint(); correct(q); }
-      else { marks=placed.map(()=> "wrong"); paint(); btn.disabled=false;
-             wrong("اضغط على الخانات لتفريغها ثم رتّب من جديد. "+(q.dir==="asc"?"ابدأ بالكسر الأصغر.":"ابدأ بالكسر الأكبر.")); }
+      const ok=slots.every((p,k)=>val(q.items[p])===val(correctOrder[k]));
+      if(ok){ locked=true; marks=slots.map(()=> "right"); paint(); correct(q); }
+      else { marks=slots.map(()=> "wrong"); paint();
+             wrong("اضغط على الخانات لتفريغها ثم رتّب من جديد. "+(q.dir==="asc"?"ابدأ بالأصغر.":"ابدأ بالأكبر.")); }
     }
     paint();
   },
@@ -613,8 +1528,8 @@ const R={
     const right=shuffle(q.pairs.map((p,i)=>i));
     let sel=null, done=0;
     body.insertAdjacentHTML("beforeend",`<div class="dirnote" style="font-weight:400">اضغط كسراً من العمود الأول، ثم الكسر المكافئ له من العمود الثاني.</div>
-      <div class="match"><div class="col" id="mL">${q.pairs.map((p,i)=>`<button class="chip" data-i="${i}">${F(...p[0])}</button>`).join("")}</div>
-      <div class="col" id="mR">${right.map(i=>`<button class="chip" data-i="${i}">${F(...q.pairs[i][1])}</button>`).join("")}</div></div>`);
+      <div class="match"><div class="col" id="mL">${q.pairs.map((p,i)=>`<button class="chip" data-i="${i}">${D(p[0])}</button>`).join("")}</div>
+      <div class="col" id="mR">${right.map(i=>`<button class="chip" data-i="${i}">${D(q.pairs[i][1])}</button>`).join("")}</div></div>`);
     $("#acts").innerHTML="";
     body.querySelectorAll("#mL .chip").forEach(b=>b.addEventListener("click",()=>{
       body.querySelectorAll("#mL .chip").forEach(x=>x.classList.remove("sel")); b.classList.add("sel"); sel=+b.dataset.i;}));
@@ -624,19 +1539,276 @@ const R={
         const l=body.querySelector(`#mL .chip[data-i="${sel}"]`);
         [l,b].forEach(x=>{x.classList.remove("sel");x.classList.add("pair1");x.disabled=true;});
         sel=null; done++; $("#fb").innerHTML="";
-        if(done===q.pairs.length) correct(q,"وصلت كل الكسور المتكافئة.");
+        if(done===q.pairs.length) correct(q,"أكملت التوصيل.");
         else if(soundOn) beep(true);
       } else { b.classList.add("wrong","shake"); setTimeout(()=>b.classList.remove("wrong","shake"),450);
-               wrong("الكسران المتكافئان: نضرب البسط والمقام في العدد نفسه."); }
+               wrong(q.hint||""); }
     }));
+  },
+  setclock(q,body){
+    // drag the hands (or tap a number) to set the clock
+    const st={h:null,m:null}; let active="h", locked=false, dragging=false;
+    body.insertAdjacentHTML("beforeend",`<div class="handbtns">
+        <button class="hb on" data-h="h"><span class="dot" style="background:var(--hourhand)"></span>شوكة الساعات (القصيرة)</button>
+        <button class="hb" data-h="m"><span class="dot" style="background:var(--minhand)"></span>شوكة الدقائق (الطويلة)</button></div>
+      <div class="vis" id="cv"></div><div class="counter">اختر الشوكة، ثم اسحبها أو اضغط على الرقم الذي تشير إليه.</div>`);
+    const btn=checkBtn(check,false);
+    const setActive=h=>{active=h; body.querySelectorAll(".hb").forEach(x=>x.classList.toggle("on",x.dataset.h===h));};
+    body.querySelectorAll(".hb").forEach(b=>b.addEventListener("click",()=>{ if(!locked) setActive(b.dataset.h); }));
+    const posAt=e=>{ const svg=$("#cv svg"), r=svg.getBoundingClientRect(), dx=e.clientX-(r.left+r.width/2), dy=e.clientY-(r.top+r.height/2);
+      let a=Math.atan2(dx,-dy)*180/Math.PI; if(a<0) a+=360; return Math.round(a/30)%12; };
+    function paint(){
+      $("#cv").innerHTML=clockFace(st.h,st.m,{size:260,click:!locked});
+      btn.disabled = st.h==null || st.m==null || locked;
+      if(locked) return;
+      const svg=$("#cv svg"); svg.style.touchAction="none";
+      svg.addEventListener("pointerdown",e=>{ dragging=true; const p=posAt(e); if(st[active]!==p){st[active]=p;paint();} e.preventDefault(); });
+    }
+    window.addEventListener("pointermove",e=>{ if(!dragging||locked) return; const p=posAt(e); if(st[active]!==p){ st[active]=p; paint(); } });
+    window.addEventListener("pointerup",()=>{ if(!dragging) return; dragging=false;
+      if(active==="h" && st.m==null) setActive("m"); });
+    function check(){
+      const th=q.h%12, tm=(q.m/5)%12;
+      const okM = st.m===tm;
+      const okH = q.m===0 ? st.h===th : (st.h===th || st.h===(th+1)%12);
+      if(okH && okM){ locked=true; $("#cv").innerHTML=clock(q.h,q.m,{size:260}); body.querySelectorAll(".hb").forEach(x=>x.disabled=true); correct(q); }
+      else wrong(!okH && !okM? "راجع الشوكتين: القصيرة للساعات والطويلة للدقائق."
+                 : !okH? "شوكة الساعات (القصيرة) تحتاج إلى تصحيح."
+                 : "شوكة الدقائق (الطويلة) تحتاج إلى تصحيح. تذكّر: بين كل رقمين 5 دقائق.");
+    }
+    paint();
+  },
+  connect(q,body){
+    // tap (or drag from) one point to another to draw a segment
+    const pts=q.pts, Wd=320, H=q.h||230, done=new Set(); let sel=null, dragging=false, locked=false;
+    const key=(a,b)=>[a,b].sort().join("|");
+    const targets=new Set(q.targets.map(t=>{const [a,b]=SEGP(t,pts); return key(a,b);}));
+    body.insertAdjacentHTML("beforeend",`<div class="vis" id="gv"></div><div class="counter" id="cc">اضغط على نقطة ثم على نقطة أخرى، أو اسحب من نقطة إلى أخرى.</div>`);
+    $("#acts").innerHTML="";
+    function draw(rubber=""){
+      let lines=[...done].map(k=>{const [a,b]=k.split("|"); return `<line x1="${pts[a][0]}" y1="${pts[a][1]}" x2="${pts[b][0]}" y2="${pts[b][1]}" stroke="var(--ok)" stroke-width="4" stroke-linecap="round"/>`;}).join("");
+      const base=fig(pts,[],{w:Wd,h:H,big:true,labelUp:q.labelUp});
+      $("#gv").innerHTML=base.replace('role="img"',`role="img" id="gsvg"`).replace(/(<circle class="pt")/,`${lines}${rubber}$1`);
+      $("#gv").querySelectorAll(".pt").forEach(c=>{ if(c.dataset.p===sel) c.setAttribute("fill","var(--blue)"); c.setAttribute("r","11"); });
+    }
+    const svgPt=e=>{ const svg=$("#gsvg"), r=svg.getBoundingClientRect(); return [(e.clientX-r.left)*Wd/r.width,(e.clientY-r.top)*H/r.height]; };
+    const near=e=>{ const [x,y]=svgPt(e); let best=null,bd=1e9; for(const n in pts){ const d=Math.hypot(pts[n][0]-x,pts[n][1]-y); if(d<bd){bd=d;best=n;} } return bd<30?best:null; };
+    function attempt(a,b){
+      const k=key(a,b);
+      if(done.has(k)) return;
+      if(targets.has(k)){ done.add(k); draw(); if(done.size===targets.size){ locked=true; correct(q); } else { beep(true); $("#cc").textContent=`رسمت ${done.size} من ${targets.size}`; } }
+      else { draw(`<line x1="${pts[a][0]}" y1="${pts[a][1]}" x2="${pts[b][0]}" y2="${pts[b][1]}" stroke="var(--bad)" stroke-width="4" stroke-dasharray="6 6"/>`); setTimeout(()=>{ if(!locked) draw(); },700);
+             wrong(q.hint||"اقرأ السؤال جيداً: أي النقاط يجب أن نصل بينها؟"); }
+    }
+    $("#gv").addEventListener("pointerdown",e=>{ if(locked) return; const p=near(e); if(!p) return; e.preventDefault();
+      if(sel && sel!==p){ const a=sel; sel=null; attempt(a,p); return; }
+      sel=p; dragging=true; draw(); });
+    $("#gv").addEventListener("pointermove",e=>{ if(!dragging||!sel||locked) return; const [x,y]=svgPt(e);
+      draw(`<line x1="${pts[sel][0]}" y1="${pts[sel][1]}" x2="${x}" y2="${y}" stroke="var(--blue)" stroke-width="3" stroke-dasharray="5 5"/>`); });
+    $("#gv").addEventListener("pointerup",e=>{ if(!dragging) return; dragging=false; const p=near(e);
+      if(p && sel && p!==sel){ const a=sel; sel=null; attempt(a,p); } else draw(); });
+    $("#gv").style.touchAction="none";
+    draw();
+  },
+  tapseg(q,body){
+    const pts=q.pts; let locked=false;
+    body.insertAdjacentHTML("beforeend",`<div class="vis" id="gv">${fig(pts,q.segs)}</div><div class="counter">اضغط على القطعة المطلوبة.</div>`);
+    $("#acts").innerHTML="";
+    const svg=$("#gv svg");
+    // wide invisible hit lines on top
+    q.segs.forEach(sg=>{ const [a,b]=SEGP(sg,pts); svg.insertAdjacentHTML("beforeend",`<line class="hitseg" data-s="${sg}" x1="${pts[a][0]}" y1="${pts[a][1]}" x2="${pts[b][0]}" y2="${pts[b][1]}" stroke="transparent" stroke-width="26" stroke-linecap="round"/>`); });
+    const same=(s1,s2)=>{ const p=SEGP(s1,pts), r=SEGP(s2,pts); return p&&r&&[...p].sort().join()===[...r].sort().join(); };
+    svg.querySelectorAll(".hitseg").forEach(h=>h.addEventListener("click",()=>{ if(locked) return;
+      const ln=svg.querySelector(`.sg[data-s="${h.dataset.s}"]`);
+      if(same(h.dataset.s,q.ask)){ locked=true; ln.setAttribute("stroke","var(--ok)"); ln.setAttribute("stroke-width","7"); correct(q); }
+      else { ln.setAttribute("stroke","var(--bad)"); setTimeout(()=>ln.setAttribute("stroke","var(--pink)"),700); wrong("اقرأ حرفي القطعة: هما النقطتان عند طرفيها."); } }));
+  },
+  measure(q,body){
+    // segment (or object) above a ruler the pupil can drag left and right
+    const S3=3, x0=q.aligned?20:46+Math.floor(Math.random()*30), x1=x0+q.mm*S3, Wd=360, H=q.tri?220:170, segY=q.tri?140:60, rY=segY+14;
+    let rx=q.aligned? x0-10 : 4, dragging=false, sx=0, srx=0;
+    let top="";
+    if(q.obj==="pencil") top=pencilSvg(x0,q.mm*S3,segY-10);
+    else if(q.obj==="nail") top=nailSvg(x0,q.mm*S3,segY-10);
+    else {
+      if(q.tri) top+=`<line x1="${x0}" y1="${segY}" x2="${(x0+x1)/2+30}" y2="${segY-115}" stroke="var(--blue)" stroke-width="2.5"/><line x1="${x1}" y1="${segY}" x2="${(x0+x1)/2+30}" y2="${segY-115}" stroke="var(--blue)" stroke-width="2.5"/>`;
+      top+=`<line x1="${x0}" y1="${segY}" x2="${x1}" y2="${segY}" stroke="var(--pink)" stroke-width="3"/>
+        <line x1="${x0}" y1="${segY-9}" x2="${x0}" y2="${segY+9}" stroke="var(--pink)" stroke-width="3"/><line x1="${x1}" y1="${segY-9}" x2="${x1}" y2="${segY+9}" stroke="var(--pink)" stroke-width="3"/>
+        <text x="${x0}" y="${segY-20}" text-anchor="middle" class="pl">${q.a}</text><text x="${x1}" y="${segY-20}" text-anchor="middle" class="pl">${q.b}</text>`;
+    }
+    body.insertAdjacentHTML("beforeend",`<div class="vis" id="mv" style="direction:ltr"><svg class="shape rulerbox" id="msvg" viewBox="0 0 ${Wd} ${H}" width="${Wd}" style="max-width:100%;height:auto;touch-action:none" role="img" aria-label="مسطرة">
+        ${top}<g id="rul" transform="translate(${rx},${rY})" style="cursor:grab">${rulerSvg()}</g></svg></div>
+      ${q.aligned?"":'<div class="nudge"><button class="sbtn" id="rr" aria-label="حرّك المسطرة يميناً">→</button><span class="dirnote" style="font-weight:400">اسحب المسطرة حتى يقع الصفر عند بداية القطعة</span><button class="sbtn" id="rl" aria-label="حرّك المسطرة يساراً">←</button></div>'}
+      <div class="eqline"><span class="eq" style="direction:rtl;font-size:24px">الطول = <select class="dd" id="dd0" aria-label="السنتمترات"><option value="">?</option>${range(0,10).map(o=>`<option value="${o}">${o}</option>`).join("")}</select> سم و <select class="dd" id="dd1" aria-label="المليمترات"><option value="">?</option>${range(0,9).map(o=>`<option value="${o}">${o}</option>`).join("")}</select> ملم</span></div>`);
+    const svg=$("#msvg"), g=$("#rul");
+    const setRx=v=>{ rx=Math.max(-20,Math.min(Wd-60,v)); g.setAttribute("transform",`translate(${rx},${rY})`); };
+    if(!q.aligned){
+      g.addEventListener("pointerdown",e=>{ dragging=true; sx=e.clientX; srx=rx; g.style.cursor="grabbing"; e.preventDefault(); });
+      window.addEventListener("pointermove",e=>{ if(!dragging) return; const r=svg.getBoundingClientRect(); setRx(srx+(e.clientX-sx)*Wd/r.width); });
+      window.addEventListener("pointerup",()=>{ dragging=false; g.style.cursor="grab"; });
+      $("#rr").addEventListener("click",()=>setRx(rx+3)); $("#rl").addEventListener("click",()=>setRx(rx-3));
+    }
+    const sels=[$("#dd0"),$("#dd1")], want=[Math.floor(q.mm/10), q.mm%10];
+    const btn=checkBtn(()=>{
+      let ok=true; sels.forEach((s,k)=>{const r=+s.value===want[k]; s.classList.toggle("wrong",!r); if(!r) ok=false;});
+      if(ok){ sels.forEach(s=>{s.disabled=true;s.classList.add("right");}); correct(q); }
+      else wrong("ضع صفر المسطرة عند بداية القطعة، ثم عُدّ السنتمترات، ثم المليمترات الصغيرة بعدها.");
+    },false);
+    sels.forEach(s=>s.addEventListener("change",()=>{s.classList.remove("wrong");btn.disabled=sels.some(x=>x.value==="");}));
+  },
+  classify(q,body){
+    const order=shuffle(q.shapes.map((s,i)=>i)); let sel=null, left=q.shapes.length;
+    body.insertAdjacentHTML("beforeend",`<div class="chips" id="pool">${order.map(i=>`<button class="chip drag shapecard" data-i="${i}" aria-label="شكل">${q.shapes[i][1]}</button>`).join("")}</div>
+      <div class="bins">${q.bins.map(([k,l])=>`<div class="bin" data-k="${k}"><span class="binl">${l}</span><div class="bini"></div></div>`).join("")}</div>
+      <div class="counter" id="cc">اسحب كل شكل إلى صندوقه، أو اضغط على الشكل ثم على الصندوق.</div>`);
+    $("#acts").innerHTML="";
+    const put=(i,binEl)=>{ const card=body.querySelector(`.shapecard[data-i="${i}"]`); if(!card||!binEl) return false;
+      if(q.shapes[i][0]===binEl.dataset.k){ card.remove(); binEl.querySelector(".bini").insertAdjacentHTML("beforeend",`<span class="placed">${q.shapes[i][1]}</span>`);
+        left--; sel=null; if(left===0) correct(q); else { beep(true); $("#cc").textContent=`بقي ${left} أشكال`; } }
+      else { card.classList.remove("shake","sel"); void card.offsetWidth; card.classList.add("shake"); binEl.classList.add("nope"); setTimeout(()=>binEl.classList.remove("nope"),500); sel=null; wrong(q.hint||""); }
+      return true; };
+    body.querySelectorAll(".shapecard").forEach(c=>dragify(c,()=>{ body.querySelectorAll(".shapecard").forEach(x=>x.classList.remove("sel")); c.classList.add("sel"); sel=+c.dataset.i; },
+      (x,y)=>{ const el=document.elementFromPoint(x,y), b=el&&el.closest(".bin"); return b? put(+c.dataset.i,b) : false; }));
+    body.querySelectorAll(".bin").forEach(b=>b.addEventListener("click",()=>{ if(sel!=null) put(sel,b); }));
+  },
+  abacus(q,body){
+    // tap + / − under each rod (or tap the rod) to add or remove beads
+    const want=ab(q.n), st=[0,0,0,0]; let locked=false;
+    body.insertAdjacentHTML("beforeend",`<div class="vis" id="av"></div>
+      <div class="abtns">${["ألوف","مئات","عشرات","آحاد"].map((l,i)=>`<div class="abtn"><button class="sbtn" data-i="${i}" data-d="1" aria-label="أضف خرزة إلى ${l}">+</button><button class="sbtn" data-i="${i}" data-d="-1" aria-label="أنقص خرزة من ${l}">−</button></div>`).join("")}</div>
+      <div class="counter" id="cc"></div>`);
+    const btn=checkBtn(check,false);
+    function paint(){
+      $("#av").innerHTML=abacusSvg(st,{click:!locked});
+      $("#cc").textContent=`العدد في العداد: ${st.join("").replace(/^0+(?=\d)/,"")}`;
+      btn.disabled=locked;
+      if(locked) return;
+      $("#av").querySelectorAll(".rodhit").forEach(r=>r.addEventListener("click",()=>{ const i=+r.dataset.i; st[i]=(st[i]+1)%10; paint(); }));
+    }
+    body.querySelectorAll(".abtns .sbtn").forEach(b=>b.addEventListener("click",()=>{ if(locked) return; const i=+b.dataset.i; st[i]=Math.max(0,Math.min(9,st[i]+ +b.dataset.d)); paint(); }));
+    function check(){
+      const bad=st.map((v,i)=>v!==want[i]);
+      if(!bad.some(Boolean)){ locked=true; body.querySelectorAll(".abtns .sbtn").forEach(b=>b.disabled=true); paint(); correct(q); }
+      else { const names=["الألوف","المئات","العشرات","الآحاد"].filter((n,i)=>bad[i]); wrong(`راجع خرزات: ${names.join(" و ")}.`); }
+    }
+    paint();
+  },
+  column(q,body){
+    const W0=Math.max(...q.rows.map(r=>r.p.length)); let k=0; const want=[];
+    let html=`<table class="colt" dir="ltr">`;
+    q.rows.forEach(r=>{
+      const p=r.p.padStart(W0," "), a=(r.a||r.p).padStart(W0," ");
+      html+=`<tr class="${r.line?"line":""}"><td class="op">${r.op||""}</td>`;
+      for(let i=0;i<W0;i++){ const ch=p[i];
+        if(ch==="?"){ want.push(+a[i]); html+=`<td><select class="dd sm" id="cd${k}" aria-label="رقم"><option value="">?</option>${range(0,9).map(o=>`<option value="${o}">${o}</option>`).join("")}</select></td>`; k++; }
+        else html+=`<td>${ch===" "?"":ch}</td>`; }
+      html+=`<td class="lab" dir="rtl">${r.lab?r.lab+" ←":""}</td></tr>`;
+    });
+    html+=`</table>`;
+    body.insertAdjacentHTML("beforeend",`<div class="vis colbox">${html}</div>`);
+    const sels=want.map((w,i)=>$("#cd"+i,body));
+    const btn=checkBtn(()=>{
+      let ok=true; sels.forEach((s,i)=>{const r=+s.value===want[i]; s.classList.toggle("wrong",!r); if(!r) ok=false;});
+      if(ok){ sels.forEach(s=>{s.disabled=true;s.classList.add("right");}); correct(q); }
+      else wrong(q.hint||"");
+    },false);
+    sels.forEach(s=>s.addEventListener("change",()=>{s.classList.remove("wrong");btn.disabled=sels.some(x=>x.value==="");}));
+  },
+  longdiv(q,body){
+    // long division as in the book: divisor on the left, quotient digits above the dividend
+    const a=String(q.a), b=q.b, qd=[]; let cur=0;
+    for(const ch of a){ cur=cur*10+ +ch; qd.push(Math.floor(cur/b)); cur%=b; }
+    const rem=cur, n=a.length;
+    const sel=(id,opts)=>`<select class="dd sm" id="${id}" aria-label="رقم"><option value="">?</option>${opts.map(o=>`<option value="${o}">${o}</option>`).join("")}</select>`;
+    let html=`<table class="divt" dir="ltr"><tr><td></td>${qd.map((d,i)=>`<td>${sel("qd"+i,range(0,9))}</td>`).join("")}</tr>
+      <tr><td class="dv">${b}</td>${a.split("").map((d,i)=>`<td class="dn${i===0?" first":""}">${d}</td>`).join("")}</tr></table>`;
+    body.insertAdjacentHTML("beforeend",`<div class="vis colbox">${html}</div>
+      <div class="eqline"><span class="eq" style="font-size:24px">الباقي = ${sel("qr",range(0,b-1))}</span></div>
+      <div class="dirnote" style="font-weight:400">اقسم خانة خانة من اليسار، واكتب صفراً فوق الرقم الذي لا يقبل القسمة على ${b}.</div>`);
+    const sels=[...qd.map((d,i)=>$("#qd"+i,body)),$("#qr",body)], want=[...qd,rem];
+    const btn=checkBtn(()=>{
+      let ok=true; sels.forEach((s,i)=>{const r=+s.value===want[i]; s.classList.toggle("wrong",!r); if(!r) ok=false;});
+      if(ok){ sels.forEach(s=>{s.disabled=true;s.classList.add("right");}); correct(q, `${q.a} ÷ ${b} = ${+qd.join("")}${rem?` والباقي ${rem}`:""}. `); }
+      else wrong(`ابدأ من اليسار: كم مرة يدخل ${b} في الرقم الأول؟ اطرح، ثم أنزل الرقم التالي.`);
+    },false);
+    sels.forEach(s=>s.addEventListener("change",()=>{s.classList.remove("wrong");btn.disabled=sels.some(x=>x.value==="");}));
+  },
+  groups(q,body){
+    let k=0, locked=false;
+    body.insertAdjacentHTML("beforeend",`<div class="gbox" id="gb"></div>
+      <div class="steppers"><div class="stepper"><span class="slabel">عدد المجموعات</span>
+        <div class="srow"><button class="sbtn" data-d="1" aria-label="أضف مجموعة">+</button><span class="sval" id="gk">0</span><button class="sbtn" data-d="-1" aria-label="احذف مجموعة">−</button></div></div></div>`);
+    const btn=checkBtn(check,false);
+    function paint(){
+      $("#gb").innerHTML= k? range(1,k).map(()=>`<div class="grpbox">${rep(`<span>${q.e}</span>`,q.n).join("")}</div>`).join("") : `<span class="dirnote" style="font-weight:400">اضغط + لتضيف مجموعة من ${q.n}</span>`;
+      $("#gk").textContent=k; btn.disabled=k===0||locked;
+    }
+    body.querySelectorAll(".sbtn").forEach(b=>b.addEventListener("click",()=>{ if(locked) return; k=Math.max(0,Math.min(10,k+ +b.dataset.d)); paint(); }));
+    function check(){ if(k===q.g){ locked=true; body.querySelectorAll(".sbtn").forEach(b=>b.disabled=true); paint(); correct(q, `${q.g} × ${q.n} = ${q.g*q.n}. `); }
+      else wrong(`نريد ${q.g} مجموعات، في كل مجموعة ${q.n}.`); }
+    paint();
+  },
+  share(q,body){
+    // a sharing mat: tap a plate to give it one item, or share one to every plate
+    const plates=Array(q.k).fill(0); let pool=q.total; const each=Math.floor(q.total/q.k), r=q.total%q.k;
+    body.insertAdjacentHTML("beforeend",`<div class="pool" id="pool"></div>
+      <div class="actions"><button class="btn ghost" id="sh1" type="button">وزّع واحدة على كل طبق</button><button class="btn ghost" id="sh0" type="button">ابدأ من جديد</button></div>
+      <div class="plates" id="pl"></div>
+      <div class="eqline"><span class="eq" style="font-size:24px">نصيب كل واحد = <select class="dd sm" id="se"><option value="">?</option>${range(0,Math.max(12,each+3)).map(o=>`<option value="${o}">${o}</option>`).join("")}</select>${q.rem?` والباقي = <select class="dd sm" id="sr"><option value="">?</option>${range(0,q.k-1).map(o=>`<option value="${o}">${o}</option>`).join("")}</select>`:""}</span></div>`);
+    function paint(){
+      $("#pool").innerHTML= pool? `<span class="plabel">المتبقي: ${pool}</span>`+rep(`<span>${q.e}</span>`,pool).join("") : `<span class="plabel">وُزّعت كل القطع</span>`;
+      $("#pl").innerHTML=plates.map((c,i)=>`<button class="plate" data-i="${i}" type="button"><span class="pc">${c}</span><span class="pitems">${rep(q.e,c).join("")}</span></button>`).join("");
+      $("#pl").querySelectorAll(".plate").forEach(p=>p.addEventListener("click",()=>{ if(pool>0){ plates[+p.dataset.i]++; pool--; paint(); } }));
+    }
+    $("#sh1").addEventListener("click",()=>{ if(pool>=q.k){ for(let i=0;i<q.k;i++) plates[i]++; pool-=q.k; paint(); } else { $("#pool").classList.remove("shake"); void $("#pool").offsetWidth; $("#pool").classList.add("shake"); } });
+    $("#sh0").addEventListener("click",()=>{ plates.fill(0); pool=q.total; paint(); });
+    const sels=[$("#se"),...(q.rem?[$("#sr")]:[])], want=[each,...(q.rem?[r]:[])];
+    const btn=checkBtn(()=>{
+      let ok=true; sels.forEach((s,i)=>{const v=+s.value===want[i]; s.classList.toggle("wrong",!v); if(!v) ok=false;});
+      if(ok){ sels.forEach(s=>{s.disabled=true;s.classList.add("right");}); correct(q, `${q.total} ÷ ${q.k} = ${each}${q.rem?` والباقي ${r}`:""}. `); }
+      else wrong("وزّع القطع على الأطباق بالتساوي، ثم عُدّ ما في الطبق الواحد"+(q.rem?" وما بقي.":"."));
+    },false);
+    sels.forEach(s=>s.addEventListener("change",()=>{s.classList.remove("wrong");btn.disabled=sels.some(x=>x.value==="");}));
+    paint();
+  },
+  opsign(q,body){
+    const f={"+":(a,b)=>a+b,"−":(a,b)=>a-b,"×":(a,b)=>a*b,"÷":(a,b)=>a/b};
+    const good=Object.keys(f).filter(o=>f[o](q.l,q.r)===q.res);
+    body.insertAdjacentHTML("beforeend",`<div class="eqline"><span class="eq" style="font-size:36px">${q.l} <span class="slot" id="slot"></span> ${q.r} = ${q.res}</span></div>
+      <div class="signs">${Object.keys(f).map(o=>`<button class="sign" data-s="${o}" aria-label="${o}">${o}</button>`).join("")}</div>`);
+    $("#acts").innerHTML="";
+    body.querySelectorAll(".sign").forEach(b=>b.addEventListener("click",()=>{
+      const slot=$("#slot"); slot.textContent=b.dataset.s; slot.classList.remove("right","wrong");
+      if(good.includes(b.dataset.s)){ slot.classList.add("right"); body.querySelectorAll(".sign").forEach(x=>x.disabled=true); correct(q); }
+      else { slot.classList.add("wrong"); b.disabled=true; wrong("جرّب العلامة واحسب: هل يكون الناتج "+q.res+"؟");
+             setTimeout(()=>{ if(slot.classList.contains("wrong")){slot.textContent="";slot.classList.remove("wrong");} },900); }
+    }));
+  },
+  race(q,body){
+    let i=0; const t0=Date.now();
+    body.insertAdjacentHTML("beforeend",`<div class="racebar"><span id="rt">⏱ 0</span><span id="rp"></span></div><div class="eqline"><span class="eq" id="rq" style="font-size:42px"></span></div><div class="signs" id="ro"></div>`);
+    $("#acts").innerHTML="";
+    const tick=setInterval(()=>{ const el=$("#rt"); if(!el){clearInterval(tick);return;} el.textContent=`⏱ ${Math.round((Date.now()-t0)/1000)}`; },500);
+    function show(){
+      const [k,t]=q.facts[i], ans=k*t;
+      const opts=shuffle(uniqSort([ans, ans+t, Math.max(0,ans-t)===ans? ans+1 : Math.max(0,ans-t), ans+1]).filter((v,j,a)=>a.indexOf(v)===j)).slice(0,3);
+      if(!opts.includes(ans)) opts[0]=ans;
+      $("#rq").textContent=`${k} × ${t} = ؟`; $("#rp").textContent=`${i+1} / ${q.facts.length}`;
+      $("#ro").innerHTML=shuffle(opts).map(o=>`<button class="sign wide" data-v="${o}">${o}</button>`).join("");
+      $("#ro").querySelectorAll(".sign").forEach(b=>b.addEventListener("click",()=>{
+        if(+b.dataset.v===ans){ $("#fb").innerHTML=""; beep(true); i++; if(i<q.facts.length) show(); else { clearInterval(tick); $("#ro").innerHTML=""; $("#rq").textContent="🏁"; correct(q, `أنهيت السباق في ${Math.round((Date.now()-t0)/1000)} ثانية. `); } }
+        else { b.disabled=true; b.classList.add("shake"); wrong(); }
+      }));
+    }
+    show();
   },
   multi(q,body){
     const st=Array(q.items.length).fill(false);
-    body.insertAdjacentHTML("beforeend",`<div class="chips">${q.items.map((x,i)=>`<button class="chip" data-i="${i}" aria-pressed="false">${F(...x)}</button>`).join("")}</div>`);
+    body.insertAdjacentHTML("beforeend",`<div class="chips">${q.items.map((x,i)=>`<button class="chip" data-i="${i}" aria-pressed="false">${D(x)}</button>`).join("")}</div>`);
     const btn=checkBtn(()=>{
       const ok=q.items.every((x,i)=>st[i]===q.ans.includes(i));
       if(ok){ body.querySelectorAll(".chip").forEach(b=>{if(st[+b.dataset.i]){b.classList.remove("sel");b.classList.add("right");} b.disabled=true;}); correct(q); }
-      else wrong("الكسر في أبسط صورة لا يقبل بسطه ومقامه القسمة على عدد واحد غير ١.");
+      else wrong(q.hint||"");
     },false);
     body.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{
       const i=+b.dataset.i; st[i]=!st[i]; b.classList.toggle("sel",st[i]); b.setAttribute("aria-pressed",st[i]); btn.disabled=!st.some(Boolean);}));
@@ -646,12 +1818,12 @@ const R={
 /* ---------- result ---------- */
 function showResult(){
   const n=S.list.length, p=S.score/n, st=starsFor(p), id=S.lesson.id;
-  if(st>(best[id]||0)){best[id]=st;store.set("fr-best",best);}
+  if(st>B(id)){best[UNIT.key+"-"+id]=st;store.set("g3-best",best);}
   beep(st>=2);
   const msg = st===3?"ممتاز! أنت بطل الكسور":st===2?"أحسنت! أداء جيد جداً":st===1?"جيد، تدرّب مرة أخرى لتربح نجوماً أكثر":"لنراجع الدرس ونحاول من جديد";
   $("#view").innerHTML=`
     <section class="card result">
-      <span class="tab">${id===9?"كل الدروس":"الدرس "+ORD[id-1]} · ${S.lesson.name}</span>
+      <span class="tab">${id===FINAL.id?"كل الدروس":"الدرس "+ORD[id-1]} · ${S.lesson.name}</span>
       <div class="stars">${starStr(st)}</div>
       <div class="big">${S.score} / ${n}</div>
       <h2>${msg}</h2>
@@ -677,9 +1849,10 @@ new MutationObserver(ms=>ms.forEach(m=>{
   else m.addedNodes.forEach(n=>{ if(n.nodeType===3){ if(/[0-9]/.test(n.nodeValue)) n.nodeValue=n.nodeValue.replace(/[0-9]/g,d=>AD[d]); } else if(n.nodeType===1) arab(n); });
 })).observe($("#app"),{childList:true,subtree:true,characterData:true});
 
-showMap();
+showHome();
 arab($("#app"));
 })();
 </script>
 
-</body></html>
+</body>
+</html>
