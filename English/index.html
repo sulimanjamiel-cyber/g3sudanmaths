@@ -1,1 +1,638 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Games – Grade 3</title>
+<meta name="description" content="ألعاب إنجليزي تفاعلية للصف الثالث – كتاب SMILE 3 (المنهج السوداني)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="English Games – Grade 3 (SMILE Book 3)">
+<meta property="og:description" content="ألعاب إنجليزي تفاعلية للصف الثالث – كتاب SMILE 3 – ست وحدات">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="English Games – Grade 3 (SMILE Book 3)">
+<meta name="twitter:description" content="ألعاب إنجليزي تفاعلية للصف الثالث – كتاب SMILE 3">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff8e7; --ink:#2b2b3a; --muted:#6b6b80; --card:#ffffff; --line:#e9e1cc;
+  --good:#2fb85a; --bad:#ef4b4b; --star:#ffc928;
+  --u1:#3cb44b; --u2:#d4589f; --u3:#18a9e0; --u4:#ff8a1f; --u5:#8a5cf6; --u6:#e8443a;
+  --c:#3cb44b;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:"Andika","Comic Sans MS",system-ui,sans-serif;font-size:20px;line-height:1.4;
+  background-image:radial-gradient(circle at 10% 10%,#ffe9a8 0 60px,transparent 61px),radial-gradient(circle at 92% 18%,#cdeffd 0 80px,transparent 81px),radial-gradient(circle at 85% 92%,#ffd6ea 0 70px,transparent 71px);background-attachment:fixed;min-height:100vh}
+.ar{font-family:"Cairo",system-ui,sans-serif;direction:rtl;unicode-bidi:isolate}
+button{font:inherit;color:inherit;cursor:pointer;border:none;background:none}
+#app{max-width:860px;margin:0 auto;padding:16px 16px 40px}
+/* header */
+.top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.back{background:var(--card);border:3px solid var(--line);border-radius:14px;padding:6px 14px;font-weight:700}
+.back:hover{border-color:var(--c)}
+.crumb{font-weight:700;color:var(--c);font-size:1.05rem}
+.spacer{flex:1}
+.mute{background:var(--card);border:3px solid var(--line);border-radius:14px;padding:6px 10px}
+/* home */
+.hero{text-align:center;padding:10px 0 6px}
+.hero h1{margin:0;font-size:2.2rem;letter-spacing:.5px}
+.hero h1 .s{color:#e8443a}.hero h1 .m{color:#ff8a1f}.hero h1 .i{color:#3cb44b}.hero h1 .l{color:#18a9e0}.hero h1 .e{color:#8a5cf6}
+.hero p{margin:4px 0;color:var(--muted)}
+.units{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:16px}
+.ucard{background:var(--card);border-radius:22px;padding:16px;text-align:left;border:4px solid var(--c);box-shadow:0 6px 0 var(--c);transition:transform .12s;display:flex;gap:12px;align-items:center}
+.ucard:hover{transform:translateY(-3px)}
+.ucard .em{font-size:2.6rem;line-height:1}
+.ucard .n{font-size:.9rem;font-weight:700;color:var(--c)}
+.ucard .t{font-size:1.2rem;font-weight:700}
+.ucard .st{font-size:.85rem;color:var(--muted)}
+.credit{margin-top:26px;text-align:center;background:var(--card);border-radius:16px;padding:12px;border:3px dashed var(--line);font-size:1.05rem}
+.credit .ph{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"Andika",sans-serif;font-weight:700}
+/* unit page */
+.uhead{background:var(--c);color:#fff;border-radius:20px;padding:14px 18px;display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.uhead .em{font-size:2.4rem}
+.uhead h2{margin:0;font-size:1.5rem}
+.games{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.gcard{background:var(--card);border:3px solid var(--line);border-radius:18px;padding:12px 14px;text-align:left;display:flex;gap:10px;align-items:center;transition:transform .1s,border-color .1s}
+.gcard:hover{border-color:var(--c);transform:translateY(-2px)}
+.gcard .num{flex:none;width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;font-weight:700;display:grid;place-items:center}
+.gcard .gt{font-weight:700;line-height:1.2}
+.gcard .ga{font-size:.85rem;color:var(--muted)}
+.stars{color:var(--star);letter-spacing:2px;font-size:.95rem}
+.stars .off{color:#ddd}
+/* game */
+.panel{background:var(--card);border-radius:24px;padding:18px;border:4px solid var(--c);box-shadow:0 6px 0 var(--c)}
+.ghead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ghead h3{margin:0;font-size:1.3rem}
+.inst{color:var(--muted);font-size:1rem;margin:2px 0 10px}
+.inst .ar{display:inline-block;margin-left:6px}
+.bar{height:14px;background:#eee;border-radius:10px;overflow:hidden;margin:6px 0 14px}
+.bar i{display:block;height:100%;background:var(--c);transition:width .3s}
+.text{background:#fffbea;border:3px dashed #f2d98c;border-radius:16px;padding:12px 14px;margin-bottom:14px;font-size:1.05rem}
+.text p{margin:4px 0}
+.text .who{font-weight:700;color:var(--c)}
+.q{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:1.35rem;font-weight:700;margin:6px 0 12px}
+.say{flex:none;width:46px;height:46px;border-radius:50%;background:var(--c);color:#fff;font-size:1.3rem;display:grid;place-items:center;box-shadow:0 3px 0 rgba(0,0,0,.18)}
+.say:active{transform:translateY(2px)}
+.blank{display:inline-block;min-width:90px;border-bottom:4px solid var(--c);text-align:center;color:var(--c);padding:0 4px}
+.pic{font-size:5rem;line-height:1.1;text-align:center;margin:4px 0 10px;min-height:90px}
+.pic svg{width:150px;height:150px}
+.pic.wide svg{width:220px;height:150px}
+.bignum{font-size:4.5rem;font-weight:700;color:var(--c);text-align:center}
+.listenbig{display:flex;justify-content:center;margin:10px 0 16px}
+.listenbig .say{width:110px;height:110px;font-size:3rem}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;background:#f7f7fb;border:3px solid #e2e2ee;border-radius:16px;padding:10px 14px;text-align:left;font-size:1.2rem;direction:ltr}
+.opt .L{flex:none;width:36px;height:36px;border-radius:50%;background:#fff;border:3px solid var(--c);color:var(--c);font-weight:700;display:grid;place-items:center}
+.opt:hover{border-color:var(--c)}
+.opt.ok{background:#e3f8e9;border-color:var(--good)}
+.opt.ok .L{background:var(--good);border-color:var(--good);color:#fff}
+.yn{flex-direction:row}
+.yn .opt{flex:1;justify-content:center;font-weight:700;font-size:1.4rem}
+.yn .opt.yes{color:#1f9e47}.yn .opt.no{color:#d83b3b}
+.shake{animation:shake .4s}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-7px)}80%{transform:translateX(7px)}}
+.wrongflash{background:#ffe6e6!important;border-color:var(--bad)!important}
+.fb{min-height:40px;text-align:center;font-weight:700;font-size:1.2rem;margin-top:12px}
+.fb.good{color:var(--good)}.fb.bad{color:var(--bad)}
+.next{display:block;margin:12px auto 0;background:var(--c);color:#fff;font-weight:700;font-size:1.25rem;padding:10px 28px;border-radius:16px;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+/* order */
+.slots{min-height:64px;border:3px dashed var(--c);border-radius:16px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px;background:#fcfcff}
+.tiles{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tile{background:#fff;border:3px solid var(--c);border-radius:12px;padding:6px 12px;font-size:1.2rem;font-weight:700;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.tile.used{visibility:hidden}
+.slots .tile{background:var(--c);color:#fff}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.btn{background:#eee;border-radius:14px;padding:8px 18px;font-weight:700}
+.btn.main{background:var(--c);color:#fff}
+/* sequence */
+.seqdone{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.seqdone div{background:#e3f8e9;border:2px solid var(--good);border-radius:12px;padding:6px 10px}
+.seqdone b{color:var(--good)}
+/* sort */
+.buckets{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.bucket{border:4px solid var(--c);border-radius:18px;padding:10px;min-height:120px;background:#fcfcff;text-align:center}
+.bucket h4{margin:0 0 8px;font-size:1.15rem}
+.bucket .in{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.bucket .in span{background:#e3f8e9;border:2px solid var(--good);border-radius:10px;padding:2px 8px;font-size:1rem}
+.tile.sel{background:#fff3c4;transform:scale(1.08)}
+/* match */
+.match{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.match .col{display:flex;flex-direction:column;gap:8px}
+.mi{background:#f7f7fb;border:3px solid #e2e2ee;border-radius:14px;padding:8px 10px;font-size:1.05rem;text-align:left;min-height:52px}
+.mi.ar{text-align:right;font-size:1.15rem}
+.mi.sel{border-color:var(--c);background:#fff3c4}
+.mi.done{background:#e3f8e9;border-color:var(--good);opacity:.75}
+/* end */
+.end{text-align:center;padding:10px}
+.end .big{font-size:4rem;color:var(--star);letter-spacing:6px}
+.end h3{font-size:1.7rem;margin:6px 0}
+/* board */
+.board{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin:10px 0}
+.sq{position:relative;background:#fff;border:3px solid #ddd;border-radius:10px;min-height:62px;padding:3px;font-size:.62rem;line-height:1.15;color:var(--muted)}
+.sq b{display:block;font-size:1rem;color:var(--ink)}
+.sq.sp{background:#fff3c4;border-color:#f2c94c}
+.sq.end{background:#e3f8e9;border-color:var(--good)}
+.tok{position:absolute;bottom:2px;font-size:1.2rem}
+.tok.p1{right:2px}.tok.p2{right:22px}
+.die{font-size:3.4rem;line-height:1}
+.turn{font-weight:700;font-size:1.2rem;text-align:center}
+.msg{text-align:center;min-height:56px;font-weight:700;color:var(--c);font-size:1.1rem}
+table.info{border-collapse:collapse;width:100%;font-size:1rem;background:#fff}
+table.info td,table.info th{border:2px solid #e9e1cc;padding:5px 8px;text-align:left}
+table.info th{background:#fff3c4}
+.shelf{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.shelf div{background:#fff;border:2px solid #e9e1cc;border-radius:12px;padding:4px 8px;text-align:center;min-width:92px}
+.shelf .e{font-size:1.9rem;display:block;height:40px}
+.shelf .e svg{width:40px;height:40px}
+.shelf .pr{display:inline-block;background:#bff2c9;border-radius:20px;padding:0 8px;font-weight:700;font-size:.95rem}
+.kids{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.kids div{background:#fff;border:2px solid #e9e1cc;border-radius:12px;padding:6px 10px}
+.kids .e{font-size:1.8rem}
+@media (max-width:520px){
+  body{font-size:18px}
+  .q{font-size:1.15rem}
+  .opt{font-size:1.05rem;padding:8px 10px}
+  .pic{font-size:4rem}
+  .sq{min-height:54px;font-size:.5rem}
+  .sq b{font-size:.85rem}
+  .hero h1{font-size:1.7rem}
+  .mi{font-size:.92rem}
+}
+.confetti{position:fixed;top:-20px;font-size:26px;pointer-events:none;animation:fall linear forwards;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+/* ---------- simple drawings for things with no emoji ---------- */
+const SV = {
+ skirt:'<svg viewBox="0 0 100 100"><rect x="34" y="18" width="32" height="10" rx="3" fill="#7a7a8c"/><path d="M34 28 L66 28 L84 86 L16 86 Z" fill="#9b9bb0"/><path d="M42 30 L36 86 M58 30 L64 86 M50 30 L50 86" stroke="#7a7a8c" stroke-width="2"/></svg>',
+ jalabeya:'<svg viewBox="0 0 100 100"><path d="M40 10 Q50 18 60 10 L76 18 L92 46 L80 52 L70 36 L72 92 L28 92 L30 36 L20 52 L8 46 L24 18 Z" fill="#f4f4f4" stroke="#999" stroke-width="2.5"/><path d="M50 16 L50 40" stroke="#999" stroke-width="2"/><circle cx="50" cy="24" r="1.8" fill="#999"/><circle cx="50" cy="32" r="1.8" fill="#999"/></svg>',
+ glue:'<svg viewBox="0 0 100 100"><rect x="34" y="30" width="32" height="58" rx="6" fill="#f7d33b" stroke="#c9a417" stroke-width="2"/><rect x="36" y="14" width="28" height="18" rx="4" fill="#e8443a"/><rect x="40" y="50" width="20" height="20" rx="3" fill="#fff"/><text x="50" y="65" font-size="10" text-anchor="middle" fill="#c9a417" font-family="sans-serif" font-weight="700">GLUE</text></svg>',
+ sharpener:'<svg viewBox="0 0 100 100"><rect x="22" y="34" width="56" height="40" rx="6" fill="#8a5cf6"/><rect x="22" y="34" width="56" height="10" fill="#a888ff"/><circle cx="46" cy="56" r="9" fill="#3d2a7a"/><rect x="60" y="48" width="12" height="16" fill="#c9c9d6"/></svg>',
+ rubber:'<svg viewBox="0 0 100 100"><rect x="18" y="38" width="64" height="28" rx="6" fill="#ff9fc0"/><rect x="18" y="38" width="30" height="28" rx="6" fill="#3a7bd5"/><rect x="40" y="38" width="8" height="28" fill="#3a7bd5"/></svg>',
+ happytree:'<svg viewBox="0 0 100 100"><rect x="44" y="52" width="12" height="40" fill="#8b5a2b"/><circle cx="50" cy="38" r="30" fill="#3cb44b"/><circle cx="34" cy="32" r="5" fill="#e8443a"/><circle cx="58" cy="24" r="5" fill="#e8443a"/><circle cx="64" cy="44" r="5" fill="#e8443a"/><circle cx="42" cy="50" r="5" fill="#e8443a"/><circle cx="50" cy="36" r="5" fill="#e8443a"/><text x="78" y="20" font-size="14">🐝</text></svg>',
+ sadtree:'<svg viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="#e5e0d5"/><path d="M50 92 L50 30 M50 60 L30 44 M50 50 L70 34 M50 40 L36 22 M50 70 L68 58 M30 44 L22 40 M70 34 L80 30" stroke="#4a3626" stroke-width="5" stroke-linecap="round" fill="none"/><ellipse cx="22" cy="16" rx="16" ry="6" fill="#bdb3a0"/><ellipse cx="80" cy="12" rx="14" ry="5" fill="#bdb3a0"/></svg>'
+};
+function clockSVG(h){
+  let s='<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#ffd84a" stroke="#1fb0e6" stroke-width="5"/><circle cx="50" cy="50" r="39" fill="#fff"/>';
+  for(let i=1;i<=12;i++){const a=(i*30-90)*Math.PI/180;s+=`<text x="${50+31*Math.cos(a)}" y="${50+31*Math.sin(a)+4}" font-size="10" text-anchor="middle" font-family="sans-serif" font-weight="700" fill="#333">${i}</text>`}
+  const a=(h%12*30-90)*Math.PI/180;
+  s+=`<line x1="50" y1="50" x2="50" y2="18" stroke="#333" stroke-width="3" stroke-linecap="round"/><line x1="50" y1="50" x2="${50+20*Math.cos(a)}" y2="${50+20*Math.sin(a)}" stroke="#e8443a" stroke-width="5" stroke-linecap="round"/><circle cx="50" cy="50" r="3.5" fill="#333"/></svg>`;
+  return s;
+}
+function posSVG(p){
+  const ball=(x,y,r)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#ff8a1f" stroke="#b35a00" stroke-width="2"/><path d="M${x-r} ${y} Q${x} ${y-r/2} ${x+r} ${y}" stroke="#b35a00" stroke-width="1.5" fill="none"/>`;
+  const box='<rect x="32" y="50" width="40" height="34" fill="#c98b4a" stroke="#7a4f22" stroke-width="2.5"/><line x1="32" y1="60" x2="72" y2="60" stroke="#7a4f22" stroke-width="1.5"/>';
+  const floor='<line x1="0" y1="85" x2="100" y2="85" stroke="#bbb" stroke-width="2"/>';
+  let s='<svg viewBox="0 0 100 100">'+floor;
+  if(p==='on') s+=box+ball(52,40,10);
+  else if(p==='in') s+='<rect x="32" y="50" width="40" height="34" fill="#a86d33"/>'+ball(52,52,9)+'<rect x="32" y="56" width="40" height="28" fill="#c98b4a" stroke="#7a4f22" stroke-width="2.5"/>';
+  else if(p==='next to') s+=box+ball(86,75,10);
+  else if(p==='behind') s+=ball(60,46,9)+box;
+  else if(p==='in front of') s+=box+ball(50,80,11);
+  else if(p==='under') s+='<rect x="16" y="38" width="68" height="8" fill="#c98b4a" stroke="#7a4f22" stroke-width="2"/><rect x="20" y="46" width="6" height="39" fill="#a86d33"/><rect x="74" y="46" width="6" height="39" fill="#a86d33"/>'+ball(50,74,10);
+  return s+'</svg>';
+}
+function pic(k){
+  if(!k) return '';
+  if(k.startsWith('clock:')) return clockSVG(+k.slice(6));
+  if(k.startsWith('pos:')) return posSVG(k.slice(4));
+  if(SV[k]) return SV[k];
+  return k;
+}
+/* ---------- content (from SMILE Book 3) ---------- */
+const P = (q,a,o,x)=>Object.assign({q,a,o},x||{});
+const shelf = items=>'<div class="shelf">'+items.map(([e,n,p])=>`<div><span class="e">${pic(e)}</span>${n}<br><span class="pr">${p} SDG</span></div>`).join('')+'</div>';
 
+const UNITS = [
+{ id:1, title:'Welcome Back to English', ar:'مرحباً بعودتك إلى الإنجليزية', em:'🏫', color:'var(--u1)', games:[
+ {t:'listen', title:'Days of the week', ar:'استمع واختر اليوم',
+  items:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'].map(d=>({say:d,a:d}))},
+ {t:'sort', title:'School days and free days', ar:'صنّف الأيام: أيام دراسة وأيام عطلة',
+  text:'<p>Is Friday a school day or free day?</p><p><b>Friday is a free day.</b></p>',
+  buckets:['School days 🏫','Free days 🏠'],
+  items:[['Sunday',0],['Monday',0],['Tuesday',0],['Wednesday',0],['Thursday',0],['Friday',1],['Saturday',1]]},
+ {t:'choice', title:'Spell the days', ar:'اختر الحرف الناقص', pool:['a','e','i','o','u'],
+  items:[P('S _ n d a y','u'),P('M _ n d a y','o'),P('T u e s d _ y','a'),P('W e d n _ s d a y','e'),P('T h _ r s d a y','u'),P('F r _ d a y','i'),P('S a t u r d _ y','a')]},
+ {t:'choice', title:'A new pupil', ar:'اقرأ ثم اختر الإجابة',
+  text:'<p><span class="who">Mr Gamar:</span> Good morning, class.</p><p><span class="who">Pupils:</span> Good morning, Mr Gamar.</p><p><span class="who">Mr Gamar:</span> We’ve got a new pupil today. This is Hassan. He’s from El Fashir. Welcome to our class, Hassan. Please sit next to Ahmed.</p><p><span class="who">Hassan:</span> Hassan’s seat is next to Ahmed and Abu Bakr. He is in front of Osman and behind Mustafa.</p>',
+  items:[P('The teacher’s name is ___.','Mr Gamar',['Hassan','Ahmed','Osman']),
+   P('Hassan is a new ___.','pupil',['teacher','book','class']),
+   P('Hassan is from ___.','El Fashir',['Darfur','Omdurman','Nile Street']),
+   P('Hassan sits next to ___.','Ahmed',['Mustafa','Osman','Mr Gamar']),
+   P('Hassan is in front of ___.','Osman',['Mustafa','Ahmed','Ali']),
+   P('Hassan is behind ___.','Mustafa',['Osman','Abu Bakr','Salah'])]},
+ {t:'match', title:'Classroom rules', ar:'صِل القاعدة الجديدة بالقاعدة المناسبة',
+  pairs:[['We don’t run in the classroom.','We walk in the classroom.'],
+   ['We don’t speak in Arabic in our English class.','We speak English in our English class.'],
+   ['We don’t eat in the classroom.','We eat in the playground.'],
+   ['We don’t throw rubbish on the floor.','We keep the classroom tidy.'],
+   ['We don’t forget to help other pupils.','We help other pupils.']]},
+ {t:'choice', title:'School things', ar:'انظر واختر الكلمة', ask:'What is this?',
+  pool:['a notebook','a pen','pencils','scissors','a ruler','crayons','glue','a sharpener','a rubber'],
+  items:[P('','a notebook',null,{pic:'📒'}),P('','a pen',null,{pic:'🖊️'}),P('','pencils',null,{pic:'✏️✏️'}),P('','scissors',null,{pic:'✂️'}),P('','a ruler',null,{pic:'📏'}),P('','crayons',null,{pic:'🖍️🖍️'}),P('','glue',null,{pic:'glue'}),P('','a sharpener',null,{pic:'sharpener'}),P('','a rubber',null,{pic:'rubber'})]},
+ {t:'choice', title:'At the shop', ar:'اقرأ الأسعار وأجب: كم السعر؟',
+  text:shelf([['📒','notebook',20],['🖊️','pen',7],['🖍️','crayons',10],['glue','glue',10],['sharpener','sharpener',5],['✏️','pencils',5],['✂️','scissors',15],['📏','ruler',10],['rubber','rubber',20]]),
+  pool:['5 pounds','7 pounds','10 pounds','15 pounds','20 pounds','25 pounds'],
+  items:[P('How much is the notebook?','20 pounds'),P('How much is the pen?','7 pounds'),P('How much are the scissors?','15 pounds'),P('How much is the sharpener?','5 pounds'),P('How much is the ruler?','10 pounds'),P('How much is the glue?','10 pounds'),
+   P('This rubber is 20 pounds and these pencils are 5 pounds. How much is that?','25 pounds')]},
+ {t:'yesno', title:'Huda’s school', ar:'اقرأ وقل نعم أو لا',
+  text:'<p>Hello, I’m Huda and this is my school. I like my school. It is near my house and I can walk to school in the morning. I can meet my friends here.</p><p>I like Maths, Arabic and reading. My best friend is Zeinab and my favourite sport is volleyball.</p>',
+  items:[P('This girl’s name is Hiba.','No'),P('She likes her school.','Yes'),P('She lives near her school.','Yes'),P('She meets her friends at home.','No'),P('She likes Maths.','Yes'),P('She doesn’t like volleyball.','No')]},
+ {t:'order', title:'Make sentences', ar:'رتّب الكلمات لتكوين جملة',
+  items:['Be careful with your book.','Cover your book at home.','Don’t write in your book.','Put your book on the desk.','Can I borrow some glue?','This is the way I carry my bag.']},
+ {t:'choice', title:'Sounds', ar:'اختر الصوت الناقص', pool:['air','ere','en','oo','an','ea','ar'],
+  items:[P('ch _ _ _','air',null,{pic:'🪑',say:'chair'}),P('h _ _ _','air',null,{pic:'💇',say:'hair'}),P('th _ _ _','ere',null,{say:'there'}),P('wh _ _ _','ere',null,{say:'where'}),P('h _ _','en',null,{pic:'🐔',say:'hen'}),P('p _ _','en',null,{pic:'🖊️',say:'pen'}),P('b _ _ k','oo',null,{pic:'📘',say:'book'}),P('f _ _ t','oo',null,{pic:'🦶',say:'foot'}),P('h _ _ d','an',null,{pic:'✋',say:'hand'}),P('t _ _','ea',null,{pic:'🍵',say:'tea'}),P('f _ _ m','ar',null,{pic:'🚜',say:'farm'})]}
+]},
+{ id:2, title:'Our Environment', ar:'بيئتنا', em:'🌳', color:'var(--u2)', games:[
+ {t:'choice', title:'Places in town', ar:'انظر واختر المكان', ask:'What is this?',
+  pool:['a museum','a school','a zoo','a market','a park','a mosque','a hospital','a café','a library','a bus station','a shop'],
+  items:[P('','a museum',null,{pic:'🏛️'}),P('','a school',null,{pic:'🏫'}),P('','a zoo',null,{pic:'🦒🐘'}),P('','a market',null,{pic:'🍅🧺🍌'}),P('','a park',null,{pic:'🌳⚽🌳'}),P('','a mosque',null,{pic:'🕌'}),P('','a hospital',null,{pic:'🏥'}),P('','a café',null,{pic:'☕'}),P('','a library',null,{pic:'📚'}),P('','a bus station',null,{pic:'🚌🚌'}),P('','a shop',null,{pic:'🏪'})]},
+ {t:'choice', title:'What can we do there?', ar:'اقرأ واختر المكان المناسب',
+  pool:['a school','a market','a library','a hospital','a shop','a park','a zoo','a bus station'],
+  items:[P('We can study there.','a school'),P('We can buy food there.','a market'),P('We can read books there.','a library'),P('We can see doctors there.','a hospital'),P('We can buy sweets there.','a shop'),P('We can walk and play there.','a park'),P('We can see animals there.','a zoo'),P('We can catch buses there.','a bus station')]},
+ {t:'choice', title:'Can we… in a park?', ar:'أجب بـ نعم نستطيع / لا نستطيع', pool:['Yes, we can.','No, we can’t.'], fixed:true,
+  items:[P('Can we swim in a park?','No, we can’t.',null,{pic:'🏊'}),P('Can we read in a park?','Yes, we can.',null,{pic:'📖'}),P('Can we run in a park?','Yes, we can.',null,{pic:'🏃'}),P('Can we drive in a park?','No, we can’t.',null,{pic:'🚗'}),P('Can we walk in a park?','Yes, we can.',null,{pic:'🚶'})]},
+ {t:'choice', title:'The park chant', ar:'أكمل الأنشودة بالكلمة الصحيحة',
+  text:'<p>What can we do, can we do today?<br>We can go to the park, to the park and play.<br>The sky there is blue. The grass there is green.<br>There are trees and the air is clean.<br>We can skip. We can jump. We can hop. We can run.<br>We can talk to our friends. We can sit in the sun.<br>What can we do? We can play in the park.<br>And then we go home to sleep when the sky is dark.</p>',
+  pool:['blue','green','clean','dark','sun','park'],
+  items:[P('The sky there is ___.','blue'),P('The grass there is ___.','green'),P('There are trees and the air is ___.','clean'),P('We can sit in the ___.','sun'),P('We can play in the ___.','park'),P('We go home to sleep when the sky is ___.','dark')]},
+ {t:'choice', title:'Good rules', ar:'اختر القاعدة الصحيحة', ask:'Choose the good rule.',
+  items:[P('','Don’t pick the flowers.',['Pick the flowers.'],{pic:'🌷🌸🌼'}),P('','Don’t drop rubbish.',['Drop rubbish.'],{pic:'🍌🥫📄'}),P('','Keep the park tidy.',['Don’t keep the park tidy.'],{pic:'🌳'}),P('','Don’t hurt animals.',['Hurt animals.'],{pic:'🐕'}),P('','Turn off the tap.',['Don’t turn off the tap.'],{pic:'🚰💧'}),P('','Put your rubbish in the rubbish bin.',['Put your rubbish on the floor.'],{pic:'🗑️'})]},
+ {t:'choice', title:'Rubbish in the classroom', ar:'أكمل بالكلمة المناسبة من الصندوق',
+  text:'<p style="text-align:center;font-weight:700">behind &nbsp; · &nbsp; classroom &nbsp; · &nbsp; paper &nbsp; · &nbsp; there &nbsp; · &nbsp; window</p>',
+  pool:['behind','classroom','paper','there','window'], all:true,
+  items:[P('There’s rubbish in the ___. It’s on the floor.','classroom'),P('There’s rubbish in the classroom, ___ the door.','behind'),P('It’s next to the ___, and under a chair.','window'),P('Don’t drop it on the floor. Don’t leave it ___.','there'),P('Plastic bags and ___, food, cans and tins.','paper')]},
+ {t:'choice', title:'Happy tree, sad tree', ar:'انظر واختر',
+  items:[P('This tree is ___.','happy',['sad'],{pic:'happytree'}),P('This tree is ___.','sad',['happy'],{pic:'sadtree'}),P('This tree has ___ leaves.','no',['lots of'],{pic:'sadtree'}),P('This tree has ___ apples.','lots of',['no'],{pic:'happytree'}),P('The air is ___.','dirty',['clean'],{pic:'sadtree'}),P('The air is ___.','clean',['dirty'],{pic:'happytree'}),P('Keep Sudan ___.','clean',['dirty','sad'],{pic:'🇸🇩'})]},
+ {t:'listen', title:'Listen: i_e and oo', ar:'استمع واختر الكلمة',
+  items:['five','time','Nile','nine','drive','fine','zoo','room','food','school'].map(w=>({say:w,a:w}))}
+]},
+{ id:3, title:'Eid El Fitr', ar:'عيد الفطر', em:'🌙', color:'var(--u3)', games:[
+ {t:'choice', title:'Clothes', ar:'انظر واختر اسم الملابس', ask:'What is this?',
+  pool:['shorts','trousers','a T-shirt','a dress','a skirt','a blouse','a shirt','a cap','a hat','a jalabeya'],
+  items:[P('','shorts',null,{pic:'🩳'}),P('','trousers',null,{pic:'👖'}),P('','a T-shirt',null,{pic:'👕'}),P('','a dress',null,{pic:'👗'}),P('','a skirt',null,{pic:'skirt'}),P('','a blouse',null,{pic:'👚'}),P('','a shirt',null,{pic:'👔'}),P('','a cap',null,{pic:'🧢'}),P('','a hat',null,{pic:'👒'}),P('','a jalabeya',null,{pic:'jalabeya'})]},
+ {t:'choice', title:'The clothes line', ar:'اقرأ الأنشودة وأجب',
+  text:'<p>Look at the garden, what can you see,<br>there on the clothes line under the tree?<br>There are shorts and trousers.<br>There’s a red T-shirt.<br>There’s an orange dress and a long grey skirt.<br>There’s a blouse. There’s a shirt.<br>There’s a cap. There’s a hat.<br>There are two jalabeyas and a small black cat.</p>',
+  items:[P('What colour is the T-shirt?','It’s red.',['It’s orange.','It’s grey.','It’s black.']),P('What colour is the dress?','It’s orange.',['It’s red.','It’s grey.','It’s black.']),P('What colour is the skirt?','It’s grey.',['It’s red.','It’s orange.','It’s black.']),P('What colour is the cat?','It’s black.',['It’s red.','It’s orange.','It’s grey.']),P('How many jalabeyas are there?','There are two.',['There is one.','There are three.']),P('Where is the clothes line?','under the tree',['in the house','in the classroom'])]},
+ {t:'choice', title:'Whose is this?', ar:'لمن هذا الشيء؟',
+  text:'<div class="kids"><div><b>Ahmed</b> <span class="e">⚽ 👕</span><br><small>football, red shirt</small></div><div><b>Hassan</b> <span class="e">🧥 🧃</span><br><small>green jacket, drink</small></div><div><b>Eddie</b> <span class="e">📘 🧢</span><br><small>book, cap</small></div><div><b>Cathy</b> <span class="e">🌸</span><br><small>flower, blue coat</small></div></div>',
+  items:[
+   P('Whose flower is this?','It’s Cathy’s flower.',['It’s Ahmed’s flower.','It’s Eddie’s flower.','It’s Hassan’s flower.'],{pic:'🌸'}),
+   P('Whose football is this?','It’s Ahmed’s football.',['It’s Cathy’s football.','It’s Eddie’s football.','It’s Hassan’s football.'],{pic:'⚽'}),
+   P('Whose cap is this?','It’s Eddie’s cap.',['It’s Ahmed’s cap.','It’s Cathy’s cap.','It’s Hassan’s cap.'],{pic:'🧢'}),
+   P('Whose jacket is this?','It’s Hassan’s jacket.',['It’s Ahmed’s jacket.','It’s Eddie’s jacket.','It’s Cathy’s jacket.'],{pic:'🧥'}),
+   P('Whose drink is this?','It’s Hassan’s drink.',['It’s Eddie’s drink.','It’s Cathy’s drink.','It’s Ahmed’s drink.'],{pic:'🧃'}),
+   P('Whose book is this?','It’s Eddie’s book.',['It’s Hassan’s book.','It’s Cathy’s book.','It’s Ahmed’s book.'],{pic:'📘'})]},
+ {t:'choice', title:'New Eid clothes', ar:'اقرأ القصة وأجب',
+  text:'<p><span class="who">Grandma:</span> Eid Mubarak children! I have got Eid clothes for you.</p><p><span class="who">Children:</span> Grandma! Thank you!</p><p><span class="who">Mum:</span> Have you got a new skirt, Rayan?</p><p><span class="who">Rayan:</span> No, I haven’t got a new skirt… but I have got a new dress. Adam has got a new jalabeya!</p>',
+  items:[P('Has Rayan got a new skirt?','No, she hasn’t.',['Yes, she has.']),P('Has Rayan got a new dress?','Yes, she has.',['No, she hasn’t.']),P('Has Adam got a new jalabeya?','Yes, he has.',['No, he hasn’t.']),P('Who has got Eid clothes for the children?','Grandma',['Rayan','Adam']),P('Rayan has got a new ___.','dress',['skirt','jalabeya','cap'])]},
+ {t:'choice', title:'At the zoo: How many?', ar:'عُدّ واختر الجملة الصحيحة',
+  items:[P('How many elephants are there?','There are two elephants.',['There is one elephant.','There are three elephants.'],{pic:'🐘🐘'}),
+   P('How many giraffes are there?','There is one giraffe.',['There are two giraffes.','There are three giraffes.'],{pic:'🦒'}),
+   P('How many lions are there?','There is one lion.',['There are two lions.','There are four lions.'],{pic:'🦁'}),
+   P('How many crocodiles are there?','There are two crocodiles.',['There is one crocodile.','There are three crocodiles.'],{pic:'🐊🐊'}),
+   P('How many monkeys are there?','There are three monkeys.',['There are two monkeys.','There is one monkey.'],{pic:'🐒🐒🐒'}),
+   P('How many girls are there?','There are four girls.',['There are three girls.','There are five girls.'],{pic:'👧👧👧👧'})]},
+ {t:'choice', title:'over, out of, through, past', ar:'اختر الكلمة المناسبة', pool:['over','out of','through','past'], all:true,
+  items:[P('Look ___ the window.','out of',null,{pic:'🪟👀'}),P('The cat jumps ___ the wall.','over',null,{pic:'🐈🧱'}),P('Go ___ the shop. Don’t stop.','past',null,{pic:'🚶🏪'}),P('The man walks ___ the trees.','through',null,{pic:'🌳🚶🌳'}),P('Look ___ the kitchen window.','out of',null,{pic:'🪟'})]},
+ {t:'sequence', title:'Make an Eid cake', ar:'رتّب خطوات عمل الكعكة',
+  items:['Wash your hands.','Put flour, oil, milk, salt and sugar in a bowl.','Mix.','Add four eggs and mix.','Put into a cake tin.','Cook the cake for two hours.']},
+ {t:'choice', title:'What time is it?', ar:'انظر إلى الساعة واختر', pool:['It’s five o’clock.','It’s six o’clock.','It’s seven o’clock.','It’s nine o’clock.','It’s twelve o’clock.','It’s three o’clock.'],
+  items:[P('On Eid El Fitr morning, I wake up at…','It’s five o’clock.',null,{pic:'clock:5'}),P('I say Eid Mubarak to my grandfather at…','It’s nine o’clock.',null,{pic:'clock:9'}),P('What time is it?','It’s six o’clock.',null,{pic:'clock:6'}),P('What time is it?','It’s seven o’clock.',null,{pic:'clock:7'}),P('What time is it?','It’s twelve o’clock.',null,{pic:'clock:12'}),P('What time is it?','It’s three o’clock.',null,{pic:'clock:3'})]},
+ {t:'choice', title:'Badria’s family', ar:'هذه عائلة بدرية – اختر', ask:'This is her…',
+  pool:['grandmother','grandfather','mother','father','sister','brother','baby brother'],
+  items:[P('','grandmother',null,{pic:'👵'}),P('','grandfather',null,{pic:'👴'}),P('','mother',null,{pic:'👩'}),P('','father',null,{pic:'👨'}),P('','sister',null,{pic:'👧'}),P('','brother',null,{pic:'👦'}),P('','baby brother',null,{pic:'👶'})]},
+ {t:'choice', title:'Good or bad?', ar:'جيد أم سيئ؟', pool:['It’s good 👍','It’s bad 👎'], fixed:true,
+  items:[P('Visit your family.','It’s good 👍'),P('Eat lots of sweets.','It’s bad 👎'),P('Say Eid Mubarak to everyone.','It’s good 👍'),P('Pick flowers in parks.','It’s bad 👎'),P('Eat lots of fruit.','It’s good 👍'),P('Visit your friends.','It’s good 👍')]},
+ {t:'listen', title:'Listen: ir, ur, ou', ar:'استمع واختر الكلمة',
+  items:['girl','shirt','skirt','turn','hurt','purple','house','blouse','mouse','trousers','flour','mountain'].map(w=>({say:w,a:w}))}
+]},
+{ id:4, title:'Family and Community', ar:'العائلة والمجتمع', em:'👨‍👩‍👧‍👦', color:'var(--u4)', games:[
+ {t:'choice', title:'Names', ar:'اقرأ وأجب',
+  text:'<p><span class="who">Ahmed:</span> My granddad’s name is Mohamed. My dad’s name is Khalid. So my name is Ahmed Khalid Mohamed.</p><p><span class="who">Eddie:</span> Names are different in the UK. My name is Eddie Harris. Harris is my family name.</p>',
+  items:[P('Who is Khalid?','Ahmed’s dad.',['Ahmed’s granddad.','Eddie’s dad.']),P('What’s the name of Ahmed’s granddad?','Mohamed',['Khalid','Harris','Ahmed']),P('What is Eddie’s family name?','Harris',['Eddie','Khalid','Mohamed']),P('Ahmed’s full name is…','Ahmed Khalid Mohamed',['Mohamed Khalid Ahmed','Ahmed Harris','Khalid Ahmed'])]},
+ {t:'match', title:'Family words', ar:'صِل الكلمة بمعناها', arRight:true,
+  pairs:[['granddad','الجد'],['grandma','الجدة'],['dad','الأب'],['mother','الأم'],['uncle','العم / الخال'],['aunt','العمة / الخالة'],['cousin','ابن العم / ابن الخال'],['brother','الأخ'],['sister','الأخت']]},
+ {t:'choice', title:'What are they doing?', ar:'ماذا يفعلون الآن؟ اختر',
+  pool:['playing','reading','talking','eating','watching','visiting'],
+  items:[P('Eddie is ___ with a ball.','playing',null,{pic:'👦⚽'}),P('Cathy is ___ a story.','reading',null,{pic:'👧📖'}),P('Fatma is ___ to her friend.','talking',null,{pic:'👧💬👧'}),P('Badr is ___ an ice cream.','eating',null,{pic:'👦🍦'}),P('Ahmed is ___ football with his father.','watching',null,{pic:'📺⚽'}),P('Dalia is ___ her grandma.','visiting',null,{pic:'👧👵'})]},
+ {t:'choice', title:'The hungry fox', ar:'أكمل القصة بالكلمة المناسبة',
+  text:'<p>Dalia’s grandma is reading a story to the children.</p><p>Mother goat: “Stay here, children. Don’t open the door.”</p><p>“Can I come in, children?” “No!” “Who is it?” It’s a hungry fox.</p><p>The baby goats open the door. Mother goat is hitting the fox.</p><p style="text-align:center;font-weight:700">asking · going · hitting · knocking · reading · opening</p>',
+  pool:['asking','going','hitting','knocking','reading','opening'],
+  items:[P('Dalia’s grandma is ___ a story.','reading'),P('Mother goat is ___ to the shops.','going'),P('Someone is ___ on the door.','knocking'),P('“Can I come in, children?” the fox is ___.','asking'),P('The baby goats are ___ the door.','opening'),P('Mother goat is ___ the fox with her bag.','hitting')]},
+ {t:'order', title:'Make sentences', ar:'رتّب الكلمات لتكوين جملة',
+  items:['Eddie is playing with a ball.','Cathy is reading a nice story.','Badr is eating an ice cream.','Fatma is talking to her friend.','Ahmed is watching football at home.','Marwa is listening to her grandma.']},
+ {t:'yesno', title:'Taja', ar:'اقرأ وقل نعم أو لا',
+  text:'<p>Hello, I’m Taja. I’m from Darfur. These are some pictures of my small village.</p><p>Here, I am teaching some children. I’m teaching them to read and write.</p><p>In this picture I am cooking for some old people. Everyone likes my food.</p><p>We are all working for our community and we are all helping our country.</p>',
+  items:[P('Taja is from Darfur.','Yes'),P('Taja’s village is big.','No'),P('Taja is teaching children to read and write.','Yes'),P('Taja is cooking for some old people.','Yes'),P('Nobody likes Taja’s food.','No'),P('They are all helping their country.','Yes')]},
+ {t:'choice', title:'Who am I? (Jobs)', ar:'اقرأ وخمّن المهنة', pool:['a baker','a teacher','a dentist','a nurse','a chef'],
+  items:[P('I work in a bakery. I make bread and cakes. Who am I?','a baker'),P('I work with children in a school. I teach them. Who am I?','a teacher'),P('I work in a clinic. I help people with their teeth. Who am I?','a dentist'),P('I work in a hospital. I help the doctor. Who am I?','a nurse'),P('I work in a kitchen. I cook food for people. Who am I?','a chef')]},
+ {t:'choice', title:'Directions', ar:'اتبع السهم واختر', pool:['Turn left.','Turn right.','Go straight on.'], fixed:true,
+  items:[P('Which way?','Turn left.',null,{pic:'⬅️'}),P('Which way?','Turn right.',null,{pic:'➡️'}),P('Which way?','Go straight on.',null,{pic:'⬆️'}),P('Excuse me, I want to go to the library.','Turn right.',null,{pic:'➡️📚'}),P('Excuse me, where is the mosque?','Go straight on.',null,{pic:'⬆️🕌'}),P('Excuse me, where is the clinic?','Turn left.',null,{pic:'🏥⬅️'})]},
+ {t:'choice', title:'this, that, these, those', ar:'قريب أم بعيد؟ واحد أم أكثر؟', pool:['This is a bag.','That is a bag.','These are bags.','Those are bags.'], fixed:true,
+  text:'<p style="text-align:center">👇 near (قريب) &nbsp;&nbsp;|&nbsp;&nbsp; 👉 far (بعيد)</p>',
+  items:[P('','This is a bag.',null,{pic:'👇🎒'}),P('','That is a bag.',null,{pic:'👉 · · · · <small>🎒</small>'}),P('','These are bags.',null,{pic:'👇🎒🎒🎒'}),P('','Those are bags.',null,{pic:'👉 · · · · <small>🎒🎒🎒</small>'})]},
+ {t:'listen', title:'Listen: ing, br, ch, st', ar:'استمع واختر الكلمة',
+  items:['sing','swing','thing','asking','opening','watching','bread','brother','brown','catch','kitchen','street','story'].map(w=>({say:w,a:w}))}
+]},
+{ id:5, title:'People, Plants and Numbers', ar:'الناس والنباتات والأرقام', em:'🌱', color:'var(--u5)', games:[
+ {t:'listen', title:'Numbers 10 to 100', ar:'استمع واختر الرقم',
+  items:[['ten',10],['twenty',20],['thirty',30],['forty',40],['fifty',50],['sixty',60],['seventy',70],['eighty',80],['ninety',90],['one hundred',100]].map(([w,n])=>({say:w,a:String(n)}))},
+ {t:'choice', title:'Number words', ar:'اقرأ الرقم واختر الكلمة', ask:'What number is this?', pool:['ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety','one hundred'],
+  items:[[30,'thirty'],[40,'forty'],[50,'fifty'],[60,'sixty'],[70,'seventy'],[80,'eighty'],[90,'ninety'],[100,'one hundred']].map(([n,w])=>P('','',null,{big:n,a:w}))},
+ {t:'sequence', title:'Grow a tomato plant', ar:'رتّب خطوات زراعة الطماطم',
+  items:['Get a plant pot.','Put soil in it.','Make a hole in the soil.','Put a tomato seed in the hole.','Cover the seed with soil.','Put the pot near a window.','Water the seed.','Wait for the plant to grow.']},
+ {t:'choice', title:'The seasons', ar:'أكمل أنشودة الفصول',
+  text:'<p>Summers are hot and winters are cold.<br>In autumn, leaves fall when they are old.<br>The weather is warm on nice days in spring.<br>And the birds in their nests in the trees all sing.<br>Winter days are white when winter snows fall.<br>Spring days are green. New plants grow tall.<br>Autumn days are cool. Autumn days are grey.<br>Summer days are blue and the sun shines all day.</p>',
+  pool:['hot','cold','warm','cool','fall','shines','green','white'],
+  items:[P('Summers are ___.','hot'),P('Winters are ___.','cold'),P('In autumn, leaves ___ when they are old.','fall'),P('The weather is ___ on nice days in spring.','warm'),P('Autumn days are ___.','cool'),P('Spring days are ___.','green'),P('Winter days are ___.','white'),P('Summer days are blue and the sun ___ all day.','shines')]},
+ {t:'choice', title:'What is happening?', ar:'انظر واختر', pool:['falling','growing','shining','singing'], all:true,
+  items:[P('Snow is ___.','falling',null,{pic:'❄️🌨️'}),P('The plants are ___.','growing',null,{pic:'🌱🌿'}),P('The sun is ___.','shining',null,{pic:'☀️'}),P('The birds are ___.','singing',null,{pic:'🐦🎶'}),P('The leaves are ___.','falling',null,{pic:'🍂🍁'})]},
+ {t:'choice', title:'How old? How tall?', ar:'اقرأ الجدول وأجب',
+  text:'<table class="info"><tr><th>Person</th><th>Age</th><th>Height</th><th>Weight</th></tr><tr><td><b>A</b></td><td>13 years old</td><td>1 metre 50</td><td>40 kilograms</td></tr><tr><td><b>B</b></td><td>40 years old</td><td>1 metre 70</td><td>60 kilograms</td></tr><tr><td><b>C</b></td><td>11 years old</td><td>1 metre 30</td><td>30 kilograms</td></tr><tr><td><b>D</b></td><td>40 years old</td><td>1 metre 80</td><td>80 kilograms</td></tr></table>',
+  items:[P('How old is person A?','13 years old',['11 years old','40 years old']),P('How tall is person B?','1 metre 70',['1 metre 50','1 metre 80','1 metre 30']),P('How much does person D weigh?','80 kilograms',['60 kilograms','40 kilograms','30 kilograms']),P('How old is person C?','11 years old',['13 years old','40 years old']),P('How tall is person D?','1 metre 80',['1 metre 70','1 metre 30','1 metre 50']),P('How much does person A weigh?','40 kilograms',['30 kilograms','60 kilograms','80 kilograms'])]},
+ {t:'choice', title:'Warda: could and can', ar:'اقرأ عن وردة واختر',
+  text:'<p><b>Warda at 6 months:</b> I could smile. I couldn’t talk. I couldn’t walk or run.</p><p><b>Warda now:</b> I am 10 years old. I can still smile. I can walk, talk and run. I can speak English.</p>',
+  items:[P('When Warda was six months old, she ___ smile.','could',['couldn’t']),P('When Warda was six months old, she ___ walk.','couldn’t',['could']),P('When Warda was six months old, she ___ talk.','couldn’t',['could']),P('Now Warda ___ walk, talk and run.','can',['can’t']),P('Now Warda ___ speak English.','can',['can’t']),P('Warda is ___ years old now.','10',['6','8'])]},
+ {t:'choice', title:'Grow healthy', ar:'أكمل نصائح الصحة', pool:['clean','vegetables','night','exercise','water','hours'],
+  items:[P('Always wash and keep ___.','clean',null,{pic:'🧼'}),P('Eat lots of fruit and ___.','vegetables',null,{pic:'🍎🥕'}),P('Clean your teeth in the morning and at ___.','night',null,{pic:'🦷🌙'}),P('Do lots of ___.','exercise',null,{pic:'🏃'}),P('Always drink lots of ___.','water',null,{pic:'💧'}),P('Sleep for 8 to 10 ___ at night.','hours',null,{pic:'😴'})]},
+ {t:'choice', title:'a or an?', ar:'اختر a أو an', pool:['a','an'], fixed:true,
+  items:[P('Can I have ___ apple?','an',null,{pic:'🍎'}),P('Get ___ plant pot.','a',null,{pic:'🪴'}),P('Can I have ___ orange?','an',null,{pic:'🍊'}),P('Make ___ hole in the soil.','a'),P('Badr is eating ___ ice cream.','an',null,{pic:'🍦'}),P('That’s ___ nice picture of a bird.','a',null,{pic:'🐦'})]},
+ {t:'yesno', title:'The big potato', ar:'اقرأ القصة وقل نعم أو لا',
+  text:'<p>“Don’t water this potato.” Look! Abdullah is watering the potato. Look! The potato is growing and growing.</p><p>Abdullah, his family and his donkey are pulling the potato out of the ground.</p><p>Abdullah’s wife is cooking the potato. The children are having lunch now. They eat potato on Sunday… Monday… Tuesday…</p><p>“Can we have bread, mum?”</p>',
+  items:[P('Abdullah is watering the potato.','Yes'),P('The potato is very small.','No'),P('The donkey is pulling the potato too.','Yes'),P('Abdullah’s wife is cooking the potato.','Yes'),P('The children eat potato on Sunday.','Yes'),P('The children want rice.','No')]},
+ {t:'listen', title:'Listen: oy, oi, w, gr, all', ar:'استمع واختر الكلمة',
+  items:['boy','toy','oil','point','soil','well','wall','walk','woman','grow','grass','grapes','ball','tall','small','kick','black'].map(w=>({say:w,a:w}))}
+]},
+{ id:6, title:'Sports and Games', ar:'الرياضة والألعاب', em:'⚽', color:'var(--u6)', games:[
+ {t:'choice', title:'Sports', ar:'انظر واختر الرياضة', ask:'What is this?',
+  pool:['table tennis','flying a kite','football','karate','running','volleyball','swimming','basketball','throwing a frisbee'],
+  items:[P('','table tennis',null,{pic:'🏓'}),P('','flying a kite',null,{pic:'🪁'}),P('','football',null,{pic:'⚽'}),P('','karate',null,{pic:'🥋'}),P('','running',null,{pic:'🏃'}),P('','volleyball',null,{pic:'🏐'}),P('','swimming',null,{pic:'🏊'}),P('','basketball',null,{pic:'🏀'}),P('','throwing a frisbee',null,{pic:'🥏'})]},
+ {t:'yesno', title:'Ahmed and Cathy', ar:'اقرأ وقل نعم أو لا',
+  text:'<p><span class="who">Ahmed:</span> Hi, I’m Ahmed. I like playing basketball. I don’t like swimming.</p><p><span class="who">Ahmed:</span> This is Cathy. She likes volleyball. She doesn’t like playing table tennis.</p>',
+  items:[P('Ahmed likes playing basketball.','Yes'),P('Ahmed likes swimming.','No'),P('Cathy likes volleyball.','Yes'),P('Cathy likes playing table tennis.','No')]},
+ {t:'choice', title:'Where is the ball?', ar:'أين الكرة؟ اختر', pool:['on','under','in','next to','behind','in front of'],
+  items:[P('The ball is ___ the box.','on',null,{pic:'pos:on'}),P('The ball is ___ the table.','under',null,{pic:'pos:under'}),P('The ball is ___ the box.','in',null,{pic:'pos:in'}),P('The ball is ___ the box.','next to',null,{pic:'pos:next to'}),P('The ball is ___ the box.','behind',null,{pic:'pos:behind'}),P('The ball is ___ the box.','in front of',null,{pic:'pos:in front of'})]},
+ {t:'choice', title:'How often?', ar:'اقرأ الجدول وأجب', pool:['sometimes','often','never'], fixed:true,
+  text:'<table class="info"><tr><th></th><th>sometimes</th><th>often</th><th>never</th></tr><tr><td><b>Dalia</b></td><td>play volleyball</td><td>play table tennis</td><td>swim</td></tr><tr><td><b>Cathy</b></td><td>play leapfrog</td><td>throw a frisbee</td><td>play football</td></tr></table>',
+  items:[P('Dalia ___ plays volleyball.','sometimes'),P('Dalia ___ plays table tennis.','often'),P('Dalia ___ swims.','never'),P('Cathy ___ plays leapfrog.','sometimes'),P('Cathy ___ throws a frisbee.','often'),P('Cathy ___ plays football.','never')]},
+ {t:'board', title:'The board game (1–30)', ar:'لعبة الألواح: ارمِ النرد – لاعبان'},
+ {t:'listen', title:'Count to 30', ar:'استمع واختر الرقم',
+  items:[['twelve',12],['fifteen',15],['eighteen',18],['twenty',20],['twenty-two',22],['twenty-three',23],['twenty-five',25],['twenty-eight',28],['twenty-nine',29],['thirty',30]].map(([w,n])=>({say:w,a:String(n)}))},
+ {t:'yesno', title:'Maha is fit', ar:'اقرأ وقل نعم أو لا',
+  text:'<p>Last year Maha couldn’t run. She wasn’t fit. But she is fit now.</p><p>“Do you exercise now, Maha?” “Yes. I exercise every day. I walk, run and I sometimes swim.”</p><p>“What do you eat and drink?” “I eat some fish and meat and lots of fruit and vegetables. I drink water, milk or juice. I never drink cola.”</p><p>“Do you eat any chocolate?” “A little. Not a lot.”</p>',
+  items:[P('Last year Maha couldn’t run.','Yes'),P('Maha is fit now.','Yes'),P('Maha exercises every day.','Yes'),P('Maha often drinks cola.','No'),P('Maha eats lots of fruit and vegetables.','Yes'),P('Maha eats lots of chocolate.','No')]},
+ {t:'choice', title:'Which sport?', ar:'اقرأ وخمّن الرياضة', pool:['table tennis','leapfrog','volleyball','swinging','basketball','marbles','running','football'],
+  items:[P('You play this sport with a ball. 2 or 4 players can play. You need a table and a net.','table tennis'),P('This sport is for 1 person. You sit down and go forward and back on a seat.','swinging'),P('There are 2 teams and 11 players play in a team. You kick a ball with your feet. 1 player can catch the ball.','football'),P('You play this sport with 5 players in your team. You throw the ball in a basket.','basketball'),P('You hit the ball with your hands and arms. There is a net. There are 6 players in a team.','volleyball')]},
+ {t:'match', title:'Playground games', ar:'صِل اللعبة بمعناها', arRight:true,
+  pairs:[['hide and seek','الغُمّيضة (الاستغماية)'],['marbles','البِلْي'],['a swing','المرجيحة'],['a slide','الزلّاقة'],['skip','نطّ الحبل'],['leapfrog','القفز فوق الظهر'],['hopscotch','الحِجْلة'],['tag','لعبة المطاردة (المسك)']]},
+ {t:'listen', title:'Listen: u/oo, ng, ee, ss', ar:'استمع واختر الكلمة',
+  items:['pull','put','sugar','good','cook','mango','English','hungry','clap','bee','feet','street','miss','dress','class','head','bread','chocolate'].map(w=>({say:w,a:w}))}
+]}
+];
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s);
+const app=$('#app');
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const LET='ABCDEFGH';
+let muted=false;
+try{muted=localStorage.getItem('eng3-mute')==='1'}catch(e){}
+function store(){try{return JSON.parse(localStorage.getItem('eng3-stars')||'{}')}catch(e){return{}}}
+function saveStars(k,n){try{const s=store();if(!s[k]||s[k]<n){s[k]=n;localStorage.setItem('eng3-stars',JSON.stringify(s))}}catch(e){}}
+let voice=null;
+function pickVoice(){try{const v=speechSynthesis.getVoices();voice=v.find(x=>/en-GB/i.test(x.lang))||v.find(x=>/^en/i.test(x.lang))||null}catch(e){}}
+try{pickVoice();speechSynthesis.onvoiceschanged=pickVoice}catch(e){}
+function speak(t){
+  if(muted||!t) return;
+  try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t.replace(/___/g,'blank').replace(/[👍👎]/g,''));u.lang='en-GB';if(voice)u.voice=voice;u.rate=.8;speechSynthesis.speak(u)}catch(e){}
+}
+let actx=null;
+function beep(ok){
+  if(muted) return;
+  try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();const notes=ok?[523,659,784]:[220,180];
+  notes.forEach((f,i)=>{const o=actx.createOscillator(),g=actx.createGain();o.type=ok?'triangle':'square';o.frequency.value=f;g.gain.setValueAtTime(.12,actx.currentTime+i*.1);g.gain.exponentialRampToValueAtTime(.001,actx.currentTime+i*.1+.2);o.connect(g);g.connect(actx.destination);o.start(actx.currentTime+i*.1);o.stop(actx.currentTime+i*.1+.22)})}catch(e){}
+}
+function confetti(){const e=['⭐','🎉','🌟','✨','🎈'];for(let i=0;i<28;i++){const d=document.createElement('div');d.className='confetti';d.textContent=e[i%e.length];d.style.left=Math.random()*100+'vw';d.style.animationDuration=(1.6+Math.random()*1.6)+'s';d.style.animationDelay=Math.random()*.5+'s';document.body.appendChild(d);setTimeout(()=>d.remove(),4000)}}
+const GOOD=['Well done! أحسنت 🌟','Great! رائع 👏','Excellent! ممتاز ⭐','Very good! جيد جداً 🎉'];
+const BAD='Try again! حاول مرة أخرى 💪';
+function starsHTML(n){return '<span class="stars">'+[1,2,3].map(i=>i<=n?'★':'<span class="off">★</span>').join('')+'</span>'}
+function blankify(q){return esc(q).replace(/___/g,'<span class="blank">?</span>')}
+function shakeEl(el){el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake','wrongflash');setTimeout(()=>el.classList.remove('wrongflash'),450)}
+function topbar(back,label){
+  return `<div class="top">${back?`<button class="back" onclick="location.hash='${back}'">⬅ Back</button>`:''}<span class="crumb">${label||''}</span><span class="spacer"></span><button class="mute" id="mute" title="Sound">${muted?'🔇':'🔊'}</button></div>`;
+}
+function bindMute(){const m=$('#mute');if(m)m.onclick=()=>{muted=!muted;try{localStorage.setItem('eng3-mute',muted?'1':'0')}catch(e){}m.textContent=muted?'🔇':'🔊';if(muted)try{speechSynthesis.cancel()}catch(e){}}}
+
+/* ---------- pages ---------- */
+function home(){
+  document.documentElement.style.setProperty('--c','#3cb44b');
+  const s=store();
+  app.innerHTML=topbar('','')+`<div class="hero"><h1><span class="s">S</span><span class="m">M</span><span class="i">I</span><span class="l">L</span><span class="e">E</span> English Games</h1><p><b>Book 3 · Grade 3</b></p><p class="ar">ألعاب اللغة الإنجليزية – الصف الثالث – اختر الوحدة</p></div>
+  <div class="units">${UNITS.map(u=>{const tot=u.games.length*3;let got=0;u.games.forEach((g,i)=>got+=(s[u.id+'-'+i]||0));
+    return `<button class="ucard" style="--c:${u.color}" onclick="location.hash='u${u.id}'"><span class="em">${u.em}</span><span><div class="n">Unit ${u.id}</div><div class="t">${u.title}</div><div class="ar st">${u.ar}</div><div class="st">⭐ ${got} / ${tot}</div></span></button>`}).join('')}</div>
+  <div class="credit ar">مع تحيات سليمان جميل &nbsp;📱 <span class="ph">0097451085117</span></div>`;
+  bindMute();
+}
+function unitPage(u){
+  document.documentElement.style.setProperty('--c',u.color);
+  const s=store();
+  app.innerHTML=topbar('#','Unit '+u.id)+`<div class="uhead"><span class="em">${u.em}</span><div><h2>Unit ${u.id}: ${u.title}</h2><div class="ar">${u.ar}</div></div></div>
+  <div class="games">${u.games.map((g,i)=>`<button class="gcard" onclick="location.hash='u${u.id}g${i+1}'"><span class="num">${i+1}</span><span><div class="gt">${g.title}</div><div class="ga ar">${g.ar}</div>${starsHTML(s[u.id+'-'+i]||0)}</span></button>`).join('')}</div>`;
+  bindMute();
+}
+
+let G=null; // current game state
+function gamePage(u,gi){
+  document.documentElement.style.setProperty('--c',u.color);
+  const g=u.games[gi];
+  G={u,gi,g,idx:0,miss:0,items:g.t==='sequence'||g.t==='sort'||g.t==='match'||g.t==='board'?null:shuffle(g.items)};
+  if(g.t==='board') return board(u,g);
+  renderItem();
+}
+function shell(inner,total,done){
+  const {u,g}=G;
+  app.innerHTML=topbar('#u'+u.id,'Unit '+u.id+' · Game '+(G.gi+1))+`<div class="panel"><div class="ghead"><h3>${g.title}</h3></div><div class="inst"><span class="ar">${g.ar}</span></div>${total?`<div class="bar"><i style="width:${done/total*100}%"></i></div>`:''}${g.text?`<div class="text">${g.text}</div>`:''}${inner}<div class="fb" id="fb"></div><div id="nx"></div></div>`;
+  bindMute();
+}
+function renderItem(){
+  const {g}=G;
+  if(g.t==='order') return orderItem();
+  if(g.t==='sequence') return sequence();
+  if(g.t==='sort') return sortGame();
+  if(g.t==='match') return matchGame();
+  if(G.idx>=G.items.length) return finish(G.items.length);
+  const it=G.items[G.idx];
+  let opts;
+  if(g.t==='yesno') opts=['Yes','No'];
+  else{
+    const pool=it.o||g.pool||g.items.map(x=>x.a);
+    let others=pool.filter(x=>x!==it.a);
+    if(!g.all&&!g.fixed&&!it.o) others=shuffle(others).slice(0,3);
+    opts=g.fixed?pool.slice():shuffle([it.a,...others]);
+  }
+  let head='';
+  const qtext=it.q||g.ask||'';
+  const sayText=it.say|| (g.t==='listen'?it.a:qtext);
+  if(g.t==='listen'){
+    head=`<div class="q">Listen and choose. <span class="ar" style="font-size:1rem;font-weight:400">استمع واختر</span></div><div class="listenbig"><button class="say" id="sayb">🔊</button></div>`;
+  }else{
+    head=`<div class="q"><button class="say" id="sayb">🔊</button><span>${blankify(qtext)}</span></div>`;
+    if(it.pic) head+=`<div class="pic ${it.pic.startsWith('pos:')?'wide':''}">${pic(it.pic)}</div>`;
+    if(it.big!=null) head+=`<div class="bignum">${it.big}</div>`;
+  }
+  const yn=g.t==='yesno';
+  const body=`<div class="opts ${yn?'yn':''}">${opts.map((o,i)=>`<button class="opt ${yn?(o==='Yes'?'yes':'no'):''}" data-v="${esc(o)}">${yn?'':`<span class="L">${LET[i]}</span>`}<span>${esc(o)}</span></button>`).join('')}</div>`;
+  shell(head+body,G.items.length,G.idx);
+  $('#sayb').onclick=()=>speak(sayText);
+  if(g.t==='listen') setTimeout(()=>speak(sayText),300);
+  let locked=false;
+  document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+    if(locked) return;
+    const v=b.dataset.v.replace(/&amp;/g,'&').replace(/&lt;/g,'<');
+    if(v===it.a){
+      locked=true;b.classList.add('ok');beep(true);
+      const fb=$('#fb');fb.className='fb good';fb.textContent=GOOD[Math.floor(Math.random()*GOOD.length)];
+      const bl=document.querySelector('.q .blank');if(bl)bl.textContent=it.a;
+      if(g.t!=='listen'&&g.t!=='yesno'){const full=qtext.includes('___')?qtext.replace('___',it.a):it.a;setTimeout(()=>speak(full.replace(/[👍👎]/g,'')),250)}
+      else if(g.t==='yesno') speak(it.a);
+      $('#nx').innerHTML='<button class="next" id="nextb">Next ➜</button>';
+      $('#nextb').onclick=()=>{G.idx++;renderItem()};
+    }else{
+      G.miss++;beep(false);shakeEl(b);
+      const fb=$('#fb');fb.className='fb bad';fb.textContent=BAD;
+    }
+  });
+}
+function orderItem(){
+  if(G.idx>=G.items.length) return finish(G.items.length);
+  const sent=G.items[G.idx];
+  const words=sent.split(' ');
+  let tiles=shuffle(words.map((w,i)=>({w,i})));
+  if(words.length>1 && tiles.every((t,k)=>t.i===k)) tiles.reverse();
+  let placed=[];
+  shell(`<div class="q"><button class="say" id="sayb">🔊</button><span>Put the words in order.</span></div><div class="slots" id="slots"></div><div class="tiles" id="tiles"></div><div class="row"><button class="btn" id="clr">↺ Clear</button><button class="btn main" id="chk">✔ Check</button></div>`,G.items.length,G.idx);
+  $('#sayb').onclick=()=>speak(sent);
+  const draw=()=>{
+    $('#slots').innerHTML=placed.map((t,k)=>`<button class="tile" data-k="${k}">${esc(t.w)}</button>`).join('')||'<span style="color:#aaa">👆 tap the words</span>';
+    $('#tiles').innerHTML=tiles.map((t,k)=>`<button class="tile ${placed.includes(t)?'used':''}" data-k="${k}">${esc(t.w)}</button>`).join('');
+    document.querySelectorAll('#tiles .tile').forEach(b=>b.onclick=()=>{const t=tiles[+b.dataset.k];if(!placed.includes(t)){placed.push(t);draw()}});
+    document.querySelectorAll('#slots .tile').forEach(b=>b.onclick=()=>{placed.splice(+b.dataset.k,1);draw()});
+  };
+  draw();
+  $('#clr').onclick=()=>{placed=[];draw()};
+  $('#chk').onclick=()=>{
+    if(placed.length<words.length){shakeEl($('#slots'));$('#fb').className='fb bad';$('#fb').textContent='Use all the words. استخدم كل الكلمات';return}
+    if(placed.map(t=>t.w).join(' ')===sent){
+      beep(true);speak(sent);$('#fb').className='fb good';$('#fb').textContent=GOOD[Math.floor(Math.random()*GOOD.length)];
+      $('#chk').disabled=true;$('#clr').disabled=true;
+      document.querySelectorAll('#tiles .tile,#slots .tile').forEach(b=>b.onclick=null);
+      $('#nx').innerHTML='<button class="next" id="nextb">Next ➜</button>';$('#nextb').onclick=()=>{G.idx++;orderItem()};
+    }else{G.miss++;beep(false);shakeEl($('#slots'));$('#fb').className='fb bad';$('#fb').textContent=BAD;placed=[];setTimeout(draw,450)}
+  };
+}
+function sequence(){
+  const steps=G.g.items;let order=shuffle(steps.map((s,i)=>({s,i})));let next=0;
+  const draw=()=>{
+    shell(`<div class="q"><span>Tap the steps in the right order.</span></div><div class="seqdone">${steps.slice(0,next).map((s,i)=>`<div><b>${i+1}.</b> ${esc(s)}</div>`).join('')}</div><div class="opts">${order.filter(o=>o.i>=next).map(o=>`<button class="opt" data-i="${o.i}"><span class="L">?</span><span>${esc(o.s)}</span></button>`).join('')}</div>`,steps.length,next);
+    document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+      if(+b.dataset.i===next){beep(true);speak(steps[next]);next++;if(next>=steps.length) return finish(steps.length);draw();$('#fb').className='fb good';$('#fb').textContent=GOOD[Math.floor(Math.random()*GOOD.length)]}
+      else{G.miss++;beep(false);shakeEl(b);$('#fb').className='fb bad';$('#fb').textContent=BAD}
+    });
+  };
+  draw();
+}
+function sortGame(){
+  const g=G.g;let left=shuffle(g.items.map(([w,b])=>({w,b})));let inB=[[],[]];let sel=null;
+  const draw=()=>{
+    shell(`<div class="q"><span>Tap a word, then tap the box.</span></div><div class="tiles">${left.map((t,k)=>`<button class="tile ${sel===k?'sel':''}" data-k="${k}">${esc(t.w)}</button>`).join('')}</div><div class="buckets">${g.buckets.map((b,i)=>`<button class="bucket" data-b="${i}"><h4>${b}</h4><div class="in">${inB[i].map(w=>`<span>${esc(w)}</span>`).join('')}</div></button>`).join('')}</div>`,g.items.length,g.items.length-left.length);
+    document.querySelectorAll('.tiles .tile').forEach(b=>b.onclick=()=>{sel=+b.dataset.k;speak(left[sel].w);draw()});
+    document.querySelectorAll('.bucket').forEach(b=>b.onclick=()=>{
+      if(sel==null){shakeEl(b);return}
+      const t=left[sel];
+      if(t.b===+b.dataset.b){beep(true);inB[t.b].push(t.w);left.splice(sel,1);sel=null;if(!left.length)return finish(g.items.length);draw();$('#fb').className='fb good';$('#fb').textContent=GOOD[0]}
+      else{G.miss++;beep(false);shakeEl(b);$('#fb').className='fb bad';$('#fb').textContent=BAD}
+    });
+  };
+  draw();
+}
+function matchGame(){
+  const g=G.g;const L=shuffle(g.pairs.map((p,i)=>({t:p[0],i})));const R=shuffle(g.pairs.map((p,i)=>({t:p[1],i})));
+  let done=new Set(),sl=null,sr=null;
+  const draw=()=>{
+    shell(`<div class="q"><span>Tap one on the left, then its partner on the right.</span></div><div class="match"><div class="col">${L.map(x=>`<button class="mi ${done.has(x.i)?'done':''} ${sl===x.i?'sel':''}" data-l="${x.i}">${esc(x.t)}</button>`).join('')}</div><div class="col">${R.map(x=>`<button class="mi ${g.arRight?'ar':''} ${done.has(x.i)?'done':''} ${sr===x.i?'sel':''}" data-r="${x.i}">${esc(x.t)}</button>`).join('')}</div></div>`,g.pairs.length,done.size);
+    document.querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{const i=+b.dataset.l;if(done.has(i))return;sl=i;speak(g.pairs[i][0]);check()});
+    document.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>{const i=+b.dataset.r;if(done.has(i))return;sr=i;if(!g.arRight)speak(g.pairs[i][1]);check()});
+  };
+  const check=()=>{
+    if(sl!=null&&sr!=null){
+      if(sl===sr){done.add(sl);beep(true);sl=sr=null;if(done.size===g.pairs.length)return finish(g.pairs.length);draw();$('#fb').className='fb good';$('#fb').textContent=GOOD[Math.floor(Math.random()*GOOD.length)];return}
+      G.miss++;beep(false);const r=document.querySelector(`[data-r="${sr}"]`);sl=sr=null;draw();shakeEl(document.querySelector(`[data-r="${r.dataset.r}"]`));$('#fb').className='fb bad';$('#fb').textContent=BAD;return;
+    }
+    draw();
+  };
+  draw();
+}
+function finish(n){
+  const r=G.miss/Math.max(1,n);const st=G.miss===0?3:r<=.5?2:1;
+  saveStars(G.u.id+'-'+G.gi,st);confetti();beep(true);speak(st===3?'Excellent!':'Well done!');
+  const hasNext=G.gi+1<G.u.games.length;
+  app.innerHTML=topbar('#u'+G.u.id,'Unit '+G.u.id)+`<div class="panel end"><div class="big">${'★'.repeat(st)}<span style="color:#ddd">${'★'.repeat(3-st)}</span></div><h3>${st===3?'Excellent! ممتاز':'Well done! أحسنت'}</h3><p>${G.g.title}</p><div class="row"><button class="btn" onclick="gamePage(G.u,G.gi)">↺ Play again</button>${hasNext?`<button class="btn main" onclick="location.hash='u${G.u.id}g${G.gi+2}'">Next game ➜</button>`:`<button class="btn main" onclick="location.hash='#'">🏠 Units</button>`}</div></div>`;
+  bindMute();
+}
+/* ---------- board game (Unit 6 Lesson 5) ---------- */
+const SQ={4:['You swim in a river. Go forward one square.',1],6:['You drop the ball. Miss a turn.','miss'],8:['You win. Go forward one square.',1],14:['You win. Your turn again.','again'],17:['You win. Go forward two squares.',2],21:['Go back one square.',-1],23:['Miss a turn.','miss'],27:['You eat a lot. Go back two squares.',-2],28:['You play basketball. Your turn again.','again']};
+function board(u,g){
+  let pos=[1,1],turn=0,skip=[false,false],over=false,die='🎲',msg='Player 1: roll the dice! ارمِ النرد';
+  const faces=['⚀','⚁','⚂','⚃','⚄','⚅'];
+  const order=[];for(let r=0;r<5;r++){const row=[];for(let c=1;c<=6;c++)row.push(r*6+c);order.push(...(r%2?row.reverse():row))}
+  const draw=()=>{
+    app.innerHTML=topbar('#u'+u.id,'Unit '+u.id+' · Game '+(G.gi+1))+`<div class="panel"><div class="ghead"><h3>${g.title}</h3></div><div class="inst"><span class="ar">${g.ar}</span> · 🔴 Player 1 · 🔵 Player 2</div>
+    <div class="board">${order.map(n=>`<div class="sq ${SQ[n]?'sp':''} ${n===30?'end':''}"><b>${n}</b>${SQ[n]?esc(SQ[n][0]):n===30?'🏁 Finish':''}${pos[0]===n?'<span class="tok p1">🔴</span>':''}${pos[1]===n?'<span class="tok p2">🔵</span>':''}</div>`).join('')}</div>
+    <div class="turn">${over?'':(turn===0?'🔴 Player 1':'🔵 Player 2')+' — “It’s my turn.”'}</div>
+    <div class="row" style="align-items:center"><span class="die">${die}</span>${over?'<button class="btn main" id="again">↺ Play again</button>':'<button class="btn main" id="roll">Roll 🎲</button>'}</div>
+    <div class="msg" id="msg">${msg}</div></div>`;
+    bindMute();
+    if(over){$('#again').onclick=()=>board(u,g);return}
+    $('#roll').onclick=roll;
+  };
+  const roll=()=>{
+    const d=1+Math.floor(Math.random()*6);die=faces[d-1];
+    const p=turn;let np=Math.min(30,pos[p]+d);pos[p]=np;
+    const nums=['one','two','three','four','five','six'];
+    let say=`${nums[d-1]}. Square ${np}.`;msg=`${p?'🔵':'🔴'} ${d} → ${np}`;
+    let again=false;
+    if(np<30&&SQ[np]){const [t,a]=SQ[np];msg+=' — '+t;say+=' '+t;
+      if(a==='miss')skip[p]=true;else if(a==='again')again=true;else{pos[p]=Math.max(1,Math.min(30,np+a))}}
+    if(pos[p]>=30){over=true;msg=`🏆 ${p?'🔵 Player 2':'🔴 Player 1'} wins! You win! 🎉`;say='You win!';confetti();saveStars(u.id+'-'+G.gi,3)}
+    speak(say);beep(true);
+    if(!over&&!again){let nt=1-p;if(skip[nt]){skip[nt]=false;msg+=` · ${nt?'🔵':'🔴'} misses a turn.`;nt=p}turn=nt}
+    draw();
+  };
+  draw();
+}
+/* ---------- router ---------- */
+function route(){
+  try{speechSynthesis.cancel()}catch(e){}
+  const h=location.hash.replace('#','');
+  const m=h.match(/^u(\d)(?:g(\d+))?$/);
+  if(!m) return home();
+  const u=UNITS.find(x=>x.id===+m[1]);if(!u) return home();
+  if(m[2]){const gi=+m[2]-1;if(u.games[gi]) return gamePage(u,gi)}
+  unitPage(u);
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',()=>{route();window.scrollTo(0,0)});
+route();
+</script>
+</body>
+</html>
+
+</body></html>
