@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:type" content="website">
+<title>علوم الصف الثالث</title>
+<meta name="description" content="ألعاب تفاعلية من كتاب العلوم للصف الثالث الابتدائي – المنهج السوداني: عالم الأحياء، المواد، الطاقة.">
+<meta property="og:title" content="علوم الصف الثالث – ألعاب تفاعلية">
+<meta property="og:description" content="ألعاب تفاعلية من كتاب العلوم للصف الثالث الابتدائي – المنهج السوداني.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Readex+Pro:wght@400;500;600&display=swap">
+<style>
+@font-face{font-family:"Two Sudan";src:url(data:font/ttf;base64,AAEAAAAKAIAAAwAgT1MvMmwJSf4AAAEoAAAAYGNtYXAADAa1AAABkAAAADRnbHlmcBAyawAAAcwAAACOaGVhZC8Kn+QAAACsAAAANmhoZWEFkQEpAAAA5AAAACRobXR4BAAARQAAAYgAAAAIbG9jYQBHAAAAAAHEAAAABm1heHAABAA1AAABCAAAACBuYW1lndiXGwAAAlwAAABmcG9zdAAZAAAAAALEAAAAJgABAAAAAQAAP50j7V8PPPUAAwPoAAAAAOb0riIAAAAA5vSuIgBFAAEBxgK/AAAAAwACAAAAAAAAAAEAAAOE/tQAAAIMAEUARgHGAAEAAAAAAAAAAAAAAAAAAAACAAEAAAACADMAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwIAAZAABQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAPz8/PwAABmIGYgOE/tQAAAOEASwAAAAAAAAAAAAAAAAAAAAgAAAB9AAAAgwARQAAAAIAAAADAAAAFAADAAEAAAAUAAQAIAAAAAQABAABAAAGYv//AAAGYv//+Z8AAQAAAAAAAAAAAEcAAAABAEUAAQHGAr8AMgAAEycnPwgfBw8DLwUjDwYXFxMXDwQnJwMnTgcCBAkQFhsdJCQjJSAdHBQJCwUGCQ0QGBQJCwUXJBUTIBELBwMCCOoEAQYRDxgWCt0VAbMtHxwcGx0aExILBgEFChIUDxgYFw0JBQINDRcECAUHFBEPDg4TJf6EDxAPEQYBCwwBZiYAAAAAAAQANgABAAAAAAABAAkAAAABAAAAAAACAAcACQADAAEECQABABIAEAADAAEECQACAA4AIlR3byBTdWRhblJlZ3VsYXIAVAB3AG8AIABTAHUAZABhAG4AUgBlAGcAdQBsAGEAcgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABUAAA==) format("truetype");unicode-range:U+0662;font-display:block}
+
+/* Layout: same family as "رياضيات الصف الثالث" — home of 3 unit cards, a lesson map per unit, then one activity card at a time */
+:root{
+  --paper:#EEF6FF; --card:#FFFFFF; --ink:#1A2233; --muted:#55607A; --line:#D3DDEB;
+  --c1:#F0505A; --c2:#2F80ED; --c3:#1E9E57; --c4:#8E44D9; --c5:#F2711C; --c6:#E0428C; --c7:#0E9AA7; --c8:#4B5BD6;
+  --gc:#1E9E57; --blob1:rgba(255,196,0,.30); --blob2:rgba(30,158,87,.18); --blob3:rgba(47,128,237,.16);
+  --yellow:#F2B705; --yellow-soft:#FCEFC2; --yellow-ink:#3A2C00;
+  --blue:#2F80ED; --ok:#1D7F62; --ok-soft:#DCF1E7; --bad:#C2423A; --bad-soft:#FBE4E0;
+  --wire:#2A3550; --sky:#DCEBFF; --soil:#8A5A33; --leaf:#2E9E4F; --dry:#B08A3E; --wall:#E9DCC4; --dark:#26314A;
+  --f-display:"Two Sudan","Baloo Bhaijaan 2","Readex Pro",system-ui,sans-serif;
+  --f-body:"Two Sudan","Readex Pro",system-ui,"Segoe UI",Tahoma,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#10141F; --card:#1A2030; --ink:#EEF2FA; --muted:#A1ABC2; --line:#323C52;
+  --c1:#F25F67; --c2:#4A8FEF; --c3:#2AAE66; --c4:#A266E6; --c5:#F47F2F; --c6:#E5559A; --c7:#1AAAB6; --c8:#6474EA;
+  --gc:#2AAE66; --blob1:rgba(255,196,0,.10); --blob2:rgba(42,174,102,.14); --blob3:rgba(47,128,237,.12);
+  --yellow:#F5C434; --yellow-soft:#3A3115; --yellow-ink:#3A2C00;
+  --blue:#4A8FEF; --ok:#45C99D; --ok-soft:#14352A; --bad:#F27D70; --bad-soft:#3D1F1C;
+  --wire:#C9D3EA; --sky:#1C2A44; --soil:#7A5030; --leaf:#3DBA62; --dry:#A2803A; --wall:#3A3428; --dark:#05070C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#10141F; --card:#1A2030; --ink:#EEF2FA; --muted:#A1ABC2; --line:#323C52;
+  --c1:#F25F67; --c2:#4A8FEF; --c3:#2AAE66; --c4:#A266E6; --c5:#F47F2F; --c6:#E5559A; --c7:#1AAAB6; --c8:#6474EA;
+  --gc:#2AAE66; --blob1:rgba(255,196,0,.10); --blob2:rgba(42,174,102,.14); --blob3:rgba(47,128,237,.12);
+  --yellow:#F5C434; --yellow-soft:#3A3115; --yellow-ink:#3A2C00;
+  --blue:#4A8FEF; --ok:#45C99D; --ok-soft:#14352A; --bad:#F27D70; --bad-soft:#3D1F1C;
+  --wire:#C9D3EA; --sky:#1C2A44; --soil:#7A5030; --leaf:#3DBA62; --dry:#A2803A; --wall:#3A3428; --dark:#05070C; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background-color:var(--paper);background-image:radial-gradient(520px 380px at 0% 0%,var(--blob1),transparent 70%),radial-gradient(520px 420px at 100% 20%,var(--blob2),transparent 70%),radial-gradient(600px 420px at 40% 100%,var(--blob3),transparent 70%);background-attachment:fixed;color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 40px}
+.wrap{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,select:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+svg text{font-family:var(--f-display)}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column}
+.tab{display:inline-block;background:var(--gc);color:#fff;font-family:var(--f-display);font-weight:700;border-radius:6px;padding:1px 10px 0;font-size:15px;align-self:flex-start}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(34px,7vw,50px);line-height:1.1;margin:6px 0 0;text-wrap:balance}
+h1 .hl{background:linear-gradient(transparent 64%, var(--yellow) 64%, var(--yellow) 90%, transparent 90%)}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.pill{display:flex;align-items:center;gap:6px;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600}
+.iconbtn{background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:6px 14px}
+.sub{color:var(--muted);margin:0}
+
+/* home */
+.units{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:720px){.units{grid-template-columns:1fr}}
+.unit{background:var(--card);border:2px solid var(--line);border-top:6px solid var(--tc);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:8px;text-align:right;transition:transform .15s,border-color .15s;min-width:0;box-shadow:0 5px 0 rgba(0,0,0,.05)}
+@media (max-width:720px){.unit{flex-direction:row;align-items:center}}
+.unit:hover{transform:translateY(-2px);border-color:var(--tc)}
+.uicon{width:74px;height:74px;border-radius:22px;display:grid;place-items:center;font-size:44px;background:color-mix(in srgb,var(--tc) 16%,var(--card));flex:none}
+.unit .ubody{display:flex;flex-direction:column;gap:4px;min-width:0}
+.unit .tab{background:var(--tc)}
+.unit .nm{font-family:var(--f-display);font-weight:800;color:var(--tc);font-size:28px;line-height:1.2}
+.unit .pg{color:var(--muted);font-size:14px}
+.unit .topics{font-size:14px;color:var(--ink)}
+
+/* map */
+.bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.back{border:1.5px solid var(--line);border-radius:999px;padding:4px 14px;background:var(--card)}
+.map{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:620px){.map{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.lesson{background:var(--card);border:1.5px solid var(--line);border-top:6px solid var(--tc);border-radius:16px;padding:12px 12px 10px;text-align:right;display:flex;flex-direction:column;gap:6px;transition:transform .15s,border-color .15s;min-width:0;box-shadow:0 5px 0 rgba(0,0,0,.05)}
+.lesson:hover{transform:translateY(-2px);border-color:var(--tc)}
+.lesson .ln{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.lesson .tab{font-size:13px;background:var(--tc)}
+.lesson .mi{font-size:30px;line-height:1}
+.lesson .pg{color:var(--muted);font-size:13px}
+.lesson .nm{font-family:var(--f-display);font-weight:700;color:var(--tc);font-size:20px;line-height:1.25}
+.stars{letter-spacing:2px;font-size:18px;color:var(--line)}
+.stars .on{color:#F5B400}
+.lesson.final{grid-column:1/-1;background:var(--gc);border-color:var(--gc);color:#fff}
+.lesson.final .nm{color:#fff;font-size:22px}
+.lesson.final .pg{color:#F0FFF6}
+.lesson.final .tab{background:var(--yellow);color:var(--yellow-ink)}
+.lesson.final .stars{color:rgba(255,255,255,.35)}
+.lesson.final .stars .on{color:#FFD43B}
+
+/* play */
+.prog{flex:1;min-width:80px;height:12px;background:var(--card);border:1.5px solid var(--line);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;background:repeating-linear-gradient(45deg,var(--gc) 0 12px,var(--yellow) 12px 24px);border-radius:99px;transition:width .3s}
+.count{font-weight:600;min-width:52px;text-align:center}
+.streak{font-weight:700;color:#E8590C;background:color-mix(in srgb,#FF8A3D 18%,var(--card));border-radius:999px;padding:2px 10px;white-space:nowrap}
+.card{background:var(--card);border:1.5px solid var(--line);border-top:6px solid var(--gc);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:16px;box-shadow:0 6px 0 rgba(0,0,0,.05)}
+.qhead{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.qtype{color:var(--muted);font-size:14px;display:flex;align-items:center;gap:8px}
+.say{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:2px 12px;font-size:14px}
+.q{font-size:21px;font-weight:600;margin:0;line-height:1.7}
+.vis{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px}
+.card.fx-ok{animation:bounce .45s}
+.card.fx-no{animation:shake .35s}
+@keyframes bounce{40%{transform:scale(1.02)}70%{transform:scale(.995)}}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.shake{animation:shake .35s}
+
+/* item chip: emoji/picture + word */
+.it{display:inline-flex;flex-direction:column;align-items:center;gap:2px;line-height:1.1}
+.it .e{font-size:38px;line-height:1.15;display:grid;place-items:center;min-height:44px}
+.it .e svg{width:44px;height:44px}
+.it .w{font-weight:600;font-size:16px;text-align:center}
+.it.row{flex-direction:row;gap:8px}
+.it.row .e{font-size:28px;min-height:0}
+.it.row .e svg{width:32px;height:32px}
+.it.row .w{font-size:18px}
+
+/* mcq */
+.opts{display:flex;flex-direction:column;gap:10px}
+.opts.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.opt{display:flex;align-items:center;gap:14px;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:8px 14px;text-align:right;min-height:62px;min-width:0}
+.opt:hover:not(:disabled){border-color:var(--gc)}
+.opt .L{font-family:var(--f-display);font-weight:800;font-size:20px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;flex:none}
+.opt:nth-child(4n+1) .L{background:var(--c1)}.opt:nth-child(4n+2) .L{background:var(--c2)}.opt:nth-child(4n+3) .L{background:var(--c5)}.opt:nth-child(4n+4) .L{background:var(--c4)}
+.opt .C{flex:1;font-size:19px;font-weight:600;min-width:0;display:flex;justify-content:flex-start;align-items:center}
+.opt.right{border-color:var(--ok);background:var(--ok-soft)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt:disabled{cursor:default}
+.opt .C svg{max-width:100%;height:auto}
+
+/* true / false */
+.tfbox{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.tfb{min-width:150px;padding:14px 22px;border-radius:18px;border:2.5px solid var(--line);background:var(--card);font-family:var(--f-display);font-size:24px;font-weight:800;display:flex;align-items:center;gap:10px;justify-content:center}
+.tfb .m{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:24px}
+.tfb.t .m{background:var(--c3)} .tfb.f .m{background:var(--c1)}
+.tfb:hover:not(:disabled){border-color:var(--gc)}
+.tfb.right{border-color:var(--ok);background:var(--ok-soft)}
+.tfb.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.statement{background:color-mix(in srgb,var(--yellow) 22%,var(--card));border-radius:14px;padding:14px 18px;font-size:22px;font-weight:700;text-align:center;font-family:var(--f-display)}
+
+/* selects */
+.sent{font-size:21px;line-height:2.4;font-weight:600}
+select.dd{font-family:var(--f-display);font-size:19px;font-weight:700;color:var(--ink);background:color-mix(in srgb,var(--yellow) 35%,var(--card));
+  border:2px solid var(--line);border-radius:10px;padding:0 6px;min-width:110px;height:44px;margin:0 4px;max-width:100%}
+select.dd.right{border-color:var(--ok);background:var(--ok-soft)}
+select.dd.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.cmap{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:18px;font-weight:600}
+.cmap .node{background:color-mix(in srgb,var(--gc) 14%,var(--card));border-radius:12px;padding:4px 10px;text-align:center}
+.cmap .arr{color:var(--muted);font-size:15px}
+.cmap .rowx{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.ftable{border-collapse:collapse;margin:0 auto;font-size:18px}
+.ftable td,.ftable th{border:1.5px solid var(--line);padding:6px 10px;text-align:center}
+.ftable th{background:color-mix(in srgb,var(--yellow) 40%,var(--card))}
+.tblwrap{overflow-x:auto}
+
+/* chips, bins */
+.pool{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;border:2px dashed var(--line);border-radius:16px;padding:12px;min-height:90px}
+.chip{min-width:84px;min-height:84px;border-radius:14px;border:2px solid var(--line);background:var(--card);display:grid;place-items:center;padding:6px 8px;touch-action:none}
+.chip.sel{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 14%,var(--card));transform:translateY(-3px)}
+.chip.right{border-color:var(--ok);background:var(--ok-soft)}
+.chip.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.chip.done{opacity:.35;pointer-events:none}
+.chip.lifting{opacity:.35}
+.dragghost{position:fixed;z-index:60;pointer-events:none;margin:0;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.bins{display:grid;grid-template-columns:repeat(var(--cols,2),minmax(0,1fr));gap:10px}
+@media (max-width:560px){.bins{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bin{border:2.5px dashed var(--bc,var(--line));border-radius:16px;min-height:110px;padding:8px;display:flex;flex-direction:column;gap:6px;background:color-mix(in srgb,var(--bc,var(--gc)) 8%,var(--card));cursor:pointer;min-width:0}
+.bin.nope{border-color:var(--bad);background:var(--bad-soft)}
+.bin.hot{border-style:solid}
+.binl{font-family:var(--f-display);font-weight:800;font-size:19px;color:var(--bc,var(--gc));text-align:center;line-height:1.3}
+.bini{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
+.bini .it .e{font-size:26px;min-height:30px}
+.bini .it .e svg{width:30px;height:30px}
+.bini .it .w{font-size:13px}
+.bini .placed{background:var(--card);border-radius:10px;padding:3px 5px;animation:popin .25s}
+@keyframes popin{0%{transform:scale(.4)}70%{transform:scale(1.1)}}
+
+/* match */
+.match{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;max-width:520px;margin:0 auto;width:100%}
+.match .col{display:flex;flex-direction:column;gap:10px}
+.match .chip{width:100%;min-height:70px}
+.match .chip .word{font-family:var(--f-display);font-weight:700;font-size:20px}
+
+/* order */
+.slots{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap}
+.slot{min-width:84px;min-height:84px;border:2.5px dashed var(--line);border-radius:14px;display:grid;place-items:center;position:relative;padding:6px}
+.slot .n{position:absolute;top:-10px;right:-8px;background:var(--gc);color:#fff;border-radius:50%;width:26px;height:26px;display:grid;place-items:center;font-size:15px;font-family:var(--f-display);font-weight:800}
+.slot.filled{border-style:solid;border-color:var(--ok);background:var(--ok-soft)}
+.slots .arrow{font-family:var(--f-display);font-size:26px;color:var(--muted)}
+.dirnote{text-align:center;color:var(--muted);font-weight:600}
+.letters .chip,.letters .slot{min-width:56px;min-height:60px}
+.letters .chip .word,.letters .slot .word{font-family:var(--f-display);font-size:30px;font-weight:800}
+
+/* balloons */
+.pond{display:flex;flex-wrap:wrap;gap:14px 10px;justify-content:center;padding:14px 6px 24px;border-radius:18px;background:linear-gradient(180deg,color-mix(in srgb,var(--blue) 14%,var(--card)),var(--card))}
+.balloon{position:relative;border:none;background:none;padding:0;width:96px;height:124px;animation:float 3.2s ease-in-out infinite;animation-delay:var(--d)}
+.balloon .bl{position:absolute;inset:0 0 22px 0;border-radius:50% 50% 46% 46%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.65),transparent 36%),var(--c);display:grid;place-items:center;box-shadow:inset -6px -8px 0 rgba(0,0,0,.10)}
+.balloon .bl .it .e{font-size:32px;min-height:36px}
+.balloon .bl .it .e svg{width:34px;height:34px}
+.balloon .bl .it .w{font-size:13px;color:#1A2233;background:rgba(255,255,255,.8);border-radius:8px;padding:0 5px}
+.balloon .str{position:absolute;left:50%;bottom:0;width:2px;height:24px;background:var(--muted)}
+.balloon.popped{animation:burst .35s forwards;pointer-events:none}
+.balloon.shake{animation:shake .35s}
+@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes burst{60%{transform:scale(1.25);opacity:.7}100%{transform:scale(0);opacity:0}}
+
+/* svg scenes */
+svg.scene{max-width:100%;height:auto;display:block;margin:0 auto}
+svg .hit{cursor:pointer}
+svg .hit:hover{filter:brightness(1.08)}
+.ctrls{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;align-items:center}
+.sbtn{min-width:48px;height:48px;border-radius:999px;border:2px solid var(--gc);background:var(--card);color:var(--gc);font-family:var(--f-display);font-size:20px;font-weight:800;padding:0 14px}
+.sbtn:active{transform:scale(.95)}
+.sbtn:disabled{opacity:.4}
+.mover{display:flex;flex-direction:column;align-items:center;gap:4px;background:color-mix(in srgb,var(--gc) 10%,var(--card));border-radius:14px;padding:6px 8px}
+.mover .sbtn{min-width:44px;height:40px;font-size:18px;padding:0 10px}
+.mover b{font-size:14px;color:var(--muted)}
+.status{text-align:center;font-weight:700;font-size:18px}
+.matrow{display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:center;max-width:460px;margin:0 auto;width:100%}
+.matbtn{border:2px solid var(--line);border-radius:12px;background:var(--card);padding:6px 12px;font-weight:700;text-align:right}
+.matbtn.on{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 14%,var(--card))}
+
+/* letter grid */
+.lgrid{display:grid;grid-template-columns:repeat(5,58px);gap:6px;justify-content:center}
+.lc{height:58px;border-radius:12px;border:2px solid var(--line);font-family:var(--f-display);font-size:30px;font-weight:800;display:grid;place-items:center;background:var(--bg,var(--card))}
+.lc.x{opacity:.25;text-decoration:line-through;pointer-events:none}
+.lc.keep{border-color:var(--ok);background:var(--ok-soft)}
+.phrase{display:flex;gap:4px;justify-content:center;flex-wrap:wrap;font-family:var(--f-display);font-size:24px;font-weight:800}
+.phrase span{min-width:30px;text-align:center;border-bottom:3px solid var(--line);padding:0 2px}
+.phrase span.got{color:var(--ok);border-color:var(--ok)}
+.phrase span.sp{border:none;min-width:12px}
+
+/* feedback */
+.fb{border-radius:14px;padding:12px 16px;font-weight:600;display:flex;gap:10px;align-items:flex-start}
+.fb.ok{background:var(--ok-soft);color:var(--ok)}
+.fb.no{background:var(--bad-soft);color:var(--bad)}
+.fb .tip{color:var(--ink);font-weight:500;display:block}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{background:var(--gc);color:#fff;border:none;border-radius:999px;padding:10px 30px;font-weight:700;font-size:19px;font-family:var(--f-display)}
+.btn:disabled{opacity:.4;cursor:default}
+.btn.ghost{background:var(--card);color:var(--gc);border:2px solid var(--gc)}
+.result{text-align:center;align-items:center}
+.result .big{font-family:var(--f-display);font-size:64px;font-weight:800;color:var(--gc);line-height:1}
+.result .stars{font-size:44px}
+.result h2{font-family:var(--f-display);font-size:30px;margin:0}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+
+/* credit */
+.credit[hidden]{display:none!important}
+.credit{margin-top:8px;border-top:1.5px dashed var(--line);padding-top:14px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;color:var(--muted);font-size:15px;text-align:center}
+.credit b{color:var(--gc);font-family:var(--f-display);font-size:18px}
+.credit .phone{font-family:var(--f-display);font-weight:700;color:var(--ink);user-select:all;letter-spacing:.03em}
+
+@media (max-width:480px){
+  body{font-size:16px} .card{padding:16px} .q{font-size:19px} .sent{font-size:19px}
+  .chip{min-width:74px;min-height:76px} .it .e{font-size:32px}
+  .lgrid{grid-template-columns:repeat(5,50px)} .lc{height:50px;font-size:26px}
+  .balloon{width:84px;height:112px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+
+<div class="wrap" id="app" dir="rtl" lang="ar">
+  <header class="top">
+    <div class="brand">
+      <span class="tab" id="unitTab">كتاب العلوم · المنهج السوداني</span>
+      <h1><span style="color:var(--c3)">علوم</span> <span style="color:var(--c2)">الصف</span> <span class="hl" style="color:var(--c5)">الثالث</span></h1>
+    </div>
+    <div class="tools">
+      <span class="pill" title="مجموع النجوم"><span style="color:#F5B400">★</span> <span id="totalStars">0</span></span>
+      <button class="iconbtn" id="soundBtn" aria-pressed="true">الصوت: يعمل</button>
+    </div>
+  </header>
+  <main id="view"></main>
+  <footer class="credit">
+    <span>مع تحيات <b>سليمان جميل</b></span>
+    <span>رقم الجوال: <bdi dir="ltr" class="phone">00974&lrm; 5108&lrm; 5117</bdi></span>
+  </footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+const $=(s,r=document)=>r.querySelector(s);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v);}catch(e){return d;}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}};
+const RM=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------- sound ---------- */
+let soundOn=store.get("sci3-sound",true),actx=null;
+function beep(good){ if(!soundOn) return;
+  try{ actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+    (good?[523,659,784]:[330,247]).forEach((f,i)=>{const o=actx.createOscillator(),g=actx.createGain();o.type=good?"triangle":"sine";o.frequency.value=f;
+      const t=actx.currentTime+i*0.11;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(0.18,t+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t+0.2);
+      o.connect(g).connect(actx.destination);o.start(t);o.stop(t+0.22);});
+  }catch(e){} }
+function pop(){ if(!soundOn) return; try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();const o=actx.createOscillator(),g=actx.createGain();o.type="square";o.frequency.setValueAtTime(700,actx.currentTime);o.frequency.exponentialRampToValueAtTime(120,actx.currentTime+0.12);g.gain.setValueAtTime(0.12,actx.currentTime);g.gain.exponentialRampToValueAtTime(0.0001,actx.currentTime+0.14);o.connect(g).connect(actx.destination);o.start();o.stop(actx.currentTime+0.15);}catch(e){} }
+function paintSound(){const b=$("#soundBtn");b.textContent=soundOn?"الصوت: يعمل":"الصوت: متوقف";b.setAttribute("aria-pressed",soundOn);}
+$("#soundBtn").addEventListener("click",()=>{soundOn=!soundOn;store.set("sci3-sound",soundOn);paintSound();});
+paintSound();
+// read the question aloud (Arabic voice when the device has one)
+const canSay="speechSynthesis" in window;
+function say(text){ if(!canSay) return; try{ speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(text); u.lang="ar-SA"; u.rate=.85;
+  const v=speechSynthesis.getVoices().find(v=>/^ar/i.test(v.lang)); if(v) u.voice=v; speechSynthesis.speak(u);}catch(e){} }
+
+/* ---------- small pictures (drawn where no emoji exists) ---------- */
+const SV={
+ clip:`<svg viewBox="0 0 48 48"><rect x="4" y="18" width="40" height="7" rx="2" fill="#D9B27C" stroke="#7A5530" stroke-width="1.5" transform="rotate(-8 24 21)"/><rect x="4" y="25" width="40" height="7" rx="2" fill="#E6C08A" stroke="#7A5530" stroke-width="1.5" transform="rotate(6 24 28)"/><circle cx="26" cy="25" r="3.5" fill="#9AA3AD" stroke="#555" stroke-width="1"/></svg>`,
+ fridge:`<svg viewBox="0 0 48 48"><rect x="12" y="3" width="24" height="42" rx="3" fill="#F2F5F8" stroke="#5B6573" stroke-width="2"/><line x1="12" y1="18" x2="36" y2="18" stroke="#5B6573" stroke-width="2"/><rect x="15" y="8" width="2.5" height="7" rx="1" fill="#5B6573"/><rect x="15" y="22" width="2.5" height="10" rx="1" fill="#5B6573"/></svg>`,
+ iron:`<svg viewBox="0 0 48 48"><path d="M6 36 Q8 24 22 22 L42 22 L42 36 Z" fill="#C9CED6" stroke="#444" stroke-width="2"/><path d="M18 22 Q20 10 30 10 L40 10 Q42 10 42 14 L42 22" fill="none" stroke="#2B2B2B" stroke-width="4"/><rect x="6" y="36" width="36" height="4" rx="2" fill="#D4A72C"/></svg>`,
+ fan:`<svg viewBox="0 0 48 48"><circle cx="24" cy="18" r="15" fill="#E8F2FF" stroke="#3E7BC2" stroke-width="2"/><g fill="#5EA3E8"><ellipse cx="24" cy="10" rx="4" ry="8"/><ellipse cx="17" cy="22" rx="4" ry="8" transform="rotate(-120 24 18)"/><ellipse cx="31" cy="22" rx="4" ry="8" transform="rotate(120 24 18)"/></g><circle cx="24" cy="18" r="3" fill="#3E7BC2"/><rect x="22" y="33" width="4" height="9" fill="#888"/><rect x="14" y="41" width="20" height="4" rx="2" fill="#E8D9A8"/></svg>`,
+ table:`<svg viewBox="0 0 48 48"><rect x="4" y="14" width="40" height="6" rx="1" fill="#C89A63" stroke="#6E4A25" stroke-width="1.5"/><rect x="8" y="20" width="4" height="22" fill="#9C7040"/><rect x="36" y="20" width="4" height="22" fill="#9C7040"/></svg>`,
+ spring:`<svg viewBox="0 0 48 48"><polyline points="10,44 10,40 22,37 10,34 22,31 10,28 22,25 10,22 22,19 16,17" fill="none" stroke="#8C96A3" stroke-width="3" stroke-linejoin="round"/><circle cx="34" cy="20" r="9" fill="#B8C0CA" stroke="#5B6573" stroke-width="2"/><circle cx="31" cy="17" r="2.5" fill="#fff" opacity=".8"/></svg>`,
+ turbine:`<svg viewBox="0 0 48 48"><rect x="22.5" y="18" width="3" height="28" fill="#9AA3AD"/><g stroke="#E8EEF5" stroke-width="3" stroke-linecap="round"><line x1="24" y1="17" x2="24" y2="2"/><line x1="24" y1="17" x2="11" y2="25"/><line x1="24" y1="17" x2="37" y2="25"/></g><circle cx="24" cy="17" r="3" fill="#5B6573"/></svg>`,
+ pylon:`<svg viewBox="0 0 48 48"><g fill="none" stroke="#5B6573" stroke-width="2"><path d="M24 4 L14 46 M24 4 L34 46 M18 28 L30 28 M16 36 L32 36 M20 18 L28 18"/><path d="M6 14 L42 14 M10 22 L38 22"/></g><path d="M0 12 Q12 18 24 14 Q36 10 48 16" fill="none" stroke="#F2B705" stroke-width="1.5"/></svg>`,
+ solar:`<svg viewBox="0 0 48 48"><circle cx="38" cy="9" r="6" fill="#F5B400"/><polygon points="4,30 32,18 44,30 16,42" fill="#2F6FD0" stroke="#1C3F7A" stroke-width="1.5"/><g stroke="#9CC3FF" stroke-width="1"><line x1="11" y1="27" x2="23" y2="39"/><line x1="18" y1="24" x2="30" y2="36"/><line x1="25" y1="21" x2="37" y2="33"/><line x1="10" y1="36" x2="38" y2="24"/></g><rect x="22" y="38" width="4" height="8" fill="#888"/></svg>`,
+ grinder:`<svg viewBox="0 0 48 48"><path d="M12 6 L28 6 L24 16 L16 16 Z" fill="#C9CED6" stroke="#555" stroke-width="1.5"/><rect x="12" y="16" width="18" height="12" rx="4" fill="#B3BAC4" stroke="#555" stroke-width="1.5"/><path d="M30 22 L40 22 L40 34" fill="none" stroke="#555" stroke-width="2.5"/><rect x="38" y="32" width="5" height="10" rx="2" fill="#C0702A"/><path d="M18 28 L18 40 L12 44 M18 40 L24 44" fill="none" stroke="#555" stroke-width="2"/></svg>`,
+ oil:`<svg viewBox="0 0 48 48"><rect x="12" y="12" width="24" height="32" rx="5" fill="#F7C51E" stroke="#B08900" stroke-width="2"/><rect x="18" y="5" width="12" height="8" rx="2" fill="#E3A80C"/><rect x="15" y="22" width="18" height="10" rx="2" fill="#fff" opacity=".85"/></svg>`,
+ cement:`<svg viewBox="0 0 48 48"><path d="M8 10 L40 10 L42 42 L6 42 Z" fill="#E7E2D6" stroke="#8C8577" stroke-width="2"/><rect x="12" y="20" width="24" height="10" fill="#C94A3F"/></svg>`,
+ rebar:`<svg viewBox="0 0 48 48"><g stroke="#7D5A45" stroke-width="3.5" stroke-linecap="round"><line x1="6" y1="40" x2="40" y2="6"/><line x1="10" y1="44" x2="44" y2="10"/><line x1="4" y1="34" x2="34" y2="4"/></g></svg>`,
+ gauze:`<svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="3" fill="#FFFFFF" stroke="#B9C2CC" stroke-width="1.5"/><g stroke="#C9D2DC" stroke-width="1"><line x1="6" y1="14" x2="42" y2="14"/><line x1="6" y1="20" x2="42" y2="20"/><line x1="6" y1="26" x2="42" y2="26"/><line x1="6" y1="32" x2="42" y2="32"/><line x1="12" y1="8" x2="12" y2="40"/><line x1="18" y1="8" x2="18" y2="40"/><line x1="24" y1="8" x2="24" y2="40"/><line x1="30" y1="8" x2="30" y2="40"/><line x1="36" y1="8" x2="36" y2="40"/></g></svg>`,
+ cardboard:`<svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="2" fill="#C99A62" stroke="#7A5530" stroke-width="1.5"/><path d="M6 16 L42 16" stroke="#A8794A" stroke-width="1.5"/></svg>`,
+ glass:`<svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="32" rx="2" fill="#CFEAFF" fill-opacity=".45" stroke="#6BA6D6" stroke-width="2"/><line x1="12" y1="34" x2="22" y2="14" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>`,
+ battery:`<svg viewBox="0 0 48 48"><rect x="10" y="10" width="28" height="34" rx="4" fill="#D4302B" stroke="#7A1512" stroke-width="2"/><rect x="18" y="5" width="12" height="6" rx="1" fill="#C0C6CE"/><rect x="10" y="22" width="28" height="7" fill="#F2B705"/></svg>`,
+ dynamo:`<svg viewBox="0 0 48 48"><rect x="16" y="10" width="16" height="26" rx="6" fill="#C9CED6" stroke="#555" stroke-width="2"/><rect x="21" y="36" width="6" height="8" fill="#555"/><circle cx="24" cy="8" r="4" fill="#555"/></svg>`
+};
+// item: picture (emoji or drawing) + word
+const IT=(e,w,cls="")=>`<span class="it ${cls}"><span class="e" aria-hidden="true">${SV[e]||e}</span>${w?`<span class="w">${w}</span>`:""}</span>`;
+const W=w=>`<span class="word">${w}</span>`;
+
+/* ---------- scenes ---------- */
+function circuitSvg(o={}){
+  // o.closed, o.parts {lamp,battery,wire} (true = present), o.slot (which missing slot is highlighted), o.small
+  const p=Object.assign({lamp:true,battery:true,wire:true},o.parts||{});
+  const lit=o.closed&&p.lamp&&p.battery&&p.wire;
+  const w="var(--wire)";
+  const lampG=p.lamp?`<g>${lit?`<g stroke="#F5B400" stroke-width="3" stroke-linecap="round"><line x1="160" y1="2" x2="160" y2="-6"/><line x1="128" y1="14" x2="120" y2="8"/><line x1="192" y1="14" x2="200" y2="8"/><line x1="122" y1="34" x2="112" y2="34"/><line x1="198" y1="34" x2="208" y2="34"/></g><circle cx="160" cy="30" r="34" fill="#FFE066" opacity=".35"/>`:""}
+     <circle cx="160" cy="30" r="20" fill="${lit?"#FFD43B":"#E6EAF0"}" stroke="#5B6573" stroke-width="2.5"/><path d="M152 34 Q156 22 160 34 Q164 22 168 34" fill="none" stroke="${lit?"#C25E00":"#7A828E"}" stroke-width="2"/>
+     <rect x="150" y="48" width="20" height="14" rx="2" fill="#5B6573"/></g>`
+    :`<g class="${o.slot?"hit":""}" data-slot="lamp"><rect x="135" y="8" width="50" height="54" rx="10" fill="var(--card)" stroke="var(--blue)" stroke-width="2.5" stroke-dasharray="6 5"/><text x="160" y="44" text-anchor="middle" font-size="26" fill="var(--blue)" font-weight="800">؟</text></g>`;
+  const batG=p.battery?`<g><rect x="120" y="178" width="80" height="30" rx="5" fill="#D4302B" stroke="#7A1512" stroke-width="2"/><rect x="200" y="186" width="7" height="14" rx="2" fill="#C0C6CE"/><text x="140" y="200" text-anchor="middle" font-size="22" fill="#fff" font-weight="800">−</text><text x="183" y="201" text-anchor="middle" font-size="22" fill="#fff" font-weight="800">+</text></g>`
+    :`<g class="${o.slot?"hit":""}" data-slot="battery"><rect x="118" y="174" width="86" height="38" rx="8" fill="var(--card)" stroke="var(--blue)" stroke-width="2.5" stroke-dasharray="6 5"/><text x="161" y="202" text-anchor="middle" font-size="26" fill="var(--blue)" font-weight="800">؟</text></g>`;
+  // right side wire (x=290) may be missing
+  const rightWire=p.wire?`<line x1="290" y1="62" x2="290" y2="193" stroke="${w}" stroke-width="5" stroke-linecap="round"/>`
+    :`<line x1="290" y1="62" x2="290" y2="95" stroke="${w}" stroke-width="5" stroke-linecap="round"/><line x1="290" y1="160" x2="290" y2="193" stroke="${w}" stroke-width="5" stroke-linecap="round"/><g class="${o.slot?"hit":""}" data-slot="wire"><rect x="268" y="98" width="44" height="60" rx="8" fill="var(--card)" stroke="var(--blue)" stroke-width="2.5" stroke-dasharray="6 5"/><text x="290" y="137" text-anchor="middle" font-size="26" fill="var(--blue)" font-weight="800">؟</text></g>`;
+  const lever=o.closed?`<line x1="30" y1="140" x2="30" y2="90" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/>`:`<line x1="30" y1="140" x2="2" y2="98" stroke="#2B2B2B" stroke-width="6" stroke-linecap="round"/>`;
+  return `<svg class="scene" viewBox="-14 -12 330 232" width="${o.small?200:330}" role="img" aria-label="دائرة كهربية">
+    <polyline points="150,55 30,55 30,90" fill="none" stroke="${w}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="30,140 30,193 120,193" fill="none" stroke="${w}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="170,55 290,55 290,62" fill="none" stroke="${w}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="207,193 290,193" fill="none" stroke="${w}" stroke-width="5" stroke-linecap="round"/>
+    ${rightWire}
+    <g class="${o.sw?"hit":""}" id="sw"><rect x="-6" y="80" width="72" height="70" fill="transparent"/><circle cx="30" cy="90" r="6" fill="#F2B705" stroke="#5B6573" stroke-width="2"/><circle cx="30" cy="140" r="6" fill="#F2B705" stroke="#5B6573" stroke-width="2"/>${lever}
+      <text x="82" y="121" text-anchor="middle" font-size="16" fill="var(--muted)" font-weight="700">المفتاح</text></g>
+    ${lampG}${batG}
+  </svg>`;
+}
+function bodySvg(){
+  const skin="#D9A066", shirt="var(--c2)", sh="#2B5FA8";
+  return `<svg class="scene" viewBox="0 0 260 360" width="250" role="img" aria-label="جسم الإنسان">
+    <g class="hit" data-r="armR"><path d="M72 112 L44 120 L30 210 L46 214 L62 140 Z" fill="${skin}" stroke="#8A5A33" stroke-width="2"/><circle cx="37" cy="220" r="11" fill="${skin}" stroke="#8A5A33" stroke-width="2"/></g>
+    <g class="hit" data-r="armL"><path d="M188 112 L216 120 L230 210 L214 214 L198 140 Z" fill="${skin}" stroke="#8A5A33" stroke-width="2"/><circle cx="223" cy="220" r="11" fill="${skin}" stroke="#8A5A33" stroke-width="2"/></g>
+    <g class="hit" data-r="legR"><path d="M84 238 L126 238 L120 336 L94 336 Z" fill="${skin}" stroke="#8A5A33" stroke-width="2"/><rect x="82" y="332" width="40" height="14" rx="6" fill="#5B4636"/></g>
+    <g class="hit" data-r="legL"><path d="M134 238 L176 238 L166 336 L140 336 Z" fill="${skin}" stroke="#8A5A33" stroke-width="2"/><rect x="138" y="332" width="40" height="14" rx="6" fill="#5B4636"/></g>
+    <g class="hit" data-r="chest"><path d="M72 106 Q130 92 188 106 L184 172 L76 172 Z" fill="${shirt}" stroke="${sh}" stroke-width="2"/></g>
+    <g class="hit" data-r="belly"><path d="M76 172 L184 172 L180 244 L80 244 Z" fill="color-mix(in srgb,${shirt} 72%,#fff)" stroke="${sh}" stroke-width="2"/></g>
+    <g class="hit" data-r="head"><rect x="118" y="80" width="24" height="18" fill="${skin}"/><circle cx="130" cy="52" r="38" fill="${skin}" stroke="#8A5A33" stroke-width="2"/><path d="M92 46 Q96 12 130 12 Q166 12 168 46 Q150 30 130 32 Q108 30 92 46 Z" fill="#2B2018"/>
+      <circle cx="116" cy="56" r="4" fill="#2B2018"/><circle cx="144" cy="56" r="4" fill="#2B2018"/><path d="M118 72 Q130 80 142 72" fill="none" stroke="#7A3B22" stroke-width="3" stroke-linecap="round"/></g>
+    <g id="bodyLbl" font-size="15" font-weight="700" fill="var(--ink)"></g>
+  </svg>`;
+}
+function faceSvg(){
+  const skin="#D9A066";
+  return `<svg class="scene" viewBox="0 0 300 300" width="260" role="img" aria-label="وجه طفل">
+    <g class="hit" data-r="ear"><ellipse cx="52" cy="150" rx="20" ry="32" fill="#CF925A" stroke="#8A5A33" stroke-width="2"/><ellipse cx="248" cy="150" rx="20" ry="32" fill="#CF925A" stroke="#8A5A33" stroke-width="2"/><path d="M50 136 Q42 150 52 164 M250 136 Q258 150 248 164" fill="none" stroke="#8A5A33" stroke-width="2.5"/></g>
+    <g class="hit" data-r="skin"><ellipse cx="150" cy="156" rx="98" ry="118" fill="${skin}" stroke="#8A5A33" stroke-width="2"/></g>
+    <path d="M54 120 Q60 30 150 30 Q242 30 246 120 Q220 70 150 72 Q80 70 54 120 Z" fill="#2B2018" pointer-events="none"/>
+    <g class="hit" data-r="eye"><ellipse cx="112" cy="140" rx="22" ry="14" fill="#fff" stroke="#5B4636" stroke-width="2"/><circle cx="112" cy="140" r="8" fill="#3B2A1C"/><ellipse cx="188" cy="140" rx="22" ry="14" fill="#fff" stroke="#5B4636" stroke-width="2"/><circle cx="188" cy="140" r="8" fill="#3B2A1C"/></g>
+    <g class="hit" data-r="nose"><path d="M150 150 L134 198 Q150 208 166 198 Z" fill="#C98752" stroke="#8A5A33" stroke-width="2"/></g>
+    <g class="hit" data-r="mouth"><path d="M114 226 Q150 262 186 226 Q150 238 114 226 Z" fill="#B53A3A" stroke="#7A2020" stroke-width="2"/><ellipse cx="150" cy="240" rx="14" ry="8" fill="#E77A86"/></g>
+  </svg>`;
+}
+function plantSvg(health,x,label,wet){
+  // health 0..7 : 7 = fresh, 0 = wilted
+  const k=health/7, stemCol=k>.45?"var(--leaf)":"var(--dry)", droop=(1-k)*60;
+  const leaf=(cx,cy,ang)=>`<ellipse cx="${cx}" cy="${cy}" rx="18" ry="8" fill="${stemCol}" transform="rotate(${ang} ${cx} ${cy})"/>`;
+  return `<g transform="translate(${x},0)">
+    <path d="M10 150 L90 150 L80 220 L20 220 Z" fill="#E7A55C" stroke="#9C6328" stroke-width="2"/>
+    <rect x="6" y="142" width="88" height="12" rx="4" fill="#D18E45" stroke="#9C6328" stroke-width="2"/>
+    <ellipse cx="50" cy="146" rx="40" ry="5" fill="${wet?"#5A3A20":"#9A7A55"}"/>
+    <g transform="rotate(${droop*0.35} 50 146)">
+      <path d="M50 146 Q${50+droop*0.4} 100 ${50+droop*0.9} ${60+droop*0.6}" fill="none" stroke="${stemCol}" stroke-width="5" stroke-linecap="round"/>
+      ${leaf(34,112,-30+droop)}${leaf(66,96,30+droop)}${leaf(36+droop*0.5,78+droop*0.4,-40+droop)}${leaf(50+droop*0.9,58+droop*0.6,droop-10)}
+    </g>
+    <text x="50" y="244" text-anchor="middle" font-size="20" font-weight="800" fill="var(--ink)">${label}</text>
+  </g>`;
+}
+
+/* ---------- content (from the textbook, page by page) ---------- */
+const BIN=(l,c)=>({l,c});
+const UNITS=[
+{key:"u1",num:"الأولى",name:"عالم الأحياء",page:"2–28",col:"var(--c3)",icon:"🐸",topics:"الكائنات · خصائصها وحاجاتها · المواطن · جسم الإنسان والحواس · النباتات · الحيوانات",
+ L:[
+ {id:1,name:"الكائنات",page:"3–5",mi:"🌱",qs:[
+  {t:"mcq",q:"أمل حاولت أن تطعم الدمية كما تطعم القطة، فضحكت أمها. لماذا قالت لها: لا تحاولي إطعام الدمية؟",vis:IT("🧸","الدمية")+IT("🐈","القطة"),opts:["لأن الدمية شيء غير حي لا يحتاج إلى غذاء","لأن الدمية لا تحب الطعام","لأن الدمية شبعت","لأن القطة ستغضب"],a:0},
+  {t:"sort",q:"صنّف الأشياء في الشكل إلى مجموعتين. اضغط على الشيء ثم على المجموعة، أو اسحبه إليها.",bins:[BIN("أشياء تحتاج للهواء والماء والغذاء","var(--c3)"),BIN("أشياء لا تحتاج للهواء والماء والغذاء","var(--c6)")],
+   items:[[IT("🐄","بقرة"),0],[IT("🏺","زير"),1],[IT("🌴","نخلة"),0],[IT("💡","مصباح"),1],[IT("🐦","طائر"),0],[IT("🎾","كرة"),1],[IT("🐍","ثعبان"),0],[IT("🐟","سمكة"),0],[IT("🪑","كرسي"),1],[IT("🐪","جمل"),0],[IT("🐸","ضفدع"),0],[IT("🐐","ماعز"),0]]},
+  {t:"mcq",q:"الأشياء التي تحتاج إلى الهواء والماء والغذاء لكي تبقى حية نسمّيها:",opts:["كائنات حية (أحياء)","أشياء غير حية (جمادات)","مواد صلبة","أدوات"],a:0},
+  {t:"mcq",q:"الأشياء التي لا تحتاج إلى الهواء والماء والغذاء نسمّيها:",opts:["أشياء غير حية (جمادات)","كائنات حية","حيوانات","نباتات"],a:0},
+  {t:"pop",q:"فرقع بالونات الأشياء غير الحية فقط.",items:[[IT("☀️","الشمس"),1],[IT("🌙","القمر"),1],[IT("⭐","النجوم"),1],[IT("🪨","الصخور"),1],[IT("🔩","الحديد"),1],[IT("👦","ولد"),0],[IT("🌳","شجرة"),0],[IT("🐇","أرنب"),0]]},
+  {t:"fill",q:"املأ مكان الأرقام في المخطط:",s:`<div class="cmap"><div class="node">الكائنات</div><div class="arr">تنقسم إلى ↓</div><div class="rowx"><div class="node">{0}</div><div class="node">{1}</div></div><div class="arr">الكائنات الحية تتمثل في ↓</div><div class="rowx"><div class="node">{2}</div><div class="node">{3}</div><div class="node">حيوان</div></div></div>`,
+   b:[[["كائنات حية","أشياء غير حية"],0],[["كائنات حية","أشياء غير حية"],1],[["إنسان","كرسي","حجر"],0],[["نبات","قمر","حديد"],0]]},
+  {t:"sort",q:"صنّف الأشياء التالية إلى كائنات حية وأشياء غير حية:",bins:[BIN("كائنات حية","var(--c3)"),BIN("أشياء غير حية","var(--c6)")],
+   items:[[IT("📕","كتاب"),1],[IT("⌚","ساعة"),1],[IT("🐟","سمكة"),0],[IT("✏️","قلم"),1],[IT("👦","ولد"),0],[IT("🌳","شجرة"),0],[IT("🐈","قطة"),0],[IT("🪑","كرسي"),1],[IT("🪱","دودة الأرض"),0],[IT("🪴","نبات في أصيص"),0],[IT("🏞️","نهر"),1]]}
+ ]},
+ {id:2,name:"خصائص الكائنات الحية",page:"6–8",mi:"🐣",qs:[
+  {t:"order",q:"رتّب مراحل نمو الدجاجة من البيضة إلى الدجاجة الكبيرة.",dir:"من الأصغر إلى الأكبر ←",items:[IT("🥚","بيضة"),IT("🐣","يفقس"),IT("🐥","كتكوت"),IT("🐔","دجاجة")]},
+  {t:"order",q:"رتّب مراحل نمو الإنسان.",dir:"من الأصغر إلى الأكبر ←",items:[IT("👶","رضيع"),IT("🧒","طفل"),IT("🧑","شاب"),IT("👴","كبير السن")]},
+  {t:"mcq",q:"المراحل (الأطوار) المختلفة التي يمر بها الكائن الحي أثناء نموه تكوّن ما يعرف بـ:",opts:["دورة الحياة","التنفس","الحركة","الإحساس"],a:0},
+  {t:"pop",q:"فرقع بالونات الكائنات الحية التي تتكاثر بالولادة (ولودة).",items:[[IT("🐕","الكلب"),1],[IT("🧑","الإنسان"),1],[IT("🐄","الأبقار"),1],[IT("🐇","الأرانب"),1],[IT("🐔","الدجاج"),0],[IT("🌻","النباتات"),0],[IT("🐍","الثعبان"),0]]},
+  {t:"sort",q:"صنّف الحيوانات إلى ولودة وبيوضة:",bins:[BIN("ولودة: تلد وترضع صغارها","var(--c2)"),BIN("بيوضة: تبيض","var(--c5)")],
+   items:[[IT("🐄","بقرة"),0],[IT("🐑","خروف"),0],[IT("🐈","قطة"),0],[IT("🐇","أرنب"),0],[IT("🐔","دجاجة"),1],[IT("🕊️","حمامة"),1],[IT("🐟","سمكة"),1],[IT("🪰","ذبابة"),1],[IT("🐍","ثعبان"),1],[IT("🐊","تمساح"),1]]},
+  {t:"mcq",q:"كيف ينتج النبات نباتات جديدة؟",vis:IT("🌱",""),opts:["بالبذور","بالولادة","بالبيض","بالحركة"],a:0},
+  {t:"mcq",q:"ماذا تتوقع أن يحدث إذا توقفت الكائنات الحية عن التكاثر؟",opts:["تختفي ولا تبقى على الأرض","تكبر أكثر","تتحرك أسرع","لا يحدث شيء"],a:0},
+  {t:"fill",q:"أكمل: أهم خصائص الكائنات الحية:",s:`<div class="sent">النمو، {0}، الإحساس بالأشياء من حولها، و{1}.</div>`,b:[[["الحركة","الصلابة","اللون"],0],[["إنتاج أفراد جديدة","الانكسار","الذوبان"],0]]}
+ ]},
+ {id:3,name:"حاجات الكائنات الحية",page:"9–11",mi:"💧",qs:[
+  {t:"plant",q:"تجربة: اسقِ النبات (أ) بالماء كل يوم، واترك النبات (ب) بدون ماء. اضغط «يوم جديد» حتى يمر أسبوع."},
+  {t:"mcq",q:"الغواص في الصورة يحمل أسطوانة هواء. ماذا نستنتج؟",vis:IT("🤿","غواص"),opts:["الكائنات الحية تحتاج للهواء لكي تبقى حية","الهواء غير مهم","الإنسان يتنفس الماء","الأسماك لا تتنفس"],a:0},
+  {t:"mcq",q:"تأخذ الكائنات الحية الهواء عن طريق عملية:",opts:["التنفس","النوم","الأكل","الحركة"],a:0},
+  {t:"tf",q:"ضع علامة ✓ أمام العبارة الصحيحة:",s:"كل الكائنات الحية تحتاج إلى الهواء عدا النبات.",a:false},
+  {t:"tf",q:"ضع علامة ✓ أمام العبارة الصحيحة:",s:"الحيوان كائن حي يصنع غذاءه بنفسه.",a:false},
+  {t:"tf",q:"ضع علامة ✓ أمام العبارة الصحيحة:",s:"النباتات لا تتكاثر.",a:false},
+  {t:"mcq",q:"أي الكائنات الحية يصنع غذاءه بنفسه؟",opts:[IT("🌿","النبات","row"),IT("🦁","الأسد","row"),IT("🐑","الخروف","row"),IT("🧑","الإنسان","row")],a:0},
+  {t:"mcq",q:"يحتاج النبات إلى الماء والهواء، ويحتاج أيضاً إلى:",opts:["ضوء الشمس","الظلام الدائم","الملح","الحديد"],a:0},
+  {t:"fill",q:"أكمل العبارات بالكلمة المناسبة:",s:`<div class="sent">تحتاج الكائنات الحية إلى الهواء والغذاء و{0}.<br>مراحل النمو التي يمر بها الكائن الحي تسمى {1}.<br>يستطيع الكائن الحي أن {2} من مكان إلى آخر.</div>`,
+   b:[[["الماء","الحجارة","الضوضاء"],0],[["دورة الحياة","التكاثر","التنفس"],0],[["يتحرك","يذوب","ينكسر"],0]]}
+ ]},
+ {id:4,name:"مواطن الكائنات الحية",page:"12–14",mi:"🏜️",qs:[
+  {t:"mcq",q:"موطن جاف يندر فيه الماء، أمطاره قليلة، تنخفض حرارته ليلاً وتزداد نهاراً، وتربته رملية أو صخرية. ما هو؟",opts:[IT("🏜️","الصحراء","row"),IT("🌳","الغابة","row"),IT("🧊","المناطق القطبية","row"),IT("🌊","البحر","row")],a:0},
+  {t:"mcq",q:"موطن ظليل لكثافة الأشجار، رطب وتهطل فيه أمطار كثيرة. ما هو؟",opts:[IT("🌳","الغابة","row"),IT("🏜️","الصحراء","row"),IT("🧊","المناطق القطبية","row"),IT("🏞️","النهر","row")],a:0},
+  {t:"mcq",q:"موطن شديد البرودة والأرض فيه مغطاة بالجليد، ويندر فيه وجود النباتات. ما هو؟",opts:[IT("🧊","المناطق القطبية","row"),IT("🏜️","الصحراء","row"),IT("🌳","الغابة","row"),IT("🏞️","البركة","row")],a:0},
+  {t:"sort",q:"وضّح الموطن الذي يعيش فيه كل كائن حي:",cols:3,bins:[BIN("🏜️ الصحراء","var(--c5)"),BIN("🌳 الغابة","var(--c3)"),BIN("🧊 المناطق القطبية","var(--c2)"),BIN("🏞️ ماء عذب","var(--c7)"),BIN("🌊 ماء مالح","var(--c8)")],
+   items:[[IT("🦁","الأسد"),1],[IT("🌵","نبات الصبار"),0],[IT("🐋","الحوت"),4],[IT("🐪","الإبل"),0],[IT("🌾","أعشاب النيل"),3],[IT("🐧","البطريق"),2],[IT("🐻‍❄️","الدب القطبي"),2],[IT("🦒","الزرافة"),1],[IT("🐘","الفيل"),1]]},
+  {t:"sort",q:"صنّف المواطن المائية:",bins:[BIN("مواطن عذبة","var(--c7)"),BIN("مواطن مالحة","var(--c8)")],items:[[IT("🏞️","الأنهار"),0],[IT("💧","البرك"),0],[IT("🌊","البحار"),1],[IT("🐋","المحيطات"),1]]},
+  {t:"tf",q:"هل العبارة صحيحة؟",s:"تعيش بعض النباتات في المواطن المائية.",a:true},
+  {t:"mcq",q:"أين يعيش البطريق والدب القطبي؟",opts:["في المناطق القطبية","في الصحراء","في الغابة","في النهر"],a:0}
+ ]},
+ {id:5,name:"جسم الإنسان",page:"15",mi:"🧍",qs:[
+  {t:"mcq",q:"من كم جزء رئيسي يتكون جسم الإنسان؟",opts:["٣ أجزاء: الرأس، الجذع، الأطراف","جزأين: الرأس والأطراف","٤ أجزاء","٥ أجزاء"],a:0},
+  {t:"tap",q:"اضغط على الرأس.",svg:"body",a:["head"]},
+  {t:"tap",q:"الجذع هو الصدر والبطن. اضغط على البطن.",svg:"body",a:["belly"]},
+  {t:"tap",q:"اضغط على الصدر.",svg:"body",a:["chest"]},
+  {t:"tap",q:"اضغط على أحد الأطراف العليا (اليدان).",svg:"body",a:["armR","armL"]},
+  {t:"tap",q:"اضغط على أحد الأطراف السفلى (الرجلان).",svg:"body",a:["legR","legL"]},
+  {t:"match",q:"صِل كل جزء من الجسم بما يشمله:",pairs:[[W("الجذع"),W("الصدر والبطن")],[W("الأطراف العليا"),W("اليدان")],[W("الأطراف السفلى"),W("الرجلان")]]},
+  {t:"mcq",q:"أين يقع الصدر في جسم الإنسان؟",opts:["في الجذع","في الرأس","في الأطراف العليا","في الأطراف السفلى"],a:0}
+ ]},
+ {id:6,name:"أعضاء الحس",page:"16–22",mi:"👀",qs:[
+  {t:"match",q:"صِل بين العضو والحاسة التي تناسبه:",pairs:[[IT("👂","الأذن"),W("السمع")],[IT("👁️","العين"),W("البصر")],[IT("✋","الجلد واليد"),W("اللمس")],[IT("👅","اللسان"),W("الذوق")],[IT("👃","الأنف"),W("الشم")]]},
+  {t:"tap",q:"بِمَ نشتم الروائح؟ اضغط على العضو.",svg:"face",a:["nose"]},
+  {t:"tap",q:"بِمَ نسمع الأصوات؟ اضغط على العضو.",svg:"face",a:["ear"]},
+  {t:"tap",q:"بِمَ نرى الأشياء؟ اضغط على العضو.",svg:"face",a:["eye"]},
+  {t:"tap",q:"بِمَ نتذوق الطعام؟ اضغط على العضو.",svg:"face",a:["mouth"]},
+  {t:"mcq",q:"تجربة: ربطنا منديلاً على عيني زميلك وأصدرنا صوت الجرس والموبايل. ما العضو الذي استخدمه ليعرف مصدر الصوت؟",vis:IT("🔔","")+IT("📱",""),opts:["الأذن","العين","الأنف","اللسان"],a:0},
+  {t:"mcq",q:"في تجربة رمي الحصى في الكرتونة: متى ينجح زميلك أكثر؟",vis:IT("📦","")+IT("🪨",""),opts:["وهو مفتوح العينين","وهو مغمض العينين","لا فرق بينهما","في الظلام"],a:0},
+  {t:"sort",q:"للمحافظة على حواسنا: صنّف العادات إلى صحيحة وخاطئة.",bins:[BIN("👍 عادة صحيحة","var(--c3)"),BIN("👎 عادة خاطئة","var(--c1)")],
+   items:[[IT("💧","غسل العيون كل يوم بالماء النظيف"),0],[IT("📺","الجلوس على مسافة مناسبة من التلفاز"),0],[IT("🧻","مسح العين بمنديل نظيف"),0],[IT("☀️","النظر إلى الشمس"),1],[IT("🔥","استخدام عود الثقاب لتنظيف الأذن"),1],[IT("📢","الصراخ في أذن الزميل"),1],[IT("🌑","القراءة في إضاءة ضعيفة"),1],[IT("🧼","الاستحمام بالماء والصابون"),0]]},
+  {t:"mcq",q:"نلمس الأشياء باليد والجلد فنتعرف على خواصها من حيث:",opts:["الصلابة والسيولة والخشونة والنعومة","اللون فقط","الطعم","الصوت"],a:0},
+  {t:"mcq",q:"لماذا لا نستخدم الماء الساخن في تجربة الإحساس بالبرودة والسخونة؟",opts:["لأنه يؤذي الجلد ويحرقه","لأنه بارد","لأننا لا نحس به","لأنه يغيّر اللون"],a:0},
+  {t:"mcq",q:"من الحيوانات التي تعتمد كثيراً على حاسة الشم في الحصول على طعامها:",opts:[IT("🐕","الكلب","row"),IT("🪨","الحجر","row"),IT("🌳","الشجرة","row"),IT("🪑","الكرسي","row")],a:0}
+ ]},
+ {id:7,name:"النباتات",page:"23–24",mi:"🌳",qs:[
+  {t:"mcq",q:"النباتات كائنات حية معظمها لونه:",opts:["أخضر","أحمر","أزرق","أسود"],a:0},
+  {t:"sort",q:"صنّف النباتات حسب حجمها:",bins:[BIN("نباتات صغيرة الحجم","var(--c7)"),BIN("نباتات كبيرة الحجم","var(--c3)")],
+   items:[[IT("🌱","حشائش"),0],[IT("🌿","أعشاب"),0],[IT("🌳","أشجار"),1],[IT("🌴","نخلة"),1],[IT("🪴","شجيرة"),1],[IT("🌾","قمح"),0]]},
+  {t:"match",q:"ضع الكلمة المناسبة مع الشكل الذي يناسبها:",pairs:[[IT("🌳",""),W("شجرة")],[IT("🪴",""),W("شجيرة")],[IT("🌿",""),W("عشب")],[IT("🌱",""),W("حشائش")]]},
+  {t:"mcq",q:"النخيل والدوم من:",opts:["الأشجار","الحشائش","الشجيرات","الأعشاب"],a:0},
+  {t:"tf",q:"هل العبارة صحيحة؟",s:"تختلف النباتات في أشكالها وأحجامها.",a:true}
+ ]},
+ {id:8,name:"الحيوانات",page:"25–27",mi:"🦒",qs:[
+  {t:"sort",q:"صنّف الحيوانات إلى مجموعاتها:",cols:3,bins:[BIN("ثدييات","var(--c2)"),BIN("طيور","var(--c5)"),BIN("زواحف","var(--c3)"),BIN("أسماك","var(--c7)"),BIN("برمائيات","var(--c4)"),BIN("حشرات","var(--c6)")],
+   items:[[IT("🐘","فيل"),0],[IT("🐎","حصان"),0],[IT("🐕","كلب"),0],[IT("🐁","فأر"),0],[IT("🕊️","حمامة"),1],[IT("🐔","دجاجة"),1],[IT("🦅","صقر"),1],[IT("🐍","ثعبان"),2],[IT("🐊","تمساح"),2],[IT("🦎","سحلية"),2],[IT("🐟","سمكة"),3],[IT("🐸","ضفدع"),4],[IT("🐜","نملة"),5],[IT("🐝","نحلة"),5],[IT("🦋","فراشة"),5]]},
+  {t:"grid",q:"احذف حروف العبارة (تلد وترضع صغارها) من جدول الحروف، ثم كوّن من الحروف الباقية اسم المجموعة المقصودة."},
+  {t:"mcq",q:"الثدييات مثل الأبقار والقطط:",opts:["تلد وترضع صغارها","تبيض لتنتج صغارها","تعيش في الماء فقط","ليس لها حركة"],a:0},
+  {t:"mcq",q:"الطيور والزواحف والبرمائيات والأسماك والحشرات كلها:",opts:["تبيض لتنتج صغارها","تلد وترضع صغارها","تصنع غذاءها بنفسها","لا تتحرك"],a:0},
+  {t:"fill",q:"وضّح نوع الحركة لكل حيوان:",s:`<div class="tblwrap"><table class="ftable"><tr><th>الحيوان</th><th>نوع الحركة</th></tr><tr><td>${IT("🐎","الحصان","row")}</td><td>{0}</td></tr><tr><td>${IT("🦅","النسر","row")}</td><td>{1}</td></tr><tr><td>${IT("🐍","الثعبان","row")}</td><td>{2}</td></tr><tr><td>${IT("🐟","السمكة","row")}</td><td>{3}</td></tr><tr><td>${IT("🪰","الذبابة","row")}</td><td>{4}</td></tr></table></div>`,
+   b:[[["يجري","يزحف","يسبح","يطير"],0],[["يجري","يزحف","يسبح","يطير"],3],[["يجري","يزحف","يسبح","يطير"],1],[["يجري","يزحف","يسبح","يطير"],2],[["يجري","يزحف","يسبح","يطير"],3]]},
+  {t:"match",q:"املأ الجدول: صِل كل مجموعة بمثال لها.",pairs:[[W("الثدييات"),IT("🐄","البقرة")],[W("الطيور"),IT("🕊️","الحمامة")],[W("الزواحف"),IT("🦎","السحلية")],[W("البرمائيات"),IT("🐸","الضفدع")],[W("الحشرات"),IT("🦟","البعوضة")]]}
+ ]}
+ ],
+ ex:[
+  {t:"fill",q:"تدريبات الوحدة: املأ الأماكن الشاغرة بالكلمة المناسبة.",s:`<div class="sent">الكائنات الحية تحتاج إلى الماء والغذاء و{0}.<br>الموطن الذي يكثر فيه الجفاف وتقل فيه الأمطار هو {1}.<br>الكائن الحي الذي يصنع غذاءه بنفسه هو {2}.<br>الحيوانات التي تلد وترضع صغارها تعرف بـ{3}.</div>`,
+   b:[[["الهواء","الحديد","الظلام"],0],[["الصحراء","الغابة","البحر"],0],[["النبات","الحيوان","الإنسان"],0],[["الثدييات","الطيور","الزواحف"],0]]},
+  {t:"tf",q:"تدريبات الوحدة: ضع علامة ✓ أمام العبارة الصحيحة.",s:"يوجد الرأس في جسم الإنسان في منطقة الصدر.",a:false},
+  {t:"tf",q:"تدريبات الوحدة: ضع علامة ✓ أمام العبارة الصحيحة.",s:"تساعد حاسة السمع الإنسان على تجنّب المخاطر.",a:true},
+  {t:"tf",q:"تدريبات الوحدة: ضع علامة ✓ أمام العبارة الصحيحة.",s:"الدب القطبي من الحيوانات التي تعيش في الغابة.",a:false},
+  {t:"mcq",q:"تدريبات الوحدة: الضفدعة من ....",vis:IT("🐸",""),opts:["البرمائيات","الثدييات","الزواحف","الأسماك"],a:0},
+  {t:"match",q:"تدريبات الوحدة: ضع كل كلمة أمام العبارة التي تناسبها.",pairs:[[W("الحيوانات البيّاضة"),W("الثعبان")],[W("خصائص الكائنات الحية"),W("النمو")],[W("وظيفة الأذن"),W("السمع")],[W("اليدان والرجلان"),W("الأطراف")]]}
+ ]},
+{key:"u2",num:"الثانية",name:"المادة",page:"29–38",col:"var(--c5)",icon:"🏺",topics:"المادة · خواص المواد · تصنيف المواد · استخدام المواد",
+ L:[
+ {id:1,name:"المادة",page:"30–31",mi:"🎈",qs:[
+  {t:"match",q:"صِل كل شيء بالمادة المصنوع منها:",pairs:[[IT("🎈","البالون"),W("المطاط")],[IT("🏺","الزير"),W("الصلصال (الطين)")],[IT("📕","الكتاب"),W("الورق")],[IT("🧣","الطرحة"),W("القماش")],[IT("clip","المشبك"),W("الخشب")]]},
+  {t:"sort",q:"ابحث في البيت والمدرسة: صنّف الأشياء حسب المادة المصنوعة منها.",cols:3,bins:[BIN("خشب","var(--c5)"),BIN("بلاستيك","var(--c2)"),BIN("زجاج","var(--c7)"),BIN("قماش","var(--c6)"),BIN("صلصال","var(--c1)"),BIN("ورق","var(--c4)")],
+   items:[[IT("clip","مشبك"),0],[IT("table","طاولة خشب"),0],[IT("🥤","كوب بلاستيك"),1],[IT("🪣","جردل"),1],[IT("🥛","كوب زجاج"),2],[IT("🪟","نافذة"),2],[IT("👕","قميص"),3],[IT("🧣","طرحة"),3],[IT("🏺","زير"),4],[IT("📕","كتاب"),5],[IT("📒","كراسة"),5]]},
+  {t:"mcq",q:"كل الأشياء من حولنا تتكون من:",opts:["مواد مختلفة","مادة واحدة فقط","هواء فقط","ماء فقط"],a:0},
+  {t:"mcq",q:"كرسي أرجله من الخشب ومقعده من القماش. هذا الكرسي مصنوع من:",vis:IT("🪑",""),opts:["أكثر من مادة","مادة واحدة"],a:0},
+  {t:"mcq",q:"كرسي أحمر كله من البلاستيك. هذا الكرسي مصنوع من:",opts:["مادة واحدة","أكثر من مادة"],a:0},
+  {t:"mcq",q:"مِمَّ تُصنع الملابس؟",vis:IT("👗","")+IT("👕",""),opts:["القماش","الصلصال","الزجاج","الحديد"],a:0}
+ ]},
+ {id:2,name:"خواص المواد",page:"32–33",mi:"🎾",qs:[
+  {t:"fill",q:"دوّن ملاحظاتك في الجدول:",s:`<div class="tblwrap"><table class="ftable"><tr><th>الشيء</th><th>الشكل</th><th>الحجم</th></tr><tr><td>${IT("🏓","كرة تنس الطاولة","row")}</td><td>كروي</td><td>صغير</td></tr><tr><td>${IT("⚽","كرة القدم","row")}</td><td>{0}</td><td>{1}</td></tr><tr><td>${IT("🧊","مكعب","row")}</td><td>{2}</td><td>صغير</td></tr></table></div>`,
+   b:[[["كروي","مكعب","مستطيل"],0],[["أكبر من كرة تنس الطاولة","أصغر من كرة تنس الطاولة"],0],[["كروي","مكعب","مثلث"],1]]},
+  {t:"sort",q:"نصف المواد بحواسنا. بأي عضو نعرف كل صفة؟",bins:[BIN("👁️ نراها بأعيننا","var(--c2)"),BIN("✋ نشعر بها بأيدينا","var(--c6)")],items:[[W("اللون"),0],[W("الشكل"),0],[W("الحجم"),0],[W("الملمس"),1],[W("النعومة"),1],[W("الخشونة"),1]]},
+  {t:"mcq",q:"الصفات التي تميّز المواد عن بعضها ويمكن إدراكها بحواسنا تسمى:",opts:["الخواص الفيزيائية","الكائنات الحية","مصادر الطاقة","أعضاء الحس"],a:0},
+  {t:"pop",q:"فرقع بالونات الخواص الفيزيائية للمواد فقط.",items:[[W("اللون"),1],[W("الشكل"),1],[W("الصلابة"),1],[W("الشفافية"),1],[W("الخفة"),1],[W("المتانة"),1],[W("التنفس"),0],[W("التكاثر"),0]]},
+  {t:"mcq",q:"كرة تنس الطاولة: ما ملمسها؟",vis:IT("🏓",""),opts:["ناعم","خشن","لزج","حاد"],a:0}
+ ]},
+ {id:3,name:"تصنيف المواد",page:"34–35",mi:"🟩",qs:[
+  {t:"mcq",q:"ما الصفة المشتركة بين هذه الأشياء؟",vis:IT("🫑","فلفل")+IT("📗","كتاب")+IT("🟩","مكعب")+IT("🥒","خيار"),opts:["اللون الأخضر","الشكل الكروي","مادة الزجاج","الاستخدام في الطهي"],a:0},
+  {t:"mcq",q:"ما الصفة المشتركة بين هذه الأشياء؟",vis:IT("🍊","برتقالة")+IT("⚽","كرة قدم")+IT("🎾","كرة تنس")+IT("🔮","كرة زجاجية"),opts:["الشكل الكروي","اللون الأخضر","الملمس الخشن","مادة الخشب"],a:0},
+  {t:"mcq",q:"ما الصفة المشتركة بين هذه الأشياء؟",vis:IT("🪣","جردل")+IT("🧴","زجاجة")+IT("🥤","كوب")+IT("🚲","لعبة"),opts:["مصنوعة من البلاستيك","مصنوعة من الصلصال","لونها واحد","حجمها واحد"],a:0},
+  {t:"mcq",q:"فيمَ تُستخدم هذه الأشياء؟",vis:IT("🍳","مقلاة")+IT("🍲","حلة")+IT("🥄","ملعقة"),opts:["أواني الطهي","مواد البناء","أثاث المنزل","لعب الأطفال"],a:0},
+  {t:"sort",q:"صنّف المواد حسب نوع استخدامها:",cols:3,bins:[BIN("مواد البناء","var(--c5)"),BIN("أواني الطهي","var(--c1)"),BIN("أثاث المنزل","var(--c2)")],
+   items:[[IT("🧱","طوب"),0],[IT("cement","أسمنت"),0],[IT("rebar","حديد"),0],[IT("🍳","مقلاة"),1],[IT("🍲","حلة"),1],[IT("🫖","إبريق"),1],[IT("🪑","كرسي"),2],[IT("🛏️","سرير"),2],[IT("table","طاولة"),2]]},
+  {t:"tf",q:"هل العبارة صحيحة؟",s:"يمكن تصنيف المواد حسب اللون والشكل والملمس والمادة ونوع الاستخدام.",a:true}
+ ]},
+ {id:4,name:"استخدام المواد",page:"36–37",mi:"🧵",qs:[
+  {t:"mcq",q:"هل يمكن استخدام البلاستيك في الطهي على النار؟",vis:IT("🔥","")+IT("🥤",""),opts:["لا، أواني الطهي تُصنع من مادة تتحمل الحرارة","نعم، البلاستيك أفضل مادة للطهي"],a:0},
+  {t:"mcq",q:"هل يمكن استخدام الزجاج في صناعة الكتب والكراسات؟",opts:["لا، الكتب تُصنع من الورق","نعم، الزجاج مناسب للكتب"],a:0},
+  {t:"match",q:"صِل كل مادة بالصفة المميزة لها:",pairs:[[W("البلاستيك"),W("المتانة والخفة")],[W("القماش"),W("المتانة وسهولة الطي")],[W("الصلصال"),W("سهولة التشكّل")],[W("الزجاج"),W("الشفافية")]]},
+  {t:"mcq",q:"ما المادة المصنوعة منها هذه الأواني؟",vis:IT("🏺","زير")+IT("⚱️","إبريق فخار"),opts:["الصلصال","البلاستيك","القماش","الورق"],a:0},
+  {t:"mcq",q:"يُستخدم الزجاج في صناعة:",opts:[IT("👓","النظارات والنوافذ","row"),IT("👕","الملابس","row"),IT("🛏️","الأسرّة","row"),IT("📕","الكتب","row")],a:0},
+  {t:"tf",q:"هل العبارة صحيحة؟",s:"لكل مادة صفات خاصة تجعلها مناسبة لصناعة بعض الأشياء.",a:true}
+ ]}
+ ],
+ ex:[
+  {t:"fill",q:"تدريبات الوحدة: أكمل.",s:`<div class="sent">تتكون الأشياء من {0} مختلفة مثل الخشب والبلاستيك.<br>تسمى خواص المادة مثل اللون والشكل والملمس بالخواص {1}.</div>`,b:[[["مواد","كائنات","أصوات"],0],[["الفيزيائية","الحية","الكهربائية"],0]]},
+  {t:"tf",q:"تدريبات الوحدة: ضع علامة ✓ أمام العبارة الصحيحة.",s:"تصنع الملابس من الصلصال.",a:false},
+  {t:"tf",q:"تدريبات الوحدة: ضع علامة ✓ أمام العبارة الصحيحة.",s:"تصنف المواد حسب استخدامها.",a:true},
+  {t:"tf",q:"تدريبات الوحدة: ضع علامة ✓ أمام العبارة الصحيحة.",s:"تصنع الكراسي من البلاستيك أو الخشب.",a:true},
+  {t:"mcq",q:"تدريبات الوحدة: ما الشيء المصنوع من الصلصال؟",opts:[IT("🏺","الزير","row"),IT("🧴","الزجاجة","row"),IT("clip","المشبك","row")],a:0,grid:1},
+  {t:"mcq",q:"تدريبات الوحدة: أيّ المواد التالية تستخدم في لعب الأطفال؟",opts:["البلاستيك","الزجاج","الصلصال"],a:0},
+  {t:"match",q:"تدريبات الوحدة: صِل بين الصورة والمادة المصنوعة منها.",pairs:[[IT("clip",""),W("خشب")],[IT("🎈",""),W("مطاط")],[IT("🔮",""),W("زجاج")],[IT("🏺",""),W("صلصال")],[IT("🧴",""),W("بلاستيك")]]}
+ ]},
+{key:"u3",num:"الثالثة",name:"الطاقة",page:"39–54",col:"var(--c4)",icon:"🔋",topics:"أشكال الطاقة · الضوء والظل · الشفاف والمعتم · مصادر الكهرباء · الدائرة الكهربية",
+ L:[
+ {id:1,name:"الطاقة وأشكالها",page:"41–42",mi:"⚡",qs:[
+  {t:"mcq",q:"الطاقة هي:",opts:["المقدرة على إحداث تغيير أو بذل شغل","نوع من الطعام","لون من الألوان","حيوان صغير"],a:0},
+  {t:"match",q:"صِل كل صورة بشكل الطاقة:",pairs:[[IT("solar","ألواح شمسية"),W("طاقة ضوئية")],[IT("pylon","أبراج الكهرباء"),W("طاقة كهربية")],[IT("🧲","مغنطيس"),W("طاقة مغنطيسية")],[IT("turbine","مراوح الرياح"),W("طاقة حركية")],[IT("🔊","مكبر صوت"),W("طاقة صوتية")],[IT("spring","زنبرك مضغوط"),W("طاقة كامنة")]]},
+  {t:"fill",q:"أكمل من حوار أحمد وندى:",s:`<div class="sent">تحصل النباتات على الطاقة من {0} لتصنع الغذاء.<br>يحصل الحيوان والإنسان على الطاقة من {1}.<br>السيارة تحتاج طاقة مخزنة في {2}.<br>الحاسوب يحتاج طاقة {3}.</div>`,
+   b:[[["الشمس","القمر","التراب"],0],[["الطعام","النوم","اللعب"],0],[["البنزين","الماء","الهواء"],0],[["كهربائية","صوتية","مغنطيسية"],0]]},
+  {t:"tf",q:"قالت ندى لأحمد: هل العبارة صحيحة؟",s:"نستطيع أن نكوّن الطاقة ونصنعها.",a:false},
+  {t:"tf",q:"هل العبارة صحيحة؟",s:"يمكننا تخزين الطاقة وتحويلها ثم استخدامها.",a:true},
+  {t:"pop",q:"حتى الأشياء غير الحية تحتاج طاقة لتعمل. فرقع بالونات الأشياء التي تحتاج طاقة لتعمل.",items:[[IT("🚗","سيارة"),1],[IT("💻","حاسوب"),1],[IT("📺","تلفاز"),1],[IT("📻","مذياع"),1],[IT("🪨","حجر"),0],[IT("📕","كتاب"),0],[IT("🪑","كرسي"),0]]}
+ ]},
+ {id:2,name:"الطاقة الضوئية",page:"43",mi:"🕯️",qs:[
+  {t:"mcq",q:"المصدر الأساسي للضوء على الأرض هو:",opts:[IT("☀️","الشمس","row"),IT("🌙","القمر","row"),IT("💡","المصابيح الكهربية","row")],a:0},
+  {t:"mcq",q:"الضوء هو الطاقة التي يمكن رؤيتها، وتسمى:",opts:["الطيف المرئي","الطاقة الكامنة","الطاقة الصوتية","الظل"],a:0},
+  {t:"align",q:"حرّك الحوائل الثلاثة إلى أعلى أو إلى أسفل حتى ترى ضوء الشمعة من خلال الثقوب الثلاثة."},
+  {t:"mcq",q:"متى رأيت ضوء الشمعة في التجربة؟",opts:["عندما كانت الثقوب الثلاثة على استقامة واحدة مع الشمعة","عندما كانت الثقوب في أماكن مختلفة","عندما أطفأنا الشمعة"],a:0},
+  {t:"mcq",q:"الاستنتاج من التجربة: يسير الضوء في خطوط ....",opts:["مستقيمة","منحنية","منكسرة","دائرية"],a:0}
+ ]},
+ {id:3,name:"الظل",page:"44",mi:"🔦",qs:[
+  {t:"shadow",q:"حرّك الكتاب بين المصباح والحائط حتى يصبح ظله على الحائط أكبر ما يمكن، ثم اضغط «تحقّق».",goal:"big"},
+  {t:"shadow",q:"الآن حرّك الكتاب حتى يصبح ظله أصغر ما يمكن، ثم اضغط «تحقّق».",goal:"small"},
+  {t:"mcq",q:"الظل هو:",opts:["المساحة المظلمة التي تتكون خلف الجسم المعتم عندما يسقط عليه الضوء","ضوء قوي يخرج من المصباح","لون الحائط","جسم شفاف"],a:0},
+  {t:"mcq",q:"ماذا يحدث للظل عندما نغيّر موضع الجسم بالنسبة لمصدر الضوء؟",opts:["تتغير مساحته وموضعه","يبقى كما هو تماماً","يختفي الضوء","يصبح الجسم شفافاً"],a:0},
+  {t:"tf",q:"فكّر: هل العبارة صحيحة؟",s:"تكوّن الظل دليل على انتشار الضوء في خطوط مستقيمة.",a:true}
+ ]},
+ {id:4,name:"الأجسام الشفافة والمعتمة",page:"45",mi:"🪟",qs:[
+  {t:"see",q:"ضع كل مادة فوق الصورة وانظر، ثم اختر نوعها."},
+  {t:"sort",q:"صنّف المواد حسب قدرتها على نفاذ الضوء:",cols:3,bins:[BIN("شفافة","var(--c7)"),BIN("نصف شفافة","var(--c5)"),BIN("معتمة","var(--c8)")],
+   items:[[IT("glass","لوح زجاج"),0],[IT("🪟","نافذة زجاج"),0],[IT("👓","نظارة"),0],[IT("gauze","قطعة شاش"),1],[IT("🧣","منديل قماش خفيف"),1],[IT("cardboard","كرتون مقوى"),2],[IT("📕","كتاب"),2],[IT("🪵","خشب"),2],[IT("🪨","حجر"),2]]},
+  {t:"mcq",q:"المادة التي لا تسمح بمرور الضوء خلالها تسمى:",opts:["مادة معتمة","مادة شفافة","مادة نصف شفافة"],a:0},
+  {t:"mcq",q:"المادة التي يمكن رؤية الأشياء من خلالها بوضوح تسمى:",opts:["مادة شفافة","مادة معتمة","مادة نصف شفافة"],a:0},
+  {t:"mcq",q:"قطعة الشاش تسمح بنفاذ بعض الضوء. فهي مادة:",opts:["نصف شفافة","شفافة","معتمة"],a:0}
+ ]},
+ {id:5,name:"مصادر الكهرباء",page:"48–50",mi:"🔋",qs:[
+  {t:"pop",q:"هذه الأشياء تعمل بالكهرباء. فرقع بالونات الأشياء التي تعمل بالكهرباء فقط.",items:[[IT("📺","تلفاز"),1],[IT("iron","مكواة"),1],[IT("fridge","ثلاجة"),1],[IT("fan","مروحة"),1],[IT("🖥️","حاسوب"),1],[IT("📱","موبايل"),1],[IT("table","طاولة"),0],[IT("📕","كتاب"),0],[IT("grinder","مفرمة يدوية"),0]]},
+  {t:"mcq",q:"من أين نحصل على الكهرباء؟",opts:["من البطارية والمولد الكهربائي (الدينمو)","من الحجارة","من الماء البارد","من الكتب"],a:0},
+  {t:"mcq",q:"البطاريات أنواع مختلفة:",vis:IT("🔋","")+IT("battery",""),opts:["جافة وسائلة، صغيرة وكبيرة","كلها كبيرة","كلها سائلة","لا توجد أنواع"],a:0},
+  {t:"pop",q:"تستخدم البطارية في تشغيل أجهزة مختلفة. فرقع بالونات الأجهزة التي تعمل بالبطارية.",items:[[IT("🔦","مصباح يدوي"),1],[IT("📻","مذياع"),1],[IT("🚗","سيارة"),1],[IT("⏰","منبه"),1],[IT("🪑","كرسي"),0],[IT("🥄","ملعقة"),0]]},
+  {t:"dynamo",q:"كيف يضيء مصباح الدراجة؟ أدِر العجلة بسرعة حتى يضيء المصباح."},
+  {t:"mcq",q:"ماذا يعطينا دينمو الدراجة ودينمو السيارة؟",opts:["كهرباء","هواء بارد","ماء","طعام"],a:0},
+  {t:"mcq",q:"لماذا نضع دينمو الدراجة بجوار إطار العجلة؟",opts:["لكي تدوّره العجلة عندما تتحرك فيعطي كهرباء","لكي يزيّن الدراجة","لكي يوقف الدراجة","لكي يبرّد الإطار"],a:0}
+ ]},
+ {id:6,name:"الدائرة الكهربية",page:"51–53",mi:"💡",qs:[
+  {t:"circuit",q:"المصباح لا يضيء. اضغط على المفتاح لإغلاق الدائرة."},
+  {t:"build",q:"أكمل الدائرة الكهربية: ضع كل قطعة في مكانها (؟) ثم أغلق المفتاح ليضيء المصباح.",missing:["battery","lamp"]},
+  {t:"build",q:"في الدائرة سلك مقطوع. أكمل الدائرة ثم أغلق المفتاح.",missing:["wire"]},
+  {t:"mcq",q:"في أي دائرة يضيء المصباح؟",opts:[circuitSvg({closed:true,small:1}),circuitSvg({closed:false,small:1})],a:0,grid:1,tip:"الدائرة المغلقة يضيء فيها المصباح، والمفتوحة لا يضيء."},
+  {t:"mcq",q:"الكهرباء تسري في دائرة:",opts:["مغلقة","مفتوحة"],a:0},
+  {t:"pop",q:"ماذا نحتاج لعمل دائرة كهربائية؟ فرقع البالونات الصحيحة.",items:[[IT("battery","بطارية"),1],[IT("〰️","أسلاك"),1],[IT("💡","مصباح صغير"),1],[IT("🔘","مفتاح كهربائي"),1],[IT("🍌","موزة"),0],[IT("📕","كتاب"),0]]},
+  {t:"mcq",q:"ما عمل المفتاح الكهربائي؟",opts:["يفتح ويغلق الدائرة الكهربائية","يصنع الكهرباء","يخزن الماء","يغير لون المصباح"],a:0}
+ ]}
+ ],
+ ex:[
+  {t:"fill",q:"تدريبات الطاقة الضوئية: أكمل.",s:`<div class="sent">المادة التي لا تسمح بمرور الضوء خلالها تسمى {0}.<br>المادة التي يمكن رؤية الأشياء من خلالها تسمى {1}.</div>`,b:[[["مادة معتمة","مادة شفافة"],0],[["مادة شفافة","مادة معتمة"],0]]},
+  {t:"match",q:"تدريبات: اكتب المصطلح العلمي لكلٍّ مما يلي.",pairs:[[W("المساحة المظلمة التي تتكون خلف جسم يسقط عليه الضوء"),W("الظل")],[W("مواد يمكن رؤية الأجسام من ورائها بوضوح"),W("مواد شفافة")],[W("طاقة يمكن رؤيتها"),W("الضوء")]]},
+  {t:"mcq",q:"تدريبات: يسير الضوء في خطوط ....",opts:["مستقيمة","منحنية","منكسرة"],a:0},
+  {t:"fill",q:"تدريبات الطاقة الكهربية: أكمل.",s:`<div class="sent">تنتقل الكهرباء في مسار اسمه {0}.<br>من مصادر الكهرباء {1}.</div>`,b:[[["الدائرة الكهربية","الظل","الموطن"],0],[["البطارية","الكرسي","الشاش"],0]]},
+  {t:"tf",q:"تدريبات: اكتب (صحيحة) أو (خطأ).",s:"تنتقل الكهرباء في دائرة مفتوحة.",a:false},
+  {t:"tf",q:"تدريبات: اكتب (صحيحة) أو (خطأ).",s:"نلمس الكهرباء بيد مبللة.",a:false},
+  {t:"pop",q:"تدريبات: من استخدامات الكهرباء. فرقع البالون الصحيح فقط.",items:[[IT("📺","تلفاز"),1],[IT("table","طاولة"),0],[IT("grinder","مفرمة يدوية"),0],[IT("oil","زيت"),0]]}
+ ]}
+];
+UNITS.forEach(u=>{u.FINAL={id:99,name:"تحدّي الوحدة "+u.num};});
+const LCOLS=["--c1","--c2","--c3","--c4","--c5","--c6","--c7","--c8"];
+let UNIT=null; const LC=i=>`var(${LCOLS[(i+UNITS.indexOf(UNIT)*3)%8]})`;
+
+/* ---------- state ---------- */
+let best=store.get("sci3-best",{}); const B=id=>best[UNIT.key+"-"+id]||0; let S=null;
+const starsFor=p=>p>=0.9?3:p>=0.7?2:p>=0.4?1:0;
+const starStr=n=>[0,1,2].map(i=>`<span class="${i<n?"on":""}">★</span>`).join("");
+const unitStars=u=>[...u.L,u.FINAL].reduce((s,l)=>s+(best[u.key+"-"+l.id]||0),0);
+const unitMax=u=>(u.L.length+1)*3;
+function updateTotal(){ $("#totalStars").textContent=`${UNITS.reduce((s,u)=>s+unitStars(u),0)} / ${UNITS.reduce((s,u)=>s+unitMax(u),0)}`; }
+const PG=p=>{const [a,b]=p.split("–"); return b?`من صفحة ${a} إلى ${b}`:`صفحة ${a}`;};
+const ORD=["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن"];
+const setGC=c=>{ if(c) $("#app").style.setProperty("--gc",c); else $("#app").style.removeProperty("--gc"); $(".credit").hidden=!!c; };
+
+function showHome(){
+  S=null; UNIT=null; setGC(null); $("#unitTab").textContent="كتاب العلوم · المنهج السوداني";
+  $("#view").innerHTML=`<p class="sub">اختر وحدة. كل الأنشطة من كتاب العلوم للصف الثالث الابتدائي.</p>
+   <div class="units" style="margin-top:14px">${UNITS.map((u,i)=>`
+    <button class="unit" data-u="${i}" style="--tc:${u.col}"><span class="uicon">${u.icon}</span>
+     <span class="ubody"><span class="tab">الوحدة ${u.num}</span><span class="nm">${u.name}</span>
+      <span class="topics">${u.topics}</span>
+      <span class="pg">${PG(u.page)} · ${u.L.length} دروس وتحدٍّ</span>
+      <span class="pg"><span style="color:#F5B400">★</span> ${unitStars(u)} / ${unitMax(u)}</span></span></button>`).join("")}</div>`;
+  $("#view").querySelectorAll(".unit").forEach(b=>b.addEventListener("click",()=>{UNIT=UNITS[+b.dataset.u];showMap();}));
+  updateTotal();
+}
+function showMap(){
+  S=null; setGC(UNIT.col); $("#unitTab").textContent=`الوحدة ${UNIT.num} · ${UNIT.name}`;
+  const nq=UNIT.L.length+UNIT.ex.length;
+  $("#view").innerHTML=`<div class="bar"><button class="back" id="homeBtn">→ الوحدات</button><span class="sub" style="font-weight:600">الوحدة ${UNIT.num}: ${UNIT.name}</span></div>
+   <div class="map" style="margin-top:14px">${UNIT.L.map((l,i)=>`
+    <button class="lesson" data-l="${l.id}" style="--tc:${LC(i)}"><span class="ln"><span class="tab">الدرس ${ORD[i]}</span><span class="mi" aria-hidden="true">${l.mi}</span></span>
+     <span class="nm">${l.name}</span><span class="ln"><span class="pg">${PG(l.page)}<br>${l.qs.length} أنشطة</span><span class="stars">${starStr(B(l.id))}</span></span></button>`).join("")}
+    <button class="lesson final" data-l="99" style="--tc:var(--yellow)"><span class="ln"><span class="tab">كل الدروس + تدريبات الوحدة</span><span class="stars">${starStr(B(99))}</span></span>
+     <span class="nm">${UNIT.FINAL.name}</span><span class="pg">${nq} سؤالاً: سؤال من كل درس وتدريبات الوحدة من الكتاب</span></button></div>`;
+  $("#homeBtn").addEventListener("click",showHome);
+  $("#view").querySelectorAll(".lesson").forEach(b=>b.addEventListener("click",()=>start(+b.dataset.l)));
+  updateTotal();
+}
+function start(id){
+  let lesson,list;
+  if(id===99){ lesson=UNIT.FINAL;
+    list=shuffle([...UNIT.L.map((l,i)=>({...l.qs[Math.floor(Math.random()*l.qs.length)],_l:i})),...UNIT.ex.map(q=>({...q,_l:-1}))]); }
+  else { lesson=UNIT.L.find(l=>l.id===id); list=lesson.qs.map(q=>({...q,_l:id-1})); }
+  setGC(id===99?UNIT.col:LC(id-1));
+  S={lesson,list,i:0,score:0,streak:0,id}; renderQ(); window.scrollTo({top:0,behavior:"smooth"});
+}
+
+/* ---------- question card ---------- */
+const LET=["أ","ب","ج","د"];
+const PRAISE=["أحسنت!","ممتاز!","رائع!","إجابة صحيحة!","عالِم صغير!"];
+const TYPE={mcq:"اختيار من متعدد",tf:"صح أم خطأ",fill:"أكمل",sort:"صنّف",match:"صِل",order:"رتّب",pop:"فرقع البالونات",tap:"اضغط على الصورة",grid:"لغز الحروف",plant:"تجربة",align:"تجربة الضوء",shadow:"تجربة الظل",see:"تجربة",dynamo:"تجربة الدينمو",circuit:"الدائرة الكهربية",build:"ركّب الدائرة"};
+const txt=h=>{const d=document.createElement("div");d.innerHTML=h;return d.textContent.replace(/\s+/g," ").trim();};
+function renderQ(){
+  const q=S.list[S.i], n=S.list.length; S.wrong=0;
+  const lab=q._l<0?"تدريبات الوحدة":`الدرس ${ORD[q._l]} · ${UNIT.L[q._l].name}`;
+  $("#view").innerHTML=`<div class="bar"><button class="back" id="backBtn">→ الدروس</button>
+     <div class="prog" aria-hidden="true"><i style="width:${(S.i/n)*100}%"></i></div><span class="streak" id="streak" hidden></span><span class="count">${S.i+1} / ${n}</span></div>
+   <section class="card" style="margin-top:14px"><div class="qhead"><span class="tab">${lab}</span><span class="qtype">${TYPE[q.t]}${canSay?`<button class="say" id="sayBtn" aria-label="استمع إلى السؤال">🔊 استمع</button>`:""}</span></div>
+     <p class="q">${q.q}</p><div id="body" style="display:flex;flex-direction:column;gap:16px"></div><div id="fb"></div><div class="actions" id="acts"></div></section>`;
+  $("#backBtn").addEventListener("click",()=>{ if(canSay) speechSynthesis.cancel(); showMap(); });
+  if(canSay) $("#sayBtn").addEventListener("click",()=>say(txt(q.q)+(q.s&&q.t==="tf"?" "+txt(q.s):"")));
+  const body=$("#body"); if(q.vis) body.insertAdjacentHTML("beforeend",`<div class="vis">${q.vis}</div>`);
+  R[q.t](q,body); paintStreak();
+}
+function confetti(){ if(RM) return; const c=document.createElement("canvas"); c.className="confetti"; document.body.appendChild(c);
+  const w=c.width=innerWidth,h=c.height=innerHeight,x=c.getContext("2d"),cols=["#FFD60A","#1E9E57","#E0428C","#2F80ED","#F2711C","#8E44D9"];
+  const ps=Array.from({length:90},()=>({x:w/2+(Math.random()-.5)*120,y:h*.45,vx:(Math.random()-.5)*11,vy:-Math.random()*11-4,s:Math.random()*7+5,r:Math.random()*6,c:cols[Math.floor(Math.random()*cols.length)]}));
+  let t=0;(function f(){x.clearRect(0,0,w,h);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.35;p.r+=.2;x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);x.restore();});if(++t<70)requestAnimationFrame(f);else c.remove();})(); }
+function cardFx(cls){const c=$(".card");if(!c||RM)return;c.classList.remove("fx-ok","fx-no");void c.offsetWidth;c.classList.add(cls);}
+function paintStreak(){const s=$("#streak");if(!s)return;s.hidden=!(S.streak>=2);s.innerHTML=`🔥 <span>${S.streak}</span> متتالية`;}
+const AGAIN=["حاول مرة أخرى","فكّر جيداً وحاول مرة أخرى","اقتربت! حاول مرة أخرى"];
+// wrong: never show the answer, let the pupil try again
+function wrong(hint=""){ S.wrong++; beep(false); S.streak=0; paintStreak(); cardFx("fx-no");
+  $("#fb").innerHTML=`<div class="fb no" role="status"><span>✗</span><span>${AGAIN[Math.min(S.wrong-1,AGAIN.length-1)]}${hint?`<span class="tip">${hint}</span>`:""}</span></div>`; }
+function soft(msg){ $("#fb").innerHTML=`<div class="fb ok" role="status"><span>✓</span><span>${msg}</span></div>`; }
+function correct(q,note=""){
+  if(S.wrong===0){S.score++;S.streak=(S.streak||0)+1;}
+  beep(true); confetti(); cardFx("fx-ok"); paintStreak();
+  if(S.streak>=3&&S.wrong===0) note=`${S.streak} إجابات صحيحة متتالية! `+note;
+  const tip=q.tip?`<span class="tip">${q.tip}</span>`:"", extra=S.wrong>0?`<span class="tip">وصلت إلى الإجابة الصحيحة بعد ${S.wrong+1} محاولات.</span>`:"";
+  $("#fb").innerHTML=`<div class="fb ok" role="status"><span>✓</span><span>${PRAISE[Math.floor(Math.random()*PRAISE.length)]} ${note}${extra}${tip}</span></div>`;
+  const last=S.i===S.list.length-1;
+  $("#acts").innerHTML=`<button class="btn" id="nextBtn">${last?"النتيجة":"التالي ←"}</button>`;
+  $("#nextBtn").addEventListener("click",()=>{ if(last) showResult(); else {S.i++;renderQ();} });
+  $("#nextBtn").focus({preventScroll:true});
+}
+function checkBtn(fn,en=true){ $("#acts").innerHTML=`<button class="btn" id="chk"${en?"":" disabled"}>تحقّق</button>`; $("#chk").addEventListener("click",fn); return $("#chk"); }
+function dragify(el,onTap,onDrop){
+  el.addEventListener("pointerdown",e=>{ if(e.button>0) return; const sx=e.clientX,sy=e.clientY; let ghost=null;
+    const move=ev=>{const dx=ev.clientX-sx,dy=ev.clientY-sy; if(!ghost&&Math.hypot(dx,dy)>8){ghost=el.cloneNode(true);ghost.classList.add("dragghost");const r=el.getBoundingClientRect();ghost.style.width=r.width+"px";ghost.style.left=r.left+"px";ghost.style.top=r.top+"px";document.body.appendChild(ghost);el.classList.add("lifting");}
+      if(ghost) ghost.style.transform=`translate(${dx}px,${dy}px) rotate(-3deg)`;};
+    const up=ev=>{window.removeEventListener("pointermove",move);window.removeEventListener("pointerup",up);
+      if(ghost){ghost.remove();el.classList.remove("lifting");onDrop(ev.clientX,ev.clientY);} else onTap();};
+    window.addEventListener("pointermove",move); window.addEventListener("pointerup",up); });
+}
+const shakeEl=el=>{el.classList.remove("shake");void el.offsetWidth;el.classList.add("shake");};
+
+/* ---------- activity renderers ---------- */
+const R={
+ mcq(q,body){
+  const order=shuffle(q.opts.map((o,i)=>i));
+  body.insertAdjacentHTML("beforeend",`<div class="opts${q.grid?" grid2":""}">${order.map((oi,k)=>`<button class="opt" data-oi="${oi}"><span class="L">${LET[k]}</span><span class="C">${q.opts[oi]}</span></button>`).join("")}</div>`);
+  body.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
+    if(+b.dataset.oi===q.a){b.classList.add("right");body.querySelectorAll(".opt").forEach(x=>x.disabled=true);correct(q);}
+    else{b.classList.add("wrong");b.disabled=true;wrong();} }));
+ },
+ tf(q,body){
+  body.insertAdjacentHTML("beforeend",`<div class="statement">${q.s}</div><div class="tfbox"><button class="tfb t" data-v="1"><span class="m">✓</span>صحيحة</button><button class="tfb f" data-v="0"><span class="m">✗</span>خطأ</button></div>`);
+  body.querySelectorAll(".tfb").forEach(b=>b.addEventListener("click",()=>{
+    if((b.dataset.v==="1")===q.a){b.classList.add("right");body.querySelectorAll(".tfb").forEach(x=>x.disabled=true);correct(q);}
+    else{b.classList.add("wrong");b.disabled=true;wrong();} }));
+ },
+ fill(q,body){
+  let h=q.s; q.b.forEach((bk,i)=>{ const opts=shuffle(bk[0].map((o,j)=>j));
+    h=h.replace(`{${i}}`,`<select class="dd" data-i="${i}" aria-label="اختر الإجابة ${i+1}"><option value="">اختر…</option>${opts.map(j=>`<option value="${j}">${bk[0][j]}</option>`).join("")}</select>`); });
+  body.insertAdjacentHTML("beforeend",`<div>${h}</div>`);
+  const sels=[...body.querySelectorAll("select.dd")];
+  const btn=checkBtn(()=>{ let ok=true; sels.forEach(s=>{const good=+s.value===q.b[+s.dataset.i][1]; s.classList.toggle("right",good); s.classList.toggle("wrong",!good); if(!good) ok=false;});
+    if(ok){sels.forEach(s=>s.disabled=true);correct(q);} else wrong("الخانات الحمراء تحتاج إلى تغيير."); },false);
+  sels.forEach(s=>s.addEventListener("change",()=>{s.classList.remove("right","wrong");btn.disabled=sels.some(x=>x.value==="");}));
+ },
+ sort(q,body){
+  const items=shuffle(q.items.map((it,i)=>i)); let sel=null, left=q.items.length;
+  body.insertAdjacentHTML("beforeend",`<div class="pool" id="pool">${items.map(i=>`<button class="chip" data-i="${i}">${q.items[i][0]}</button>`).join("")}</div>
+    <div class="bins" style="--cols:${q.cols||q.bins.length}">${q.bins.map((b,k)=>`<div class="bin" data-k="${k}" style="--bc:${b.c}" role="button" tabindex="0"><div class="binl">${b.l}</div><div class="bini"></div></div>`).join("")}</div>
+    <div class="dirnote" style="font-weight:400">اضغط على الشيء ثم على المجموعة، أو اسحبه إليها.</div>`);
+  const bins=[...body.querySelectorAll(".bin")];
+  const place=(chip,k)=>{ const i=+chip.dataset.i, bin=bins[k];
+    if(q.items[i][1]===k){ chip.classList.add("done"); chip.classList.remove("sel"); sel=null; pop();
+      bin.querySelector(".bini").insertAdjacentHTML("beforeend",`<span class="placed">${q.items[i][0]}</span>`); left--;
+      if(left===0) correct(q); else if(S.wrong===0) $("#fb").innerHTML=""; }
+    else { bin.classList.add("nope"); setTimeout(()=>bin.classList.remove("nope"),450); shakeEl(chip); wrong(); } };
+  body.querySelectorAll(".chip").forEach(ch=>dragify(ch,()=>{ body.querySelectorAll(".chip.sel").forEach(x=>x.classList.remove("sel")); ch.classList.add("sel"); sel=ch; },
+    (x,y)=>{ const el=document.elementFromPoint(x,y); const b=el&&el.closest(".bin"); if(b) place(ch,+b.dataset.k); }));
+  bins.forEach(b=>{ const go=()=>{ if(sel) place(sel,+b.dataset.k); }; b.addEventListener("click",go); b.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}}); });
+ },
+ match(q,body){
+  const L=shuffle(q.pairs.map((p,i)=>i)), Rr=shuffle(q.pairs.map((p,i)=>i)); let a=null,b=null,left=q.pairs.length;
+  body.insertAdjacentHTML("beforeend",`<div class="match"><div class="col">${L.map(i=>`<button class="chip" data-s="a" data-i="${i}">${q.pairs[i][0]}</button>`).join("")}</div>
+    <div class="col">${Rr.map(i=>`<button class="chip" data-s="b" data-i="${i}">${q.pairs[i][1]}</button>`).join("")}</div></div>`);
+  const tryPair=()=>{ if(!a||!b) return;
+    if(a.dataset.i===b.dataset.i){ [a,b].forEach(x=>{x.classList.remove("sel");x.classList.add("right");x.disabled=true;}); pop(); left--; a=b=null; if(left===0) correct(q); }
+    else { const x=a,y=b; [x,y].forEach(e=>{e.classList.add("wrong");shakeEl(e);}); setTimeout(()=>[x,y].forEach(e=>e.classList.remove("wrong","sel")),450); a=b=null; wrong(); } };
+  body.querySelectorAll(".match .chip").forEach(ch=>ch.addEventListener("click",()=>{
+    if(ch.dataset.s==="a"){ if(a) a.classList.remove("sel"); a=ch; } else { if(b) b.classList.remove("sel"); b=ch; }
+    ch.classList.add("sel"); tryPair(); }));
+ },
+ order(q,body,done){
+  const n=q.items.length; let k=0; const ord=shuffle(q.items.map((x,i)=>i));
+  body.insertAdjacentHTML("beforeend",`${q.dir?`<div class="dirnote">${q.dir}</div>`:""}<div class="slots ${q.letters?"letters":""}">${q.items.map((x,i)=>`<div class="slot" data-s="${i}"><span class="n">${i+1}</span></div>`).join("")}</div>
+    <div class="pool ${q.letters?"letters":""}">${ord.map(i=>`<button class="chip" data-i="${i}">${q.items[i]}</button>`).join("")}</div>`);
+  const slots=[...body.querySelectorAll(".slot")];
+  body.querySelectorAll(".pool .chip").forEach(ch=>ch.addEventListener("click",()=>{
+    const i=+ch.dataset.i;
+    // letters may repeat: accept any chip whose content equals the next one
+    if(q.items[i]===q.items[k]){ slots[k].insertAdjacentHTML("beforeend",q.items[k]); slots[k].classList.add("filled"); ch.classList.add("done"); pop(); k++;
+      if(k===n){ if(done) done(); else correct(q); } }
+    else { shakeEl(ch); wrong(); } }));
+ },
+ pop(q,body){
+  const cols=["var(--c1)","var(--c2)","var(--c3)","var(--c5)","var(--c6)","var(--c4)","var(--c7)","var(--c8)"];
+  const ord=shuffle(q.items.map((x,i)=>i)); let left=q.items.filter(x=>x[1]).length;
+  body.insertAdjacentHTML("beforeend",`<div class="pond">${ord.map((i,k)=>`<button class="balloon" data-i="${i}" style="--c:color-mix(in srgb,${cols[k%cols.length]} 55%,#fff);--d:${(k%5)*-.6}s"><span class="bl">${q.items[i][0]}</span><span class="str"></span></button>`).join("")}</div>
+    <div class="dirnote">بقي: <span id="left">${left}</span></div>`);
+  body.querySelectorAll(".balloon").forEach(b=>b.addEventListener("click",()=>{
+    if(q.items[+b.dataset.i][1]){ b.classList.add("popped"); pop(); left--; $("#left").textContent=left; if(left===0) correct(q); }
+    else { b.classList.remove("shake"); void b.offsetWidth; b.classList.add("shake"); wrong(); } }));
+ },
+ tap(q,body){
+  body.insertAdjacentHTML("beforeend",`<div class="vis">${q.svg==="body"?bodySvg():faceSvg()}</div>`);
+  let done=false;
+  body.querySelectorAll("svg .hit").forEach(g=>g.addEventListener("click",()=>{ if(done) return;
+    if(q.a.includes(g.dataset.r)){ done=true; g.querySelectorAll("path,ellipse,circle,rect").forEach(e=>{e.style.stroke="var(--ok)";e.style.strokeWidth="5";}); correct(q); }
+    else { g.style.opacity=".45"; setTimeout(()=>g.style.opacity="",400); wrong(); } }));
+ },
+ grid(q,body){
+  const G=["ت","ر","ا","ص","د","ا","ل","ض","ل","غ","ت","ا","د","ا","ث","هـ","ي","ع","و","ت","ر","ي"];
+  const phrase="تلد وترضع صغارها"; const need={}; [...phrase.replace(/\s/g,"")].forEach(c=>{const k=c==="ه"?"هـ":c; need[k]=(need[k]||0)+1;});
+  const total=Object.values(need).reduce((a,b)=>a+b,0); let gone=0;
+  const pcs=[...phrase].map(c=>c===" "?`<span class="sp"></span>`:`<span data-c="${c==="ه"?"هـ":c}">${c}</span>`).join("");
+  const bgs=["#D6ECFB","#fff","#FFF6CC","#fff","#FDE0EC","#fff","#FDE0EC","#fff","#ECECEC","#fff","#FFE3D6","#fff","#DCF0E2","#fff","#FFF6CC","#fff","#E3E0F3","#fff","#D6ECFB","#fff","#FDE0EC","#DCF0E2"];
+  body.insertAdjacentHTML("beforeend",`<div class="phrase" aria-label="العبارة">${pcs}</div>
+    <div class="lgrid">${G.map((c,i)=>`<button class="lc" data-c="${c}" style="--bg:color-mix(in srgb,${bgs[i]} 70%,var(--card))">${c}</button>`).join("")}</div>
+    <div class="dirnote" id="gnote">اضغط على كل حرف من حروف العبارة لتحذفه. حُذف <span id="gone">0</span> من ${total}.</div><div id="stage2"></div>`);
+  body.querySelectorAll(".lc").forEach(b=>b.addEventListener("click",()=>{ const c=b.dataset.c;
+    if(need[c]>0){ need[c]--; gone++; b.classList.add("x"); pop(); $("#gone").textContent=gone;
+      const sp=body.querySelector(`.phrase span[data-c="${c}"]:not(.got)`); if(sp) sp.classList.add("got");
+      if(gone===total){ body.querySelectorAll(".lc:not(.x)").forEach(x=>{x.classList.add("keep");x.disabled=true;});
+        soft("ممتاز! حذفت كل حروف العبارة. الآن رتّب الحروف الباقية لتكوّن اسم المجموعة.");
+        const st=$("#stage2"); const word=["ا","ل","ث","د","ي","ي","ا","ت"];
+        R.order({items:word.map(c=>W(c)),letters:true,dir:"اكتب الكلمة من اليمين إلى اليسار ←"},st,()=>{
+          st.insertAdjacentHTML("beforeend",`<div class="statement" style="margin-top:12px">الثدييات تلد وترضع صغارها.</div>`); correct(q,"الكلمة هي: الثدييات."); }); } }
+    else { shakeEl(b); wrong("هذا الحرف ليس من حروف العبارة الباقية."); } }));
+ },
+ plant(q,body){
+  let day=0; const hA=()=>7, hB=()=>Math.max(0,7-day);
+  const draw=()=>{ $("#pv").innerHTML=`<svg class="scene" viewBox="0 0 300 250" width="320" role="img" aria-label="نباتان في أصيصين">${plantSvg(hA(),170,"أ",day>0)}${plantSvg(hB(),40,"ب",false)}${day>0?`<text x="220" y="16" text-anchor="middle" font-size="22">💧</text>`:""}</svg>`;
+    $("#dayl").textContent=`اليوم: ${day} من 7`; bind(); };
+  body.insertAdjacentHTML("beforeend",`<div class="vis" id="pv"></div><div class="status" id="dayl"></div><div class="ctrls"><button class="sbtn" id="dayBtn">☀️ يوم جديد واسقِ النبات (أ)</button></div><div class="status" id="ask" hidden>مرّ أسبوع! اضغط على النبات الذي ذبل.</div>`);
+  let asking=false;
+  const bind=()=>{ if(!asking) return; $("#pv").querySelectorAll("svg > g").forEach((g,i)=>{ g.classList.add("hit"); g.addEventListener("click",()=>{ if(!asking) return;
+    if(i===1){ asking=false; correct(q,"النبات الذي لم نسقه ذبل، فالماء ضروري لحياة الكائن الحي."); } else wrong("انظر إلى الأوراق: أيهما تغيّر لونها وانحنت؟"); }); }); };
+  $("#dayBtn").addEventListener("click",()=>{ if(day<7){ day++; pop(); draw(); } if(day===7){ $("#dayBtn").disabled=true; $("#ask").hidden=false; asking=true; bind(); } });
+  draw();
+ },
+ align(q,body){
+  const pos=[0,0,0].map(()=>[-2,-1,1,2][Math.floor(Math.random()*4)]); const step=16;
+  const draw=()=>{ const ok=pos.every(p=>p===0); const xs=[110,165,220];
+    $("#av").innerHTML=`<svg class="scene" viewBox="0 0 330 170" width="340" role="img" aria-label="شمعة وثلاثة حوائل">
+      <rect x="0" y="0" width="330" height="170" rx="12" fill="var(--sky)"/>
+      ${ok?`<line x1="40" y1="70" x2="300" y2="70" stroke="#FFD43B" stroke-width="6" opacity=".9"/>`:""}
+      <rect x="30" y="80" width="20" height="60" rx="3" fill="#F7F1E3" stroke="#B8A27A" stroke-width="1.5"/><path d="M40 52 Q30 66 40 76 Q50 66 40 52 Z" fill="#FF9F1C"/><circle cx="40" cy="70" r="16" fill="#FFD43B" opacity=".35"/>
+      ${xs.map((x,i)=>{const hy=70+pos[i]*step;return `<rect x="${x-7}" y="18" width="14" height="140" fill="#7FB2E8" stroke="#2F5E96" stroke-width="2"/><rect x="${x-7}" y="${hy-5}" width="14" height="10" fill="var(--dark)"/>`;}).join("")}
+      <g transform="translate(296,70)"><ellipse rx="20" ry="12" fill="#fff" stroke="#3B2A1C" stroke-width="2"/><circle r="6" fill="#3B2A1C"/></g>
+      <text x="300" y="104" text-anchor="middle" font-size="14" fill="var(--muted)" font-weight="700">عينك</text>
+    </svg>`;
+    $("#astat").textContent=ok?"ترى ضوء الشمعة الآن!":"لا ترى ضوء الشمعة بعد.";
+    return ok; };
+  body.insertAdjacentHTML("beforeend",`<div class="vis" id="av"></div><div class="status" id="astat"></div>
+    <div class="ctrls">${[2,1,0].map(i=>`<div class="mover"><button class="sbtn" data-i="${i}" data-d="-1" aria-label="ارفع الحائل ${i+1}">▲</button><b>الحائل ${i+1}</b><button class="sbtn" data-i="${i}" data-d="1" aria-label="اخفض الحائل ${i+1}">▼</button></div>`).join("")}</div>`);
+  let done=false; draw();
+  body.querySelectorAll(".mover .sbtn").forEach(b=>b.addEventListener("click",()=>{ if(done) return; const i=+b.dataset.i; pos[i]=Math.max(-3,Math.min(3,pos[i]+ +b.dataset.d));
+    if(draw()){ done=true; body.querySelectorAll(".mover .sbtn").forEach(x=>x.disabled=true); correct(q,"يُرى الضوء عندما تكون الثقوب على استقامة واحدة."); } }));
+ },
+ shadow(q,body){
+  const XS=[235,195,155,115,75]; let k=2; const TX=300, WX=24, H=34;
+  const draw=()=>{ const x=XS[k], d=TX-x, sh=Math.min(176,H*(TX-WX)/d), cy=100;
+    $("#sv").innerHTML=`<svg class="scene" viewBox="0 0 330 200" width="340" role="img" aria-label="مصباح يدوي وكتاب وحائط">
+      <rect x="0" y="0" width="330" height="200" rx="12" fill="var(--dark)"/>
+      <rect x="6" y="8" width="${WX-6}" height="184" fill="var(--wall)"/>
+      <polygon points="${TX-8},${cy-12} ${WX},4 ${WX},196 ${TX-8},${cy+12}" fill="#FFE066" opacity=".5"/>
+      <rect x="6" y="${cy-sh/2}" width="${WX-4}" height="${sh}" fill="#141414" opacity=".85"/>
+      <rect x="${x-6}" y="${cy-H/2}" width="12" height="${H}" fill="#9C4A2E" stroke="#5A2A18" stroke-width="2"/>
+      <g transform="translate(${TX},${cy})"><rect x="-6" y="-12" width="12" height="24" rx="3" fill="#C9CED6"/><rect x="6" y="-8" width="24" height="16" rx="4" fill="#F2B705" stroke="#9C7A00" stroke-width="1.5"/></g>
+      <text x="${x}" y="${cy+H/2+18}" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">كتاب</text>
+      <text x="62" y="190" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">الحائط</text>
+    </svg>`; $("#left1").disabled=k===XS.length-1; $("#right1").disabled=k===0; };
+  body.insertAdjacentHTML("beforeend",`<div class="vis" id="sv"></div><div class="ctrls"><button class="sbtn" id="right1">نحو المصباح ▶</button><button class="sbtn" id="left1">◀ نحو الحائط</button></div>`);
+  draw();
+  $("#left1").addEventListener("click",()=>{ if(k<XS.length-1){k++;draw();} }); $("#right1").addEventListener("click",()=>{ if(k>0){k--;draw();} });
+  checkBtn(()=>{ const good=q.goal==="big"?k===0:k===XS.length-1;
+    if(good){ body.querySelectorAll(".ctrls .sbtn").forEach(b=>b.disabled=true); correct(q,q.goal==="big"?"كلما اقترب الجسم من المصباح كبر ظله.":"كلما ابتعد الجسم عن المصباح واقترب من الحائط صغر ظله."); }
+    else wrong("حرّك الكتاب أكثر ولاحظ تغيّر الظل."); });
+ },
+ see(q,body){
+  const M=[{n:"لوح زجاجي",ic:"glass",a:0,ov:`<div style="position:absolute;inset:0;border-radius:12px;background:linear-gradient(135deg,rgba(255,255,255,.45),rgba(190,225,255,.15));border:3px solid #6BA6D6"></div>`},
+           {n:"قطعة شاش",ic:"gauze",a:1,ov:`<div style="position:absolute;inset:0;border-radius:12px;background:repeating-linear-gradient(0deg,rgba(255,255,255,.75) 0 3px,rgba(255,255,255,.45) 3px 6px),repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 3px,transparent 3px 6px);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)"></div>`},
+           {n:"ورق كرتون مقوى",ic:"cardboard",a:2,ov:`<div style="position:absolute;inset:0;border-radius:12px;background:#C99A62;border:3px solid #7A5530"></div>`}];
+  const K=["مادة شفافة","مادة نصف شفافة","مادة معتمة"];
+  body.insertAdjacentHTML("beforeend",`<div class="vis"><div id="pic" style="position:relative;width:200px;height:150px;border-radius:12px;background:var(--sky);display:grid;place-items:center;font-size:96px;overflow:hidden">🦒<div id="ovl"></div></div></div>
+    <div class="matrow">${M.map((m,i)=>`<button class="matbtn" data-m="${i}">${IT(m.ic,m.n,"row")}</button><select class="dd" data-i="${i}" aria-label="نوع ${m.n}"><option value="">اختر…</option>${shuffle([0,1,2]).map(j=>`<option value="${j}">${K[j]}</option>`).join("")}</select>`).join("")}</div>
+    <div class="dirnote" style="font-weight:400">اضغط على اسم المادة لتضعها فوق الصورة.</div>`);
+  body.querySelectorAll(".matbtn").forEach(b=>b.addEventListener("click",()=>{ const on=b.classList.contains("on"); body.querySelectorAll(".matbtn").forEach(x=>x.classList.remove("on"));
+    $("#ovl").innerHTML=on?"":M[+b.dataset.m].ov; if(!on) b.classList.add("on"); }));
+  const sels=[...body.querySelectorAll("select.dd")];
+  const btn=checkBtn(()=>{ let ok=true; sels.forEach(s=>{const g=+s.value===M[+s.dataset.i].a; s.classList.toggle("right",g); s.classList.toggle("wrong",!g); if(!g) ok=false;});
+    if(ok){ sels.forEach(s=>s.disabled=true); correct(q); } else wrong("جرّب المادة فوق الصورة مرة أخرى ولاحظ."); },false);
+  sels.forEach(s=>s.addEventListener("change",()=>{ s.classList.remove("right","wrong"); btn.disabled=sels.some(x=>x.value===""); }));
+ },
+ dynamo(q,body){
+  let e=0, ang=0, done=false, raf=null;
+  body.insertAdjacentHTML("beforeend",`<div class="vis"><svg class="scene" viewBox="0 0 320 200" width="330" role="img" aria-label="عجلة دراجة ودينمو ومصباح">
+     <g id="wheel" transform="translate(110,110)"><circle r="78" fill="none" stroke="#2B2B2B" stroke-width="10"/><circle r="70" fill="none" stroke="#9AA3AD" stroke-width="3"/>
+       ${Array.from({length:12},(_,i)=>`<line x1="0" y1="0" x2="${(70*Math.cos(i*Math.PI/6)).toFixed(1)}" y2="${(70*Math.sin(i*Math.PI/6)).toFixed(1)}" stroke="#9AA3AD" stroke-width="2"/>`).join("")}<circle r="8" fill="#5B6573"/></g>
+     <g transform="translate(200,40)"><rect x="-12" y="0" width="24" height="44" rx="9" fill="#C9CED6" stroke="#555" stroke-width="2"/><circle id="dcap" cx="0" cy="48" r="7" fill="#555"/><text x="0" y="-8" text-anchor="middle" font-size="13" font-weight="700" fill="var(--muted)">الدينمو</text></g>
+     <path d="M212 50 Q250 40 262 70" fill="none" stroke="var(--wire)" stroke-width="3"/>
+     <g transform="translate(270,100)"><circle id="glow" r="34" fill="#FFE066" opacity="0"/><circle id="bulb" r="18" fill="#E6EAF0" stroke="#5B6573" stroke-width="2.5"/><rect x="-9" y="-36" width="18" height="18" rx="3" fill="#5B6573"/><text x="0" y="48" text-anchor="middle" font-size="13" font-weight="700" fill="var(--muted)">المصباح</text></g>
+   </svg></div><div class="status" id="dstat">المصباح لا يضيء</div><div class="ctrls"><button class="sbtn" id="spin">🔄 أدِر العجلة</button></div>`);
+  const tick=()=>{ if(!document.body.contains($("#wheel"))) return; e=Math.max(0,e-0.006); ang+=e*22; $("#wheel").setAttribute("transform",`translate(110,110) rotate(${ang})`);
+    const b=Math.min(1,e); $("#glow").setAttribute("opacity",(b*.6).toFixed(2)); $("#bulb").setAttribute("fill",b>.15?`color-mix(in srgb,#FFD43B ${Math.round(b*100)}%,#E6EAF0)`:"#E6EAF0");
+    $("#dstat").textContent=b>=.85?"المصباح يضيء!":b>.15?"المصباح يضيء قليلاً… أسرع!":"المصباح لا يضيء";
+    if(b>=.85&&!done){ done=true; correct(q,"الدينمو يعطينا كهرباء عندما تدور العجلة."); }
+    raf=requestAnimationFrame(tick); };
+  $("#spin").addEventListener("click",()=>{ e=Math.min(1.3,e+0.16); });
+  tick();
+ },
+ circuit(q,body){
+  let closed=false;
+  const draw=()=>{ $("#cv").innerHTML=circuitSvg({closed,sw:!closed}); if(!closed) $("#sw").addEventListener("click",()=>{ closed=true; pop(); draw(); $("#cs").textContent="الدائرة مغلقة: المصباح يضيء"; correct(q,"الكهرباء تسري في الدائرة المغلقة."); }); };
+  body.insertAdjacentHTML("beforeend",`<div class="vis" id="cv"></div><div class="status" id="cs">الدائرة مفتوحة: المصباح لا يضيء</div>`);
+  draw();
+ },
+ build(q,body){
+  const parts={lamp:!q.missing.includes("lamp"),battery:!q.missing.includes("battery"),wire:!q.missing.includes("wire")};
+  const NAMES={battery:IT("battery","بطارية"),lamp:IT("💡","مصباح"),wire:IT("〰️","سلك")};
+  let sel=null, closed=false;
+  const tray=shuffle(["battery","lamp","wire"]);
+  body.insertAdjacentHTML("beforeend",`<div class="vis" id="cv"></div><div class="status" id="cs"></div><div class="pool" id="tray">${tray.map(p=>`<button class="chip" data-p="${p}">${NAMES[p]}</button>`).join("")}</div><div class="dirnote" style="font-weight:400">اضغط على القطعة ثم على علامة (؟) في الدائرة، أو اسحبها إليها.</div>`);
+  const complete=()=>parts.lamp&&parts.battery&&parts.wire;
+  const put=(chip,slot)=>{ const p=chip.dataset.p;
+    if(p===slot&&!parts[slot]){ parts[slot]=true; chip.classList.add("done"); chip.classList.remove("sel"); sel=null; pop(); draw(); if(S.wrong===0) $("#fb").innerHTML=""; }
+    else { shakeEl(chip); wrong("هذه القطعة لا توضع هنا."); } };
+  const draw=()=>{ $("#cv").innerHTML=circuitSvg({closed,parts,slot:1,sw:complete()&&!closed});
+    $("#cs").textContent=!complete()?"الدائرة ناقصة":closed?"الدائرة مغلقة: المصباح يضيء":"اكتملت القطع. أغلق المفتاح الآن.";
+    $("#cv").querySelectorAll("[data-slot]").forEach(g=>g.addEventListener("click",()=>{ if(sel) put(sel,g.dataset.slot); }));
+    const sw=$("#sw"); sw.addEventListener("click",()=>{ if(closed) return; if(!complete()){ wrong("أكمل القطع الناقصة أولاً."); return; } closed=true; pop(); draw(); correct(q,"الدائرة المغلقة تجعل المصباح يضيء."); }); };
+  draw();
+  body.querySelectorAll("#tray .chip").forEach(ch=>dragify(ch,()=>{ body.querySelectorAll("#tray .chip").forEach(x=>x.classList.remove("sel")); ch.classList.add("sel"); sel=ch; },
+    (x,y)=>{ const el=document.elementFromPoint(x,y); const g=el&&el.closest("[data-slot]"); if(g) put(ch,g.dataset.slot); }));
+ }
+};
+
+/* ---------- result ---------- */
+function showResult(){
+  const n=S.list.length,p=S.score/n,st=starsFor(p),id=S.id;
+  if(st>B(id)){best[UNIT.key+"-"+id]=st;store.set("sci3-best",best);}
+  beep(st>=2); if(st>=2) confetti();
+  const msg=st===3?"ممتاز! أنت عالِم صغير":st===2?"أحسنت! أداء جيد جداً":st===1?"جيد، تدرّب مرة أخرى لتربح نجوماً أكثر":"لنراجع الدرس ونحاول من جديد";
+  $("#view").innerHTML=`<section class="card result"><span class="tab">${id===99?"تحدّي الوحدة":"الدرس "+ORD[id-1]} · ${S.lesson.name}</span>
+    <div class="stars">${starStr(st)}</div><div class="big">${S.score} / ${n}</div><h2>${msg}</h2>
+    <p class="sub">تُحسب النقطة للنشاط الذي تُنجزه صحيحاً من المحاولة الأولى.</p>
+    <div class="actions"><button class="btn" id="again">العب مرة أخرى</button><button class="btn ghost" id="toMap">الدروس</button></div></section>`;
+  $("#again").addEventListener("click",()=>start(id)); $("#toMap").addEventListener("click",showMap); updateTotal();
+}
+
+/* ---------- Arabic-Indic digits on screen, as in the book ---------- */
+const AD="٠١٢٣٤٥٦٧٨٩";
+function arab(node){ const w=document.createTreeWalker(node,NodeFilter.SHOW_TEXT); let t; while((t=w.nextNode())){ if(/[0-9]/.test(t.nodeValue)) t.nodeValue=t.nodeValue.replace(/[0-9]/g,d=>AD[d]); } }
+new MutationObserver(ms=>ms.forEach(m=>{
+  if(m.type==="characterData"){ if(/[0-9]/.test(m.target.nodeValue)) arab(m.target.parentNode); }
+  else m.addedNodes.forEach(n=>{ if(n.nodeType===3){ if(/[0-9]/.test(n.nodeValue)) n.nodeValue=n.nodeValue.replace(/[0-9]/g,d=>AD[d]); } else if(n.nodeType===1&&n.namespaceURI!=="http://www.w3.org/2000/svg") arab(n); else if(n.nodeType===1) n.querySelectorAll&&n.querySelectorAll("text").forEach(arab); });
+})).observe($("#app"),{childList:true,subtree:true,characterData:true});
+
+showHome(); arab($("#app"));
+})();
+</script>
+
+</body>
+</html>
